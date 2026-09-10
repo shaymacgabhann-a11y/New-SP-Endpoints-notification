@@ -1,0 +1,18 @@
+# ScalePad Documentation
+
+> Documentation for ScalePad
+
+## Guides
+- [Getting started with the ScalePad API](https://developer.scalepad.com/docs/getting-started.md)
+- [API versioning policy](https://developer.scalepad.com/docs/api-versioning-policy.md)
+- [List Clients](https://developer.scalepad.com/reference/list-clients-1.md): This endpoint retrieves a detailed list of clients.
+- [Get Client](https://developer.scalepad.com/reference/get-client-1.md): This endpoint retrieves a single client, identified by its unique ID.
+- [List Assessments](https://developer.scalepad.com/reference/apipublicv1assessmentslist.md): Retrieve a comprehensive list of all assessments.
+- [Create Agreement](https://developer.scalepad.com/reference/apipublicv1agreementscreate.md): Create an agreement with full details.
+- [Ingest Backup Results](https://developer.scalepad.com/reference/backupradar-ingest.md): Ingest backup results for a device.
+
+## Guides
+## API Reference
+## Guides
+
+---

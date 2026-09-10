@@ -1,0 +1,54 @@
+name: Check ScalePad developer docs
+
+on:
+  schedule:
+    # 15:00 UTC daily = 08:00 Pacific (PDT) / 07:00 (PST)
+    - cron: "0 15 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Print the Slack payload instead of posting it"
+        type: boolean
+        default: false
+
+# Only one run at a time so two runs never race on the snapshot commit.
+concurrency:
+  group: check-docs
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run tests
+        run: python -m unittest -q tests/test_check_docs.py
+
+      - name: Diff docs and notify
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          ARGS=""
+          if [ "${{ inputs.dry_run }}" = "true" ]; then ARGS="--dry-run"; fi
+          python check_docs.py $ARGS
+
+      - name: Commit updated snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state/
+          if git diff --cached --quiet; then
+            echo "snapshot unchanged"
+            exit 0
+          fi
+          git commit -m "chore: update docs snapshot ($(date -u +%Y-%m-%d))"
+          git pull --rebase
+          git push

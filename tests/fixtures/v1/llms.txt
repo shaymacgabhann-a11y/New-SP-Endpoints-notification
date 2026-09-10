@@ -1,0 +1,16 @@
+# ScalePad Documentation
+
+> Documentation for ScalePad
+
+## Guides
+- [Getting started with the ScalePad API](https://developer.scalepad.com/docs/getting-started.md)
+- [List Clients](https://developer.scalepad.com/reference/list-clients-1.md): This endpoint retrieves a detailed list of clients.
+- [Get Client](https://developer.scalepad.com/reference/get-client-1.md): This endpoint retrieves a single client, identified by its unique ID.
+- [List Assessments](https://developer.scalepad.com/reference/apipublicv1assessmentslist.md): Retrieve a comprehensive list of all assessments.
+- [Delete Evidence Request](https://developer.scalepad.com/reference/14_evidenceapi-1.md): Deletes a specific evidence request.
+
+## Guides
+## API Reference
+## Guides
+
+---
