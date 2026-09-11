@@ -18,6 +18,7 @@ import threading
 import unittest
 from contextlib import redirect_stderr, redirect_stdout
 from pathlib import Path
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
@@ -44,6 +45,62 @@ def run(base_url: str, snapshot: Path, report: Path) -> tuple[int, str, str]:
         code = check_docs.main(["--base-url", base_url, "--snapshot", str(snapshot),
                                 "--report", str(report), "--dry-run", "--concurrency", "4"])
     return code, out.getvalue(), err.getvalue()
+
+
+class RateLimitedHandler(http.server.BaseHTTPRequestHandler):
+    """Returns 429 for the first N requests to any path, then 200 with a fixed body."""
+    fail_times = 0
+    hits = 0
+    retry_after = None
+
+    def do_GET(self):
+        type(self).hits += 1
+        if type(self).hits <= type(self).fail_times:
+            self.send_response(429)
+            if type(self).retry_after is not None:
+                self.send_header("Retry-After", str(type(self).retry_after))
+            self.end_headers()
+            return
+        body = b"ok"
+        self.send_response(200)
+        self.send_header("Content-Length", str(len(body)))
+        self.end_headers()
+        self.wfile.write(body)
+
+    def log_message(self, *_):
+        pass
+
+
+class HttpGetRateLimitTest(unittest.TestCase):
+    def test_retries_429_and_honours_retry_after(self):
+        RateLimitedHandler.hits = 0
+        RateLimitedHandler.fail_times = 2
+        RateLimitedHandler.retry_after = 0  # keep the test instant
+        srv = http.server.ThreadingHTTPServer(("127.0.0.1", 0), RateLimitedHandler)
+        threading.Thread(target=srv.serve_forever, daemon=True).start()
+        try:
+            with patch("check_docs.time.sleep"):
+                result = check_docs.http_get(f"http://127.0.0.1:{srv.server_address[1]}/x")
+            self.assertEqual(result, "ok")
+            self.assertEqual(RateLimitedHandler.hits, 3)
+        finally:
+            srv.shutdown()
+            srv.server_close()
+
+    def test_gives_up_after_rate_limit_retries_exhausted(self):
+        RateLimitedHandler.hits = 0
+        RateLimitedHandler.fail_times = 999
+        RateLimitedHandler.retry_after = None
+        srv = http.server.ThreadingHTTPServer(("127.0.0.1", 0), RateLimitedHandler)
+        threading.Thread(target=srv.serve_forever, daemon=True).start()
+        try:
+            with patch("check_docs.time.sleep"):
+                with self.assertRaises(Exception):
+                    check_docs.http_get(f"http://127.0.0.1:{srv.server_address[1]}/x", rate_limit_retries=3)
+            self.assertEqual(RateLimitedHandler.hits, 4)  # initial attempt + 3 retries
+        finally:
+            srv.shutdown()
+            srv.server_close()
 
 
 class CheckDocsTest(unittest.TestCase):
@@ -124,6 +181,29 @@ class CheckDocsTest(unittest.TestCase):
         self.assertEqual(len(pages), 5)
         self.assertTrue(all(p.url.startswith("https://example.test/") for p in pages))
         self.assertEqual({p.kind for p in pages}, {"guide", "endpoint"})
+
+    def test_carry_forward_failed_preserves_last_known_good_data(self):
+        good = check_docs.Page(key="/reference/x", title="X", url="https://e.test/reference/x",
+                                description="", kind="endpoint", content_hash="abc123",
+                                product="Core API", method="GET", path="/v1/x")
+        old_pages = {"/reference/x": good, "/reference/y": check_docs.Page(
+            key="/reference/y", title="Y", url="https://e.test/reference/y", description="", kind="endpoint")}
+        failed_fetch = check_docs.Page(key="/reference/x", title="X", url="https://e.test/reference/x",
+                                        description="", kind="endpoint", fetch_error="HTTPError: 429")
+        brand_new_failed = check_docs.Page(key="/reference/z", title="Z", url="https://e.test/reference/z",
+                                            description="", kind="endpoint", fetch_error="HTTPError: 429")
+        pages = [failed_fetch, brand_new_failed]
+
+        carried = check_docs.carry_forward_failed(pages, old_pages)
+
+        self.assertEqual(carried, 1)
+        # Known page: fully restored to its last-good record, fetch_error cleared.
+        self.assertEqual(pages[0].content_hash, "abc123")
+        self.assertIsNone(pages[0].fetch_error)
+        self.assertEqual(pages[0].method, "GET")
+        # Brand-new page with no prior record: nothing to carry forward, left as-is.
+        self.assertEqual(pages[1].key, "/reference/z")
+        self.assertEqual(pages[1].fetch_error, "HTTPError: 429")
 
     def test_missing_llms_does_not_clobber_snapshot(self):
         self.snapshot.write_text(json.dumps({"meta": {}, "pages": [{"key": "/x", "title": "x", "url": "u", "description": "", "kind": "guide"}]}))

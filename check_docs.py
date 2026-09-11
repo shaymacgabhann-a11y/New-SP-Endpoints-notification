@@ -33,7 +33,7 @@ import sys
 import time
 import urllib.error
 import urllib.request
-from dataclasses import dataclass, field, asdict
+from dataclasses import dataclass, field, asdict, replace
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -57,19 +57,38 @@ HTTP_METHODS = ("get", "put", "post", "delete", "options", "head", "patch", "tra
 # Fetching
 # --------------------------------------------------------------------------- #
 
-def http_get(url: str, retries: int = 3, timeout: int = 30) -> str:
+def http_get(url: str, retries: int = 3, timeout: int = 30, rate_limit_retries: int = 6) -> str:
     last_err: Exception | None = None
-    for attempt in range(retries):
+    attempt = 0
+    rate_limit_attempt = 0
+    while True:
         try:
             req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "text/plain, text/markdown, */*"})
             with urllib.request.urlopen(req, timeout=timeout) as resp:
                 return resp.read().decode("utf-8", errors="replace")
         except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError) as e:  # noqa: PERF203
             last_err = e
-            # Don't retry hard 4xx (except 429)
-            if isinstance(e, urllib.error.HTTPError) and 400 <= e.code < 500 and e.code != 429:
+            if isinstance(e, urllib.error.HTTPError) and e.code == 429:
+                # Rate limited: back off longer and more patiently than a plain retry,
+                # honouring Retry-After when the server sends one.
+                rate_limit_attempt += 1
+                if rate_limit_attempt > rate_limit_retries:
+                    raise
+                retry_after = None
+                try:
+                    retry_after = float(e.headers.get("Retry-After")) if e.headers else None
+                except (TypeError, ValueError):
+                    retry_after = None
+                delay = retry_after if retry_after is not None else min(2.0 * (2 ** (rate_limit_attempt - 1)), 30.0)
+                time.sleep(delay)
+                continue
+            # Don't retry other hard 4xx.
+            if isinstance(e, urllib.error.HTTPError) and 400 <= e.code < 500:
                 raise
-            time.sleep(1.5 * (attempt + 1))
+            attempt += 1
+            if attempt >= retries:
+                raise
+            time.sleep(1.5 * attempt)
     assert last_err is not None
     raise last_err
 
@@ -205,6 +224,25 @@ def enrich_page(page: Page, markdown: str) -> None:
                 page.path = path
                 page.operation = summarise_operation(spec, op)
                 return  # one operation per page
+
+
+def carry_forward_failed(pages: list[Page], old_pages: dict[str, Page]) -> int:
+    """Replace any page that failed to fetch this run with its last known-good
+    record from the previous snapshot, in place. Returns how many were carried.
+
+    A page that failed to fetch must not overwrite its last known-good record —
+    that would both erase real data and, since the diff skips any page with a
+    fetch_error on either side, permanently swallow the next real change to it
+    (comparing against a blanked-out entry forever). Only genuinely new pages
+    (never seen before) keep their fetch_error, since there is nothing to carry
+    forward for them.
+    """
+    carried = 0
+    for i, p in enumerate(pages):
+        if p.fetch_error and p.key in old_pages:
+            pages[i] = replace(old_pages[p.key])
+            carried += 1
+    return carried
 
 
 def fetch_pages(pages: list[Page], concurrency: int, log) -> None:
@@ -422,7 +460,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--base-url", default=os.environ.get("DOCS_BASE_URL", DEFAULT_BASE_URL))
     ap.add_argument("--snapshot", type=Path, default=SNAPSHOT_PATH)
     ap.add_argument("--report", type=Path, default=REPORT_PATH)
-    ap.add_argument("--concurrency", type=int, default=8)
+    ap.add_argument("--concurrency", type=int, default=4)
     ap.add_argument("--dry-run", action="store_true", help="never post to Slack, print payload instead")
     ap.add_argument("--no-save", action="store_true", help="don't update the snapshot")
     ap.add_argument("--webhook", default=os.environ.get("SLACK_WEBHOOK_URL", ""),
@@ -449,6 +487,10 @@ def main(argv: list[str] | None = None) -> int:
     old_pages, old_meta = load_snapshot(args.snapshot)
     meta = {"base_url": base_url, "checked_at": now.isoformat(), "page_count": len(pages),
             "previous_checked_at": old_meta.get("checked_at")}
+
+    carried = carry_forward_failed(pages, old_pages)
+    if carried:
+        log(f"carried forward last known-good data for {carried} page(s) that failed to fetch this run")
 
     if not old_pages:
         log("no previous snapshot — baseline established, nothing to report")
