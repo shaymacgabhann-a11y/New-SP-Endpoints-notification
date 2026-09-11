@@ -1,9 +1,9 @@
 {
  "meta": {
   "base_url": "https://developer.scalepad.com",
-  "checked_at": "2026-09-10T20:58:31.827247+00:00",
+  "checked_at": "2026-09-11T16:04:24.554825+00:00",
   "page_count": 583,
-  "previous_checked_at": null
+  "previous_checked_at": "2026-09-10T20:58:31.827247+00:00"
  },
  "pages": [
   {
@@ -259,17 +259,38 @@
    "url": "https://developer.scalepad.com/reference/01_listclientreports-1"
   },
   {
-   "content_hash": null,
+   "content_hash": "4430a3a6095b07d8",
    "description": "Returns paginated Assessment Overview for all partner clients.  This endpoint supports: - Cursor-based pagination - Sorting - Filtering  **Use Cases:** - Retrieve Assessment Overview across all MSP clients - Build partner-level dashboards - Analyze Assessment completeness across multiple tenants - Paginate large Assessment summary datasets",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/01_listclientsassessmentsummary-1",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "query:cursor",
+     "query:filter[client.name]",
+     "query:filter[client.tenant_id]",
+     "query:page_size",
+     "query:sort"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "400",
+     "401",
+     "404",
+     "500"
+    ],
+    "summary": "Clients Assessment Overview",
+    "tags": [
+     "Assessments"
+    ]
+   },
+   "path": "/controlmap/v1/clients/assessments/common/summary",
+   "product": "ControlMap API",
    "title": "Clients Assessment Overview",
-   "updated_at": null,
+   "updated_at": "2026-04-23T21:50:24.000Z",
    "url": "https://developer.scalepad.com/reference/01_listclientsassessmentsummary-1"
   },
   {
@@ -1044,9 +1065,9 @@
    "url": "https://developer.scalepad.com/reference/17_evidenceapi-1"
   },
   {
-   "content_hash": null,
+   "content_hash": "bc323ceb9a47d761",
    "description": "Retrieves a paginated list of action items for a specific client.  Supports filtering with PII, sorting, and cursor-based pagination.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/a_actionitem-1",
    "kind": "endpoint",
    "method": null,
@@ -1054,7 +1075,7 @@
    "path": null,
    "product": null,
    "title": "Search Client Action Items",
-   "updated_at": null,
+   "updated_at": "2026-04-23T21:50:24.000Z",
    "url": "https://developer.scalepad.com/reference/a_actionitem-1"
   },
   {
@@ -12655,121 +12676,271 @@
    "url": "https://developer.scalepad.com/reference/apiv1roadmapspreadsheet"
   },
   {
-   "content_hash": null,
+   "content_hash": "302c2fd52a71aaab",
    "description": "Returns comprehensive assessment summary for a client.  By default, the response includes: - `assessment_question_groups` - `grades` - `assessment_stats`  Optional query parameters: - `include_framework_assessment_stats=true`: Includes framework-level statistics such as `frameworks_count` and `framework-specific progress` data along with the default response.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/assessmentprogress-1",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*",
+     "query:include_framework_assessment_stats"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "400",
+     "401",
+     "500"
+    ],
+    "summary": "Client Assessment Summary",
+    "tags": [
+     "Assessments"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/assessments/common/summary",
+   "product": "ControlMap API",
    "title": "Client Assessment Summary",
-   "updated_at": null,
+   "updated_at": "2026-04-23T21:50:24.000Z",
    "url": "https://developer.scalepad.com/reference/assessmentprogress-1"
   },
   {
-   "content_hash": null,
+   "content_hash": "333ce6de26645929",
    "description": "Clears the existing answer for the specified assessment question.  This operation removes the stored answer and resets the question to an unanswered state.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/assessmentquestiondeleteanswerforclient-1",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "DELETE",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*",
+     "path:question_code*"
+    ],
+    "request_fields": [],
+    "responses": [
+     "204",
+     "401",
+     "404",
+     "500"
+    ],
+    "summary": "Clear Assessment Question Answer",
+    "tags": [
+     "Assessments"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/assessments/common/questions/{question_code}/answer",
+   "product": "ControlMap API",
    "title": "Clear Assessment Question Answer",
-   "updated_at": null,
+   "updated_at": "2026-04-23T21:50:24.000Z",
    "url": "https://developer.scalepad.com/reference/assessmentquestiondeleteanswerforclient-1"
   },
   {
-   "content_hash": null,
+   "content_hash": "a95cce425435fca8",
    "description": "Returns full assessment question details for the question identified by **question code**.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/assessmentquestiongetbycodeforclient-1",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*",
+     "path:question_code*"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "404",
+     "500"
+    ],
+    "summary": "Get Assessment Question",
+    "tags": [
+     "Assessments"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/assessments/common/questions/{question_code}",
+   "product": "ControlMap API",
    "title": "Get Assessment Question",
-   "updated_at": null,
+   "updated_at": "2026-04-23T21:50:24.000Z",
    "url": "https://developer.scalepad.com/reference/assessmentquestiongetbycodeforclient-1"
   },
   {
-   "content_hash": null,
+   "content_hash": "759af795a91d1b08",
    "description": "Maps an assessment question to evidences, action items, policies, or procedures for a client.  In the request body, include only the entity codes/IDs that need to be mapped. Empty or omitted arrays are ignored.  Supported request fields: - evidence_codes - action_item_codes - policy_codes - procedure_codes",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/assessmentquestionmapentitiesforclient-1",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*",
+     "path:question_code*"
+    ],
+    "request_fields": [
+     "action_item_codes",
+     "evidence_codes",
+     "policy_codes",
+     "procedure_codes"
+    ],
+    "responses": [
+     "204",
+     "400",
+     "404",
+     "500"
+    ],
+    "summary": "Map Assessment Question to Evidences",
+    "tags": [
+     "Assessments"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/assessments/common/questions/{question_code}/mappings",
+   "product": "ControlMap API",
    "title": "Map Assessment Question to Evidences",
-   "updated_at": null,
+   "updated_at": "2026-04-23T21:50:24.000Z",
    "url": "https://developer.scalepad.com/reference/assessmentquestionmapentitiesforclient-1"
   },
   {
-   "content_hash": null,
+   "content_hash": "eb07d48087cbe77b",
    "description": "Creates a response for a client's assessment question",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/assessmentquestionnotecreate-1",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*",
+     "path:question_code*"
+    ],
+    "request_fields": [
+     "provided_by",
+     "response"
+    ],
+    "responses": [
+     "201",
+     "400",
+     "404",
+     "500"
+    ],
+    "summary": "Create Assessment Question Response",
+    "tags": [
+     "Assessments"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/assessments/common/questions/{question_code}/responses",
+   "product": "ControlMap API",
    "title": "Create Assessment Question Response",
-   "updated_at": null,
+   "updated_at": "2026-04-23T21:50:24.000Z",
    "url": "https://developer.scalepad.com/reference/assessmentquestionnotecreate-1"
   },
   {
-   "content_hash": null,
+   "content_hash": "bd796e4df8c6c533",
    "description": "Submits or updates the selected answer for the assessment question identified by `question_code`.  The `answer` value must match one of the valid response options for that question.  **Supported answer values:**    Yes, No, Partially, NA",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/assessmentquestionputanswerforclient-1",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "PUT",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*",
+     "path:question_code*"
+    ],
+    "request_fields": [
+     "answer"
+    ],
+    "responses": [
+     "200",
+     "400",
+     "401",
+     "404",
+     "500"
+    ],
+    "summary": "Save Assessment Question Answer",
+    "tags": [
+     "Assessments"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/assessments/common/questions/{question_code}/answer",
+   "product": "ControlMap API",
    "title": "Save Assessment Question Answer",
-   "updated_at": null,
+   "updated_at": "2026-04-23T21:50:24.000Z",
    "url": "https://developer.scalepad.com/reference/assessmentquestionputanswerforclient-1"
   },
   {
-   "content_hash": null,
+   "content_hash": "a583c9937e6bc152",
    "description": "Deletes a assessment question response. The note must belong to the question.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/assessmentquestionresponsedelete-1",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "DELETE",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*",
+     "path:question_code*",
+     "path:response_id*"
+    ],
+    "request_fields": [],
+    "responses": [
+     "204",
+     "404",
+     "500"
+    ],
+    "summary": "Delete Assessment Question Response",
+    "tags": [
+     "Assessments"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/assessments/common/questions/{question_code}/responses/{response_id}",
+   "product": "ControlMap API",
    "title": "Delete Assessment Question Response",
-   "updated_at": null,
+   "updated_at": "2026-04-23T21:50:24.000Z",
    "url": "https://developer.scalepad.com/reference/assessmentquestionresponsedelete-1"
   },
   {
-   "content_hash": null,
+   "content_hash": "9d17df5921de8900",
    "description": "Partially updates a question response. You can update either or both fields: response and provided_by.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/assessmentquestionresponseupdate-1",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "PATCH",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*",
+     "path:question_code*"
+    ],
+    "request_fields": [
+     "id",
+     "provided_by",
+     "response"
+    ],
+    "responses": [
+     "200",
+     "400",
+     "404",
+     "500"
+    ],
+    "summary": "Update Assessment Question Response",
+    "tags": [
+     "Assessments"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/assessments/common/questions/{question_code}/responses",
+   "product": "ControlMap API",
    "title": "Update Assessment Question Response",
-   "updated_at": null,
+   "updated_at": "2026-04-23T21:50:24.000Z",
    "url": "https://developer.scalepad.com/reference/assessmentquestionresponseupdate-1"
   },
   {
-   "content_hash": null,
+   "content_hash": "27d14659308943ab",
    "description": "Returns a paginated list of assessment questions for the specified client.          Supports filtering with PII, sorting, and cursor-based pagination..",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/assessmentquestionssearchbyclient-1",
    "kind": "endpoint",
    "method": null,
@@ -12777,49 +12948,111 @@
    "path": null,
    "product": null,
    "title": "Search Client Assessment Questions",
-   "updated_at": null,
+   "updated_at": "2026-04-23T21:50:24.000Z",
    "url": "https://developer.scalepad.com/reference/assessmentquestionssearchbyclient-1"
   },
   {
-   "content_hash": null,
+   "content_hash": "732bbe9da8dd88e6",
    "description": "Removes links between an assessment question and the given evidences, action items, policies, or procedures for a client.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/assessmentquestionunmapentitiesforclient-1",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*",
+     "path:question_code*"
+    ],
+    "request_fields": [
+     "action_item_codes",
+     "evidence_codes",
+     "policy_codes",
+     "procedure_codes"
+    ],
+    "responses": [
+     "204",
+     "400",
+     "404",
+     "500"
+    ],
+    "summary": "Unmap Assessment Question from Evidences",
+    "tags": [
+     "Assessments"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/assessments/common/questions/{question_code}/mappings/bulk-delete",
+   "product": "ControlMap API",
    "title": "Unmap Assessment Question from Evidences",
-   "updated_at": null,
+   "updated_at": "2026-04-23T21:50:24.000Z",
    "url": "https://developer.scalepad.com/reference/assessmentquestionunmapentitiesforclient-1"
   },
   {
-   "content_hash": null,
+   "content_hash": "a050fbd193ba32d5",
    "description": "Retrieves a specific action item for a given client.  This endpoint returns detailed information about an action item, including its status, ownership, and audit metadata.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/b_actionitem-1",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:action_item_id*",
+     "path:client_id*"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "400",
+     "401",
+     "404",
+     "500"
+    ],
+    "summary": "Get Action Item",
+    "tags": [
+     "Action Items"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/action-items/{action_item_id}",
+   "product": "ControlMap API",
    "title": "Get Action Item",
-   "updated_at": null,
+   "updated_at": "2026-04-23T21:50:24.000Z",
    "url": "https://developer.scalepad.com/reference/b_actionitem-1"
   },
   {
-   "content_hash": null,
+   "content_hash": "9e281b3e609d1abc",
    "description": "Removes links between a client governance and given objectives (requirements), policies, controls for the client.  In the request body, include only the entity codes that need to be unmapped. Empty or omitted arrays are ignored..  Supported request fields: - objectives (program_name + codes) - policy_codes - control_codes",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/bulkdeleteentitiesfromclientgovernance",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*",
+     "path:governance_id*"
+    ],
+    "request_fields": [
+     "control_codes",
+     "objectives",
+     "policy_codes"
+    ],
+    "responses": [
+     "204",
+     "400",
+     "401",
+     "404",
+     "500"
+    ],
+    "summary": "Unmap Governance from Objectives, Policies",
+    "tags": [
+     "Governance"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/governance/{governance_id}/mappings/bulk-delete",
+   "product": "ControlMap API",
    "title": "Unmap Governance from Objectives, Policies",
-   "updated_at": null,
+   "updated_at": "2026-06-04T22:13:22.000Z",
    "url": "https://developer.scalepad.com/reference/bulkdeleteentitiesfromclientgovernance"
   },
   {
@@ -13159,17 +13392,51 @@
    "url": "https://developer.scalepad.com/reference/create-deliverable-template-from-template-1"
   },
   {
-   "content_hash": null,
+   "content_hash": "4e9e008ff4d49db1",
    "description": "Creates a new action item for the specified client with the provided details  **Allowed values for patchable fields:**   - **status**: `Not Started`, `In Progress`, `Review`, `Completed`, `Not Applicable`  - **roadmap**: `3 months`, `6 months`, `12 months`  - **priority**: `High`, `Medium`, `Low`, `Critical`  - **currency**: `USD`, `EUR`, `AUD`, `CAD`, `SEK`, `NZD`, `SGD`, `INR`  - **efforts_in_hours**: must be zero or a positive number  - **cost**: must be zero or a positive number",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/createactionitem-1",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*"
+    ],
+    "request_fields": [
+     "actual_end_date",
+     "actual_start_date",
+     "change_in_milestone",
+     "corrective_action",
+     "cost",
+     "currency",
+     "efforts_in_hours",
+     "milestones",
+     "planned_end_date",
+     "planned_start_date",
+     "priority",
+     "responsible_department",
+     "responsible_person",
+     "roadmap",
+     "status",
+     "weakness_description",
+     "weakness_name"
+    ],
+    "responses": [
+     "201",
+     "400",
+     "401",
+     "500"
+    ],
+    "summary": "Create a new action item",
+    "tags": [
+     "Action Items"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/action-items",
+   "product": "ControlMap API",
    "title": "Create a new action item",
-   "updated_at": null,
+   "updated_at": "2026-04-23T21:50:24.000Z",
    "url": "https://developer.scalepad.com/reference/createactionitem-1"
   },
   {
@@ -13187,17 +13454,37 @@
    "url": "https://developer.scalepad.com/reference/createcategory"
   },
   {
-   "content_hash": null,
+   "content_hash": "5bf322b506acafa8",
    "description": "Creates a new governance for the specified client with the provided details.  The authenticated user becomes the owner and creator. The is created in **In Review** status with a default review date one week from creation.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/createclientgovernancedocument",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*"
+    ],
+    "request_fields": [
+     "description",
+     "title"
+    ],
+    "responses": [
+     "201",
+     "400",
+     "401",
+     "404",
+     "500"
+    ],
+    "summary": "Create Client Governance",
+    "tags": [
+     "Governance"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/governance",
+   "product": "ControlMap API",
    "title": "Create Client Governance",
-   "updated_at": null,
+   "updated_at": "2026-06-04T22:13:22.000Z",
    "url": "https://developer.scalepad.com/reference/createclientgovernancedocument"
   },
   {
@@ -13764,17 +14051,35 @@
    "url": "https://developer.scalepad.com/reference/deleteclientactionitem"
   },
   {
-   "content_hash": null,
+   "content_hash": "05f0de6e92a668e6",
    "description": "Deletes an existing governance identified by its governance ID for the specified client.  The governance and all associated data will be permanently removed.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/deleteclientgovernancedocument",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "DELETE",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*",
+     "path:governance_id*"
+    ],
+    "request_fields": [],
+    "responses": [
+     "204",
+     "400",
+     "401",
+     "404",
+     "500"
+    ],
+    "summary": "Delete Client Governance",
+    "tags": [
+     "Governance"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/governance/{governance_id}",
+   "product": "ControlMap API",
    "title": "Delete Client Governance",
-   "updated_at": null,
+   "updated_at": "2026-06-04T22:13:22.000Z",
    "url": "https://developer.scalepad.com/reference/deleteclientgovernancedocument"
   },
   {
@@ -14729,17 +15034,35 @@
    "url": "https://developer.scalepad.com/reference/get_v1-suppliers-id-1"
   },
   {
-   "content_hash": null,
+   "content_hash": "1e1ae79c710abf8f",
    "description": "Returns detailed information for a specific governance identified by its ID for the given client.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/getclientgovernancedocumentbyid",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*",
+     "path:governance_id*"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "400",
+     "401",
+     "404",
+     "500"
+    ],
+    "summary": "Get Client Governance",
+    "tags": [
+     "Governance"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/governance/{governance_id}",
+   "product": "ControlMap API",
    "title": "Get Client Governance",
-   "updated_at": null,
+   "updated_at": "2026-06-04T22:13:22.000Z",
    "url": "https://developer.scalepad.com/reference/getclientgovernancedocumentbyid"
   },
   {
@@ -14933,17 +15256,38 @@
    "url": "https://developer.scalepad.com/reference/getevidencebyid"
   },
   {
-   "content_hash": null,
+   "content_hash": "1ab5a8028a7d8358",
    "description": "Returns paginated governance summaries for all partner clients.  This endpoint supports: - Cursor-based pagination - Sorting - Filtering  **Use Cases:** - Retrieve governance summaries across all MSP clients - Build partner-level dashboards - Analyze governance completeness across multiple tenants - Paginate large governance summary datasets",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/getgovernancesummarybyclients",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "query:cursor",
+     "query:filter[client.name]",
+     "query:filter[client.tenant_id]",
+     "query:page_size",
+     "query:sort"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "400",
+     "401",
+     "404",
+     "500"
+    ],
+    "summary": "Clients Governance Overview",
+    "tags": [
+     "Governance"
+    ]
+   },
+   "path": "/controlmap/v1/clients/governance-summary",
+   "product": "ControlMap API",
    "title": "Clients Governance Overview",
-   "updated_at": null,
+   "updated_at": "2026-06-04T22:13:22.000Z",
    "url": "https://developer.scalepad.com/reference/getgovernancesummarybyclients"
   },
   {
@@ -16350,17 +16694,39 @@
    "url": "https://developer.scalepad.com/reference/listquotetemplates"
   },
   {
-   "content_hash": null,
+   "content_hash": "f41a226b2d4d4b96",
    "description": "Maps a governance to framework requirements (objectives), policies, and/or controls for a client.  In the request body, include only the business codes that need to be mapped. Empty or omitted arrays are ignored.  Supported request fields: - objectives (program_name + codes) - policy_codes - control_codes",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/mapentitiestoclientgovernancedocument",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*",
+     "path:governance_id*"
+    ],
+    "request_fields": [
+     "control_codes",
+     "objectives",
+     "policy_codes"
+    ],
+    "responses": [
+     "204",
+     "400",
+     "401",
+     "404",
+     "500"
+    ],
+    "summary": "Map Governance to Objectives, Policies, and",
+    "tags": [
+     "Governance"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/governance/{governance_id}/mappings",
+   "product": "ControlMap API",
    "title": "Map Governance to Objectives, Policies, and",
-   "updated_at": null,
+   "updated_at": "2026-06-04T22:13:22.000Z",
    "url": "https://developer.scalepad.com/reference/mapentitiestoclientgovernancedocument"
   },
   {
@@ -16476,135 +16842,330 @@
    "url": "https://developer.scalepad.com/reference/mapentitiestoclientrisk"
   },
   {
-   "content_hash": null,
+   "content_hash": "5a1390dbb81932c5",
    "description": "Returns a paginated list of control families for the client tenant. Each row includes id, name, code, creating user, and created timestamp only.  Supports filtering by `id`, `name`, and `code` using `filter[id]`, `filter[name]`, and `filter[code]` query parameters.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/opencontrolfamilieslist",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*",
+     "query:cursor",
+     "query:filter[code]",
+     "query:filter[id]",
+     "query:filter[name]",
+     "query:page_size"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "400",
+     "401",
+     "404",
+     "500"
+    ],
+    "summary": "List Control Families",
+    "tags": [
+     "Controls"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/control-families",
+   "product": "ControlMap API",
    "title": "List Control Families",
-   "updated_at": null,
+   "updated_at": "2026-06-04T22:13:22.000Z",
    "url": "https://developer.scalepad.com/reference/opencontrolfamilieslist"
   },
   {
-   "content_hash": null,
+   "content_hash": "28c4569269793a2c",
    "description": "Removes links between a client control and policies, procedures, governance documents, risks, evidences, and/or action items identified by **policy_codes**, **procedure_codes**, **governance_codes**, **risk_codes**, **evidence_codes**, and **action_item_codes** in the request body.  Send only codes for mappings that should be removed. Empty or omitted arrays are ignored.  Supported request fields: - objectives (program_name + codes) - policy_codes - procedure_codes - governance_codes - risk_codes - evidence_codes - action_item_codes",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/opencontrolsbulkdeletemappings",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*",
+     "path:control_id*"
+    ],
+    "request_fields": [
+     "action_item_codes",
+     "evidence_codes",
+     "governance_codes",
+     "objectives",
+     "policy_codes",
+     "procedure_codes",
+     "risk_codes"
+    ],
+    "responses": [
+     "204",
+     "400",
+     "401",
+     "404",
+     "500"
+    ],
+    "summary": "Unmap Policy, Procedure, Governance, Risk",
+    "tags": [
+     "Controls"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/controls/{control_id}/mappings/bulk-delete",
+   "product": "ControlMap API",
    "title": "Unmap Policy, Procedure, Governance, Risk",
-   "updated_at": null,
+   "updated_at": "2026-06-04T22:13:22.000Z",
    "url": "https://developer.scalepad.com/reference/opencontrolsbulkdeletemappings"
   },
   {
-   "content_hash": null,
+   "content_hash": "e8e3c1d40b9cd76d",
    "description": "Returns paginated control summary metrics for all partner clients.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/opencontrolsclientssummary",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "query:cursor",
+     "query:filter[client.id]",
+     "query:page_size",
+     "query:sort"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "400",
+     "401",
+     "404",
+     "500"
+    ],
+    "summary": "List Clients Control Summaries",
+    "tags": [
+     "Controls"
+    ]
+   },
+   "path": "/controlmap/v1/clients/controls-summary",
+   "product": "ControlMap API",
    "title": "List Clients Control Summaries",
-   "updated_at": null,
+   "updated_at": "2026-06-04T22:13:22.000Z",
    "url": "https://developer.scalepad.com/reference/opencontrolsclientssummary"
   },
   {
-   "content_hash": null,
+   "content_hash": "92c7c2b3935f36d6",
    "description": "Returns aggregate control metrics for the requested client.  Response uses `data` with one element (`client` + `control_summary`), `total_count` is `1`, and `next_cursor` is null.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/opencontrolsclientsummary",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "400",
+     "401",
+     "404",
+     "500"
+    ],
+    "summary": "Client Control Summary",
+    "tags": [
+     "Controls"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/controls-summary",
+   "product": "ControlMap API",
    "title": "Client Control Summary",
-   "updated_at": null,
+   "updated_at": "2026-06-04T22:13:22.000Z",
    "url": "https://developer.scalepad.com/reference/opencontrolsclientsummary"
   },
   {
-   "content_hash": null,
+   "content_hash": "390356a830ca072f",
    "description": "Creates a control for  for the specified client with the provided details. The authenticated user becomes the owner and creator.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/opencontrolscreate",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*"
+    ],
+    "request_fields": [
+     "contributors",
+     "control_family_name",
+     "control_set_name",
+     "description",
+     "name",
+     "owner_email",
+     "tag",
+     "type"
+    ],
+    "responses": [
+     "201",
+     "400",
+     "401",
+     "404",
+     "500"
+    ],
+    "summary": "Create Control",
+    "tags": [
+     "Controls"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/controls",
+   "product": "ControlMap API",
    "title": "Create Control",
-   "updated_at": null,
+   "updated_at": "2026-06-04T22:13:22.000Z",
    "url": "https://developer.scalepad.com/reference/opencontrolscreate"
   },
   {
-   "content_hash": null,
+   "content_hash": "81f00ab50c75429c",
    "description": "Deletes an existing Control identified by its control ID for the specified client.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/opencontrolsdelete",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "DELETE",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*",
+     "path:control_id*"
+    ],
+    "request_fields": [],
+    "responses": [
+     "204",
+     "400",
+     "401",
+     "404",
+     "500"
+    ],
+    "summary": "Delete Control",
+    "tags": [
+     "Controls"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/controls/{control_id}",
+   "product": "ControlMap API",
    "title": "Delete Control",
-   "updated_at": null,
+   "updated_at": "2026-06-04T22:13:22.000Z",
    "url": "https://developer.scalepad.com/reference/opencontrolsdelete"
   },
   {
-   "content_hash": null,
+   "content_hash": "666936e037a4e65d",
    "description": "Returns detailed information for a specific control identified by its ID for the given client.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/opencontrolsdetail",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*",
+     "path:control_id*"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "400",
+     "401",
+     "404",
+     "500"
+    ],
+    "summary": "Get Control by ID",
+    "tags": [
+     "Controls"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/controls/{control_id}",
+   "product": "ControlMap API",
    "title": "Get Control by ID",
-   "updated_at": null,
+   "updated_at": "2026-06-04T22:13:22.000Z",
    "url": "https://developer.scalepad.com/reference/opencontrolsdetail"
   },
   {
-   "content_hash": null,
+   "content_hash": "fef280a212e49a66",
    "description": "Returns a paginated list of control sets for the client tenant. Each row includes id, name, code, creating user, and created timestamp only.  Supports filtering by `id`, `name`, and `code` using `filter[id]`, `filter[name]`, and `filter[code]` query parameters.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/opencontrolsetslist",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*",
+     "query:cursor",
+     "query:filter[code]",
+     "query:filter[id]",
+     "query:filter[name]",
+     "query:page_size"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "400",
+     "401",
+     "404",
+     "500"
+    ],
+    "summary": "List Control Sets",
+    "tags": [
+     "Controls"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/control-sets",
+   "product": "ControlMap API",
    "title": "List Control Sets",
-   "updated_at": null,
+   "updated_at": "2026-06-04T22:13:22.000Z",
    "url": "https://developer.scalepad.com/reference/opencontrolsetslist"
   },
   {
-   "content_hash": null,
+   "content_hash": "b3897ecf032ce41a",
    "description": "Map policies, procedures, governance documents, risks, evidences, action items, and/or framework objectives to the control identified by `control_id`. Only non-empty lists in the request body are applied. Objectives use `objectives` with `program_name` and `codes` (requirement reqid within that program).",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/opencontrolsmapmappings",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*",
+     "path:control_id*"
+    ],
+    "request_fields": [
+     "action_item_codes",
+     "evidence_codes",
+     "governance_codes",
+     "objectives",
+     "policy_codes",
+     "procedure_codes",
+     "risk_codes"
+    ],
+    "responses": [
+     "204",
+     "400",
+     "401",
+     "404",
+     "500"
+    ],
+    "summary": "Map Policy, Procedure, Governance, Risk",
+    "tags": [
+     "Controls"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/controls/{control_id}/mappings",
+   "product": "ControlMap API",
    "title": "Map Policy, Procedure, Governance, Risk",
-   "updated_at": null,
+   "updated_at": "2026-06-04T22:13:22.000Z",
    "url": "https://developer.scalepad.com/reference/opencontrolsmapmappings"
   },
   {
-   "content_hash": null,
+   "content_hash": "60f66a96beb1f30a",
    "description": "Retrieves a paginated list of controls for a specific client.  Supports filtering, sorting, and cursor-based pagination via a JSON request body.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/opencontrolssearch",
    "kind": "endpoint",
    "method": null,
@@ -16612,7 +17173,7 @@
    "path": null,
    "product": null,
    "title": "Search Client Controls",
-   "updated_at": null,
+   "updated_at": "2026-06-04T22:13:22.000Z",
    "url": "https://developer.scalepad.com/reference/opencontrolssearch"
   },
   {
@@ -16630,45 +17191,146 @@
    "url": "https://developer.scalepad.com/reference/patch_v1-suppliers-id-1"
   },
   {
-   "content_hash": null,
+   "content_hash": "67272eb12bb30134",
    "description": "Updates specific fields of an action item request. Only the fields provided in the request body will be updated. All other fields will remain unchanged.  **Allowed values for patchable fields:**   - **status**: `Not Started`, `In Progress`, `Review`, `Completed`, `Not Applicable`  - **roadmap**: `3 months`, `6 months`, `12 months`  - **priority**: `High`, `Medium`, `Low`, `Critical`  - **currency**: `USD`, `EUR`, `AUD`, `CAD`, `SEK`, `NZD`, `SGD`, `INR`  - **efforts_in_hours**: must be zero or a positive number  - **cost**: must be zero or a positive number",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/patchactionitemrequest-1",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "PATCH",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:action_item_id*",
+     "path:client_id*"
+    ],
+    "request_fields": [
+     "actual_end_date",
+     "actual_start_date",
+     "change_in_milestone",
+     "corrective_action",
+     "cost",
+     "currency",
+     "efforts_in_hours",
+     "milestones",
+     "notes",
+     "planned_end_date",
+     "planned_start_date",
+     "priority",
+     "responsible_department",
+     "responsible_person",
+     "roadmap",
+     "status",
+     "weakness_description",
+     "weakness_name"
+    ],
+    "responses": [
+     "200",
+     "400",
+     "401",
+     "404",
+     "500"
+    ],
+    "summary": "Partially update an action item",
+    "tags": [
+     "Action Items"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/action-items/{action_item_id}",
+   "product": "ControlMap API",
    "title": "Partially update an action item",
-   "updated_at": null,
+   "updated_at": "2026-04-23T21:50:24.000Z",
    "url": "https://developer.scalepad.com/reference/patchactionitemrequest-1"
   },
   {
-   "content_hash": null,
+   "content_hash": "5d8fb06addd11c14",
    "description": "Updates specific fields of a control. Only the fields provided in the request body will be updated. All other fields will remain unchanged.  Request property names use snake_case in JSON. When `status` is included, it is applied after the other scalar fields in the same request. Combined `control_set_name` and `control_family_name` update the control set first, then the family.  **Allowed values for patchable fields:**   - **name**: control title  - **description**: control description  - **code**: business / display code (e.g. `HRM-1`)  - **status**: `Not Implemented`, `Partially Implemented`, `Implemented`, `Alternative implementation`, `In progress / Planned`  - **owner**: user email or display name  - **type**: `Preventive`, `Corrective`, `Detective`  - **frequency**: `Weekly`, `Monthly`, `Quarterly`, `Bi-Annual`, `Annual`  - **team**: team name  - **implementation_notes**: implementation or testing notes  - **control_family_name**: control family display name within a control set (use with **control_set_name** when the family name is not unique)  - **control_set_name**: control set display name  - **priority**: `Not Set`, `Low`, `Medium`, `High`, `Critical`  - **effectiveness**: `Not Performed`, `Performed Informally`, `Planned & Tracked`, `Automated`, `Quantitatively Measured`",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/patchclientcontrol",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "PATCH",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*",
+     "path:control_id*"
+    ],
+    "request_fields": [
+     "code",
+     "contributors",
+     "control_family_name",
+     "control_set_name",
+     "description",
+     "effectiveness",
+     "frequency",
+     "implementation_notes",
+     "name",
+     "owner",
+     "priority",
+     "status",
+     "tags",
+     "team",
+     "type"
+    ],
+    "responses": [
+     "200",
+     "400",
+     "401",
+     "404",
+     "500"
+    ],
+    "summary": "Partially Update Client Control",
+    "tags": [
+     "Controls"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/controls/{control_id}",
+   "product": "ControlMap API",
    "title": "Partially Update Client Control",
-   "updated_at": null,
+   "updated_at": "2026-06-04T22:13:22.000Z",
    "url": "https://developer.scalepad.com/reference/patchclientcontrol"
   },
   {
-   "content_hash": null,
+   "content_hash": "ec26e4020378d30d",
    "description": "Updates specific fields of a governance. Only the fields provided in the request body will be updated. All other fields will remain unchanged.  Request property names use snake_case in JSON. When `status` is included, it is applied after the other fields in the same request.  **Allowed values for patchable fields:**   - **title**: title  - **description**: body / HTML  - **code**: business code (e.g. `GOV-12`)  - **status**: `Draft`, `In Progress`, `In Review`, `Ready For Approval`, `Approved`  - **data_classification**: data classification label configured for the tenant  - **review_date**: ISO-8601 instant string (e.g. `2025-09-15T17:00:00Z`)  - **owner**: user email or display name  - **approver**: user email or display name  - **team**: team name  - **tags**: array of tag names; replaces the governance's current tags  - **contributors**: array of contributor email addresses; replaces the current contributor list",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/patchclientgovernancedocument",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "PATCH",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*",
+     "path:governance_id*"
+    ],
+    "request_fields": [
+     "approver",
+     "code",
+     "contributors",
+     "data_classification",
+     "description",
+     "owner",
+     "review_date",
+     "status",
+     "tags",
+     "team",
+     "title"
+    ],
+    "responses": [
+     "200",
+     "400",
+     "401",
+     "404",
+     "500"
+    ],
+    "summary": "Partially Update Client Governance",
+    "tags": [
+     "Governance"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/governance/{governance_id}",
+   "product": "ControlMap API",
    "title": "Partially Update Client Governance",
-   "updated_at": null,
+   "updated_at": "2026-06-04T22:13:22.000Z",
    "url": "https://developer.scalepad.com/reference/patchclientgovernancedocument"
   },
   {
@@ -16943,9 +17605,9 @@
    "url": "https://developer.scalepad.com/reference/revoke-deliverable-share-general-link-1"
   },
   {
-   "content_hash": null,
+   "content_hash": "4b4b3f3531e3f8d8",
    "description": "Retrieves a paginated list of governance for a specific client.  Supports filtering, sorting, and cursor-based pagination via a JSON request body.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/searchclientgovernance",
    "kind": "endpoint",
    "method": null,
@@ -16953,7 +17615,7 @@
    "path": null,
    "product": null,
    "title": "Search Client Governance",
-   "updated_at": null,
+   "updated_at": "2026-06-04T22:13:22.000Z",
    "url": "https://developer.scalepad.com/reference/searchclientgovernance"
   },
   {
