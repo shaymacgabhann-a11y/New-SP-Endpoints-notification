@@ -1,15 +1,15 @@
 {
  "meta": {
   "base_url": "https://developer.scalepad.com",
-  "checked_at": "2026-09-11T16:04:24.554825+00:00",
+  "checked_at": "2026-09-11T16:31:18.476542+00:00",
   "page_count": 583,
-  "previous_checked_at": "2026-09-10T20:58:31.827247+00:00"
+  "previous_checked_at": "2026-09-11T16:04:24.554825+00:00"
  },
  "pages": [
   {
-   "content_hash": null,
+   "content_hash": "f94af0509298b79b",
    "description": "",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/changelog/20260702-control-map-v1-changelog",
    "kind": "guide",
    "method": null,
@@ -21,9 +21,9 @@
    "url": "https://developer.scalepad.com/changelog/20260702-control-map-v1-changelog"
   },
   {
-   "content_hash": null,
+   "content_hash": "d2aff401c34529cc",
    "description": "",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/changelog/20260714-quoter-v1-changelog",
    "kind": "guide",
    "method": null,
@@ -35,9 +35,9 @@
    "url": "https://developer.scalepad.com/changelog/20260714-quoter-v1-changelog"
   },
   {
-   "content_hash": null,
+   "content_hash": "a700316a14172816",
    "description": "",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/changelog/20260721-core-api-v1-changelog",
    "kind": "guide",
    "method": null,
@@ -49,9 +49,9 @@
    "url": "https://developer.scalepad.com/changelog/20260721-core-api-v1-changelog"
   },
   {
-   "content_hash": null,
+   "content_hash": "9017142098fc5e16",
    "description": "",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/changelog/20260722-saas-management-v1-changelog",
    "kind": "guide",
    "method": null,
@@ -63,9 +63,9 @@
    "url": "https://developer.scalepad.com/changelog/20260722-saas-management-v1-changelog"
   },
   {
-   "content_hash": null,
+   "content_hash": "24726dd9912bbf10",
    "description": "",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/changelog/20260804-control-map-v1-changelog",
    "kind": "guide",
    "method": null,
@@ -77,9 +77,9 @@
    "url": "https://developer.scalepad.com/changelog/20260804-control-map-v1-changelog"
   },
   {
-   "content_hash": null,
+   "content_hash": "2b5f1bc73cdffd27",
    "description": "",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/changelog/20260805-lifecycle-manager-v1-changelog",
    "kind": "guide",
    "method": null,
@@ -91,9 +91,9 @@
    "url": "https://developer.scalepad.com/changelog/20260805-lifecycle-manager-v1-changelog"
   },
   {
-   "content_hash": null,
+   "content_hash": "4bd58cd481c415e7",
    "description": "",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/changelog/20260812-quoter-v1-changelog",
    "kind": "guide",
    "method": null,
@@ -105,9 +105,9 @@
    "url": "https://developer.scalepad.com/changelog/20260812-quoter-v1-changelog"
   },
   {
-   "content_hash": null,
+   "content_hash": "3b13e9bb83396c73",
    "description": "",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/changelog/20260818-backup-radar-v1-changelog",
    "kind": "guide",
    "method": null,
@@ -119,9 +119,9 @@
    "url": "https://developer.scalepad.com/changelog/20260818-backup-radar-v1-changelog"
   },
   {
-   "content_hash": null,
+   "content_hash": "730aaf7c80acd6e9",
    "description": "",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/changelog/20260827-saas-management-v1-changelog",
    "kind": "guide",
    "method": null,
@@ -133,9 +133,9 @@
    "url": "https://developer.scalepad.com/changelog/20260827-saas-management-v1-changelog"
   },
   {
-   "content_hash": null,
+   "content_hash": "b9673f16751173c0",
    "description": "",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/changelog/20260909-lifecycle-manager-v1-changelog",
    "kind": "guide",
    "method": null,
@@ -1079,31 +1079,79 @@
    "url": "https://developer.scalepad.com/reference/a_actionitem-1"
   },
   {
-   "content_hash": null,
+   "content_hash": "c6f9c3bc454450c3",
    "description": "Maps an action item to objectives , assessment questions, risks, controls, assets, and/or asset types for a client.  In the request body, include only the entity codes that need to be mapped. Empty or omitted arrays are ignored.  Supported request fields: - objective_codes - question_codes - risk_codes - control_codes - asset_codes - asset_type_names",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/actionitemmapentitiesforclient",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:action_item_id*",
+     "path:client_id*"
+    ],
+    "request_fields": [
+     "asset_codes",
+     "asset_type_names",
+     "control_codes",
+     "objective_codes",
+     "question_codes",
+     "risk_codes"
+    ],
+    "responses": [
+     "204",
+     "400",
+     "404",
+     "500"
+    ],
+    "summary": "Map Action Item to All Entity Types",
+    "tags": [
+     "Action Items"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/action-items/{action_item_id}/mappings",
+   "product": "ControlMap API",
    "title": "Map Action Item to All Entity Types",
-   "updated_at": null,
+   "updated_at": "2026-06-04T22:58:28.000Z",
    "url": "https://developer.scalepad.com/reference/actionitemmapentitiesforclient"
   },
   {
-   "content_hash": null,
+   "content_hash": "cc0cb8a7bedbf992",
    "description": "Removes links between an action item and the given objectives (requirements), assessment questions, risks, controls, assets, and/or asset types for a client.  In the request body, include only the entity codes that need to be unmapped. Empty or omitted arrays are ignored.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/actionitemunmapentitiesforclient",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:action_item_id*",
+     "path:client_id*"
+    ],
+    "request_fields": [
+     "asset_codes",
+     "asset_type_names",
+     "control_codes",
+     "objective_codes",
+     "question_codes",
+     "risk_codes"
+    ],
+    "responses": [
+     "204",
+     "400",
+     "404",
+     "500"
+    ],
+    "summary": "Unmap Action Item from All Entity Types",
+    "tags": [
+     "Action Items"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/action-items/{action_item_id}/mappings/bulk-delete",
+   "product": "ControlMap API",
    "title": "Unmap Action Item from All Entity Types",
-   "updated_at": null,
+   "updated_at": "2026-07-02T20:17:56.000Z",
    "url": "https://developer.scalepad.com/reference/actionitemunmapentitiesforclient"
   },
   {
@@ -13168,31 +13216,72 @@
    "url": "https://developer.scalepad.com/reference/bulkdeleteentitiesfromclientrisk"
   },
   {
-   "content_hash": null,
+   "content_hash": "ef50119c5dc2ee14",
    "description": "Uploads a document  up to 10 MB and associates it with the specified action item. The file is uploaded as multipart/form-data.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/c_actionitem-1",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:action_item_id*",
+     "path:client_id*"
+    ],
+    "request_fields": [
+     "file"
+    ],
+    "responses": [
+     "200",
+     "400",
+     "401",
+     "404",
+     "500"
+    ],
+    "summary": "Upload Document to Action Item (upto 10 MB)",
+    "tags": [
+     "Action Items"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/action-items/{action_item_id}/documents",
+   "product": "ControlMap API",
    "title": "Upload Document to Action Item (upto 10 MB)",
-   "updated_at": null,
+   "updated_at": "2026-04-23T21:50:24.000Z",
    "url": "https://developer.scalepad.com/reference/c_actionitem-1"
   },
   {
-   "content_hash": null,
+   "content_hash": "4d418583c5df3eb2",
    "description": "Retrieves a paginated summary of action items grouped by client.  Supports filtering, sorting, and cursor-based pagination.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/c_actionitem_1-1",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "query:cursor",
+     "query:filter[client.id]",
+     "query:filter[client.name]",
+     "query:filter[client.tenant_id]",
+     "query:page_size",
+     "query:sort"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "400",
+     "401",
+     "500"
+    ],
+    "summary": "List Client Action Items Summary",
+    "tags": [
+     "Action Items"
+    ]
+   },
+   "path": "/controlmap/v1/clients/action-items-summary",
+   "product": "ControlMap API",
    "title": "List Client Action Items Summary",
-   "updated_at": null,
+   "updated_at": "2026-04-23T21:50:24.000Z",
    "url": "https://developer.scalepad.com/reference/c_actionitem_1-1"
   },
   {
@@ -13440,17 +13529,35 @@
    "url": "https://developer.scalepad.com/reference/createactionitem-1"
   },
   {
-   "content_hash": null,
+   "content_hash": "abe15a9ef9f42a9c",
    "description": "Adds a new category to organize items.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/createcategory",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "query:fields"
+    ],
+    "request_fields": [
+     "name",
+     "parent_category",
+     "parent_category_id"
+    ],
+    "responses": [
+     "201",
+     "404"
+    ],
+    "summary": "Create Category",
+    "tags": [
+     "Categories"
+    ]
+   },
+   "path": "/v1/categories",
+   "product": "Quoter API",
    "title": "Create Category",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/createcategory"
   },
   {
@@ -13598,171 +13705,463 @@
    "url": "https://developer.scalepad.com/reference/createclientrisk"
   },
   {
-   "content_hash": null,
+   "content_hash": "56c04e88a1da0c05",
    "description": "Creates a new contact with billing and optional shipping details.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/createcontact",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "query:fields"
+    ],
+    "request_fields": [
+     "billing_address",
+     "billing_email",
+     "billing_first_name",
+     "billing_last_name",
+     "billing_mobile_phone",
+     "billing_organization",
+     "billing_work_phone",
+     "client",
+     "shipping_address",
+     "shipping_email",
+     "shipping_first_name",
+     "shipping_label",
+     "shipping_last_name",
+     "shipping_organization",
+     "shipping_phone",
+     "title",
+     "website"
+    ],
+    "responses": [
+     "200",
+     "400",
+     "401",
+     "422"
+    ],
+    "summary": "Create Contact",
+    "tags": [
+     "Contacts"
+    ]
+   },
+   "path": "/v1/contacts",
+   "product": "Quoter API",
    "title": "Create Contact",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/createcontact"
   },
   {
-   "content_hash": null,
+   "content_hash": "0aa9f9bb7ec4b41e",
    "description": "Adds a new item to your product catalog.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/createitem",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "query:fields"
+    ],
+    "request_fields": [
+     "allow_decimal_quantities",
+     "category",
+     "category_id",
+     "code",
+     "cost_decimal",
+     "cost_type",
+     "description",
+     "internal_note",
+     "manufacturer",
+     "manufacturer_id",
+     "name",
+     "percentage_price_category_ids",
+     "percentage_price_decimal",
+     "price_decimal",
+     "pricing_scheme",
+     "quantity_help_tip",
+     "recurring",
+     "recurring_interval",
+     "restrict_discounting",
+     "show_option_prices",
+     "sku",
+     "supplier",
+     "supplier_id",
+     "taxable",
+     "weight_decimal"
+    ],
+    "responses": [
+     "201",
+     "404"
+    ],
+    "summary": "Create Item",
+    "tags": [
+     "Items"
+    ]
+   },
+   "path": "/v1/items",
+   "product": "Quoter API",
    "title": "Create Item",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/createitem"
   },
   {
-   "content_hash": null,
+   "content_hash": "f3b8f011db206664",
    "description": "Adds a new item group to organize items.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/createitemgroup",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "query:fields"
+    ],
+    "request_fields": [
+     "name"
+    ],
+    "responses": [
+     "201",
+     "404"
+    ],
+    "summary": "Create Item Group",
+    "tags": [
+     "Item Groups"
+    ]
+   },
+   "path": "/v1/item-groups",
+   "product": "Quoter API",
    "title": "Create Item Group",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/createitemgroup"
   },
   {
-   "content_hash": null,
+   "content_hash": "faa90fb245e5de81",
    "description": "Assigns an item to an item group.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/createitemgroupitemassignment",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "query:fields"
+    ],
+    "request_fields": [
+     "item_group_id",
+     "item_id"
+    ],
+    "responses": [
+     "201",
+     "404"
+    ],
+    "summary": "Create Item Group Assignment",
+    "tags": [
+     "Item Groups"
+    ]
+   },
+   "path": "/v1/item-group-item-assignments",
+   "product": "Quoter API",
    "title": "Create Item Group Assignment",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/createitemgroupitemassignment"
   },
   {
-   "content_hash": null,
+   "content_hash": "ba87d2392675324e",
    "description": "Adds a new item option to an item.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/createitemoption",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "query:fields"
+    ],
+    "request_fields": [
+     "allow_multiple_values",
+     "description",
+     "extended_description",
+     "item_id",
+     "name",
+     "required",
+     "sort_order"
+    ],
+    "responses": [
+     "201",
+     "404"
+    ],
+    "summary": "Create Item Option",
+    "tags": [
+     "Item Options"
+    ]
+   },
+   "path": "/v1/item-options",
+   "product": "Quoter API",
    "title": "Create Item Option",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/createitemoption"
   },
   {
-   "content_hash": null,
+   "content_hash": "7c26714f0df5e6e7",
    "description": "Adds a new value to an item option.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/createitemoptionvalue",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "query:fields"
+    ],
+    "request_fields": [
+     "code",
+     "cost_decimal",
+     "cost_type",
+     "item_option_id",
+     "name",
+     "price_decimal",
+     "pricing_scheme",
+     "sort_order"
+    ],
+    "responses": [
+     "201",
+     "404"
+    ],
+    "summary": "Create Item Option Value",
+    "tags": [
+     "Item Options"
+    ]
+   },
+   "path": "/v1/item-option-values",
+   "product": "Quoter API",
    "title": "Create Item Option Value",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/createitemoptionvalue"
   },
   {
-   "content_hash": null,
+   "content_hash": "039d4d30b196c80d",
    "description": "Adds a new pricing tier to an item.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/createitemtier",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "query:fields"
+    ],
+    "request_fields": [
+     "cost_decimal",
+     "cost_type",
+     "item_id",
+     "lower_boundary",
+     "price_decimal"
+    ],
+    "responses": [
+     "201",
+     "404"
+    ],
+    "summary": "Create Item Tier",
+    "tags": [
+     "Item Tiers"
+    ]
+   },
+   "path": "/v1/item-tiers",
+   "product": "Quoter API",
    "title": "Create Item Tier",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/createitemtier"
   },
   {
-   "content_hash": null,
+   "content_hash": "74af0e0e992040d7",
    "description": "Creates a new line item within an existing quote.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/createlineitem",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [],
+    "request_fields": [
+     "category",
+     "description",
+     "manufacturer",
+     "name",
+     "part_number",
+     "quantity",
+     "quote_id",
+     "recurring",
+     "supplier",
+     "supplier_sku",
+     "taxable",
+     "unit_cost",
+     "unit_price"
+    ],
+    "responses": [
+     "201",
+     "404"
+    ],
+    "summary": "Create Line Item",
+    "tags": [
+     "Line Items"
+    ]
+   },
+   "path": "/v1/line-items",
+   "product": "Quoter API",
    "title": "Create Line Item",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/createlineitem"
   },
   {
-   "content_hash": null,
+   "content_hash": "511039f5aafe34ad",
    "description": "Adds a new manufacturer to the system.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/createmanufacturer",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "query:fields"
+    ],
+    "request_fields": [
+     "name"
+    ],
+    "responses": [
+     "201",
+     "404"
+    ],
+    "summary": "Create Manufacturer",
+    "tags": [
+     "Manufacturers"
+    ]
+   },
+   "path": "/v1/manufacturers",
+   "product": "Quoter API",
    "title": "Create Manufacturer",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/createmanufacturer"
   },
   {
-   "content_hash": null,
+   "content_hash": "8a91ff83260804fd",
    "description": "Creates a new draft quote from a template. The contact is identified by email plus either `client_id` or `client_name`; when both are provided, `client_id` is used. The referenced contact must already exist on the account. Sections and line items are added via their own endpoints after creation.  Response body matches `GET /v1/quotes/{quote_id}`.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/createquote",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [],
+    "request_fields": [
+     "comments",
+     "contact",
+     "cover_page_content",
+     "cover_page_subtitle",
+     "cover_page_title",
+     "currency_iso",
+     "custom_number",
+     "expired_at",
+     "internal_notes",
+     "name",
+     "owner",
+     "tax_codes",
+     "template_id"
+    ],
+    "responses": [
+     "201",
+     "400",
+     "422"
+    ],
+    "summary": "Create Quote",
+    "tags": [
+     "Quotes"
+    ]
+   },
+   "path": "/v1/quotes",
+   "product": "Quoter API",
    "title": "Create Quote",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/createquote"
   },
   {
-   "content_hash": null,
+   "content_hash": "8d78ab43595b004c",
    "description": "Adds one or more line items to a section on a draft quote. Line, section, and quote-level totals are recomputed and persisted as part of the call.  Validation accumulates: every failing rule across every item in the batch comes back in a single 422 response with located error paths (`line_items[i].field`).  Response body matches `GET /v1/quotes/{quote_id}`.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/createquotelineitems",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:quote_id*",
+     "path:section_id*"
+    ],
+    "request_fields": [
+     "[].category",
+     "[].code",
+     "[].description",
+     "[].discount",
+     "[].manufacturer",
+     "[].name",
+     "[].quantity_decimal",
+     "[].recurring_interval",
+     "[].sku",
+     "[].supplier",
+     "[].taxable",
+     "[].unit_cost_decimal",
+     "[].unit_price_decimal"
+    ],
+    "responses": [
+     "201",
+     "400",
+     "404",
+     "409",
+     "422"
+    ],
+    "summary": "Create Quote Line Items",
+    "tags": [
+     "Quote Section Line Items"
+    ]
+   },
+   "path": "/v1/quotes/{quote_id}/sections/{section_id}/line-items",
+   "product": "Quoter API",
    "title": "Create Quote Line Items",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/createquotelineitems"
   },
   {
-   "content_hash": null,
+   "content_hash": "9146c7bf2f328156",
    "description": "Adds one or more sections to a draft quote. Sections group line items on the quote layout. Multiple sections can be added in one call.  Response body matches `GET /v1/quotes/{quote_id}`.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/createquotesections",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:quote_id*"
+    ],
+    "request_fields": [
+     "[].name"
+    ],
+    "responses": [
+     "201",
+     "400",
+     "404",
+     "409",
+     "422"
+    ],
+    "summary": "Create Quote Sections",
+    "tags": [
+     "Quote Sections"
+    ]
+   },
+   "path": "/v1/quotes/{quote_id}/sections",
+   "product": "Quoter API",
    "title": "Create Quote Sections",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/createquotesections"
   },
   {
@@ -13803,17 +14202,38 @@
    "url": "https://developer.scalepad.com/reference/createsaasmanagementenrollmenttoken"
   },
   {
-   "content_hash": null,
+   "content_hash": "4620102b1ae7bc76",
    "description": "Generates pre-signed URL(s) to upload document(s) for the specified action item.  The client uploads files directly to S3 using the returned signed_url before expires_in_seconds elapses.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/d_actionitem-1",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:action_item_id*",
+     "path:client_id*"
+    ],
+    "request_fields": [
+     "[].file_name",
+     "[].file_size_bytes"
+    ],
+    "responses": [
+     "201",
+     "400",
+     "401",
+     "404",
+     "500"
+    ],
+    "summary": "Generate Signed URLs to Upload Documents",
+    "tags": [
+     "Action Items"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/action-items/{action_item_id}/documents/signed-url",
+   "product": "ControlMap API",
    "title": "Generate Signed URLs to Upload Documents",
-   "updated_at": null,
+   "updated_at": "2026-04-23T21:50:24.000Z",
    "url": "https://developer.scalepad.com/reference/d_actionitem-1"
   },
   {
@@ -14009,45 +14429,91 @@
    "url": "https://developer.scalepad.com/reference/delete-deliverable-template-section-component-1"
   },
   {
-   "content_hash": null,
+   "content_hash": "0b044e24e6a6a013",
    "description": "Removes a supplier from the system.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/delete_v1-suppliers-id-1",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "DELETE",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:id*"
+    ],
+    "request_fields": [],
+    "responses": [
+     "204",
+     "404"
+    ],
+    "summary": "Delete Supplier",
+    "tags": [
+     "Suppliers"
+    ]
+   },
+   "path": "/v1/suppliers/{id}",
+   "product": "Quoter API",
    "title": "Delete Supplier",
-   "updated_at": null,
+   "updated_at": "2026-04-23T21:49:34.000Z",
    "url": "https://developer.scalepad.com/reference/delete_v1-suppliers-id-1"
   },
   {
-   "content_hash": null,
+   "content_hash": "fa2e22b8031c92fc",
    "description": "Removes a category from the system.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/deletecategory",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "DELETE",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:id*"
+    ],
+    "request_fields": [],
+    "responses": [
+     "204",
+     "404"
+    ],
+    "summary": "Delete Category",
+    "tags": [
+     "Categories"
+    ]
+   },
+   "path": "/v1/categories/{id}",
+   "product": "Quoter API",
    "title": "Delete Category",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/deletecategory"
   },
   {
-   "content_hash": null,
+   "content_hash": "787c43cf350d8f82",
    "description": "Deletes an existing action item identified by its action item ID for the specified client.  The action item and all associated data will be permanently removed.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/deleteclientactionitem",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "DELETE",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:action_item_id*",
+     "path:client_id*"
+    ],
+    "request_fields": [],
+    "responses": [
+     "204",
+     "400",
+     "401",
+     "404",
+     "500"
+    ],
+    "summary": "Delete Action Item",
+    "tags": [
+     "Action Items"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/action-items/{action_item_id}",
+   "product": "ControlMap API",
    "title": "Delete Action Item",
-   "updated_at": null,
+   "updated_at": "2026-07-02T20:17:56.000Z",
    "url": "https://developer.scalepad.com/reference/deleteclientactionitem"
   },
   {
@@ -14212,101 +14678,199 @@
    "url": "https://developer.scalepad.com/reference/deleteclientrisk"
   },
   {
-   "content_hash": null,
+   "content_hash": "55febd03d90d041c",
    "description": "Removes an item from your product catalog.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/deleteitem",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "DELETE",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:id*"
+    ],
+    "request_fields": [],
+    "responses": [
+     "204",
+     "404"
+    ],
+    "summary": "Delete Item",
+    "tags": [
+     "Items"
+    ]
+   },
+   "path": "/v1/items/{id}",
+   "product": "Quoter API",
    "title": "Delete Item",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/deleteitem"
   },
   {
-   "content_hash": null,
+   "content_hash": "83392a6ee5345a59",
    "description": "Removes an item group from the system.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/deleteitemgroup",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "DELETE",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:id*"
+    ],
+    "request_fields": [],
+    "responses": [
+     "204",
+     "404"
+    ],
+    "summary": "Delete Item Group",
+    "tags": [
+     "Item Groups"
+    ]
+   },
+   "path": "/v1/item-groups/{id}",
+   "product": "Quoter API",
    "title": "Delete Item Group",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/deleteitemgroup"
   },
   {
-   "content_hash": null,
+   "content_hash": "820f0f6cdebeed47",
    "description": "Removes an item group assignment from the system.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/deleteitemgroupitemassignment",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "DELETE",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:id*"
+    ],
+    "request_fields": [],
+    "responses": [
+     "204",
+     "404"
+    ],
+    "summary": "Delete Item Group Assignment",
+    "tags": [
+     "Item Groups"
+    ]
+   },
+   "path": "/v1/item-group-item-assignments/{id}",
+   "product": "Quoter API",
    "title": "Delete Item Group Assignment",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/deleteitemgroupitemassignment"
   },
   {
-   "content_hash": null,
+   "content_hash": "c1fe8dacf1d24e26",
    "description": "Removes an item option from an item.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/deleteitemoption",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "DELETE",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:id*"
+    ],
+    "request_fields": [],
+    "responses": [
+     "204",
+     "404"
+    ],
+    "summary": "Delete Item Option",
+    "tags": [
+     "Item Options"
+    ]
+   },
+   "path": "/v1/item-options/{id}",
+   "product": "Quoter API",
    "title": "Delete Item Option",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/deleteitemoption"
   },
   {
-   "content_hash": null,
+   "content_hash": "e5d1504bf7ed3892",
    "description": "Removes an item option value from an item option.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/deleteitemoptionvalue",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "DELETE",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:id*"
+    ],
+    "request_fields": [],
+    "responses": [
+     "204",
+     "404"
+    ],
+    "summary": "Delete Item Option Value",
+    "tags": [
+     "Item Options"
+    ]
+   },
+   "path": "/v1/item-option-values/{id}",
+   "product": "Quoter API",
    "title": "Delete Item Option Value",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/deleteitemoptionvalue"
   },
   {
-   "content_hash": null,
+   "content_hash": "6f87db00ee74a0df",
    "description": "Removes an item tier from an item.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/deleteitemtier",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "DELETE",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:id*"
+    ],
+    "request_fields": [],
+    "responses": [
+     "204",
+     "404"
+    ],
+    "summary": "Delete Item Tier",
+    "tags": [
+     "Item Tiers"
+    ]
+   },
+   "path": "/v1/item-tiers/{id}",
+   "product": "Quoter API",
    "title": "Delete Item Tier",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/deleteitemtier"
   },
   {
-   "content_hash": null,
+   "content_hash": "47c3ac69e2e653da",
    "description": "Removes a manufacturer from the system.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/deletemanufacturer",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "DELETE",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:id*"
+    ],
+    "request_fields": [],
+    "responses": [
+     "204",
+     "404"
+    ],
+    "summary": "Delete Manufacturer",
+    "tags": [
+     "Manufacturers"
+    ]
+   },
+   "path": "/v1/manufacturers/{id}",
+   "product": "Quoter API",
    "title": "Delete Manufacturer",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/deletemanufacturer"
   },
   {
@@ -14380,143 +14944,295 @@
    "url": "https://developer.scalepad.com/reference/evidenceunmapentitiesforclient"
   },
   {
-   "content_hash": null,
+   "content_hash": "92627f9cb5655984",
    "description": "Retrieves detailed information about a specific category.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/fetchcategory",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:id*",
+     "query:fields"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "404"
+    ],
+    "summary": "Fetch Category",
+    "tags": [
+     "Categories"
+    ]
+   },
+   "path": "/v1/categories/{id}",
+   "product": "Quoter API",
    "title": "Fetch Category",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/fetchcategory"
   },
   {
-   "content_hash": null,
+   "content_hash": "5d6d8301aa5fd074",
    "description": "Retrieves a contact by its id. If the contact is not yet linked locally, a remote lookup is performed and the local record is backfilled with the resolved id (record_updated_at is not bumped by this backfill). Returns 404 if no match is found.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/fetchcontact",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:id*",
+     "query:fields"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "401",
+     "404",
+     "422"
+    ],
+    "summary": "Fetch Contact",
+    "tags": [
+     "Contacts"
+    ]
+   },
+   "path": "/v1/contacts/{id}",
+   "product": "Quoter API",
    "title": "Fetch Contact",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/fetchcontact"
   },
   {
-   "content_hash": null,
+   "content_hash": "40ade1d9dba4debb",
    "description": "Retrieves detailed information about a specific item.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/fetchitem",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:id*",
+     "query:fields"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "404"
+    ],
+    "summary": "Fetch Item",
+    "tags": [
+     "Items"
+    ]
+   },
+   "path": "/v1/items/{id}",
+   "product": "Quoter API",
    "title": "Fetch Item",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/fetchitem"
   },
   {
-   "content_hash": null,
+   "content_hash": "fb4e7d68ec1a260d",
    "description": "Retrieves detailed information about a specific item group.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/fetchitemgroup",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:id*",
+     "query:fields"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "404"
+    ],
+    "summary": "Fetch Item Group",
+    "tags": [
+     "Item Groups"
+    ]
+   },
+   "path": "/v1/item-groups/{id}",
+   "product": "Quoter API",
    "title": "Fetch Item Group",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/fetchitemgroup"
   },
   {
-   "content_hash": null,
+   "content_hash": "2bf2dba2b5e825dd",
    "description": "Retrieves detailed information about a specific item group assignment.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/fetchitemgroupitemassignment",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:id*",
+     "query:fields"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "404"
+    ],
+    "summary": "Fetch Item Group Assignment",
+    "tags": [
+     "Item Groups"
+    ]
+   },
+   "path": "/v1/item-group-item-assignments/{id}",
+   "product": "Quoter API",
    "title": "Fetch Item Group Assignment",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/fetchitemgroupitemassignment"
   },
   {
-   "content_hash": null,
+   "content_hash": "365f9b47261d8abf",
    "description": "Retrieves detailed information about a specific item option.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/fetchitemoption",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:id*",
+     "query:fields"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "404"
+    ],
+    "summary": "Fetch Item Option",
+    "tags": [
+     "Item Options"
+    ]
+   },
+   "path": "/v1/item-options/{id}",
+   "product": "Quoter API",
    "title": "Fetch Item Option",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/fetchitemoption"
   },
   {
-   "content_hash": null,
+   "content_hash": "9218df2c121a6f2d",
    "description": "Retrieves detailed information about a specific item option value.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/fetchitemoptionvalue",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:id*",
+     "query:fields"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "404"
+    ],
+    "summary": "Fetch Item Option Value",
+    "tags": [
+     "Item Options"
+    ]
+   },
+   "path": "/v1/item-option-values/{id}",
+   "product": "Quoter API",
    "title": "Fetch Item Option Value",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/fetchitemoptionvalue"
   },
   {
-   "content_hash": null,
+   "content_hash": "213dc16f25d59881",
    "description": "Retrieves detailed information about a specific item tier.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/fetchitemtier",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:id*",
+     "query:fields"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "404"
+    ],
+    "summary": "Fetch Item Tier",
+    "tags": [
+     "Item Tiers"
+    ]
+   },
+   "path": "/v1/item-tiers/{id}",
+   "product": "Quoter API",
    "title": "Fetch Item Tier",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/fetchitemtier"
   },
   {
-   "content_hash": null,
+   "content_hash": "e7715ee96b1a3569",
    "description": "Retrieves detailed information about a specific manufacturer.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/fetchmanufacturer",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:id*",
+     "query:fields"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "404"
+    ],
+    "summary": "Fetch Manufacturer",
+    "tags": [
+     "Manufacturers"
+    ]
+   },
+   "path": "/v1/manufacturers/{id}",
+   "product": "Quoter API",
    "title": "Fetch Manufacturer",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/fetchmanufacturer"
   },
   {
-   "content_hash": null,
+   "content_hash": "828966cf2e9696ed",
    "description": "Retrieves a quote revision with the full display payload \u2014 sections, line items, totals, contacts, content blocks, custom fields, and taxes. Both primary and draft revisions are returned; callers inspect the `primary` and `draft` flags to determine state.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/fetchquote",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:quote_id*"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "404",
+     "422"
+    ],
+    "summary": "Fetch Quote",
+    "tags": [
+     "Quotes"
+    ]
+   },
+   "path": "/v1/quotes/{quote_id}",
+   "product": "Quoter API",
    "title": "Fetch Quote",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/fetchquote"
   },
   {
@@ -15006,31 +15722,67 @@
    "url": "https://developer.scalepad.com/reference/get-ticket-1"
   },
   {
-   "content_hash": null,
+   "content_hash": "a2e754dd70c3ee9c",
    "description": "Retrieves a list of all suppliers available in the system.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/get_v1-suppliers-1",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "query:cursor",
+     "query:fields",
+     "query:filter[name]",
+     "query:filter[record_created_at]",
+     "query:filter[record_updated_at]",
+     "query:page_size",
+     "query:sort"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "404",
+     "422"
+    ],
+    "summary": "List Suppliers",
+    "tags": [
+     "Suppliers"
+    ]
+   },
+   "path": "/v1/suppliers",
+   "product": "Quoter API",
    "title": "List Suppliers",
-   "updated_at": null,
+   "updated_at": "2026-04-23T21:49:34.000Z",
    "url": "https://developer.scalepad.com/reference/get_v1-suppliers-1"
   },
   {
-   "content_hash": null,
+   "content_hash": "12270cc59d2edb41",
    "description": "Retrieves detailed information about a specific supplier.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/get_v1-suppliers-id-1",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:id*",
+     "query:fields"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "404"
+    ],
+    "summary": "Fetch Supplier",
+    "tags": [
+     "Suppliers"
+    ]
+   },
+   "path": "/v1/suppliers/{id}",
+   "product": "Quoter API",
    "title": "Fetch Supplier",
-   "updated_at": null,
+   "updated_at": "2026-04-23T21:49:34.000Z",
    "url": "https://developer.scalepad.com/reference/get_v1-suppliers-id-1"
   },
   {
@@ -15591,45 +16343,109 @@
    "url": "https://developer.scalepad.com/reference/getsaasmanagementutilizationsummary"
   },
   {
-   "content_hash": null,
+   "content_hash": "e45e74ee33ee6e12",
    "description": "Returns backup health for one client.  Identify the client with the **ScalePad client ID** (`client_id` in list responses).",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/getv3clienthealth",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:id*",
+     "query:history_days"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "400",
+     "401",
+     "402",
+     "429",
+     "500"
+    ],
+    "summary": "Get backup health for a single client",
+    "tags": [
+     "Health"
+    ]
+   },
+   "path": "/backup-radar/v3/clients/{id}/health",
+   "product": "Backup Radar API",
    "title": "Get backup health for a single client",
-   "updated_at": null,
+   "updated_at": "2026-06-04T22:13:41.000Z",
    "url": "https://developer.scalepad.com/reference/getv3clienthealth"
   },
   {
-   "content_hash": null,
+   "content_hash": "8bf5bb6efc48ff4c",
    "description": "Returns a cursor-paginated list of backup devices whose names match the optional filters. Each item includes the device's last result and per-day SLA history for the requested window, ending on the tenant's current local date.  Devices are returned whether or not their Backup Radar company is mapped to a ScalePad company. When a device is not mapped, the ScalePad-specific fields (`device_id`, `device_name`, and the `client` `name`/`client_id`) are null.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/getv3clientsdevices",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "query:cursor",
+     "query:filter[device_id]",
+     "query:filter[device_name]",
+     "query:history_days",
+     "query:page_size",
+     "query:sort"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "400",
+     "401",
+     "402",
+     "429",
+     "500"
+    ],
+    "summary": "List backup devices",
+    "tags": [
+     "Devices"
+    ]
+   },
+   "path": "/backup-radar/v3/clients/devices",
+   "product": "Backup Radar API",
    "title": "List backup devices",
-   "updated_at": null,
+   "updated_at": "2026-06-15T22:36:14.000Z",
    "url": "https://developer.scalepad.com/reference/getv3clientsdevices"
   },
   {
-   "content_hash": null,
+   "content_hash": "f5d1fdb602e813b1",
    "description": "Returns a cursor-paginated list of clients whose backup health matches the optional filters. Each item includes history for the last seven calendar days, ending on the tenant's current local date.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/getv3clientshealth",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "query:cursor",
+     "query:filter[client.name]",
+     "query:history_days",
+     "query:page_size",
+     "query:sort"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "400",
+     "401",
+     "402",
+     "429",
+     "500"
+    ],
+    "summary": "List clients and their backup health",
+    "tags": [
+     "Health"
+    ]
+   },
+   "path": "/backup-radar/v3/clients/health",
+   "product": "Backup Radar API",
    "title": "List clients and their backup health",
-   "updated_at": null,
+   "updated_at": "2026-06-04T22:13:41.000Z",
    "url": "https://developer.scalepad.com/reference/getv3clientshealth"
   },
   {
@@ -16482,17 +17298,39 @@
    "url": "https://developer.scalepad.com/reference/list-tickets-1"
   },
   {
-   "content_hash": null,
+   "content_hash": "7bacc51b91b7898e",
    "description": "Retrieves a list of all categories available in the system.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/listcategories",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "query:cursor",
+     "query:fields",
+     "query:filter[name]",
+     "query:filter[parent_category_id]",
+     "query:filter[record_created_at]",
+     "query:filter[record_updated_at]",
+     "query:page_size",
+     "query:sort"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "404",
+     "422"
+    ],
+    "summary": "List Categories",
+    "tags": [
+     "Categories"
+    ]
+   },
+   "path": "/v1/categories",
+   "product": "Quoter API",
    "title": "List Categories",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/listcategories"
   },
   {
@@ -16526,171 +17364,445 @@
    "url": "https://developer.scalepad.com/reference/listclientriskdepartments"
   },
   {
-   "content_hash": null,
+   "content_hash": "36337998a350edb0",
    "description": "Retrieves a list of contacts. Supports filtering by canonical V2 fields (id, client.id, billing_email, first_name, last_name, phone, organization, address, city, country, region, postal_code, record_created_at, record_updated_at) using the query-string filter syntax `filter[field]=operator:value`. Lookup by billing email + client id is expressed as `filter[billing_email]=eq:<email>&filter[client.id]=eq:<client_id>`. `filter[email]` is accepted as a deprecated alias for `filter[billing_email]`.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/listcontacts",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "query:cursor",
+     "query:fields",
+     "query:filter[address]",
+     "query:filter[billing_email]",
+     "query:filter[city]",
+     "query:filter[client.id]",
+     "query:filter[country]",
+     "query:filter[email]",
+     "query:filter[first_name]",
+     "query:filter[id]",
+     "query:filter[last_name]",
+     "query:filter[organization]",
+     "query:filter[phone]",
+     "query:filter[postal_code]",
+     "query:filter[record_created_at]",
+     "query:filter[record_updated_at]",
+     "query:filter[region]",
+     "query:page_size",
+     "query:sort"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "401",
+     "422"
+    ],
+    "summary": "List Contacts",
+    "tags": [
+     "Contacts"
+    ]
+   },
+   "path": "/v1/contacts",
+   "product": "Quoter API",
    "title": "List Contacts",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/listcontacts"
   },
   {
-   "content_hash": null,
+   "content_hash": "282f11fc3142bce1",
    "description": "Retrieves supplier item data for specified MPNs from suppliers configured through SupplierSync. Format includes modern cursor-based pagination, advanced filtering with operators, and normalized timestamp fields. Results exclude native distributor integrations and are limited to SupplierSync sources. Note that other supplier-related endpoints (e.g., ListSuppliers, CreateSupplier) interact with a separate supplier object and do not affect supplier items.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/listdatafeedsupplieritems",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "query:cursor",
+     "query:filter[mpn]*",
+     "query:page_size"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "400",
+     "422"
+    ],
+    "summary": "List Supplier Items",
+    "tags": [
+     "Data Feed Suppliers"
+    ]
+   },
+   "path": "/v1/datafeeds/supplier-items",
+   "product": "Quoter API",
    "title": "List Supplier Items",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/listdatafeedsupplieritems"
   },
   {
-   "content_hash": null,
+   "content_hash": "b80d5bafe0992b43",
    "description": "Retrieves a list of suppliers configured through SupplierSync. Format includes modern cursor-based pagination and normalized timestamp fields.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/listdatafeedsuppliers",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "query:cursor",
+     "query:page_size",
+     "query:sort"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "400",
+     "422"
+    ],
+    "summary": "List Suppliers",
+    "tags": [
+     "Data Feed Suppliers"
+    ]
+   },
+   "path": "/v1/datafeeds/suppliers",
+   "product": "Quoter API",
    "title": "List Suppliers",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/listdatafeedsuppliers"
   },
   {
-   "content_hash": null,
+   "content_hash": "3d6176c17b695b91",
    "description": "Retrieves a list of all item group assignments available in the system.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/listitemgroupitemassignments",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "query:cursor",
+     "query:fields",
+     "query:filter[item_group_id]",
+     "query:filter[item_id]",
+     "query:filter[record_created_at]",
+     "query:filter[record_updated_at]",
+     "query:page_size",
+     "query:sort"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "404",
+     "422"
+    ],
+    "summary": "List Item Group Assignments",
+    "tags": [
+     "Item Groups"
+    ]
+   },
+   "path": "/v1/item-group-item-assignments",
+   "product": "Quoter API",
    "title": "List Item Group Assignments",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/listitemgroupitemassignments"
   },
   {
-   "content_hash": null,
+   "content_hash": "11bc3c92f870ec7e",
    "description": "Retrieves a list of all item groups available in the system.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/listitemgroups",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "query:cursor",
+     "query:fields",
+     "query:filter[name]",
+     "query:filter[record_created_at]",
+     "query:filter[record_updated_at]",
+     "query:page_size",
+     "query:sort"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "404",
+     "422"
+    ],
+    "summary": "List Item Groups",
+    "tags": [
+     "Item Groups"
+    ]
+   },
+   "path": "/v1/item-groups",
+   "product": "Quoter API",
    "title": "List Item Groups",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/listitemgroups"
   },
   {
-   "content_hash": null,
+   "content_hash": "b15d8b01cfa2b77a",
    "description": "Retrieves a list of all item options available in the system.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/listitemoptions",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "query:cursor",
+     "query:fields",
+     "query:filter[item_id]",
+     "query:filter[name]",
+     "query:filter[record_created_at]",
+     "query:filter[record_updated_at]",
+     "query:page_size",
+     "query:sort"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "404",
+     "422"
+    ],
+    "summary": "List Item Options",
+    "tags": [
+     "Item Options"
+    ]
+   },
+   "path": "/v1/item-options",
+   "product": "Quoter API",
    "title": "List Item Options",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/listitemoptions"
   },
   {
-   "content_hash": null,
+   "content_hash": "6cf5867b93cb8b39",
    "description": "Retrieves a list of all item option values available in the system.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/listitemoptionvalues",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "query:cursor",
+     "query:fields",
+     "query:filter[code]",
+     "query:filter[item_id]",
+     "query:filter[item_option_id]",
+     "query:filter[name]",
+     "query:filter[record_created_at]",
+     "query:filter[record_updated_at]",
+     "query:page_size",
+     "query:sort"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "404",
+     "422"
+    ],
+    "summary": "List Item Option Values",
+    "tags": [
+     "Item Options"
+    ]
+   },
+   "path": "/v1/item-option-values",
+   "product": "Quoter API",
    "title": "List Item Option Values",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/listitemoptionvalues"
   },
   {
-   "content_hash": null,
+   "content_hash": "c1a8e565386bf9da",
    "description": "Retrieves a list of all items available in the system.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/listitems",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "query:cursor",
+     "query:fields",
+     "query:filter[category_id]",
+     "query:filter[code]",
+     "query:filter[manufacturer_id]",
+     "query:filter[name]",
+     "query:filter[record_created_at]",
+     "query:filter[record_updated_at]",
+     "query:filter[sku]",
+     "query:filter[supplier_id]",
+     "query:page_size",
+     "query:sort"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "404",
+     "422"
+    ],
+    "summary": "List Items",
+    "tags": [
+     "Items"
+    ]
+   },
+   "path": "/v1/items",
+   "product": "Quoter API",
    "title": "List Items",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/listitems"
   },
   {
-   "content_hash": null,
+   "content_hash": "89ddb82f4bada9dd",
    "description": "Retrieves a list of all item tiers available in the system.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/listitemtiers",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "query:cursor",
+     "query:fields",
+     "query:filter[item_id]",
+     "query:filter[record_created_at]",
+     "query:filter[record_updated_at]",
+     "query:page_size",
+     "query:sort"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "404",
+     "422"
+    ],
+    "summary": "List Item Tiers",
+    "tags": [
+     "Item Tiers"
+    ]
+   },
+   "path": "/v1/item-tiers",
+   "product": "Quoter API",
    "title": "List Item Tiers",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/listitemtiers"
   },
   {
-   "content_hash": null,
+   "content_hash": "f260cba96a6eec24",
    "description": "Retrieves a list of all manufacturers available in the system.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/listmanufacturers",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "query:cursor",
+     "query:fields",
+     "query:filter[name]",
+     "query:filter[record_created_at]",
+     "query:filter[record_updated_at]",
+     "query:page_size",
+     "query:sort"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "404",
+     "422"
+    ],
+    "summary": "List Manufacturers",
+    "tags": [
+     "Manufacturers"
+    ]
+   },
+   "path": "/v1/manufacturers",
+   "product": "Quoter API",
    "title": "List Manufacturers",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/listmanufacturers"
   },
   {
-   "content_hash": null,
+   "content_hash": "6a7820d65025dd9d",
    "description": "Retrieves a paginated list of all Quotes. Supports multiple filtering and sorting options.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/listquotes",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "query:cursor",
+     "query:filter[client.id]",
+     "query:filter[custom_number]",
+     "query:filter[draft]",
+     "query:filter[email_status]",
+     "query:filter[expired_at]",
+     "query:filter[id]",
+     "query:filter[lm_initiative_id]",
+     "query:filter[name]",
+     "query:filter[primary]",
+     "query:filter[record_created_at]",
+     "query:filter[record_updated_at]",
+     "query:filter[recurring_interval]",
+     "query:filter[stage]",
+     "query:filter[uuid]",
+     "query:filter[won_at]",
+     "query:page_size",
+     "query:sort"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "404",
+     "422"
+    ],
+    "summary": "List Quotes",
+    "tags": [
+     "Quotes"
+    ]
+   },
+   "path": "/v1/quotes",
+   "product": "Quoter API",
    "title": "List Quotes",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/listquotes"
   },
   {
-   "content_hash": null,
+   "content_hash": "479fffefcedfbadd",
    "description": "Retrieves a paginated list of all Quote Templates. Supports filtering by title and sorting options.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/listquotetemplates",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "query:cursor",
+     "query:filter[title]",
+     "query:page_size",
+     "query:sort"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "404",
+     "422"
+    ],
+    "summary": "List Quote Templates",
+    "tags": [
+     "Quote Templates"
+    ]
+   },
+   "path": "/v1/quote-templates",
+   "product": "Quoter API",
    "title": "List Quote Templates",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/listquotetemplates"
   },
   {
@@ -17177,17 +18289,34 @@
    "url": "https://developer.scalepad.com/reference/opencontrolssearch"
   },
   {
-   "content_hash": null,
+   "content_hash": "ae5a3a7f310759f7",
    "description": "Modifies the properties or configuration of an existing supplier.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/patch_v1-suppliers-id-1",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "PATCH",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:id*",
+     "query:fields"
+    ],
+    "request_fields": [
+     "name"
+    ],
+    "responses": [
+     "200",
+     "404"
+    ],
+    "summary": "Update Supplier",
+    "tags": [
+     "Suppliers"
+    ]
+   },
+   "path": "/v1/suppliers/{id}",
+   "product": "Quoter API",
    "title": "Update Supplier",
-   "updated_at": null,
+   "updated_at": "2026-04-23T21:49:34.000Z",
    "url": "https://developer.scalepad.com/reference/patch_v1-suppliers-id-1"
   },
   {
@@ -17421,59 +18550,151 @@
    "url": "https://developer.scalepad.com/reference/patchclientprocedure"
   },
   {
-   "content_hash": null,
+   "content_hash": "fb6e77da58bf460a",
    "description": "Patch a line item on a draft quote. Absent fields preserve the row.  Nested objects + `recurring_interval` are tri-state: omit = no change, `null` = clear, populated = apply. `{}` \u2192 422. Entity ref `id` required non-empty when present. `category` cannot be cleared. `recurring_interval: \"\"` \u2192 422.  Response matches `GET /v1/quotes/{quote_id}`.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/patchquotesectionlineitem",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "PATCH",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:line_item_id*",
+     "path:quote_id*",
+     "path:section_id*"
+    ],
+    "request_fields": [
+     "category",
+     "code",
+     "description",
+     "discount",
+     "manufacturer",
+     "name",
+     "quantity_decimal",
+     "recurring_interval",
+     "sku",
+     "supplier",
+     "taxable",
+     "unit_cost_decimal",
+     "unit_price_decimal"
+    ],
+    "responses": [
+     "200",
+     "400",
+     "404",
+     "409",
+     "422"
+    ],
+    "summary": "Patch Quote Line Item",
+    "tags": [
+     "Quote Section Line Items"
+    ]
+   },
+   "path": "/v1/quotes/{quote_id}/sections/{section_id}/line-items/{line_item_id}",
+   "product": "Quoter API",
    "title": "Patch Quote Line Item",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/patchquotesectionlineitem"
   },
   {
-   "content_hash": null,
+   "content_hash": "1480e19b28d17056",
    "description": "Adds a new supplier to the system.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/post_v1-suppliers-1",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "query:fields"
+    ],
+    "request_fields": [
+     "name"
+    ],
+    "responses": [
+     "201",
+     "404"
+    ],
+    "summary": "Create Supplier",
+    "tags": [
+     "Suppliers"
+    ]
+   },
+   "path": "/v1/suppliers",
+   "product": "Quoter API",
    "title": "Create Supplier",
-   "updated_at": null,
+   "updated_at": "2026-04-23T21:49:34.000Z",
    "url": "https://developer.scalepad.com/reference/post_v1-suppliers-1"
   },
   {
-   "content_hash": null,
+   "content_hash": "e432a7732dcad2e9",
    "description": "Accepts a root JSON array of backup entries. Each entry identifies a device, job, and client, and may include result collections for backups, replications, verifications, boot verifications, and alerts.  The entire batch is rejected when any entry fails validation. The total number of results across all collections in a request must not exceed 10,000.  A successful request is acknowledged with an empty `202 Accepted` response. Accepted results are queued for asynchronous processing by the backup results saver pipeline.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/postv3backups",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [],
+    "request_fields": [
+     "[].alerts",
+     "[].backups",
+     "[].boot_verifications",
+     "[].client_name",
+     "[].device_name",
+     "[].job_name",
+     "[].metadata",
+     "[].replications",
+     "[].verifications"
+    ],
+    "responses": [
+     "202",
+     "400",
+     "401",
+     "402",
+     "429",
+     "500"
+    ],
+    "summary": "Ingest backup results",
+    "tags": [
+     "Backups"
+    ]
+   },
+   "path": "/backup-radar/v3/backups",
+   "product": "Backup Radar API",
    "title": "Ingest backup results",
-   "updated_at": null,
+   "updated_at": "2026-08-18T18:04:51.000Z",
    "url": "https://developer.scalepad.com/reference/postv3backups"
   },
   {
-   "content_hash": null,
+   "content_hash": "6cb845ceff35198d",
    "description": "Transitions a draft quote into the published state. Runs strict validation, assigns a `quote_number`, and resolves `expired_at` if it was left unset.  Response body matches `GET /v1/quotes/{quote_id}`.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/publishquote",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:quote_id*"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "404",
+     "409",
+     "422",
+     "503"
+    ],
+    "summary": "Publish Quote",
+    "tags": [
+     "Quotes"
+    ]
+   },
+   "path": "/v1/quotes/{quote_id}/publish",
+   "product": "Quoter API",
    "title": "Publish Quote",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/publishquote"
   },
   {
@@ -17716,17 +18937,36 @@
    "url": "https://developer.scalepad.com/reference/update-deliverable-template-1"
   },
   {
-   "content_hash": null,
+   "content_hash": "aab7ab148d499a7c",
    "description": "Modifies the properties or configuration of an existing category.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/updatecategory",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "PATCH",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:id*",
+     "query:fields"
+    ],
+    "request_fields": [
+     "name",
+     "parent_category",
+     "parent_category_id"
+    ],
+    "responses": [
+     "200",
+     "404"
+    ],
+    "summary": "Update Category",
+    "tags": [
+     "Categories"
+    ]
+   },
+   "path": "/v1/categories/{id}",
+   "product": "Quoter API",
    "title": "Update Category",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/updatecategory"
   },
   {
@@ -17771,101 +19011,276 @@
    "url": "https://developer.scalepad.com/reference/updateclientrisk"
   },
   {
-   "content_hash": null,
+   "content_hash": "8d41c7199f2ff99b",
    "description": "Updates a specific contact's information by its id. If the contact is not yet linked locally, a remote lookup is performed and the local record is backfilled before the update is applied. All fields are optional (PATCH semantics). The client field is not accepted on updates \u2014 any request containing a client field will be rejected with a 422.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/updatecontact",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "PATCH",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:id*",
+     "query:fields"
+    ],
+    "request_fields": [
+     "billing_address",
+     "billing_email",
+     "billing_first_name",
+     "billing_last_name",
+     "billing_mobile_phone",
+     "billing_organization",
+     "billing_work_phone",
+     "shipping_address",
+     "shipping_email",
+     "shipping_first_name",
+     "shipping_label",
+     "shipping_last_name",
+     "shipping_organization",
+     "shipping_phone",
+     "title",
+     "website"
+    ],
+    "responses": [
+     "200",
+     "400",
+     "401",
+     "404",
+     "422"
+    ],
+    "summary": "Update Contact",
+    "tags": [
+     "Contacts"
+    ]
+   },
+   "path": "/v1/contacts/{id}",
+   "product": "Quoter API",
    "title": "Update Contact",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/updatecontact"
   },
   {
-   "content_hash": null,
+   "content_hash": "699fc250db6b1451",
    "description": "Modifies the properties or configuration of an existing item.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/updateitem",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "PATCH",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:id*",
+     "query:fields"
+    ],
+    "request_fields": [
+     "allow_decimal_quantities",
+     "category",
+     "category_id",
+     "code",
+     "cost_decimal",
+     "cost_type",
+     "description",
+     "internal_note",
+     "manufacturer",
+     "manufacturer_id",
+     "name",
+     "percentage_price_category_ids",
+     "percentage_price_decimal",
+     "price_decimal",
+     "pricing_scheme",
+     "quantity_help_tip",
+     "recurring",
+     "recurring_interval",
+     "restrict_discounting",
+     "show_option_prices",
+     "sku",
+     "supplier",
+     "supplier_id",
+     "taxable",
+     "weight_decimal"
+    ],
+    "responses": [
+     "200",
+     "404"
+    ],
+    "summary": "Update Item",
+    "tags": [
+     "Items"
+    ]
+   },
+   "path": "/v1/items/{id}",
+   "product": "Quoter API",
    "title": "Update Item",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/updateitem"
   },
   {
-   "content_hash": null,
+   "content_hash": "22fdb14eceb1c0ba",
    "description": "Modifies the properties or configuration of an existing item group.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/updateitemgroup",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "PATCH",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:id*",
+     "query:fields"
+    ],
+    "request_fields": [
+     "name"
+    ],
+    "responses": [
+     "200",
+     "404"
+    ],
+    "summary": "Update Item Group",
+    "tags": [
+     "Item Groups"
+    ]
+   },
+   "path": "/v1/item-groups/{id}",
+   "product": "Quoter API",
    "title": "Update Item Group",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/updateitemgroup"
   },
   {
-   "content_hash": null,
+   "content_hash": "ef1e656e6faef695",
    "description": "Modifies the properties or configuration of an existing item option.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/updateitemoption",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "PATCH",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:id*",
+     "query:fields"
+    ],
+    "request_fields": [
+     "allow_multiple_values",
+     "description",
+     "extended_description",
+     "name",
+     "required",
+     "sort_order"
+    ],
+    "responses": [
+     "200",
+     "404"
+    ],
+    "summary": "Update Item Option",
+    "tags": [
+     "Item Options"
+    ]
+   },
+   "path": "/v1/item-options/{id}",
+   "product": "Quoter API",
    "title": "Update Item Option",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/updateitemoption"
   },
   {
-   "content_hash": null,
+   "content_hash": "750113f167a864ce",
    "description": "Modifies the properties or configuration of an existing item option value.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/updateitemoptionvalue",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "PATCH",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:id*",
+     "query:fields"
+    ],
+    "request_fields": [
+     "code",
+     "cost_decimal",
+     "cost_type",
+     "name",
+     "price_decimal",
+     "pricing_scheme",
+     "sort_order"
+    ],
+    "responses": [
+     "200",
+     "404"
+    ],
+    "summary": "Update Item Option Value",
+    "tags": [
+     "Item Options"
+    ]
+   },
+   "path": "/v1/item-option-values/{id}",
+   "product": "Quoter API",
    "title": "Update Item Option Value",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/updateitemoptionvalue"
   },
   {
-   "content_hash": null,
+   "content_hash": "fd0d24fcb5dd298d",
    "description": "Modifies the properties or configuration of an existing item tier.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/updateitemtier",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "PATCH",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:id*",
+     "query:fields"
+    ],
+    "request_fields": [
+     "cost_decimal",
+     "cost_type",
+     "lower_boundary",
+     "price_decimal"
+    ],
+    "responses": [
+     "200",
+     "404"
+    ],
+    "summary": "Update Item Tier",
+    "tags": [
+     "Item Tiers"
+    ]
+   },
+   "path": "/v1/item-tiers/{id}",
+   "product": "Quoter API",
    "title": "Update Item Tier",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/updateitemtier"
   },
   {
-   "content_hash": null,
+   "content_hash": "724c01f13507aa24",
    "description": "Modifies the properties or configuration of an existing manufacturer.",
-   "fetch_error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "fetch_error": null,
    "key": "/reference/updatemanufacturer",
    "kind": "endpoint",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
+   "method": "PATCH",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:id*",
+     "query:fields"
+    ],
+    "request_fields": [
+     "name"
+    ],
+    "responses": [
+     "200",
+     "404"
+    ],
+    "summary": "Update Manufacturer",
+    "tags": [
+     "Manufacturers"
+    ]
+   },
+   "path": "/v1/manufacturers/{id}",
+   "product": "Quoter API",
    "title": "Update Manufacturer",
-   "updated_at": null,
+   "updated_at": "2026-07-15T21:57:01.000Z",
    "url": "https://developer.scalepad.com/reference/updatemanufacturer"
   },
   {
