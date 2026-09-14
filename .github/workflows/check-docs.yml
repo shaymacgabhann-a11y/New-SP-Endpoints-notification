@@ -2,8 +2,12 @@ name: Check ScalePad developer docs
 
 on:
   schedule:
-    # 15:00 UTC daily = 08:00 Pacific (PDT) / 07:00 (PST)
-    - cron: "0 15 * * 1-5"
+    # 15:07 UTC daily = 08:07 Pacific (PDT) / 07:07 (PST)
+    - cron: "7 15 * * 1-5"
+    # 17:07 UTC daily = 10:07 Pacific (PDT) / 09:07 (PST)
+    - cron: "7 17 * * 1-5"
+    # 19:07 UTC daily = 12:07 Pacific (PDT) / 11:07 (PST)
+    - cron: "7 19 * * 1-5"
   workflow_dispatch:
     inputs:
       dry_run:
