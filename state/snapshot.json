@@ -1,9 +1,9 @@
 {
  "meta": {
   "base_url": "https://developer.scalepad.com",
-  "checked_at": "2026-09-17T22:04:12.527796+00:00",
-  "page_count": 583,
-  "previous_checked_at": "2026-09-17T20:15:24.474877+00:00"
+  "checked_at": "2026-09-18T18:19:18.395586+00:00",
+  "page_count": 584,
+  "previous_checked_at": "2026-09-17T22:04:12.527796+00:00"
  },
  "pages": [
   {
@@ -201,6 +201,20 @@
    "title": "Product APIs and subscriptions",
    "updated_at": "2026-03-26T19:01:31.000Z",
    "url": "https://developer.scalepad.com/docs/product-apis-and-subscriptions"
+  },
+  {
+   "content_hash": "97220721efde3d1b",
+   "description": "Connect your AI client to ScalePad with OAuth, discover product tools, and start with a read-only request.",
+   "fetch_error": null,
+   "key": "/docs/product-mcp",
+   "kind": "guide",
+   "method": null,
+   "operation": {},
+   "path": null,
+   "product": null,
+   "title": "ScalePad MCP 2.0",
+   "updated_at": "2026-09-18T18:02:41.000Z",
+   "url": "https://developer.scalepad.com/docs/product-mcp"
   },
   {
    "content_hash": "5c6a31f3bc5188cc",
