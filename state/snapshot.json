@@ -1,9 +1,9 @@
 {
  "meta": {
   "base_url": "https://developer.scalepad.com",
-  "checked_at": "2026-09-21T22:32:44.518670+00:00",
+  "checked_at": "2026-09-22T18:45:57.413184+00:00",
   "page_count": 584,
-  "previous_checked_at": "2026-09-21T21:00:12.126938+00:00"
+  "previous_checked_at": "2026-09-21T22:32:44.518670+00:00"
  },
  "pages": [
   {
@@ -133,7 +133,7 @@
    "url": "https://developer.scalepad.com/changelog/20260827-saas-management-v1-changelog"
   },
   {
-   "content_hash": "b9673f16751173c0",
+   "content_hash": "976ebb524e41d7ee",
    "description": "",
    "fetch_error": null,
    "key": "/changelog/20260909-lifecycle-manager-v1-changelog",
@@ -16877,7 +16877,7 @@
    "url": "https://developer.scalepad.com/reference/list-hardware-assets-1"
   },
   {
-   "content_hash": "273bbca128556b6c",
+   "content_hash": "be679468ed10adfd",
    "description": "This endpoint returns the list of integration configurations associated with the MSP. It indicates which configurations are the primary integrations associated with specific entities.",
    "fetch_error": null,
    "key": "/reference/list-integration-configurations-1",
