@@ -1,9 +1,9 @@
 {
  "meta": {
   "base_url": "https://developer.scalepad.com",
-  "checked_at": "2026-09-23T18:58:46.001562+00:00",
+  "checked_at": "2026-09-23T20:16:29.831285+00:00",
   "page_count": 584,
-  "previous_checked_at": "2026-09-22T21:58:30.746222+00:00"
+  "previous_checked_at": "2026-09-23T18:58:46.001562+00:00"
  },
  "pages": [
   {
@@ -274,7 +274,7 @@
   },
   {
    "content_hash": "4430a3a6095b07d8",
-   "description": "Returns paginated Assessment Overview for all partner clients.  This endpoint supports: - Cursor-based pagination - Sorting - Filtering  **Use Cases:** - Retrieve Assessment Overview across all MSP clients - Build partner-level dashboards - Analyze Assessment completeness across multiple tenants - Paginate large Assessment summary datasets",
+   "description": "Returns paginated Assessment Overview for all partner clients.  This endpoint supports: - Cursor-based pagination - Sorting - Filtering  **Use Cases:** - Retrieve Assessment Overview across all MSP\u2026",
    "fetch_error": null,
    "key": "/reference/01_listclientsassessmentsummary-1",
    "kind": "endpoint",
@@ -309,7 +309,7 @@
   },
   {
    "content_hash": "7bcfea7bbd5d1299",
-   "description": "Returns compliance health metrics for each client of an MSP. By default, returns a paginated list of clients and their overall compliance health. Use `fields` to include additional health metrics like compliance_score, risk_score, frameworks, work_progress, and history.",
+   "description": "Returns compliance health metrics for each client of an MSP. By default, returns a paginated list of clients and their overall compliance health. Use `fields` to include additional health metrics\u2026",
    "fetch_error": null,
    "key": "/reference/01_listclientshealth-1",
    "kind": "endpoint",
@@ -374,7 +374,7 @@
   },
   {
    "content_hash": "a023788b21d114b8",
-   "description": "Returns detailed compliance health metrics for a single MSP client.  This endpoint is optimized for retrieving the full health snapshot of a client, including compliance score, risk score, frameworks, and work progress.  - Use this endpoint instead of `/clients/health` when you need data for **one client only**. - All scoring fields reflect the most recently computed health values.",
+   "description": "Returns detailed compliance health metrics for a single MSP client.  This endpoint is optimized for retrieving the full health snapshot of a client, including compliance score, risk score,\u2026",
    "fetch_error": null,
    "key": "/reference/02_clienthealth-1",
    "kind": "endpoint",
@@ -437,7 +437,7 @@
   },
   {
    "content_hash": "33c0cd4dc4cef464",
-   "description": "Returns paginated evidence summaries for all partner clients.  This endpoint supports: - Cursor-based pagination - Sorting - Filtering  **Use Cases:** - Retrieve evidence summaries across all MSP clients - Build partner-level dashboards - Analyze evidence completeness across multiple tenants - Paginate large evidence summary datasets",
+   "description": "Returns paginated evidence summaries for all partner clients.  This endpoint supports: - Cursor-based pagination - Sorting - Filtering  **Use Cases:** - Retrieve evidence summaries across all MSP\u2026",
    "fetch_error": null,
    "key": "/reference/02_evidenceapi-1",
    "kind": "endpoint",
@@ -542,7 +542,7 @@
   },
   {
    "content_hash": "a059e391e8ea7258",
-   "description": "Returns paginated risk summaries for all partner clients.  This endpoint supports: - Advanced field-level filtering using comparison operators (`eq`, `in`) - Cursor-based pagination for efficient navigation of large datasets - Selective field projection to reduce response payload size - Multi-field sorting with ascending/descending order indicators  Use this API to obtain aggregated or filtered risk summaries across clients.",
+   "description": "Returns paginated risk summaries for all partner clients.  This endpoint supports: - Advanced field-level filtering using comparison operators (`eq`, `in`) - Cursor-based pagination for efficient\u2026",
    "fetch_error": null,
    "key": "/reference/03_listclientsrisksummary-1",
    "kind": "endpoint",
@@ -577,7 +577,7 @@
   },
   {
    "content_hash": "ad2224de2085cde3",
-   "description": "Partially updates an existing evidence for the specified client.  This operation allows updating one or more evidence fields, including: - **`Name`**  - **`Description`**  - **`Owner`**  - **`Schedule`**  Only the fields provided in the request payload will be updated. All other fields will remain unchanged. ---   **Important \u2014 Schedule Rules**  - An evidence can have **only one schedule**. - This endpoint **does not allow updating an existing schedule**. - If a schedule already exists, the request will be **rejected**. - To change the schedule, the existing schedule must be **deleted first** using the **Delete Schedule API**. - If no schedule exists, this endpoint will **create a new schedule**.",
+   "description": "Partially updates an existing evidence for the specified client.  This operation allows updating one or more evidence fields, including: - **`Name`**  - **`Description`**  - **`Owner`**  -\u2026",
    "fetch_error": null,
    "key": "/reference/04_evidenceapi-1",
    "kind": "endpoint",
@@ -615,7 +615,7 @@
   },
   {
    "content_hash": "b70d5565e1e89c16",
-   "description": "Deletes the refresh schedule associated with an existing evidence record.  This operation removes **only the schedule configuration** and does not delete the evidence itself.  Use `POST .../schedule/delete` with the required `schedule_action` query parameter.  ---   **Important \u2014 Confirmation Required**  If a refresh schedule already exists, deleting it requires **explicit confirmation** from the client. This ensures that related evidence requests are handled correctly.  The client must specify **one** of the following options when deleting a schedule:  - **`Disable future evidence requests`**   \u2014 Disables all upcoming evidence requests generated by the refresh schedule.  - **`Disable future evidence requests and delete existing requests`**   \u2014 Disables all future evidence requests and deletes existing incomplete requests.  If confirmation is not provided, the request will be rejected.",
+   "description": "Deletes the refresh schedule associated with an existing evidence record.  This operation removes **only the schedule configuration** and does not delete the evidence itself.  Use `POST\u2026",
    "fetch_error": null,
    "key": "/reference/05_evidenceapi-1",
    "kind": "endpoint",
@@ -680,7 +680,7 @@
   },
   {
    "content_hash": "738205017ad132de",
-   "description": "Retrieves all evidence requests and it's document associated with a specific evidence record.  This is typically used when: - Viewing the request history for an evidence - Auditing evidence review workflow - Displaying evidence request details for the client or reviewer",
+   "description": "Retrieves all evidence requests and it's document associated with a specific evidence record.  This is typically used when: - Viewing the request history for an evidence - Auditing evidence review\u2026",
    "fetch_error": null,
    "key": "/reference/07_evidenceapi-1",
    "kind": "endpoint",
@@ -712,7 +712,7 @@
   },
   {
    "content_hash": "80830ef1f3da281b",
-   "description": "Creates a new request inside an existing evidence.  This operation is typically used when: - Additional clarification or documentation is needed - Reviewer initiates an evidence request workflow - Evidence must be updated or completed by the client  The authenticated user is automatically resolved and stored as the creator of the evidence request.",
+   "description": "Creates a new request inside an existing evidence.  This operation is typically used when: - Additional clarification or documentation is needed - Reviewer initiates an evidence request workflow -\u2026",
    "fetch_error": null,
    "key": "/reference/08_evidenceapi-1",
    "kind": "endpoint",
@@ -744,7 +744,7 @@
   },
   {
    "content_hash": "92e0db13719f382a",
-   "description": "Creates an new evidence request and generates pre-signed URL(s) for uploading document(s) to that evidence request for the specified evidence. The client uploads files directly to S3 using the returned signed Urls and method before expires_in_seconds elapses.",
+   "description": "Creates an new evidence request and generates pre-signed URL(s) for uploading document(s) to that evidence request for the specified evidence. The client uploads files directly to S3 using the\u2026",
    "fetch_error": null,
    "key": "/reference/09_evidenceapi-1",
    "kind": "endpoint",
@@ -917,7 +917,7 @@
   },
   {
    "content_hash": "48c27c38e325baab",
-   "description": "Updates specific fields of an evidence request. Only provided fields are updated, others remain unchanged.  Only fields included in the payload will be updated. Fields omitted will remain unchanged.  **Common Use Cases:** - Updating status (**Supported values:**  `Not Started`, `In Progress`, `Review`, `Completed`, `Not Applicable`) - Changing Assignee - Updating due-date - Adding reviewer notes",
+   "description": "Updates specific fields of an evidence request. Only provided fields are updated, others remain unchanged.  Only fields included in the payload will be updated. Fields omitted will remain unchanged.\u2026",
    "fetch_error": null,
    "key": "/reference/12_evidenceapi-1",
    "kind": "endpoint",
@@ -954,7 +954,7 @@
   },
   {
    "content_hash": "bd339542ba219710",
-   "description": "Triggers a refresh of all evidence mappings for the specified client.  This operation is typically used to: - Re-sync evidence mappings after changes in configuration - Pull updated mapping definitions - Recompute mapping relationships for compliance workflows",
+   "description": "Triggers a refresh of all evidence mappings for the specified client.  This operation is typically used to: - Re-sync evidence mappings after changes in configuration - Pull updated mapping\u2026",
    "fetch_error": null,
    "key": "/reference/13_evidenceapi-1",
    "kind": "endpoint",
@@ -984,7 +984,7 @@
   },
   {
    "content_hash": "c9777f96ebeb9659",
-   "description": "Deletes a specific evidence request associated with an evidence.  This operation is typically used when: - A request was created incorrectly - The workflow requires removing outdated or duplicate requests - A reviewer needs to invalidate a previous request  **Important:** Deletion may be restricted if evidence contains only one request.",
+   "description": "Deletes a specific evidence request associated with an evidence.  This operation is typically used when: - A request was created incorrectly - The workflow requires removing outdated or duplicate\u2026",
    "fetch_error": null,
    "key": "/reference/14_evidenceapi-1",
    "kind": "endpoint",
@@ -1016,7 +1016,7 @@
   },
   {
    "content_hash": "ddb4d8f0647f4aee",
-   "description": "Archives an existing evidence request and records audit metadata.  This endpoint is typically used when: - A reviewer or system wants to mark an evidence request as archived - Workflows require closing outdated or completed requests - Auditing requires capturing who performed the archival action  **Behavior:** - If the request is already archived, the operation is a **no-op** but still returns HTTP 200. - Audit metadata (actor, timestamp, etc.) is recorded for compliance.",
+   "description": "Archives an existing evidence request and records audit metadata.  This endpoint is typically used when: - A reviewer or system wants to mark an evidence request as archived - Workflows require\u2026",
    "fetch_error": null,
    "key": "/reference/15_evidenceapi-1",
    "kind": "endpoint",
@@ -1048,7 +1048,7 @@
   },
   {
    "content_hash": "18c597a4d03fd681",
-   "description": "Deletes the specified document for the given client.  Use this endpoint when: - An incorrect or duplicate document was uploaded - A document must be removed from an evidence request - Evidence documentation is no longer required",
+   "description": "Deletes the specified document for the given client.  Use this endpoint when: - An incorrect or duplicate document was uploaded - A document must be removed from an evidence request - Evidence\u2026",
    "fetch_error": null,
    "key": "/reference/17_evidenceapi-1",
    "kind": "endpoint",
@@ -1094,7 +1094,7 @@
   },
   {
    "content_hash": "c6f9c3bc454450c3",
-   "description": "Maps an action item to objectives , assessment questions, risks, controls, assets, and/or asset types for a client.  In the request body, include only the entity codes that need to be mapped. Empty or omitted arrays are ignored.  Supported request fields: - objective_codes - question_codes - risk_codes - control_codes - asset_codes - asset_type_names",
+   "description": "Maps an action item to objectives , assessment questions, risks, controls, assets, and/or asset types for a client.  In the request body, include only the entity codes that need to be mapped. Empty\u2026",
    "fetch_error": null,
    "key": "/reference/actionitemmapentitiesforclient",
    "kind": "endpoint",
@@ -1132,7 +1132,7 @@
   },
   {
    "content_hash": "cc0cb8a7bedbf992",
-   "description": "Removes links between an action item and the given objectives (requirements), assessment questions, risks, controls, assets, and/or asset types for a client.  In the request body, include only the entity codes that need to be unmapped. Empty or omitted arrays are ignored.",
+   "description": "Removes links between an action item and the given objectives (requirements), assessment questions, risks, controls, assets, and/or asset types for a client.  In the request body, include only the\u2026",
    "fetch_error": null,
    "key": "/reference/actionitemunmapentitiesforclient",
    "kind": "endpoint",
@@ -2567,7 +2567,7 @@
   },
   {
    "content_hash": "4565bc036d39ca59",
-   "description": "Create a PSA ticket and link it to an assessment evaluation question. The ticket is queued for creation in the external PSA; this endpoint returns 202 Accepted with a Pending state. Poll the assessment until the linked ticket's state transitions to Created or Error.",
+   "description": "Create a PSA ticket and link it to an assessment evaluation question. The ticket is queued for creation in the external PSA; this endpoint returns 202 Accepted with a Pending state. Poll the\u2026",
    "fetch_error": null,
    "key": "/reference/apipublicv1assessmentevaluationquestionticketcreate",
    "kind": "endpoint",
@@ -3483,7 +3483,7 @@
   },
   {
    "content_hash": "e9ea2852b37668e9",
-   "description": "Export contacts as a spreadsheet, honoring the supplied search, filters, sort, and selected columns. Exports every matching row, so the page_size and cursor parameters are ignored. The requested xlsx format is downgraded to csv when the result set is too large for a spreadsheet; the response content type and file name reflect the format that was written.",
+   "description": "Export contacts as a spreadsheet, honoring the supplied search, filters, sort, and selected columns. Exports every matching row, so the page_size and cursor parameters are ignored. The requested xlsx\u2026",
    "fetch_error": null,
    "key": "/reference/apipublicv1assetscontactsexport",
    "kind": "endpoint",
@@ -5363,7 +5363,7 @@
   },
   {
    "content_hash": "ca64ba3f4d9c3980",
-   "description": "Search clients by name, returning a paged list of client id and display label pairs scoped to the caller's client group access. When no search term is provided, returns the caller's most recently visited clients first, followed by their remaining accessible clients ordered by name.",
+   "description": "Search clients by name, returning a paged list of client id and display label pairs scoped to the caller's client group access. When no search term is provided, returns the caller's most recently\u2026",
    "fetch_error": null,
    "key": "/reference/apipublicv1clientslookup",
    "kind": "endpoint",
@@ -5631,7 +5631,7 @@
   },
   {
    "content_hash": "26a06b5ba4c1d2c1",
-   "description": "List Lifecycle Manager contacts for accessible clients. Supports optional client, integration-lineage, hidden-status, and name/email search filters, cursor pagination, Core record lineage, license assignment details, and SaaS-derived MFA/activity posture.",
+   "description": "List Lifecycle Manager contacts for accessible clients. Supports optional client, integration-lineage, hidden-status, and name/email search filters, cursor pagination, Core record lineage, license\u2026",
    "fetch_error": null,
    "key": "/reference/apipublicv1contactslist",
    "kind": "endpoint",
@@ -6703,7 +6703,7 @@
   },
   {
    "content_hash": "aa2ab33f11715842",
-   "description": "Reposition an action item within the account's manual sort order. Specify the dragged item's new neighbors using the place-relative convention: 'before_id' is the action the dragged item should land BEFORE (i.e. immediately above it in the final list), and 'after_id' is the action it should land AFTER (i.e. immediately below it in the final list). Omit 'before_id' when dropping at the end of the list and omit 'after_id' when dropping at the start. At least one of the two must be supplied.",
+   "description": "Reposition an action item within the account's manual sort order. Specify the dragged item's new neighbors using the place-relative convention: 'before_id' is the action the dragged item should land\u2026",
    "fetch_error": null,
    "key": "/reference/apipublicv1engagementactionreposition",
    "kind": "endpoint",
@@ -8721,7 +8721,7 @@
   },
   {
    "content_hash": "a2f80883a3d11f4d",
-   "description": "Get the PSA opportunity linked to an initiative. The response body reports Pending while a newly-created opportunity is still being created in the PSA, terminal states after creation completes, and 404 Not Found when no opportunity is linked.",
+   "description": "Get the PSA opportunity linked to an initiative. The response body reports Pending while a newly-created opportunity is still being created in the PSA, terminal states after creation completes, and\u2026",
    "fetch_error": null,
    "key": "/reference/apipublicv1initiativeopportunityget",
    "kind": "endpoint",
@@ -9195,7 +9195,7 @@
   },
   {
    "content_hash": "21841b568df3173c",
-   "description": "Create a PSA ticket and link it to the initiative. The ticket is queued for creation in the external PSA; this endpoint returns 202 Accepted with a Pending state. Poll `GET /v1/initiatives/{initiative_id}/ticket` until the state transitions to Created or Error.",
+   "description": "Create a PSA ticket and link it to the initiative. The ticket is queued for creation in the external PSA; this endpoint returns 202 Accepted with a Pending state. Poll `GET\u2026",
    "fetch_error": null,
    "key": "/reference/apipublicv1initiativeticketcreate",
    "kind": "endpoint",
@@ -9229,7 +9229,7 @@
   },
   {
    "content_hash": "a937b2d5245581c9",
-   "description": "Detach (unlink) the PSA ticket associated with an initiative. The ticket itself is not deleted from the external PSA \u2014 only the LM-side link is removed. Any pending create job for the link is cancelled. Returns 204 No Content on success and 404 Not Found when no ticket is currently linked.",
+   "description": "Detach (unlink) the PSA ticket associated with an initiative. The ticket itself is not deleted from the external PSA \u2014 only the LM-side link is removed. Any pending create job for the link is\u2026",
    "fetch_error": null,
    "key": "/reference/apipublicv1initiativeticketdelete",
    "kind": "endpoint",
@@ -9260,7 +9260,7 @@
   },
   {
    "content_hash": "6c320c9eb82831f6",
-   "description": "Get the current state of the PSA ticket linked to an initiative. The response body reports Pending while the ticket is still being created in the external PSA, Created or Error for terminal states, and 404 Not Found when no ticket is linked.",
+   "description": "Get the current state of the PSA ticket linked to an initiative. The response body reports Pending while the ticket is still being created in the external PSA, Created or Error for terminal states,\u2026",
    "fetch_error": null,
    "key": "/reference/apipublicv1initiativeticketget",
    "kind": "endpoint",
@@ -12739,7 +12739,7 @@
   },
   {
    "content_hash": "302c2fd52a71aaab",
-   "description": "Returns comprehensive assessment summary for a client.  By default, the response includes: - `assessment_question_groups` - `grades` - `assessment_stats`  Optional query parameters: - `include_framework_assessment_stats=true`: Includes framework-level statistics such as `frameworks_count` and `framework-specific progress` data along with the default response.",
+   "description": "Returns comprehensive assessment summary for a client.  By default, the response includes: - `assessment_question_groups` - `grades` - `assessment_stats`  Optional query parameters: -\u2026",
    "fetch_error": null,
    "key": "/reference/assessmentprogress-1",
    "kind": "endpoint",
@@ -12831,7 +12831,7 @@
   },
   {
    "content_hash": "759af795a91d1b08",
-   "description": "Maps an assessment question to evidences, action items, policies, or procedures for a client.  In the request body, include only the entity codes/IDs that need to be mapped. Empty or omitted arrays are ignored.  Supported request fields: - evidence_codes - action_item_codes - policy_codes - procedure_codes",
+   "description": "Maps an assessment question to evidences, action items, policies, or procedures for a client.  In the request body, include only the entity codes/IDs that need to be mapped. Empty or omitted arrays\u2026",
    "fetch_error": null,
    "key": "/reference/assessmentquestionmapentitiesforclient-1",
    "kind": "endpoint",
@@ -12901,7 +12901,7 @@
   },
   {
    "content_hash": "bd796e4df8c6c533",
-   "description": "Submits or updates the selected answer for the assessment question identified by `question_code`.  The `answer` value must match one of the valid response options for that question.  **Supported answer values:**    Yes, No, Partially, NA",
+   "description": "Submits or updates the selected answer for the assessment question identified by `question_code`.  The `answer` value must match one of the valid response options for that question.  **Supported\u2026",
    "fetch_error": null,
    "key": "/reference/assessmentquestionputanswerforclient-1",
    "kind": "endpoint",
@@ -13083,7 +13083,7 @@
   },
   {
    "content_hash": "9e281b3e609d1abc",
-   "description": "Removes links between a client governance and given objectives (requirements), policies, controls for the client.  In the request body, include only the entity codes that need to be unmapped. Empty or omitted arrays are ignored..  Supported request fields: - objectives (program_name + codes) - policy_codes - control_codes",
+   "description": "Removes links between a client governance and given objectives (requirements), policies, controls for the client.  In the request body, include only the entity codes that need to be unmapped. Empty\u2026",
    "fetch_error": null,
    "key": "/reference/bulkdeleteentitiesfromclientgovernance",
    "kind": "endpoint",
@@ -13119,7 +13119,7 @@
   },
   {
    "content_hash": "d4a85cf56d2d2d79",
-   "description": "Removes links between a client policy and the framework objectives and/or controls in the request body.  Send only codes for mappings that should be removed. Empty or omitted arrays are ignored.  Supported request fields: - objectives (program_name + codes) - control_codes",
+   "description": "Removes links between a client policy and the framework objectives and/or controls in the request body.  Send only codes for mappings that should be removed. Empty or omitted arrays are ignored.\u2026",
    "fetch_error": null,
    "key": "/reference/bulkdeleteentitiesfromclientpolicy",
    "kind": "endpoint",
@@ -13154,7 +13154,7 @@
   },
   {
    "content_hash": "bcd7df7403dfd7f5",
-   "description": "Removes links between a client procedure and framework requirements (objectives), policies, and/or controls in the request body.  Send only codes for mappings that should be removed. Empty or omitted arrays are ignored.  Supported request fields: - objectives (program_name + codes) - policy_codes - control_codes",
+   "description": "Removes links between a client procedure and framework requirements (objectives), policies, and/or controls in the request body.  Send only codes for mappings that should be removed. Empty or omitted\u2026",
    "fetch_error": null,
    "key": "/reference/bulkdeleteentitiesfromclientprocedure",
    "kind": "endpoint",
@@ -13190,7 +13190,7 @@
   },
   {
    "content_hash": "f1dc48bae5f5203e",
-   "description": "Removes links between a risk and the given assets, asset types, threats, vulnerabilities, vendors, objectives, controls, and/or action items for a client.  Send only codes for mappings that should be removed. Empty or omitted arrays are ignored.  Supported request fields: - asset_codes - asset_type_names - threat_codes - vulnerability_codes - vendor_codes - objective_codes - control_codes - action_item_codes",
+   "description": "Removes links between a risk and the given assets, asset types, threats, vulnerabilities, vendors, objectives, controls, and/or action items for a client.  Send only codes for mappings that should be\u2026",
    "fetch_error": null,
    "key": "/reference/bulkdeleteentitiesfromclientrisk",
    "kind": "endpoint",
@@ -13496,7 +13496,7 @@
   },
   {
    "content_hash": "4e9e008ff4d49db1",
-   "description": "Creates a new action item for the specified client with the provided details  **Allowed values for patchable fields:**   - **status**: `Not Started`, `In Progress`, `Review`, `Completed`, `Not Applicable`  - **roadmap**: `3 months`, `6 months`, `12 months`  - **priority**: `High`, `Medium`, `Low`, `Critical`  - **currency**: `USD`, `EUR`, `AUD`, `CAD`, `SEK`, `NZD`, `SGD`, `INR`  - **efforts_in_hours**: must be zero or a positive number  - **cost**: must be zero or a positive number",
+   "description": "Creates a new action item for the specified client with the provided details  **Allowed values for patchable fields:**   - **status**: `Not Started`, `In Progress`, `Review`, `Completed`, `Not\u2026",
    "fetch_error": null,
    "key": "/reference/createactionitem-1",
    "kind": "endpoint",
@@ -13576,7 +13576,7 @@
   },
   {
    "content_hash": "5bf322b506acafa8",
-   "description": "Creates a new governance for the specified client with the provided details.  The authenticated user becomes the owner and creator. The is created in **In Review** status with a default review date one week from creation.",
+   "description": "Creates a new governance for the specified client with the provided details.  The authenticated user becomes the owner and creator. The is created in **In Review** status with a default review date\u2026",
    "fetch_error": null,
    "key": "/reference/createclientgovernancedocument",
    "kind": "endpoint",
@@ -13610,7 +13610,7 @@
   },
   {
    "content_hash": "e071d785415056bd",
-   "description": "Creates a new policy for the specified client with the provided details.  The authenticated user becomes the owner and creator. The policy is created in **In Review** status with **HTML** source and a default review date one week from creation.",
+   "description": "Creates a new policy for the specified client with the provided details.  The authenticated user becomes the owner and creator. The policy is created in **In Review** status with **HTML** source and\u2026",
    "fetch_error": null,
    "key": "/reference/createclientpolicy",
    "kind": "endpoint",
@@ -13645,7 +13645,7 @@
   },
   {
    "content_hash": "4988934e152c2534",
-   "description": "Creates a new procedure for the specified client with the provided details.  The authenticated user becomes the owner and creator. The procedure is created in **In Review** status with a default review date one week from creation.",
+   "description": "Creates a new procedure for the specified client with the provided details.  The authenticated user becomes the owner and creator. The procedure is created in **In Review** status with a default\u2026",
    "fetch_error": null,
    "key": "/reference/createclientprocedure",
    "kind": "endpoint",
@@ -13679,7 +13679,7 @@
   },
   {
    "content_hash": "5da00c76c6534ff1",
-   "description": "Creates a new risk for the specified client with the provided details.  The authenticated user becomes the creator. Supported status values: `Assessed`, `Assessment in progress`, `Closed`, `Needs Remediation`, `Not Assessed`, `Remediated`.",
+   "description": "Creates a new risk for the specified client with the provided details.  The authenticated user becomes the creator. Supported status values: `Assessed`, `Assessment in progress`, `Closed`, `Needs\u2026",
    "fetch_error": null,
    "key": "/reference/createclientrisk",
    "kind": "endpoint",
@@ -14060,7 +14060,7 @@
   },
   {
    "content_hash": "8a91ff83260804fd",
-   "description": "Creates a new draft quote from a template. The contact is identified by email plus either `client_id` or `client_name`; when both are provided, `client_id` is used. The referenced contact must already exist on the account. Sections and line items are added via their own endpoints after creation.  Response body matches `GET /v1/quotes/{quote_id}`.",
+   "description": "Creates a new draft quote from a template. The contact is identified by email plus either `client_id` or `client_name`; when both are provided, `client_id` is used. The referenced contact must\u2026",
    "fetch_error": null,
    "key": "/reference/createquote",
    "kind": "endpoint",
@@ -14101,7 +14101,7 @@
   },
   {
    "content_hash": "8d78ab43595b004c",
-   "description": "Adds one or more line items to a section on a draft quote. Line, section, and quote-level totals are recomputed and persisted as part of the call.  Validation accumulates: every failing rule across every item in the batch comes back in a single 422 response with located error paths (`line_items[i].field`).  Response body matches `GET /v1/quotes/{quote_id}`.",
+   "description": "Adds one or more line items to a section on a draft quote. Line, section, and quote-level totals are recomputed and persisted as part of the call.  Validation accumulates: every failing rule across\u2026",
    "fetch_error": null,
    "key": "/reference/createquotelineitems",
    "kind": "endpoint",
@@ -14889,7 +14889,7 @@
   },
   {
    "content_hash": "e1ad75b3e4985550",
-   "description": "Maps an evidence to objectives and/or controls for a client.  In the request body, include only the entity codes that need to be mapped. Empty or omitted arrays are ignored.  Supported request fields: - objective_codes - control_codes",
+   "description": "Maps an evidence to objectives and/or controls for a client.  In the request body, include only the entity codes that need to be mapped. Empty or omitted arrays are ignored.  Supported request\u2026",
    "fetch_error": null,
    "key": "/reference/evidencemapentitiesforclient",
    "kind": "endpoint",
@@ -14924,7 +14924,7 @@
   },
   {
    "content_hash": "8e4581b0ed985471",
-   "description": "Removes links between an evidence and the given objectives (requirements) and/or controls for a client.  In the request body, include only the entity codes that need to be unmapped. Empty or omitted arrays are ignored.",
+   "description": "Removes links between an evidence and the given objectives (requirements) and/or controls for a client.  In the request body, include only the entity codes that need to be unmapped. Empty or omitted\u2026",
    "fetch_error": null,
    "key": "/reference/evidenceunmapentitiesforclient",
    "kind": "endpoint",
@@ -14988,7 +14988,7 @@
   },
   {
    "content_hash": "5d6d8301aa5fd074",
-   "description": "Retrieves a contact by its id. If the contact is not yet linked locally, a remote lookup is performed and the local record is backfilled with the resolved id (record_updated_at is not bumped by this backfill). Returns 404 if no match is found.",
+   "description": "Retrieves a contact by its id. If the contact is not yet linked locally, a remote lookup is performed and the local record is backfilled with the resolved id (record_updated_at is not bumped by this\u2026",
    "fetch_error": null,
    "key": "/reference/fetchcontact",
    "kind": "endpoint",
@@ -15222,7 +15222,7 @@
   },
   {
    "content_hash": "828966cf2e9696ed",
-   "description": "Retrieves a quote revision with the full display payload \u2014 sections, line items, totals, contacts, content blocks, custom fields, and taxes. Both primary and draft revisions are returned; callers inspect the `primary` and `draft` flags to determine state.",
+   "description": "Retrieves a quote revision with the full display payload \u2014 sections, line items, totals, contacts, content blocks, custom fields, and taxes. Both primary and draft revisions are returned; callers\u2026",
    "fetch_error": null,
    "key": "/reference/fetchquote",
    "kind": "endpoint",
@@ -15959,7 +15959,7 @@
   },
   {
    "content_hash": "bab853af03af2d85",
-   "description": "Retrieves a time-limited signed URL for downloading the specified document.  This is typically used to: - Provide secure client-side document downloads - Grant temporary access to evidence-related documents - Retrieve signed URLs stored in cloud storage",
+   "description": "Retrieves a time-limited signed URL for downloading the specified document.  This is typically used to: - Provide secure client-side document downloads - Grant temporary access to evidence-related\u2026",
    "fetch_error": null,
    "key": "/reference/getdocumentsignedurl",
    "kind": "endpoint",
@@ -16023,7 +16023,7 @@
   },
   {
    "content_hash": "1ab5a8028a7d8358",
-   "description": "Returns paginated governance summaries for all partner clients.  This endpoint supports: - Cursor-based pagination - Sorting - Filtering  **Use Cases:** - Retrieve governance summaries across all MSP clients - Build partner-level dashboards - Analyze governance completeness across multiple tenants - Paginate large governance summary datasets",
+   "description": "Returns paginated governance summaries for all partner clients.  This endpoint supports: - Cursor-based pagination - Sorting - Filtering  **Use Cases:** - Retrieve governance summaries across all MSP\u2026",
    "fetch_error": null,
    "key": "/reference/getgovernancesummarybyclients",
    "kind": "endpoint",
@@ -16058,7 +16058,7 @@
   },
   {
    "content_hash": "c49e98d31bb82107",
-   "description": "Returns paginated Policy summaries for all partner clients.    This endpoint supports:   - Cursor-based pagination   - Sorting   - Filtering    **Use Cases:**   - Retrieve Policy summaries across all MSP clients   - Build partner-level dashboards   - Analyze Policy completeness across multiple tenants   - Paginate large Policy summary datasets",
+   "description": "Returns paginated Policy summaries for all partner clients.    This endpoint supports:   - Cursor-based pagination   - Sorting   - Filtering    **Use Cases:**   - Retrieve Policy summaries across all\u2026",
    "fetch_error": null,
    "key": "/reference/getpolicysummarybyclients",
    "kind": "endpoint",
@@ -16093,7 +16093,7 @@
   },
   {
    "content_hash": "e97a52e3607939c3",
-   "description": "Returns paginated Procedure summaries for all partner clients.  This endpoint supports: - Cursor-based pagination - Sorting - Filtering  **Use Cases:** - Retrieve Procedure summaries across all MSP clients - Build partner-level dashboards - Analyze Procedure completeness across multiple tenants - Paginate large Procedure summary datasets",
+   "description": "Returns paginated Procedure summaries for all partner clients.  This endpoint supports: - Cursor-based pagination - Sorting - Filtering  **Use Cases:** - Retrieve Procedure summaries across all MSP\u2026",
    "fetch_error": null,
    "key": "/reference/getproceduresummarybyclients",
    "kind": "endpoint",
@@ -16128,7 +16128,7 @@
   },
   {
    "content_hash": "2cf0dff2e1a8b7b8",
-   "description": "Returns metadata for a specific report document and a secure, time-limited pre-signed URL for downloading the file.  The signed URL expires after the specified number of seconds and must be used before that time. This endpoint ensures secure access to stored report files without exposing them publicly.  **Response includes:** - `id`               \u2014 unique document identifier - `name`             \u2014 human-readable report title - `signed_url`        \u2014 downloadable, pre-signed URL - `expires_in_seconds` \u2014 time remaining before the URL expires",
+   "description": "Returns metadata for a specific report document and a secure, time-limited pre-signed URL for downloading the file.  The signed URL expires after the specified number of seconds and must be used\u2026",
    "fetch_error": null,
    "key": "/reference/getreportsignedurl-1",
    "kind": "endpoint",
@@ -16160,7 +16160,7 @@
   },
   {
    "content_hash": "c471f0c8a6db8771",
-   "description": "Returns paginated Objective summaries for all partner clients.  This endpoint supports: - Cursor-based pagination - Sorting - Filtering  **Use Cases:** - Retrieve Objective summaries across all MSP clients - Build partner-level dashboards - Analyze Objective completeness across multiple tenants - Paginate large Objective summary datasets",
+   "description": "Returns paginated Objective summaries for all partner clients.  This endpoint supports: - Cursor-based pagination - Sorting - Filtering  **Use Cases:** - Retrieve Objective summaries across all MSP\u2026",
    "fetch_error": null,
    "key": "/reference/getrequirementsobjectivesummary",
    "kind": "endpoint",
@@ -16194,7 +16194,7 @@
   },
   {
    "content_hash": "c53f245f9e68ba5b",
-   "description": "Returns one row per app the client has usage data for in the reporting period, with usage metrics, certifications, and lifecycle classification. This is the data backing the SaaS Management app dashboard.  `sort` accepts canonical_name, unique_users, active_time, avg_time, or session_count, with a `-` prefix for descending order; defaults to canonical_name ascending.  `filter[app_id]`, `filter[user_id]`, `filter[department_id]`, `filter[category_id]`, `filter[vendor_id]`, `filter[approval_status]`, `filter[is_favorite]`, and `filter[lifecycle]` narrow the result set \u2014 see the filter parameter description for operator support per field. `filter[user_id]` and `filter[department_id]` additionally restrict unique_users, avg_time_ms_per_day, and session_count to activity from the given user(s)/department; an app with no matching activity is omitted rather than returned with zeroed metrics.  `q` searches by app name. `has_compliance_gap`, `missing_frameworks`, and `compliance_frameworks` filter on certification status.  Pagination is cursor-based and best-effort/non-atomic: rows may be skipped or duplicated between page requests if the underlying data changes concurrently.",
+   "description": "Returns one row per app the client has usage data for in the reporting period, with usage metrics, certifications, and lifecycle classification. This is the data backing the SaaS Management app\u2026",
    "fetch_error": null,
    "key": "/reference/getsaasmanagementapputilization",
    "kind": "endpoint",
@@ -16240,7 +16240,7 @@
   },
   {
    "content_hash": "354c2a86a278a873",
-   "description": "Returns one bucket per `granularity` unit over the date range, with a count of apps in each of five mutually-exclusive, priority-ordered lifecycle segments for that bucket:  1. `risky_apps` \u2014 scanned with a compliance gap (missing a required framework). Top priority: a risky app is never also counted in another segment. 2. `unapproved_apps` \u2014 not risky, and explicitly marked not approved. 3. `ai_apps` \u2014 not risky, and categorized as an AI app. 4. `other_apps` \u2014 not risky, approved, not AI, and had activity in the bucket. 5. `unused_apps` \u2014 not risky, approved, not AI, with prior usage but no activity in the bucket.  Apps with an unreviewed approval status are excluded from every segment. `filter[department_id]` and `filter[approval_status]` (both list, `in` operator) scope which apps are counted.  This endpoint has no comparison period (`period.compare_start_date` / `compare_end_date` are always null) and no pagination \u2014 all buckets in the range are returned in a single response.",
+   "description": "Returns one bucket per `granularity` unit over the date range, with a count of apps in each of five mutually-exclusive, priority-ordered lifecycle segments for that bucket:  1. `risky_apps` \u2014 scanned\u2026",
    "fetch_error": null,
    "key": "/reference/getsaasmanagementapputilizationtimeseries",
    "kind": "endpoint",
@@ -16278,7 +16278,7 @@
   },
   {
    "content_hash": "6ff9abead4358c1f",
-   "description": "Same rows and filters as GET .../apps/utilization, with each app row additionally carrying its top users by average time (`users`), capped at `users_limit`. Use this only when the per-user breakdown is needed \u2014 it costs one extra query per app row compared to the base endpoint.  Pagination is cursor-based and best-effort/non-atomic: rows may be skipped or duplicated between page requests if the underlying data changes concurrently.",
+   "description": "Same rows and filters as GET .../apps/utilization, with each app row additionally carrying its top users by average time (`users`), capped at `users_limit`. Use this only when the per-user breakdown\u2026",
    "fetch_error": null,
    "key": "/reference/getsaasmanagementapputilizationwithusers",
    "kind": "endpoint",
@@ -16391,7 +16391,7 @@
   },
   {
    "content_hash": "8bf5bb6efc48ff4c",
-   "description": "Returns a cursor-paginated list of backup devices whose names match the optional filters. Each item includes the device's last result and per-day SLA history for the requested window, ending on the tenant's current local date.  Devices are returned whether or not their Backup Radar company is mapped to a ScalePad company. When a device is not mapped, the ScalePad-specific fields (`device_id`, `device_name`, and the `client` `name`/`client_id`) are null.",
+   "description": "Returns a cursor-paginated list of backup devices whose names match the optional filters. Each item includes the device's last result and per-day SLA history for the requested window, ending on the\u2026",
    "fetch_error": null,
    "key": "/reference/getv3clientsdevices",
    "kind": "endpoint",
@@ -16878,7 +16878,7 @@
   },
   {
    "content_hash": "be679468ed10adfd",
-   "description": "This endpoint returns the list of integration configurations associated with the MSP. It indicates which configurations are the primary integrations associated with specific entities.",
+   "description": "This endpoint returns the list of integration configurations associated with the MSP. It indicates which configurations are the primary integrations associated with specific entities.\u2026",
    "fetch_error": null,
    "key": "/reference/list-integration-configurations-1",
    "kind": "endpoint",
@@ -17379,7 +17379,7 @@
   },
   {
    "content_hash": "36337998a350edb0",
-   "description": "Retrieves a list of contacts. Supports filtering by canonical V2 fields (id, client.id, billing_email, first_name, last_name, phone, organization, address, city, country, region, postal_code, record_created_at, record_updated_at) using the query-string filter syntax `filter[field]=operator:value`. Lookup by billing email + client id is expressed as `filter[billing_email]=eq:<email>&filter[client.id]=eq:<client_id>`. `filter[email]` is accepted as a deprecated alias for `filter[billing_email]`.",
+   "description": "Retrieves a list of contacts. Supports filtering by canonical V2 fields (id, client.id, billing_email, first_name, last_name, phone, organization, address, city, country, region, postal_code,\u2026",
    "fetch_error": null,
    "key": "/reference/listcontacts",
    "kind": "endpoint",
@@ -17426,7 +17426,7 @@
   },
   {
    "content_hash": "282f11fc3142bce1",
-   "description": "Retrieves supplier item data for specified MPNs from suppliers configured through SupplierSync. Format includes modern cursor-based pagination, advanced filtering with operators, and normalized timestamp fields. Results exclude native distributor integrations and are limited to SupplierSync sources. Note that other supplier-related endpoints (e.g., ListSuppliers, CreateSupplier) interact with a separate supplier object and do not affect supplier items.",
+   "description": "Retrieves supplier item data for specified MPNs from suppliers configured through SupplierSync. Format includes modern cursor-based pagination, advanced filtering with operators, and normalized\u2026",
    "fetch_error": null,
    "key": "/reference/listdatafeedsupplieritems",
    "kind": "endpoint",
@@ -17821,7 +17821,7 @@
   },
   {
    "content_hash": "f41a226b2d4d4b96",
-   "description": "Maps a governance to framework requirements (objectives), policies, and/or controls for a client.  In the request body, include only the business codes that need to be mapped. Empty or omitted arrays are ignored.  Supported request fields: - objectives (program_name + codes) - policy_codes - control_codes",
+   "description": "Maps a governance to framework requirements (objectives), policies, and/or controls for a client.  In the request body, include only the business codes that need to be mapped. Empty or omitted arrays\u2026",
    "fetch_error": null,
    "key": "/reference/mapentitiestoclientgovernancedocument",
    "kind": "endpoint",
@@ -17857,7 +17857,7 @@
   },
   {
    "content_hash": "6be45ef7086cbbc6",
-   "description": "Maps a policy to framework objectives and/or controls for a client.  In the request body, include only the business codes that need to be mapped. Empty or omitted arrays are ignored.  Supported request fields: - objectives (program_name + codes) - control_codes",
+   "description": "Maps a policy to framework objectives and/or controls for a client.  In the request body, include only the business codes that need to be mapped. Empty or omitted arrays are ignored.  Supported\u2026",
    "fetch_error": null,
    "key": "/reference/mapentitiestoclientpolicy",
    "kind": "endpoint",
@@ -17892,7 +17892,7 @@
   },
   {
    "content_hash": "533afb3993344e63",
-   "description": "Maps a client procedure to framework requirements (objectives), policies, and/or controls.  In the request body, include only the business codes that need to be mapped. Empty or omitted arrays are ignored.  Supported request fields: - objectives (program_name + codes) - policy_codes - control_codes",
+   "description": "Maps a client procedure to framework requirements (objectives), policies, and/or controls.  In the request body, include only the business codes that need to be mapped. Empty or omitted arrays are\u2026",
    "fetch_error": null,
    "key": "/reference/mapentitiestoclientprocedure",
    "kind": "endpoint",
@@ -17928,7 +17928,7 @@
   },
   {
    "content_hash": "90030fcb7a6e83d1",
-   "description": "Maps a risk to assets, asset types, threats, vulnerabilities, vendors, objectives, controls, and/or action items for a client.  In the request body, include only the entity codes that need to be mapped. Empty or omitted arrays are ignored.  Supported request fields: - asset_codes - asset_type_names - threat_codes - vulnerability_codes - vendor_codes - objective_codes - control_codes - action_item_codes",
+   "description": "Maps a risk to assets, asset types, threats, vulnerabilities, vendors, objectives, controls, and/or action items for a client.  In the request body, include only the entity codes that need to be\u2026",
    "fetch_error": null,
    "key": "/reference/mapentitiestoclientrisk",
    "kind": "endpoint",
@@ -17969,7 +17969,7 @@
   },
   {
    "content_hash": "5a1390dbb81932c5",
-   "description": "Returns a paginated list of control families for the client tenant. Each row includes id, name, code, creating user, and created timestamp only.  Supports filtering by `id`, `name`, and `code` using `filter[id]`, `filter[name]`, and `filter[code]` query parameters.",
+   "description": "Returns a paginated list of control families for the client tenant. Each row includes id, name, code, creating user, and created timestamp only.  Supports filtering by `id`, `name`, and `code` using\u2026",
    "fetch_error": null,
    "key": "/reference/opencontrolfamilieslist",
    "kind": "endpoint",
@@ -18005,7 +18005,7 @@
   },
   {
    "content_hash": "28c4569269793a2c",
-   "description": "Removes links between a client control and policies, procedures, governance documents, risks, evidences, and/or action items identified by **policy_codes**, **procedure_codes**, **governance_codes**, **risk_codes**, **evidence_codes**, and **action_item_codes** in the request body.  Send only codes for mappings that should be removed. Empty or omitted arrays are ignored.  Supported request fields: - objectives (program_name + codes) - policy_codes - procedure_codes - governance_codes - risk_codes - evidence_codes - action_item_codes",
+   "description": "Removes links between a client control and policies, procedures, governance documents, risks, evidences, and/or action items identified by **policy_codes**, **procedure_codes**, **governance_codes**,\u2026",
    "fetch_error": null,
    "key": "/reference/opencontrolsbulkdeletemappings",
    "kind": "endpoint",
@@ -18214,7 +18214,7 @@
   },
   {
    "content_hash": "fef280a212e49a66",
-   "description": "Returns a paginated list of control sets for the client tenant. Each row includes id, name, code, creating user, and created timestamp only.  Supports filtering by `id`, `name`, and `code` using `filter[id]`, `filter[name]`, and `filter[code]` query parameters.",
+   "description": "Returns a paginated list of control sets for the client tenant. Each row includes id, name, code, creating user, and created timestamp only.  Supports filtering by `id`, `name`, and `code` using\u2026",
    "fetch_error": null,
    "key": "/reference/opencontrolsetslist",
    "kind": "endpoint",
@@ -18250,7 +18250,7 @@
   },
   {
    "content_hash": "b3897ecf032ce41a",
-   "description": "Map policies, procedures, governance documents, risks, evidences, action items, and/or framework objectives to the control identified by `control_id`. Only non-empty lists in the request body are applied. Objectives use `objectives` with `program_name` and `codes` (requirement reqid within that program).",
+   "description": "Map policies, procedures, governance documents, risks, evidences, action items, and/or framework objectives to the control identified by `control_id`. Only non-empty lists in the request body are\u2026",
    "fetch_error": null,
    "key": "/reference/opencontrolsmapmappings",
    "kind": "endpoint",
@@ -18335,7 +18335,7 @@
   },
   {
    "content_hash": "67272eb12bb30134",
-   "description": "Updates specific fields of an action item request. Only the fields provided in the request body will be updated. All other fields will remain unchanged.  **Allowed values for patchable fields:**   - **status**: `Not Started`, `In Progress`, `Review`, `Completed`, `Not Applicable`  - **roadmap**: `3 months`, `6 months`, `12 months`  - **priority**: `High`, `Medium`, `Low`, `Critical`  - **currency**: `USD`, `EUR`, `AUD`, `CAD`, `SEK`, `NZD`, `SGD`, `INR`  - **efforts_in_hours**: must be zero or a positive number  - **cost**: must be zero or a positive number",
+   "description": "Updates specific fields of an action item request. Only the fields provided in the request body will be updated. All other fields will remain unchanged.  **Allowed values for patchable fields:**   -\u2026",
    "fetch_error": null,
    "key": "/reference/patchactionitemrequest-1",
    "kind": "endpoint",
@@ -18386,7 +18386,7 @@
   },
   {
    "content_hash": "5d8fb06addd11c14",
-   "description": "Updates specific fields of a control. Only the fields provided in the request body will be updated. All other fields will remain unchanged.  Request property names use snake_case in JSON. When `status` is included, it is applied after the other scalar fields in the same request. Combined `control_set_name` and `control_family_name` update the control set first, then the family.  **Allowed values for patchable fields:**   - **name**: control title  - **description**: control description  - **code**: business / display code (e.g. `HRM-1`)  - **status**: `Not Implemented`, `Partially Implemented`, `Implemented`, `Alternative implementation`, `In progress / Planned`  - **owner**: user email or display name  - **type**: `Preventive`, `Corrective`, `Detective`  - **frequency**: `Weekly`, `Monthly`, `Quarterly`, `Bi-Annual`, `Annual`  - **team**: team name  - **implementation_notes**: implementation or testing notes  - **control_family_name**: control family display name within a control set (use with **control_set_name** when the family name is not unique)  - **control_set_name**: control set display name  - **priority**: `Not Set`, `Low`, `Medium`, `High`, `Critical`  - **effectiveness**: `Not Performed`, `Performed Informally`, `Planned & Tracked`, `Automated`, `Quantitatively Measured`",
+   "description": "Updates specific fields of a control. Only the fields provided in the request body will be updated. All other fields will remain unchanged.  Request property names use snake_case in JSON. When\u2026",
    "fetch_error": null,
    "key": "/reference/patchclientcontrol",
    "kind": "endpoint",
@@ -18434,7 +18434,7 @@
   },
   {
    "content_hash": "ec26e4020378d30d",
-   "description": "Updates specific fields of a governance. Only the fields provided in the request body will be updated. All other fields will remain unchanged.  Request property names use snake_case in JSON. When `status` is included, it is applied after the other fields in the same request.  **Allowed values for patchable fields:**   - **title**: title  - **description**: body / HTML  - **code**: business code (e.g. `GOV-12`)  - **status**: `Draft`, `In Progress`, `In Review`, `Ready For Approval`, `Approved`  - **data_classification**: data classification label configured for the tenant  - **review_date**: ISO-8601 instant string (e.g. `2025-09-15T17:00:00Z`)  - **owner**: user email or display name  - **approver**: user email or display name  - **team**: team name  - **tags**: array of tag names; replaces the governance's current tags  - **contributors**: array of contributor email addresses; replaces the current contributor list",
+   "description": "Updates specific fields of a governance. Only the fields provided in the request body will be updated. All other fields will remain unchanged.  Request property names use snake_case in JSON. When\u2026",
    "fetch_error": null,
    "key": "/reference/patchclientgovernancedocument",
    "kind": "endpoint",
@@ -18478,7 +18478,7 @@
   },
   {
    "content_hash": "42245867652ae640",
-   "description": "Updates specific fields of a policy. Only the fields provided in the request body will be updated. All other fields will remain unchanged.  Request property names use snake_case in JSON. When `status` is included, it is applied after the other fields in the same request.  **Allowed values for patchable fields:**   - **title**: policy title  - **code**: business code (e.g. `POL-12`)  - **status**: `Draft`, `In Progress`, `In Review`, `Ready For Approval`, `Approved`  - **data_classification**: data classification label configured for the tenant  - **review_date**: ISO-8601 instant string (e.g. `2025-09-15T17:00:00Z`)  - **owner**: user email or display name  - **approver**: user email or display name  - **team**: team name  - **tags**: array of tag names; replaces the policy's current tags  - **contributors**: array of contributor email addresses; replaces the current contributor list",
+   "description": "Updates specific fields of a policy. Only the fields provided in the request body will be updated. All other fields will remain unchanged.  Request property names use snake_case in JSON. When\u2026",
    "fetch_error": null,
    "key": "/reference/patchclientpolicy",
    "kind": "endpoint",
@@ -18521,7 +18521,7 @@
   },
   {
    "content_hash": "1515f57bc82c4df5",
-   "description": "Updates specific fields of a procedure document (procedure rows only, not governance documents). Only the fields provided in the request body will be updated. All other fields will remain unchanged.  Request property names use snake_case in JSON. When `status` is included, it is applied after the other fields in the same request.  **Allowed values for patchable fields:**   - **title**: document title  - **description**: document body / HTML  - **code**: business code (e.g. `PRO-12`)  - **status**: `Draft`, `In Progress`, `In Review`, `Ready For Approval`, `Approved`  - **data_classification**: data classification label configured for the tenant  - **review_date**: ISO-8601 instant string (e.g. `2025-09-15T17:00:00Z`)  - **owner**: user email or display name  - **approver**: user email or display name  - **team**: team name  - **tags**: array of tag names; replaces the procedure's current tags  - **contributors**: array of contributor email addresses; replaces the current contributor list",
+   "description": "Updates specific fields of a procedure document (procedure rows only, not governance documents). Only the fields provided in the request body will be updated. All other fields will remain unchanged.\u2026",
    "fetch_error": null,
    "key": "/reference/patchclientprocedure",
    "kind": "endpoint",
@@ -18565,7 +18565,7 @@
   },
   {
    "content_hash": "fb6e77da58bf460a",
-   "description": "Patch a line item on a draft quote. Absent fields preserve the row.  Nested objects + `recurring_interval` are tri-state: omit = no change, `null` = clear, populated = apply. `{}` \u2192 422. Entity ref `id` required non-empty when present. `category` cannot be cleared. `recurring_interval: \"\"` \u2192 422.  Response matches `GET /v1/quotes/{quote_id}`.",
+   "description": "Patch a line item on a draft quote. Absent fields preserve the row.  Nested objects + `recurring_interval` are tri-state: omit = no change, `null` = clear, populated = apply. `{}` \u2192 422. Entity ref\u2026",
    "fetch_error": null,
    "key": "/reference/patchquotesectionlineitem",
    "kind": "endpoint",
@@ -18642,7 +18642,7 @@
   },
   {
    "content_hash": "e432a7732dcad2e9",
-   "description": "Accepts a root JSON array of backup entries. Each entry identifies a device, job, and client, and may include result collections for backups, replications, verifications, boot verifications, and alerts.  The entire batch is rejected when any entry fails validation. The total number of results across all collections in a request must not exceed 10,000.  A successful request is acknowledged with an empty `202 Accepted` response. Accepted results are queued for asynchronous processing by the backup results saver pipeline.",
+   "description": "Accepts a root JSON array of backup entries. Each entry identifies a device, job, and client, and may include result collections for backups, replications, verifications, boot verifications, and\u2026",
    "fetch_error": null,
    "key": "/reference/postv3backups",
    "kind": "endpoint",
@@ -18682,7 +18682,7 @@
   },
   {
    "content_hash": "6cb845ceff35198d",
-   "description": "Transitions a draft quote into the published state. Runs strict validation, assigns a `quote_number`, and resolves `expired_at` if it was left unset.  Response body matches `GET /v1/quotes/{quote_id}`.",
+   "description": "Transitions a draft quote into the published state. Runs strict validation, assigns a `quote_number`, and resolves `expired_at` if it was left unset.  Response body matches `GET\u2026",
    "fetch_error": null,
    "key": "/reference/publishquote",
    "kind": "endpoint",
@@ -18985,7 +18985,7 @@
   },
   {
    "content_hash": "e0d4ec3ca5ce7bb9",
-   "description": "Updates specific fields of a risk. Only the fields provided in the request body will be updated. All other fields will remain unchanged.  Request property names use snake_case in JSON.  **Allowed values for patchable fields:**   - **title**: risk title  - **code**: business code (e.g. `RSK-12`)  - **description**: risk description  - **status**: `Not Assessed`, `Assessment in progress`, `Assessed`, `Needs Remediation`, `Remediated`, `Closed`  - **owner_email**: user email  - **team**: team name  - **department**: department name  - **category**: risk category name",
+   "description": "Updates specific fields of a risk. Only the fields provided in the request body will be updated. All other fields will remain unchanged.  Request property names use snake_case in JSON.  **Allowed\u2026",
    "fetch_error": null,
    "key": "/reference/updateclientrisk",
    "kind": "endpoint",
@@ -19026,7 +19026,7 @@
   },
   {
    "content_hash": "8d41c7199f2ff99b",
-   "description": "Updates a specific contact's information by its id. If the contact is not yet linked locally, a remote lookup is performed and the local record is backfilled before the update is applied. All fields are optional (PATCH semantics). The client field is not accepted on updates \u2014 any request containing a client field will be rejected with a 422.",
+   "description": "Updates a specific contact's information by its id. If the contact is not yet linked locally, a remote lookup is performed and the local record is backfilled before the update is applied. All fields\u2026",
    "fetch_error": null,
    "key": "/reference/updatecontact",
    "kind": "endpoint",
@@ -19299,7 +19299,7 @@
   },
   {
    "content_hash": "2054b6943304ddfb",
-   "description": "Creates or updates an HTML policy section using **`title`** and **`description`** (snake_case JSON).  **Create** \u2014 omit **`id`**: **`title`** is required; **`description`** is optional. **Update** \u2014 send **`id`**: include at least one of **`title`** or **`description`**.",
+   "description": "Creates or updates an HTML policy section using **`title`** and **`description`** (snake_case JSON).  **Create** \u2014 omit **`id`**: **`title`** is required; **`description`** is optional. **Update** \u2014\u2026",
    "fetch_error": null,
    "key": "/reference/upsertclientpolicysection",
    "kind": "endpoint",
