@@ -1,53 +1,11 @@
 {
  "meta": {
   "base_url": "https://developer.scalepad.com",
-  "checked_at": "2026-09-23T22:11:16.508525+00:00",
-  "page_count": 584,
-  "previous_checked_at": "2026-09-23T20:16:29.831285+00:00"
+  "checked_at": "2026-09-24T19:01:40.173383+00:00",
+  "page_count": 590,
+  "previous_checked_at": "2026-09-23T22:11:16.508525+00:00"
  },
  "pages": [
-  {
-   "content_hash": "f94af0509298b79b",
-   "description": "",
-   "fetch_error": null,
-   "key": "/changelog/20260702-control-map-v1-changelog",
-   "kind": "guide",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
-   "title": "ControlMap API \u2013 Risk Management Write Operations & Relationship Cleanup",
-   "updated_at": null,
-   "url": "https://developer.scalepad.com/changelog/20260702-control-map-v1-changelog"
-  },
-  {
-   "content_hash": "d2aff401c34529cc",
-   "description": "",
-   "fetch_error": null,
-   "key": "/changelog/20260714-quoter-v1-changelog",
-   "kind": "guide",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
-   "title": "Quoter API \u2013 Quote Authoring & Contacts",
-   "updated_at": null,
-   "url": "https://developer.scalepad.com/changelog/20260714-quoter-v1-changelog"
-  },
-  {
-   "content_hash": "a700316a14172816",
-   "description": "",
-   "fetch_error": null,
-   "key": "/changelog/20260721-core-api-v1-changelog",
-   "kind": "guide",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
-   "title": "Core API \u2013 Sites & Product Catalog, SaaS subscriptions, and query-contract alignment",
-   "updated_at": null,
-   "url": "https://developer.scalepad.com/changelog/20260721-core-api-v1-changelog"
-  },
   {
    "content_hash": "9017142098fc5e16",
    "description": "",
@@ -145,6 +103,48 @@
    "title": "Lifecycle Manager API - Contract Alignment, Migration Corrections, and New Endpoints",
    "updated_at": null,
    "url": "https://developer.scalepad.com/changelog/20260909-lifecycle-manager-v1-changelog"
+  },
+  {
+   "content_hash": "3ecb3b2c1702746e",
+   "description": "",
+   "fetch_error": null,
+   "key": "/changelog/20260915-core-api-v1-changelog",
+   "kind": "guide",
+   "method": null,
+   "operation": {},
+   "path": null,
+   "product": null,
+   "title": "Core API \u2013 Vendor application URL and connection settings on integration configurations",
+   "updated_at": null,
+   "url": "https://developer.scalepad.com/changelog/20260915-core-api-v1-changelog"
+  },
+  {
+   "content_hash": "08d610d102482f38",
+   "description": "",
+   "fetch_error": null,
+   "key": "/changelog/20260922-control-map-v1-changelog",
+   "kind": "guide",
+   "method": null,
+   "operation": {},
+   "path": null,
+   "product": null,
+   "title": "ControlMap API \u2013 Objective Editing, Risk Detail & Health History",
+   "updated_at": null,
+   "url": "https://developer.scalepad.com/changelog/20260922-control-map-v1-changelog"
+  },
+  {
+   "content_hash": "44dfd55ffac0bb2c",
+   "description": "",
+   "fetch_error": null,
+   "key": "/changelog/20260924-control-map-v1-changelog",
+   "kind": "guide",
+   "method": null,
+   "operation": {},
+   "path": null,
+   "product": null,
+   "title": "ControlMap API \u2013 Objective Assessments, Policy Sections & Risk Search",
+   "updated_at": null,
+   "url": "https://developer.scalepad.com/changelog/20260924-control-map-v1-changelog"
   },
   {
    "content_hash": "8ecb55fbddd10ddf",
@@ -245,7 +245,7 @@
    "url": "https://developer.scalepad.com/docs/zapier-integration"
   },
   {
-   "content_hash": "b9343003e8bfabca",
+   "content_hash": "eb10ee72eba50aae",
    "description": "Returns a paginated list of evidences belonging to the specified client.  Supports filtering with PII, sorting, and cursor-based pagination.",
    "fetch_error": null,
    "key": "/reference/01_evidenceapi-1",
@@ -259,7 +259,7 @@
    "url": "https://developer.scalepad.com/reference/01_evidenceapi-1"
   },
   {
-   "content_hash": "c169d6f859c83b63",
+   "content_hash": "7c9f8ea4fc8cd0e7",
    "description": "Retrieves a paginated list of reports for a client, with support for filtering with PII, sorting, and cursor-based pagination.",
    "fetch_error": null,
    "key": "/reference/01_listclientreports-1",
@@ -273,7 +273,7 @@
    "url": "https://developer.scalepad.com/reference/01_listclientreports-1"
   },
   {
-   "content_hash": "4430a3a6095b07d8",
+   "content_hash": "b198f840a2602008",
    "description": "Returns paginated Assessment Overview for all partner clients.  This endpoint supports: - Cursor-based pagination - Sorting - Filtering  **Use Cases:** - Retrieve Assessment Overview across all MSP\u2026",
    "fetch_error": null,
    "key": "/reference/01_listclientsassessmentsummary-1",
@@ -308,7 +308,7 @@
    "url": "https://developer.scalepad.com/reference/01_listclientsassessmentsummary-1"
   },
   {
-   "content_hash": "7bcfea7bbd5d1299",
+   "content_hash": "96fce6b6f8fd3498",
    "description": "Returns compliance health metrics for each client of an MSP. By default, returns a paginated list of clients and their overall compliance health. Use `fields` to include additional health metrics\u2026",
    "fetch_error": null,
    "key": "/reference/01_listclientshealth-1",
@@ -345,8 +345,8 @@
    "url": "https://developer.scalepad.com/reference/01_listclientshealth-1"
   },
   {
-   "content_hash": "5fac66afaa2f4b12",
-   "description": "Retrieves a paginated list of risks associated with a specific client.  Supports filtering with PII, sorting, and cursor-based pagination.",
+   "content_hash": "504bd1a508ac5a86",
+   "description": "Retrieves a paginated list of risks associated with a specific client.  Supports filtering with PII, sorting, and cursor-based pagination. All additions to this read contract are optional and\u2026",
    "fetch_error": null,
    "key": "/reference/01_listclientsrisk-1",
    "kind": "endpoint",
@@ -359,8 +359,8 @@
    "url": "https://developer.scalepad.com/reference/01_listclientsrisk-1"
   },
   {
-   "content_hash": "f687bd8c488f8b24",
-   "description": "Retrieves a paginated list of objectives associated with a specific client.  Supports filtering, sorting, and cursor-based pagination.",
+   "content_hash": "9942de5f05f306fc",
+   "description": "Retrieves a paginated list of objectives associated with a specific client.  Supports filtering, sorting, and cursor-based pagination. Document mappings are returned once per managed document and\u2026",
    "fetch_error": null,
    "key": "/reference/01_searchclientobjectives",
    "kind": "endpoint",
@@ -373,7 +373,7 @@
    "url": "https://developer.scalepad.com/reference/01_searchclientobjectives"
   },
   {
-   "content_hash": "a023788b21d114b8",
+   "content_hash": "49525a55bf19a029",
    "description": "Returns detailed compliance health metrics for a single MSP client.  This endpoint is optimized for retrieving the full health snapshot of a client, including compliance score, risk score,\u2026",
    "fetch_error": null,
    "key": "/reference/02_clienthealth-1",
@@ -382,7 +382,10 @@
    "operation": {
     "deprecated": false,
     "parameters": [
-     "path:client_id*"
+     "path:client_id*",
+     "query:end_date",
+     "query:include_history",
+     "query:start_date"
     ],
     "request_fields": [],
     "responses": [
@@ -404,7 +407,7 @@
    "url": "https://developer.scalepad.com/reference/02_clienthealth-1"
   },
   {
-   "content_hash": "965975abbe9d5b0d",
+   "content_hash": "899e450bbfa8f63f",
    "description": "Returns detailed information for a specific risk identified by its ID for the given client.",
    "fetch_error": null,
    "key": "/reference/02_clientrisk-1",
@@ -436,7 +439,7 @@
    "url": "https://developer.scalepad.com/reference/02_clientrisk-1"
   },
   {
-   "content_hash": "33c0cd4dc4cef464",
+   "content_hash": "187afed19d3b199a",
    "description": "Returns paginated evidence summaries for all partner clients.  This endpoint supports: - Cursor-based pagination - Sorting - Filtering  **Use Cases:** - Retrieve evidence summaries across all MSP\u2026",
    "fetch_error": null,
    "key": "/reference/02_evidenceapi-1",
@@ -470,7 +473,7 @@
    "url": "https://developer.scalepad.com/reference/02_evidenceapi-1"
   },
   {
-   "content_hash": "536169d9be2ced0f",
+   "content_hash": "ebeab759411eaf43",
    "description": "Returns a single objective for the specified client and framework.",
    "fetch_error": null,
    "key": "/reference/02_getclientobjectivebyid",
@@ -502,7 +505,42 @@
    "url": "https://developer.scalepad.com/reference/02_getclientobjectivebyid"
   },
   {
-   "content_hash": "7e2d0e8c727d3e50",
+   "content_hash": "e66911430f700978",
+   "description": "Associates the specified objective with a crosswalk objective for the client.",
+   "fetch_error": null,
+   "key": "/reference/03_createclientobjectivecrosswalk",
+   "kind": "endpoint",
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*",
+     "path:framework_id*",
+     "path:objective_id*"
+    ],
+    "request_fields": [
+     "crosswalk"
+    ],
+    "responses": [
+     "204",
+     "400",
+     "401",
+     "404",
+     "500"
+    ],
+    "summary": "Create Client Objective Crosswalk",
+    "tags": [
+     "Frameworks"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/frameworks/{framework_id}/objectives/{objective_id}/mappings",
+   "product": "ControlMap API",
+   "title": "Create Client Objective Crosswalk",
+   "updated_at": "2026-09-23T23:13:10.000Z",
+   "url": "https://developer.scalepad.com/reference/03_createclientobjectivecrosswalk"
+  },
+  {
+   "content_hash": "fec85aa2135f30cf",
    "description": "Creates a new evidence with all necessary details.",
    "fetch_error": null,
    "key": "/reference/03_evidenceapi-1",
@@ -541,7 +579,7 @@
    "url": "https://developer.scalepad.com/reference/03_evidenceapi-1"
   },
   {
-   "content_hash": "a059e391e8ea7258",
+   "content_hash": "359f2dd6d3d2442c",
    "description": "Returns paginated risk summaries for all partner clients.  This endpoint supports: - Advanced field-level filtering using comparison operators (`eq`, `in`) - Cursor-based pagination for efficient\u2026",
    "fetch_error": null,
    "key": "/reference/03_listclientsrisksummary-1",
@@ -576,7 +614,42 @@
    "url": "https://developer.scalepad.com/reference/03_listclientsrisksummary-1"
   },
   {
-   "content_hash": "ad2224de2085cde3",
+   "content_hash": "6922cf7c13a7162b",
+   "description": "Removes the crosswalk objective mapping from the specified client objective.",
+   "fetch_error": null,
+   "key": "/reference/04_deleteclientobjectivecrosswalk",
+   "kind": "endpoint",
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*",
+     "path:framework_id*",
+     "path:objective_id*"
+    ],
+    "request_fields": [
+     "crosswalk"
+    ],
+    "responses": [
+     "204",
+     "400",
+     "401",
+     "404",
+     "500"
+    ],
+    "summary": "Delete Client Objective Crosswalk",
+    "tags": [
+     "Frameworks"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/frameworks/{framework_id}/objectives/{objective_id}/mappings/bulk-delete",
+   "product": "ControlMap API",
+   "title": "Delete Client Objective Crosswalk",
+   "updated_at": "2026-09-23T23:13:10.000Z",
+   "url": "https://developer.scalepad.com/reference/04_deleteclientobjectivecrosswalk"
+  },
+  {
+   "content_hash": "d0f82da3138fe500",
    "description": "Partially updates an existing evidence for the specified client.  This operation allows updating one or more evidence fields, including: - **`Name`**  - **`Description`**  - **`Owner`**  -\u2026",
    "fetch_error": null,
    "key": "/reference/04_evidenceapi-1",
@@ -614,7 +687,7 @@
    "url": "https://developer.scalepad.com/reference/04_evidenceapi-1"
   },
   {
-   "content_hash": "b70d5565e1e89c16",
+   "content_hash": "24387323bcc49e40",
    "description": "Deletes the refresh schedule associated with an existing evidence record.  This operation removes **only the schedule configuration** and does not delete the evidence itself.  Use `POST\u2026",
    "fetch_error": null,
    "key": "/reference/05_evidenceapi-1",
@@ -647,7 +720,81 @@
    "url": "https://developer.scalepad.com/reference/05_evidenceapi-1"
   },
   {
-   "content_hash": "e32aaac3a7becd85",
+   "content_hash": "c5a9b53b1e2b2040",
+   "description": "Updates specific fields of an objective. Only the fields provided in the request body will be updated. All other fields will remain unchanged.  Request property names use snake_case in JSON.\u2026",
+   "fetch_error": null,
+   "key": "/reference/05_updateclientobjective",
+   "kind": "endpoint",
+   "method": "PATCH",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*",
+     "path:framework_id*",
+     "path:objective_id*"
+    ],
+    "request_fields": [
+     "current_maturity",
+     "description",
+     "implementation_details",
+     "in_scope",
+     "remarks",
+     "status",
+     "target_maturity"
+    ],
+    "responses": [
+     "200",
+     "400",
+     "401",
+     "404",
+     "500"
+    ],
+    "summary": "Partially Update Client Objective",
+    "tags": [
+     "Frameworks"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/frameworks/{framework_id}/objectives/{objective_id}",
+   "product": "ControlMap API",
+   "title": "Partially Update Client Objective",
+   "updated_at": "2026-09-23T23:13:10.000Z",
+   "url": "https://developer.scalepad.com/reference/05_updateclientobjective"
+  },
+  {
+   "content_hash": "a852c368c80051d7",
+   "description": "**Deprecated.** Use `POST .../schedule/delete` instead \u2014 it accepts the same `schedule_action` confirmation query parameter and no request body, so it is a direct replacement.  This operation is\u2026",
+   "fetch_error": null,
+   "key": "/reference/05a_evidenceapideprecated",
+   "kind": "endpoint",
+   "method": "DELETE",
+   "operation": {
+    "deprecated": true,
+    "parameters": [
+     "path:client_id*",
+     "path:evidence_id*",
+     "query:schedule_action*"
+    ],
+    "request_fields": [],
+    "responses": [
+     "204",
+     "400",
+     "401",
+     "404",
+     "500"
+    ],
+    "summary": "Delete Evidence Schedule (Deprecated)",
+    "tags": [
+     "Evidences"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/evidences/{evidence_id}/schedule",
+   "product": "ControlMap API",
+   "title": "Delete Evidence Schedule (Deprecated)",
+   "updated_at": "2026-09-23T23:13:10.000Z",
+   "url": "https://developer.scalepad.com/reference/05a_evidenceapideprecated"
+  },
+  {
+   "content_hash": "e92b0b4a8ae8dbd1",
    "description": "Deletes an evidence that is no longer required for compliance or business purposes.",
    "fetch_error": null,
    "key": "/reference/06_evidenceapi-1",
@@ -679,7 +826,7 @@
    "url": "https://developer.scalepad.com/reference/06_evidenceapi-1"
   },
   {
-   "content_hash": "738205017ad132de",
+   "content_hash": "7ea7ddc89ee1d154",
    "description": "Retrieves all evidence requests and it's document associated with a specific evidence record.  This is typically used when: - Viewing the request history for an evidence - Auditing evidence review\u2026",
    "fetch_error": null,
    "key": "/reference/07_evidenceapi-1",
@@ -711,7 +858,7 @@
    "url": "https://developer.scalepad.com/reference/07_evidenceapi-1"
   },
   {
-   "content_hash": "80830ef1f3da281b",
+   "content_hash": "00d50e452470a761",
    "description": "Creates a new request inside an existing evidence.  This operation is typically used when: - Additional clarification or documentation is needed - Reviewer initiates an evidence request workflow -\u2026",
    "fetch_error": null,
    "key": "/reference/08_evidenceapi-1",
@@ -743,7 +890,7 @@
    "url": "https://developer.scalepad.com/reference/08_evidenceapi-1"
   },
   {
-   "content_hash": "92e0db13719f382a",
+   "content_hash": "8c50113bf08d09eb",
    "description": "Creates an new evidence request and generates pre-signed URL(s) for uploading document(s) to that evidence request for the specified evidence. The client uploads files directly to S3 using the\u2026",
    "fetch_error": null,
    "key": "/reference/09_evidenceapi-1",
@@ -766,19 +913,19 @@
      "404",
      "500"
     ],
-    "summary": "Create Evidence Request and Generate Signed",
+    "summary": "Create Evidence Request and Generate Signed URLs for Documents",
     "tags": [
      "Evidences"
     ]
    },
    "path": "/controlmap/v1/clients/{client_id}/evidences/{evidence_id}/documents/signed-url",
    "product": "ControlMap API",
-   "title": "Create Evidence Request and Generate Signed",
+   "title": "Create Evidence Request and Generate Signed URLs for Documents",
    "updated_at": "2026-04-23T21:50:24.000Z",
    "url": "https://developer.scalepad.com/reference/09_evidenceapi-1"
   },
   {
-   "content_hash": "66f3b019807f5397",
+   "content_hash": "409b981d0402093b",
    "description": "Generates pre-signed URL to upload document(s) for the specified evidence request.  The client uploads files directly to S3 using the returned signedUrl and method before expires_in_seconds elapses.",
    "fetch_error": null,
    "key": "/reference/09_evidenceapi_1-1",
@@ -801,19 +948,19 @@
      "404",
      "500"
     ],
-    "summary": "Generate Signed URLs to Upload Documents",
+    "summary": "Generate Signed URLs to Upload Documents for an Evidence Request",
     "tags": [
      "Evidences"
     ]
    },
    "path": "/controlmap/v1/clients/{client_id}/evidence-requests/{evidence_request_id}/documents/signed-url",
    "product": "ControlMap API",
-   "title": "Generate Signed URLs to Upload Documents",
+   "title": "Generate Signed URLs to Upload Documents for an Evidence Request",
    "updated_at": "2026-04-23T21:50:24.000Z",
    "url": "https://developer.scalepad.com/reference/09_evidenceapi_1-1"
   },
   {
-   "content_hash": "0b873d7adf64ff3a",
+   "content_hash": "56313a367319a399",
    "description": "Uploads a document up to 10 MB and attaches it to the specified evidence request.",
    "fetch_error": null,
    "key": "/reference/10_evidenceapi-1",
@@ -835,19 +982,19 @@
      "404",
      "500"
     ],
-    "summary": "Upload a document (up to 10 MB) to an",
+    "summary": "Upload a document (up to 10 MB) to an evidence request.",
     "tags": [
      "Evidences"
     ]
    },
    "path": "/controlmap/v1/clients/{client_id}/evidence-requests/{evidence_request_id}/documents",
    "product": "ControlMap API",
-   "title": "Upload a document (up to 10 MB) to an",
+   "title": "Upload a document (up to 10 MB) to an evidence request.",
    "updated_at": "2026-04-23T21:50:24.000Z",
    "url": "https://developer.scalepad.com/reference/10_evidenceapi-1"
   },
   {
-   "content_hash": "c7bd6bf80c5351a6",
+   "content_hash": "9c1ebe9a0af741d8",
    "description": "Creates a new evidence request and uploads a document up to 10 MB, attaching the uploaded document to the newly created evidence request.",
    "fetch_error": null,
    "key": "/reference/11_evidenceapi-1",
@@ -869,19 +1016,19 @@
      "404",
      "500"
     ],
-    "summary": "Create Evidence Request and Upload a",
+    "summary": "Create Evidence Request and Upload a document (up to 10 MB)",
     "tags": [
      "Evidences"
     ]
    },
    "path": "/controlmap/v1/clients/{client_id}/evidences/{evidence_id}/documents",
    "product": "ControlMap API",
-   "title": "Create Evidence Request and Upload a",
+   "title": "Create Evidence Request and Upload a document (up to 10 MB)",
    "updated_at": "2026-04-23T21:50:24.000Z",
    "url": "https://developer.scalepad.com/reference/11_evidenceapi-1"
   },
   {
-   "content_hash": "481bc8ccf11a7dab",
+   "content_hash": "032c1da8e8639274",
    "description": "Creates a new hyperlink and associates it with an evidence request.  Used to create: - External reference URLs - Documentation or shared drive links - URL-based supporting evidence",
    "fetch_error": null,
    "key": "/reference/11_evidenceapi_1-1",
@@ -916,7 +1063,7 @@
    "url": "https://developer.scalepad.com/reference/11_evidenceapi_1-1"
   },
   {
-   "content_hash": "48c27c38e325baab",
+   "content_hash": "e211425dce092b65",
    "description": "Updates specific fields of an evidence request. Only provided fields are updated, others remain unchanged.  Only fields included in the payload will be updated. Fields omitted will remain unchanged.\u2026",
    "fetch_error": null,
    "key": "/reference/12_evidenceapi-1",
@@ -953,7 +1100,7 @@
    "url": "https://developer.scalepad.com/reference/12_evidenceapi-1"
   },
   {
-   "content_hash": "bd339542ba219710",
+   "content_hash": "99e59e098f0de4d9",
    "description": "Triggers a refresh of all evidence mappings for the specified client.  This operation is typically used to: - Re-sync evidence mappings after changes in configuration - Pull updated mapping\u2026",
    "fetch_error": null,
    "key": "/reference/13_evidenceapi-1",
@@ -983,7 +1130,7 @@
    "url": "https://developer.scalepad.com/reference/13_evidenceapi-1"
   },
   {
-   "content_hash": "c9777f96ebeb9659",
+   "content_hash": "2824a144bf568f7b",
    "description": "Deletes a specific evidence request associated with an evidence.  This operation is typically used when: - A request was created incorrectly - The workflow requires removing outdated or duplicate\u2026",
    "fetch_error": null,
    "key": "/reference/14_evidenceapi-1",
@@ -1015,7 +1162,7 @@
    "url": "https://developer.scalepad.com/reference/14_evidenceapi-1"
   },
   {
-   "content_hash": "ddb4d8f0647f4aee",
+   "content_hash": "7850431876ed2c3a",
    "description": "Archives an existing evidence request and records audit metadata.  This endpoint is typically used when: - A reviewer or system wants to mark an evidence request as archived - Workflows require\u2026",
    "fetch_error": null,
    "key": "/reference/15_evidenceapi-1",
@@ -1047,7 +1194,7 @@
    "url": "https://developer.scalepad.com/reference/15_evidenceapi-1"
   },
   {
-   "content_hash": "18c597a4d03fd681",
+   "content_hash": "686189b4b506d59a",
    "description": "Deletes the specified document for the given client.  Use this endpoint when: - An incorrect or duplicate document was uploaded - A document must be removed from an evidence request - Evidence\u2026",
    "fetch_error": null,
    "key": "/reference/17_evidenceapi-1",
@@ -1079,7 +1226,7 @@
    "url": "https://developer.scalepad.com/reference/17_evidenceapi-1"
   },
   {
-   "content_hash": "bc323ceb9a47d761",
+   "content_hash": "46832647262410ba",
    "description": "Retrieves a paginated list of action items for a specific client.  Supports filtering with PII, sorting, and cursor-based pagination.",
    "fetch_error": null,
    "key": "/reference/a_actionitem-1",
@@ -1093,7 +1240,7 @@
    "url": "https://developer.scalepad.com/reference/a_actionitem-1"
   },
   {
-   "content_hash": "c6f9c3bc454450c3",
+   "content_hash": "be6fd5918cec6368",
    "description": "Maps an action item to objectives , assessment questions, risks, controls, assets, and/or asset types for a client.  In the request body, include only the entity codes that need to be mapped. Empty\u2026",
    "fetch_error": null,
    "key": "/reference/actionitemmapentitiesforclient",
@@ -1119,19 +1266,19 @@
      "404",
      "500"
     ],
-    "summary": "Map Action Item to All Entity Types",
+    "summary": "Map Action Item to Objectives, Assessment Questions, Risks, Controls, Assets, and Asset Types",
     "tags": [
      "Action Items"
     ]
    },
    "path": "/controlmap/v1/clients/{client_id}/action-items/{action_item_id}/mappings",
    "product": "ControlMap API",
-   "title": "Map Action Item to All Entity Types",
+   "title": "Map Action Item to Objectives, Assessment Questions, Risks, Controls, Assets, and Asset Types",
    "updated_at": "2026-06-04T22:58:28.000Z",
    "url": "https://developer.scalepad.com/reference/actionitemmapentitiesforclient"
   },
   {
-   "content_hash": "cc0cb8a7bedbf992",
+   "content_hash": "db27394b5263d950",
    "description": "Removes links between an action item and the given objectives (requirements), assessment questions, risks, controls, assets, and/or asset types for a client.  In the request body, include only the\u2026",
    "fetch_error": null,
    "key": "/reference/actionitemunmapentitiesforclient",
@@ -1157,14 +1304,14 @@
      "404",
      "500"
     ],
-    "summary": "Unmap Action Item from All Entity Types",
+    "summary": "Unmap Action Item from Objectives, Assessment Questions, Risks, Controls, Assets, and Asset Types",
     "tags": [
      "Action Items"
     ]
    },
    "path": "/controlmap/v1/clients/{client_id}/action-items/{action_item_id}/mappings/bulk-delete",
    "product": "ControlMap API",
-   "title": "Unmap Action Item from All Entity Types",
+   "title": "Unmap Action Item from Objectives, Assessment Questions, Risks, Controls, Assets, and Asset Types",
    "updated_at": "2026-07-02T20:17:56.000Z",
    "url": "https://developer.scalepad.com/reference/actionitemunmapentitiesforclient"
   },
@@ -12738,7 +12885,7 @@
    "url": "https://developer.scalepad.com/reference/apiv1roadmapspreadsheet"
   },
   {
-   "content_hash": "302c2fd52a71aaab",
+   "content_hash": "ba874d698f14bd33",
    "description": "Returns comprehensive assessment summary for a client.  By default, the response includes: - `assessment_question_groups` - `grades` - `assessment_stats`  Optional query parameters: -\u2026",
    "fetch_error": null,
    "key": "/reference/assessmentprogress-1",
@@ -12769,7 +12916,7 @@
    "url": "https://developer.scalepad.com/reference/assessmentprogress-1"
   },
   {
-   "content_hash": "333ce6de26645929",
+   "content_hash": "e371528cf903f06b",
    "description": "Clears the existing answer for the specified assessment question.  This operation removes the stored answer and resets the question to an unanswered state.",
    "fetch_error": null,
    "key": "/reference/assessmentquestiondeleteanswerforclient-1",
@@ -12800,7 +12947,7 @@
    "url": "https://developer.scalepad.com/reference/assessmentquestiondeleteanswerforclient-1"
   },
   {
-   "content_hash": "a95cce425435fca8",
+   "content_hash": "1d489057c2560d60",
    "description": "Returns full assessment question details for the question identified by **question code**.",
    "fetch_error": null,
    "key": "/reference/assessmentquestiongetbycodeforclient-1",
@@ -12830,7 +12977,7 @@
    "url": "https://developer.scalepad.com/reference/assessmentquestiongetbycodeforclient-1"
   },
   {
-   "content_hash": "759af795a91d1b08",
+   "content_hash": "01c6cdfd636dd1af",
    "description": "Maps an assessment question to evidences, action items, policies, or procedures for a client.  In the request body, include only the entity codes/IDs that need to be mapped. Empty or omitted arrays\u2026",
    "fetch_error": null,
    "key": "/reference/assessmentquestionmapentitiesforclient-1",
@@ -12854,19 +13001,19 @@
      "404",
      "500"
     ],
-    "summary": "Map Assessment Question to Evidences",
+    "summary": "Map Assessment Question to Evidences, Action Items, Policies, or Procedures",
     "tags": [
      "Assessments"
     ]
    },
    "path": "/controlmap/v1/clients/{client_id}/assessments/common/questions/{question_code}/mappings",
    "product": "ControlMap API",
-   "title": "Map Assessment Question to Evidences",
+   "title": "Map Assessment Question to Evidences, Action Items, Policies, or Procedures",
    "updated_at": "2026-04-23T21:50:24.000Z",
    "url": "https://developer.scalepad.com/reference/assessmentquestionmapentitiesforclient-1"
   },
   {
-   "content_hash": "eb07d48087cbe77b",
+   "content_hash": "2130fde45ee21af6",
    "description": "Creates a response for a client's assessment question",
    "fetch_error": null,
    "key": "/reference/assessmentquestionnotecreate-1",
@@ -12900,7 +13047,7 @@
    "url": "https://developer.scalepad.com/reference/assessmentquestionnotecreate-1"
   },
   {
-   "content_hash": "bd796e4df8c6c533",
+   "content_hash": "fb8af551d1570d79",
    "description": "Submits or updates the selected answer for the assessment question identified by `question_code`.  The `answer` value must match one of the valid response options for that question.  **Supported\u2026",
    "fetch_error": null,
    "key": "/reference/assessmentquestionputanswerforclient-1",
@@ -12934,7 +13081,7 @@
    "url": "https://developer.scalepad.com/reference/assessmentquestionputanswerforclient-1"
   },
   {
-   "content_hash": "a583c9937e6bc152",
+   "content_hash": "99b96eefac541705",
    "description": "Deletes a assessment question response. The note must belong to the question.",
    "fetch_error": null,
    "key": "/reference/assessmentquestionresponsedelete-1",
@@ -12965,7 +13112,7 @@
    "url": "https://developer.scalepad.com/reference/assessmentquestionresponsedelete-1"
   },
   {
-   "content_hash": "9d17df5921de8900",
+   "content_hash": "a39a1deb3624a107",
    "description": "Partially updates a question response. You can update either or both fields: response and provided_by.",
    "fetch_error": null,
    "key": "/reference/assessmentquestionresponseupdate-1",
@@ -13000,7 +13147,7 @@
    "url": "https://developer.scalepad.com/reference/assessmentquestionresponseupdate-1"
   },
   {
-   "content_hash": "27d14659308943ab",
+   "content_hash": "f810b4455346aa7d",
    "description": "Returns a paginated list of assessment questions for the specified client.          Supports filtering with PII, sorting, and cursor-based pagination..",
    "fetch_error": null,
    "key": "/reference/assessmentquestionssearchbyclient-1",
@@ -13014,7 +13161,7 @@
    "url": "https://developer.scalepad.com/reference/assessmentquestionssearchbyclient-1"
   },
   {
-   "content_hash": "732bbe9da8dd88e6",
+   "content_hash": "f50d449130c4e6de",
    "description": "Removes links between an assessment question and the given evidences, action items, policies, or procedures for a client.",
    "fetch_error": null,
    "key": "/reference/assessmentquestionunmapentitiesforclient-1",
@@ -13038,19 +13185,56 @@
      "404",
      "500"
     ],
-    "summary": "Unmap Assessment Question from Evidences",
+    "summary": "Unmap Assessment Question from Evidences, Action Items, Policies, or Procedures",
     "tags": [
      "Assessments"
     ]
    },
    "path": "/controlmap/v1/clients/{client_id}/assessments/common/questions/{question_code}/mappings/bulk-delete",
    "product": "ControlMap API",
-   "title": "Unmap Assessment Question from Evidences",
+   "title": "Unmap Assessment Question from Evidences, Action Items, Policies, or Procedures",
    "updated_at": "2026-04-23T21:50:24.000Z",
    "url": "https://developer.scalepad.com/reference/assessmentquestionunmapentitiesforclient-1"
   },
   {
-   "content_hash": "a050fbd193ba32d5",
+   "content_hash": "b346518333ba5e25",
+   "description": "**Deprecated.** Use `POST .../mappings/bulk-delete` instead \u2014 it accepts the same entity-codes body shape, so it is a direct replacement.  This operation is scheduled for removal in a future API\u2026",
+   "fetch_error": null,
+   "key": "/reference/assessmentquestionunmapentitiesforclientdeprecated",
+   "kind": "endpoint",
+   "method": "DELETE",
+   "operation": {
+    "deprecated": true,
+    "parameters": [
+     "path:client_id*",
+     "path:question_code*"
+    ],
+    "request_fields": [
+     "action_item_codes",
+     "evidence_codes",
+     "policy_codes",
+     "procedure_codes"
+    ],
+    "responses": [
+     "204",
+     "400",
+     "402",
+     "404",
+     "500"
+    ],
+    "summary": "Unmap Assessment Question from Items (Deprecated)",
+    "tags": [
+     "Assessments"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/assessments/common/questions/{question_code}/mappings",
+   "product": "ControlMap API",
+   "title": "Unmap Assessment Question from Items (Deprecated)",
+   "updated_at": "2026-09-23T23:14:10.000Z",
+   "url": "https://developer.scalepad.com/reference/assessmentquestionunmapentitiesforclientdeprecated"
+  },
+  {
+   "content_hash": "c313caa90e9be5b9",
    "description": "Retrieves a specific action item for a given client.  This endpoint returns detailed information about an action item, including its status, ownership, and audit metadata.",
    "fetch_error": null,
    "key": "/reference/b_actionitem-1",
@@ -13082,7 +13266,7 @@
    "url": "https://developer.scalepad.com/reference/b_actionitem-1"
   },
   {
-   "content_hash": "9e281b3e609d1abc",
+   "content_hash": "1db0d385162c1832",
    "description": "Removes links between a client governance and given objectives (requirements), policies, controls for the client.  In the request body, include only the entity codes that need to be unmapped. Empty\u2026",
    "fetch_error": null,
    "key": "/reference/bulkdeleteentitiesfromclientgovernance",
@@ -13106,19 +13290,19 @@
      "404",
      "500"
     ],
-    "summary": "Unmap Governance from Objectives, Policies",
+    "summary": "Unmap Governance from Objectives, Policies, and Controls",
     "tags": [
      "Governance"
     ]
    },
    "path": "/controlmap/v1/clients/{client_id}/governance/{governance_id}/mappings/bulk-delete",
    "product": "ControlMap API",
-   "title": "Unmap Governance from Objectives, Policies",
+   "title": "Unmap Governance from Objectives, Policies, and Controls",
    "updated_at": "2026-06-04T22:13:22.000Z",
    "url": "https://developer.scalepad.com/reference/bulkdeleteentitiesfromclientgovernance"
   },
   {
-   "content_hash": "d4a85cf56d2d2d79",
+   "content_hash": "b666d3bbba3a1806",
    "description": "Removes links between a client policy and the framework objectives and/or controls in the request body.  Send only codes for mappings that should be removed. Empty or omitted arrays are ignored.\u2026",
    "fetch_error": null,
    "key": "/reference/bulkdeleteentitiesfromclientpolicy",
@@ -13153,7 +13337,7 @@
    "url": "https://developer.scalepad.com/reference/bulkdeleteentitiesfromclientpolicy"
   },
   {
-   "content_hash": "bcd7df7403dfd7f5",
+   "content_hash": "d16dfffbd527ffbb",
    "description": "Removes links between a client procedure and framework requirements (objectives), policies, and/or controls in the request body.  Send only codes for mappings that should be removed. Empty or omitted\u2026",
    "fetch_error": null,
    "key": "/reference/bulkdeleteentitiesfromclientprocedure",
@@ -13189,7 +13373,7 @@
    "url": "https://developer.scalepad.com/reference/bulkdeleteentitiesfromclientprocedure"
   },
   {
-   "content_hash": "f1dc48bae5f5203e",
+   "content_hash": "1e9dcfa865fda790",
    "description": "Removes links between a risk and the given assets, asset types, threats, vulnerabilities, vendors, objectives, controls, and/or action items for a client.  Send only codes for mappings that should be\u2026",
    "fetch_error": null,
    "key": "/reference/bulkdeleteentitiesfromclientrisk",
@@ -13218,19 +13402,19 @@
      "404",
      "500"
     ],
-    "summary": "Unmap Risk from Assets, Asset Types",
+    "summary": "Unmap Risk from Assets, Asset Types, Threats, Vulnerabilities, or Vendors",
     "tags": [
      "Risks"
     ]
    },
    "path": "/controlmap/v1/clients/{client_id}/risks/{risk_id}/mappings/bulk-delete",
    "product": "ControlMap API",
-   "title": "Unmap Risk from Assets, Asset Types",
+   "title": "Unmap Risk from Assets, Asset Types, Threats, Vulnerabilities, or Vendors",
    "updated_at": "2026-07-02T17:30:37.000Z",
    "url": "https://developer.scalepad.com/reference/bulkdeleteentitiesfromclientrisk"
   },
   {
-   "content_hash": "ef50119c5dc2ee14",
+   "content_hash": "cd446aae0fc33839",
    "description": "Uploads a document  up to 10 MB and associates it with the specified action item. The file is uploaded as multipart/form-data.",
    "fetch_error": null,
    "key": "/reference/c_actionitem-1",
@@ -13264,7 +13448,7 @@
    "url": "https://developer.scalepad.com/reference/c_actionitem-1"
   },
   {
-   "content_hash": "4d418583c5df3eb2",
+   "content_hash": "7d85daa57ecfc6c2",
    "description": "Retrieves a paginated summary of action items grouped by client.  Supports filtering, sorting, and cursor-based pagination.",
    "fetch_error": null,
    "key": "/reference/c_actionitem_1-1",
@@ -13495,7 +13679,7 @@
    "url": "https://developer.scalepad.com/reference/create-deliverable-template-from-template-1"
   },
   {
-   "content_hash": "4e9e008ff4d49db1",
+   "content_hash": "c90dc715ce224e16",
    "description": "Creates a new action item for the specified client with the provided details  **Allowed values for patchable fields:**   - **status**: `Not Started`, `In Progress`, `Review`, `Completed`, `Not\u2026",
    "fetch_error": null,
    "key": "/reference/createactionitem-1",
@@ -13575,7 +13759,7 @@
    "url": "https://developer.scalepad.com/reference/createcategory"
   },
   {
-   "content_hash": "5bf322b506acafa8",
+   "content_hash": "8762789f4507fd60",
    "description": "Creates a new governance for the specified client with the provided details.  The authenticated user becomes the owner and creator. The is created in **In Review** status with a default review date\u2026",
    "fetch_error": null,
    "key": "/reference/createclientgovernancedocument",
@@ -13609,7 +13793,7 @@
    "url": "https://developer.scalepad.com/reference/createclientgovernancedocument"
   },
   {
-   "content_hash": "e071d785415056bd",
+   "content_hash": "dde20fbb8c464069",
    "description": "Creates a new policy for the specified client with the provided details.  The authenticated user becomes the owner and creator. The policy is created in **In Review** status with **HTML** source and\u2026",
    "fetch_error": null,
    "key": "/reference/createclientpolicy",
@@ -13644,7 +13828,7 @@
    "url": "https://developer.scalepad.com/reference/createclientpolicy"
   },
   {
-   "content_hash": "4988934e152c2534",
+   "content_hash": "1d5c8d6b57e38c85",
    "description": "Creates a new procedure for the specified client with the provided details.  The authenticated user becomes the owner and creator. The procedure is created in **In Review** status with a default\u2026",
    "fetch_error": null,
    "key": "/reference/createclientprocedure",
@@ -13678,7 +13862,7 @@
    "url": "https://developer.scalepad.com/reference/createclientprocedure"
   },
   {
-   "content_hash": "5da00c76c6534ff1",
+   "content_hash": "1e6bd946d307dacf",
    "description": "Creates a new risk for the specified client with the provided details.  The authenticated user becomes the creator. Supported status values: `Assessed`, `Assessment in progress`, `Closed`, `Needs\u2026",
    "fetch_error": null,
    "key": "/reference/createclientrisk",
@@ -14216,7 +14400,7 @@
    "url": "https://developer.scalepad.com/reference/createsaasmanagementenrollmenttoken"
   },
   {
-   "content_hash": "4620102b1ae7bc76",
+   "content_hash": "e4439d2bb2dc8f01",
    "description": "Generates pre-signed URL(s) to upload document(s) for the specified action item.  The client uploads files directly to S3 using the returned signed_url before expires_in_seconds elapses.",
    "fetch_error": null,
    "key": "/reference/d_actionitem-1",
@@ -14239,14 +14423,14 @@
      "404",
      "500"
     ],
-    "summary": "Generate Signed URLs to Upload Documents",
+    "summary": "Generate Signed URLs to Upload Documents for an Action Item",
     "tags": [
      "Action Items"
     ]
    },
    "path": "/controlmap/v1/clients/{client_id}/action-items/{action_item_id}/documents/signed-url",
    "product": "ControlMap API",
-   "title": "Generate Signed URLs to Upload Documents",
+   "title": "Generate Signed URLs to Upload Documents for an Action Item",
    "updated_at": "2026-04-23T21:50:24.000Z",
    "url": "https://developer.scalepad.com/reference/d_actionitem-1"
   },
@@ -14499,7 +14683,7 @@
    "url": "https://developer.scalepad.com/reference/deletecategory"
   },
   {
-   "content_hash": "787c43cf350d8f82",
+   "content_hash": "ff86b9794faa72f5",
    "description": "Deletes an existing action item identified by its action item ID for the specified client.  The action item and all associated data will be permanently removed.",
    "fetch_error": null,
    "key": "/reference/deleteclientactionitem",
@@ -14531,7 +14715,7 @@
    "url": "https://developer.scalepad.com/reference/deleteclientactionitem"
   },
   {
-   "content_hash": "05f0de6e92a668e6",
+   "content_hash": "29332c93cc4e1ff7",
    "description": "Deletes an existing governance identified by its governance ID for the specified client.  The governance and all associated data will be permanently removed.",
    "fetch_error": null,
    "key": "/reference/deleteclientgovernancedocument",
@@ -14563,7 +14747,7 @@
    "url": "https://developer.scalepad.com/reference/deleteclientgovernancedocument"
   },
   {
-   "content_hash": "33aecb99bbadfda2",
+   "content_hash": "a7cfbcf5e7361351",
    "description": "Deletes an existing policy identified by its policy ID for the specified client.  The policy and all associated data will be permanently removed.",
    "fetch_error": null,
    "key": "/reference/deleteclientpolicy",
@@ -14595,7 +14779,7 @@
    "url": "https://developer.scalepad.com/reference/deleteclientpolicy"
   },
   {
-   "content_hash": "c41aac8fa66a9d94",
+   "content_hash": "9027fc80da1cd241",
    "description": "Deletes an existing policy section identified by its section ID for the specified client policy.  The section will be permanently removed from the policy.",
    "fetch_error": null,
    "key": "/reference/deleteclientpolicysection",
@@ -14628,7 +14812,7 @@
    "url": "https://developer.scalepad.com/reference/deleteclientpolicysection"
   },
   {
-   "content_hash": "d0f13b2757850e5c",
+   "content_hash": "dd1444460dd1cd71",
    "description": "Deletes an existing procedure identified by its procedure ID for the specified client.  The procedure and all associated data will be permanently removed.",
    "fetch_error": null,
    "key": "/reference/deleteclientprocedure",
@@ -14660,7 +14844,7 @@
    "url": "https://developer.scalepad.com/reference/deleteclientprocedure"
   },
   {
-   "content_hash": "a129010120af524e",
+   "content_hash": "ee19b17294e36302",
    "description": "Deletes an existing risk identified by its risk ID for the specified client.  The risk and all associated data will be permanently removed.",
    "fetch_error": null,
    "key": "/reference/deleteclientrisk",
@@ -14888,7 +15072,7 @@
    "url": "https://developer.scalepad.com/reference/deletemanufacturer"
   },
   {
-   "content_hash": "e1ad75b3e4985550",
+   "content_hash": "3fef7225083f681b",
    "description": "Maps an evidence to objectives and/or controls for a client.  In the request body, include only the entity codes that need to be mapped. Empty or omitted arrays are ignored.  Supported request\u2026",
    "fetch_error": null,
    "key": "/reference/evidencemapentitiesforclient",
@@ -14903,7 +15087,8 @@
     "request_fields": [
      "assessment_question_codes",
      "control_codes",
-     "objective_codes"
+     "objective_codes",
+     "objectives"
     ],
     "responses": [
      "204",
@@ -14923,7 +15108,7 @@
    "url": "https://developer.scalepad.com/reference/evidencemapentitiesforclient"
   },
   {
-   "content_hash": "8e4581b0ed985471",
+   "content_hash": "6a64a0abc47d01c4",
    "description": "Removes links between an evidence and the given objectives (requirements) and/or controls for a client.  In the request body, include only the entity codes that need to be unmapped. Empty or omitted\u2026",
    "fetch_error": null,
    "key": "/reference/evidenceunmapentitiesforclient",
@@ -14938,7 +15123,8 @@
     "request_fields": [
      "assessment_question_codes",
      "control_codes",
-     "objective_codes"
+     "objective_codes",
+     "objectives"
     ],
     "responses": [
      "204",
@@ -15800,7 +15986,7 @@
    "url": "https://developer.scalepad.com/reference/get_v1-suppliers-id-1"
   },
   {
-   "content_hash": "1e1ae79c710abf8f",
+   "content_hash": "3df30690dee3fa8c",
    "description": "Returns detailed information for a specific governance identified by its ID for the given client.",
    "fetch_error": null,
    "key": "/reference/getclientgovernancedocumentbyid",
@@ -15832,7 +16018,7 @@
    "url": "https://developer.scalepad.com/reference/getclientgovernancedocumentbyid"
   },
   {
-   "content_hash": "842a25ca56109788",
+   "content_hash": "6d58d0db04944b66",
    "description": "Returns detailed information for a specific policy identified by its ID for the given client.",
    "fetch_error": null,
    "key": "/reference/getclientpolicybyid",
@@ -15864,7 +16050,7 @@
    "url": "https://developer.scalepad.com/reference/getclientpolicybyid"
   },
   {
-   "content_hash": "66a02bef90aca74c",
+   "content_hash": "7b83326e11da471f",
    "description": "Returns detailed information for a specific procedure identified by its ID for the given client.",
    "fetch_error": null,
    "key": "/reference/getclientprocedurebyid",
@@ -15896,7 +16082,7 @@
    "url": "https://developer.scalepad.com/reference/getclientprocedurebyid"
   },
   {
-   "content_hash": "027d47d7bdde9bf8",
+   "content_hash": "384345586a03c38d",
    "description": "Returns Objective summary for a single client.",
    "fetch_error": null,
    "key": "/reference/getclientrequirementsobjectivesummary",
@@ -15926,7 +16112,7 @@
    "url": "https://developer.scalepad.com/reference/getclientrequirementsobjectivesummary"
   },
   {
-   "content_hash": "0a2686243662ab26",
+   "content_hash": "3e3731016591d10d",
    "description": "Returns detailed information for a specific risk category identified by its ID for the given client.",
    "fetch_error": null,
    "key": "/reference/getclientriskcategorybyid",
@@ -15958,7 +16144,7 @@
    "url": "https://developer.scalepad.com/reference/getclientriskcategorybyid"
   },
   {
-   "content_hash": "bab853af03af2d85",
+   "content_hash": "2acd05ecba7e5ac1",
    "description": "Retrieves a time-limited signed URL for downloading the specified document.  This is typically used to: - Provide secure client-side document downloads - Grant temporary access to evidence-related\u2026",
    "fetch_error": null,
    "key": "/reference/getdocumentsignedurl",
@@ -15990,7 +16176,7 @@
    "url": "https://developer.scalepad.com/reference/getdocumentsignedurl"
   },
   {
-   "content_hash": "a6da2c6276123c03",
+   "content_hash": "d5008a2ca7f8772b",
    "description": "Retrieves detailed information about a specific evidence using its unique identifier.",
    "fetch_error": null,
    "key": "/reference/getevidencebyid",
@@ -16022,7 +16208,7 @@
    "url": "https://developer.scalepad.com/reference/getevidencebyid"
   },
   {
-   "content_hash": "1ab5a8028a7d8358",
+   "content_hash": "ce7740c6eb8f56fd",
    "description": "Returns paginated governance summaries for all partner clients.  This endpoint supports: - Cursor-based pagination - Sorting - Filtering  **Use Cases:** - Retrieve governance summaries across all MSP\u2026",
    "fetch_error": null,
    "key": "/reference/getgovernancesummarybyclients",
@@ -16057,7 +16243,7 @@
    "url": "https://developer.scalepad.com/reference/getgovernancesummarybyclients"
   },
   {
-   "content_hash": "c49e98d31bb82107",
+   "content_hash": "786d19e06a27819e",
    "description": "Returns paginated Policy summaries for all partner clients.    This endpoint supports:   - Cursor-based pagination   - Sorting   - Filtering    **Use Cases:**   - Retrieve Policy summaries across all\u2026",
    "fetch_error": null,
    "key": "/reference/getpolicysummarybyclients",
@@ -16092,7 +16278,7 @@
    "url": "https://developer.scalepad.com/reference/getpolicysummarybyclients"
   },
   {
-   "content_hash": "e97a52e3607939c3",
+   "content_hash": "febb6a91b34de527",
    "description": "Returns paginated Procedure summaries for all partner clients.  This endpoint supports: - Cursor-based pagination - Sorting - Filtering  **Use Cases:** - Retrieve Procedure summaries across all MSP\u2026",
    "fetch_error": null,
    "key": "/reference/getproceduresummarybyclients",
@@ -16127,7 +16313,7 @@
    "url": "https://developer.scalepad.com/reference/getproceduresummarybyclients"
   },
   {
-   "content_hash": "2cf0dff2e1a8b7b8",
+   "content_hash": "cc822ec3d9134e45",
    "description": "Returns metadata for a specific report document and a secure, time-limited pre-signed URL for downloading the file.  The signed URL expires after the specified number of seconds and must be used\u2026",
    "fetch_error": null,
    "key": "/reference/getreportsignedurl-1",
@@ -17348,7 +17534,39 @@
    "url": "https://developer.scalepad.com/reference/listcategories"
   },
   {
-   "content_hash": "229025ac69405d59",
+   "content_hash": "9f5e2757fca5a362",
+   "description": "Retrieves risk categories for the specified client. Optionally filter by name using a case-insensitive search query.",
+   "fetch_error": null,
+   "key": "/reference/listclientriskcategories",
+   "kind": "endpoint",
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*",
+     "query:search"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "400",
+     "401",
+     "404",
+     "500"
+    ],
+    "summary": "List Client Risk Categories",
+    "tags": [
+     "Risks"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/risks/categories",
+   "product": "ControlMap API",
+   "title": "List Client Risk Categories",
+   "updated_at": "2026-09-23T23:13:10.000Z",
+   "url": "https://developer.scalepad.com/reference/listclientriskcategories"
+  },
+  {
+   "content_hash": "c1dbbf98405ad3e1",
    "description": "Retrieves all departments available for risk assignment for the specified client.",
    "fetch_error": null,
    "key": "/reference/listclientriskdepartments",
@@ -17820,7 +18038,7 @@
    "url": "https://developer.scalepad.com/reference/listquotetemplates"
   },
   {
-   "content_hash": "f41a226b2d4d4b96",
+   "content_hash": "bd2be06ff4c689b2",
    "description": "Maps a governance to framework requirements (objectives), policies, and/or controls for a client.  In the request body, include only the business codes that need to be mapped. Empty or omitted arrays\u2026",
    "fetch_error": null,
    "key": "/reference/mapentitiestoclientgovernancedocument",
@@ -17844,19 +18062,19 @@
      "404",
      "500"
     ],
-    "summary": "Map Governance to Objectives, Policies, and",
+    "summary": "Map Governance to Objectives, Policies, and Controls",
     "tags": [
      "Governance"
     ]
    },
    "path": "/controlmap/v1/clients/{client_id}/governance/{governance_id}/mappings",
    "product": "ControlMap API",
-   "title": "Map Governance to Objectives, Policies, and",
+   "title": "Map Governance to Objectives, Policies, and Controls",
    "updated_at": "2026-06-04T22:13:22.000Z",
    "url": "https://developer.scalepad.com/reference/mapentitiestoclientgovernancedocument"
   },
   {
-   "content_hash": "6be45ef7086cbbc6",
+   "content_hash": "00c94fc1258c3c55",
    "description": "Maps a policy to framework objectives and/or controls for a client.  In the request body, include only the business codes that need to be mapped. Empty or omitted arrays are ignored.  Supported\u2026",
    "fetch_error": null,
    "key": "/reference/mapentitiestoclientpolicy",
@@ -17891,7 +18109,7 @@
    "url": "https://developer.scalepad.com/reference/mapentitiestoclientpolicy"
   },
   {
-   "content_hash": "533afb3993344e63",
+   "content_hash": "b1168cf005d314ec",
    "description": "Maps a client procedure to framework requirements (objectives), policies, and/or controls.  In the request body, include only the business codes that need to be mapped. Empty or omitted arrays are\u2026",
    "fetch_error": null,
    "key": "/reference/mapentitiestoclientprocedure",
@@ -17927,7 +18145,7 @@
    "url": "https://developer.scalepad.com/reference/mapentitiestoclientprocedure"
   },
   {
-   "content_hash": "90030fcb7a6e83d1",
+   "content_hash": "50db571256870ec4",
    "description": "Maps a risk to assets, asset types, threats, vulnerabilities, vendors, objectives, controls, and/or action items for a client.  In the request body, include only the entity codes that need to be\u2026",
    "fetch_error": null,
    "key": "/reference/mapentitiestoclientrisk",
@@ -17956,19 +18174,19 @@
      "404",
      "500"
     ],
-    "summary": "Map Risk to Assets, Asset Types, Threats",
+    "summary": "Map Risk to Assets, Asset Types, Threats, Vulnerabilities, or Vendors",
     "tags": [
      "Risks"
     ]
    },
    "path": "/controlmap/v1/clients/{client_id}/risks/{risk_id}/mappings",
    "product": "ControlMap API",
-   "title": "Map Risk to Assets, Asset Types, Threats",
+   "title": "Map Risk to Assets, Asset Types, Threats, Vulnerabilities, or Vendors",
    "updated_at": "2026-07-02T17:30:37.000Z",
    "url": "https://developer.scalepad.com/reference/mapentitiestoclientrisk"
   },
   {
-   "content_hash": "5a1390dbb81932c5",
+   "content_hash": "e7899a2687467b00",
    "description": "Returns a paginated list of control families for the client tenant. Each row includes id, name, code, creating user, and created timestamp only.  Supports filtering by `id`, `name`, and `code` using\u2026",
    "fetch_error": null,
    "key": "/reference/opencontrolfamilieslist",
@@ -18004,7 +18222,7 @@
    "url": "https://developer.scalepad.com/reference/opencontrolfamilieslist"
   },
   {
-   "content_hash": "28c4569269793a2c",
+   "content_hash": "6c225af01d5befac",
    "description": "Removes links between a client control and policies, procedures, governance documents, risks, evidences, and/or action items identified by **policy_codes**, **procedure_codes**, **governance_codes**,\u2026",
    "fetch_error": null,
    "key": "/reference/opencontrolsbulkdeletemappings",
@@ -18032,19 +18250,19 @@
      "404",
      "500"
     ],
-    "summary": "Unmap Policy, Procedure, Governance, Risk",
+    "summary": "Unmap Policy, Procedure, Governance, Risk, Evidence, and Action Items from Control",
     "tags": [
      "Controls"
     ]
    },
    "path": "/controlmap/v1/clients/{client_id}/controls/{control_id}/mappings/bulk-delete",
    "product": "ControlMap API",
-   "title": "Unmap Policy, Procedure, Governance, Risk",
+   "title": "Unmap Policy, Procedure, Governance, Risk, Evidence, and Action Items from Control",
    "updated_at": "2026-06-04T22:13:22.000Z",
    "url": "https://developer.scalepad.com/reference/opencontrolsbulkdeletemappings"
   },
   {
-   "content_hash": "e8e3c1d40b9cd76d",
+   "content_hash": "7ab5611b88874100",
    "description": "Returns paginated control summary metrics for all partner clients.",
    "fetch_error": null,
    "key": "/reference/opencontrolsclientssummary",
@@ -18078,7 +18296,7 @@
    "url": "https://developer.scalepad.com/reference/opencontrolsclientssummary"
   },
   {
-   "content_hash": "92c7c2b3935f36d6",
+   "content_hash": "9393d4a2d99675ef",
    "description": "Returns aggregate control metrics for the requested client.  Response uses `data` with one element (`client` + `control_summary`), `total_count` is `1`, and `next_cursor` is null.",
    "fetch_error": null,
    "key": "/reference/opencontrolsclientsummary",
@@ -18109,7 +18327,7 @@
    "url": "https://developer.scalepad.com/reference/opencontrolsclientsummary"
   },
   {
-   "content_hash": "390356a830ca072f",
+   "content_hash": "3040419755e5edc9",
    "description": "Creates a control for  for the specified client with the provided details. The authenticated user becomes the owner and creator.",
    "fetch_error": null,
    "key": "/reference/opencontrolscreate",
@@ -18149,7 +18367,7 @@
    "url": "https://developer.scalepad.com/reference/opencontrolscreate"
   },
   {
-   "content_hash": "81f00ab50c75429c",
+   "content_hash": "a8768f5d06f47b60",
    "description": "Deletes an existing Control identified by its control ID for the specified client.",
    "fetch_error": null,
    "key": "/reference/opencontrolsdelete",
@@ -18181,7 +18399,7 @@
    "url": "https://developer.scalepad.com/reference/opencontrolsdelete"
   },
   {
-   "content_hash": "666936e037a4e65d",
+   "content_hash": "a1477a93d3fb2254",
    "description": "Returns detailed information for a specific control identified by its ID for the given client.",
    "fetch_error": null,
    "key": "/reference/opencontrolsdetail",
@@ -18213,7 +18431,7 @@
    "url": "https://developer.scalepad.com/reference/opencontrolsdetail"
   },
   {
-   "content_hash": "fef280a212e49a66",
+   "content_hash": "de3ee61b7b379873",
    "description": "Returns a paginated list of control sets for the client tenant. Each row includes id, name, code, creating user, and created timestamp only.  Supports filtering by `id`, `name`, and `code` using\u2026",
    "fetch_error": null,
    "key": "/reference/opencontrolsetslist",
@@ -18249,7 +18467,7 @@
    "url": "https://developer.scalepad.com/reference/opencontrolsetslist"
   },
   {
-   "content_hash": "b3897ecf032ce41a",
+   "content_hash": "f81f30496151ca52",
    "description": "Map policies, procedures, governance documents, risks, evidences, action items, and/or framework objectives to the control identified by `control_id`. Only non-empty lists in the request body are\u2026",
    "fetch_error": null,
    "key": "/reference/opencontrolsmapmappings",
@@ -18277,19 +18495,19 @@
      "404",
      "500"
     ],
-    "summary": "Map Policy, Procedure, Governance, Risk",
+    "summary": "Map Policy, Procedure, Governance, Risk, Evidence, and Action Items to Control",
     "tags": [
      "Controls"
     ]
    },
    "path": "/controlmap/v1/clients/{client_id}/controls/{control_id}/mappings",
    "product": "ControlMap API",
-   "title": "Map Policy, Procedure, Governance, Risk",
+   "title": "Map Policy, Procedure, Governance, Risk, Evidence, and Action Items to Control",
    "updated_at": "2026-06-04T22:13:22.000Z",
    "url": "https://developer.scalepad.com/reference/opencontrolsmapmappings"
   },
   {
-   "content_hash": "60f66a96beb1f30a",
+   "content_hash": "45f4678634ecbc7d",
    "description": "Retrieves a paginated list of controls for a specific client.  Supports filtering, sorting, and cursor-based pagination via a JSON request body.",
    "fetch_error": null,
    "key": "/reference/opencontrolssearch",
@@ -18334,7 +18552,7 @@
    "url": "https://developer.scalepad.com/reference/patch_v1-suppliers-id-1"
   },
   {
-   "content_hash": "67272eb12bb30134",
+   "content_hash": "8cfc2a618be6ea63",
    "description": "Updates specific fields of an action item request. Only the fields provided in the request body will be updated. All other fields will remain unchanged.  **Allowed values for patchable fields:**   -\u2026",
    "fetch_error": null,
    "key": "/reference/patchactionitemrequest-1",
@@ -18354,12 +18572,14 @@
      "cost",
      "currency",
      "efforts_in_hours",
+     "is_poam",
      "milestones",
      "notes",
      "planned_end_date",
      "planned_start_date",
      "priority",
      "responsible_department",
+     "responsible_department_id",
      "responsible_person",
      "roadmap",
      "status",
@@ -18385,7 +18605,7 @@
    "url": "https://developer.scalepad.com/reference/patchactionitemrequest-1"
   },
   {
-   "content_hash": "5d8fb06addd11c14",
+   "content_hash": "eb1205f0c83803f1",
    "description": "Updates specific fields of a control. Only the fields provided in the request body will be updated. All other fields will remain unchanged.  Request property names use snake_case in JSON. When\u2026",
    "fetch_error": null,
    "key": "/reference/patchclientcontrol",
@@ -18433,7 +18653,7 @@
    "url": "https://developer.scalepad.com/reference/patchclientcontrol"
   },
   {
-   "content_hash": "ec26e4020378d30d",
+   "content_hash": "942ac4172a103dae",
    "description": "Updates specific fields of a governance. Only the fields provided in the request body will be updated. All other fields will remain unchanged.  Request property names use snake_case in JSON. When\u2026",
    "fetch_error": null,
    "key": "/reference/patchclientgovernancedocument",
@@ -18477,7 +18697,7 @@
    "url": "https://developer.scalepad.com/reference/patchclientgovernancedocument"
   },
   {
-   "content_hash": "42245867652ae640",
+   "content_hash": "e5723927739c787e",
    "description": "Updates specific fields of a policy. Only the fields provided in the request body will be updated. All other fields will remain unchanged.  Request property names use snake_case in JSON. When\u2026",
    "fetch_error": null,
    "key": "/reference/patchclientpolicy",
@@ -18520,7 +18740,7 @@
    "url": "https://developer.scalepad.com/reference/patchclientpolicy"
   },
   {
-   "content_hash": "1515f57bc82c4df5",
+   "content_hash": "ccf721c013b11a93",
    "description": "Updates specific fields of a procedure document (procedure rows only, not governance documents). Only the fields provided in the request body will be updated. All other fields will remain unchanged.\u2026",
    "fetch_error": null,
    "key": "/reference/patchclientprocedure",
@@ -18840,7 +19060,7 @@
    "url": "https://developer.scalepad.com/reference/revoke-deliverable-share-general-link-1"
   },
   {
-   "content_hash": "4b4b3f3531e3f8d8",
+   "content_hash": "8154f5803939a539",
    "description": "Retrieves a paginated list of governance for a specific client.  Supports filtering, sorting, and cursor-based pagination via a JSON request body.",
    "fetch_error": null,
    "key": "/reference/searchclientgovernance",
@@ -18854,7 +19074,7 @@
    "url": "https://developer.scalepad.com/reference/searchclientgovernance"
   },
   {
-   "content_hash": "c75b639ded3942d9",
+   "content_hash": "6d80473334f8af9b",
    "description": "Retrieves a paginated list of policies for a specific client.  Supports filtering, sorting, and cursor-based pagination via a JSON request body.",
    "fetch_error": null,
    "key": "/reference/searchclientpolicies",
@@ -18868,7 +19088,7 @@
    "url": "https://developer.scalepad.com/reference/searchclientpolicies"
   },
   {
-   "content_hash": "d91add5bba45b9b7",
+   "content_hash": "6eb190a2b94c2d83",
    "description": "Retrieves a paginated list of procedures for a specific client.  Supports filtering, sorting, and cursor-based pagination via a JSON request body.",
    "fetch_error": null,
    "key": "/reference/searchclientprocedures",
@@ -18984,7 +19204,7 @@
    "url": "https://developer.scalepad.com/reference/updatecategory"
   },
   {
-   "content_hash": "e0d4ec3ca5ce7bb9",
+   "content_hash": "ad9282f4ff0a8425",
    "description": "Updates specific fields of a risk. Only the fields provided in the request body will be updated. All other fields will remain unchanged.  Request property names use snake_case in JSON.  **Allowed\u2026",
    "fetch_error": null,
    "key": "/reference/updateclientrisk",
@@ -19298,7 +19518,7 @@
    "url": "https://developer.scalepad.com/reference/updatemanufacturer"
   },
   {
-   "content_hash": "2054b6943304ddfb",
+   "content_hash": "3c26d1fc602e48d5",
    "description": "Creates or updates an HTML policy section using **`title`** and **`description`** (snake_case JSON).  **Create** \u2014 omit **`id`**: **`title`** is required; **`description`** is optional. **Update** \u2014\u2026",
    "fetch_error": null,
    "key": "/reference/upsertclientpolicysection",
