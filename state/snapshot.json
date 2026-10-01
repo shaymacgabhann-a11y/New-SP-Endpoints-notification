@@ -1,25 +1,11 @@
 {
  "meta": {
   "base_url": "https://developer.scalepad.com",
-  "checked_at": "2026-09-30T22:55:53.468574+00:00",
-  "page_count": 590,
-  "previous_checked_at": "2026-09-30T21:23:58.908788+00:00"
+  "checked_at": "2026-10-01T20:18:19.933260+00:00",
+  "page_count": 591,
+  "previous_checked_at": "2026-09-30T22:55:53.468574+00:00"
  },
  "pages": [
-  {
-   "content_hash": "9017142098fc5e16",
-   "description": "",
-   "fetch_error": null,
-   "key": "/changelog/20260722-saas-management-v1-changelog",
-   "kind": "guide",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
-   "title": "SaaS Management: Device Enrollment & Utilization Summary",
-   "updated_at": null,
-   "url": "https://developer.scalepad.com/changelog/20260722-saas-management-v1-changelog"
-  },
   {
    "content_hash": "24726dd9912bbf10",
    "description": "",
@@ -145,6 +131,20 @@
    "title": "ControlMap API \u2013 Objective Assessments, Policy Sections & Risk Search",
    "updated_at": null,
    "url": "https://developer.scalepad.com/changelog/20260924-control-map-v1-changelog"
+  },
+  {
+   "content_hash": "0ea2cb9585c5e72a",
+   "description": "",
+   "fetch_error": null,
+   "key": "/changelog/20260930-backup-radar-v1-changelog",
+   "kind": "guide",
+   "method": null,
+   "operation": {},
+   "path": null,
+   "product": null,
+   "title": "BackupRadar API \u2013 Retire Unused Backups",
+   "updated_at": null,
+   "url": "https://developer.scalepad.com/changelog/20260930-backup-radar-v1-changelog"
   },
   {
    "content_hash": "8ecb55fbddd10ddf",
@@ -18861,7 +18861,7 @@
    "url": "https://developer.scalepad.com/reference/post_v1-suppliers-1"
   },
   {
-   "content_hash": "e432a7732dcad2e9",
+   "content_hash": "3218564434b26dee",
    "description": "Accepts a root JSON array of backup entries. Each entry identifies a device, job, and client, and may include result collections for backups, replications, verifications, boot verifications, and\u2026",
    "fetch_error": null,
    "key": "/reference/postv3backups",
@@ -18899,6 +18899,46 @@
    "title": "Ingest backup results",
    "updated_at": "2026-08-18T18:04:51.000Z",
    "url": "https://developer.scalepad.com/reference/postv3backups"
+  },
+  {
+   "content_hash": "c5bb1ecf256719f7",
+   "description": "Retires backups that match the supplied filters. Filters are exact (case-insensitive) and combined with AND. `reason` is required. At least one filter is required.  Set `dry_run` to `true` to preview\u2026",
+   "fetch_error": null,
+   "key": "/reference/postv3backupsretire",
+   "kind": "endpoint",
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [],
+    "request_fields": [
+     "client_id",
+     "client_name",
+     "close_psa_tickets",
+     "device_id",
+     "device_name",
+     "dry_run",
+     "job_name",
+     "no_result_in",
+     "reason"
+    ],
+    "responses": [
+     "200",
+     "400",
+     "401",
+     "403",
+     "429",
+     "500"
+    ],
+    "summary": "Retire unused backups",
+    "tags": [
+     "Backups"
+    ]
+   },
+   "path": "/backup-radar/v3/backups/retire",
+   "product": "Backup Radar API",
+   "title": "Retire unused backups",
+   "updated_at": "2026-10-01T18:15:02.000Z",
+   "url": "https://developer.scalepad.com/reference/postv3backupsretire"
   },
   {
    "content_hash": "6cb845ceff35198d",
