@@ -1,9 +1,9 @@
 {
  "meta": {
   "base_url": "https://developer.scalepad.com",
-  "checked_at": "2026-10-13T01:14:15.852161+00:00",
+  "checked_at": "2026-10-13T20:36:23.543737+00:00",
   "page_count": 591,
-  "previous_checked_at": "2026-10-12T23:35:45.766355+00:00"
+  "previous_checked_at": "2026-10-13T01:14:15.852161+00:00"
  },
  "pages": [
   {
@@ -203,7 +203,7 @@
    "url": "https://developer.scalepad.com/docs/product-apis-and-subscriptions"
   },
   {
-   "content_hash": "97220721efde3d1b",
+   "content_hash": "83294fd09af662ab",
    "description": "Connect your AI client to ScalePad with OAuth, discover product tools, and start with a read-only request.",
    "fetch_error": null,
    "key": "/docs/product-mcp",
@@ -213,7 +213,7 @@
    "path": null,
    "product": null,
    "title": "ScalePad MCP 2.0",
-   "updated_at": "2026-09-18T18:02:41.000Z",
+   "updated_at": "2026-10-13T16:05:37.000Z",
    "url": "https://developer.scalepad.com/docs/product-mcp"
   },
   {
@@ -14173,14 +14173,14 @@
    "url": "https://developer.scalepad.com/reference/createitemtier"
   },
   {
-   "content_hash": "74af0e0e992040d7",
-   "description": "Creates a new line item within an existing quote.",
+   "content_hash": "78a20fb49ae5974c",
+   "description": "**Deprecated.** This endpoint stops working on **2027-10-31**. Use [Create Quote Line Items](https://developer.scalepad.com/reference/createquotelineitems) instead, which adds line items to a\u2026",
    "fetch_error": null,
    "key": "/reference/createlineitem",
    "kind": "endpoint",
    "method": "POST",
    "operation": {
-    "deprecated": false,
+    "deprecated": true,
     "parameters": [],
     "request_fields": [
      "category",
@@ -14243,7 +14243,7 @@
    "url": "https://developer.scalepad.com/reference/createmanufacturer"
   },
   {
-   "content_hash": "8a91ff83260804fd",
+   "content_hash": "a9e30751bb0dc41c",
    "description": "Creates a new draft quote from a template. The contact is identified by email plus either `client_id` or `client_name`; when both are provided, `client_id` is used. The referenced contact must\u2026",
    "fetch_error": null,
    "key": "/reference/createquote",
@@ -14284,8 +14284,8 @@
    "url": "https://developer.scalepad.com/reference/createquote"
   },
   {
-   "content_hash": "8d78ab43595b004c",
-   "description": "Adds one or more line items to a section on a draft quote. Line, section, and quote-level totals are recomputed and persisted as part of the call.  Validation accumulates: every failing rule across\u2026",
+   "content_hash": "ea9a812c18e4ac32",
+   "description": "Adds one or more line items to a section on a draft quote. Line, section, and quote-level totals are recomputed and persisted as part of the call. New line items appear at the end of the section in\u2026",
    "fetch_error": null,
    "key": "/reference/createquotelineitems",
    "kind": "endpoint",
@@ -14330,7 +14330,7 @@
    "url": "https://developer.scalepad.com/reference/createquotelineitems"
   },
   {
-   "content_hash": "9146c7bf2f328156",
+   "content_hash": "427459db0ea1d42a",
    "description": "Adds one or more sections to a draft quote. Sections group line items on the quote layout. Multiple sections can be added in one call.  Response body matches `GET /v1/quotes/{quote_id}`.",
    "fetch_error": null,
    "key": "/reference/createquotesections",
@@ -15407,7 +15407,7 @@
    "url": "https://developer.scalepad.com/reference/fetchmanufacturer"
   },
   {
-   "content_hash": "828966cf2e9696ed",
+   "content_hash": "7255ec26ca9f65f6",
    "description": "Retrieves a quote revision with the full display payload \u2014 sections, line items, totals, contacts, content blocks, custom fields, and taxes. Both primary and draft revisions are returned; callers\u2026",
    "fetch_error": null,
    "key": "/reference/fetchquote",
@@ -17960,7 +17960,7 @@
    "url": "https://developer.scalepad.com/reference/listmanufacturers"
   },
   {
-   "content_hash": "6a7820d65025dd9d",
+   "content_hash": "eb7b038242a186e5",
    "description": "Retrieves a paginated list of all Quotes. Supports multiple filtering and sorting options.",
    "fetch_error": null,
    "key": "/reference/listquotes",
@@ -18784,7 +18784,7 @@
    "url": "https://developer.scalepad.com/reference/patchclientprocedure"
   },
   {
-   "content_hash": "fb6e77da58bf460a",
+   "content_hash": "6feb638c4b7e100f",
    "description": "Patch a line item on a draft quote. Absent fields preserve the row.  Nested objects + `recurring_interval` are tri-state: omit = no change, `null` = clear, populated = apply. `{}` \u2192 422. Entity ref\u2026",
    "fetch_error": null,
    "key": "/reference/patchquotesectionlineitem",
@@ -18941,7 +18941,7 @@
    "url": "https://developer.scalepad.com/reference/postv3backupsretire"
   },
   {
-   "content_hash": "6cb845ceff35198d",
+   "content_hash": "7db485e383e46b14",
    "description": "Transitions a draft quote into the published state. Runs strict validation, assigns a `quote_number`, and resolves `expired_at` if it was left unset.  Response body matches `GET\u2026",
    "fetch_error": null,
    "key": "/reference/publishquote",

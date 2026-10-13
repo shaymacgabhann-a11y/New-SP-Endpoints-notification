@@ -1,19 +1,26 @@
-# ScalePad developer docs — changes detected 2026-10-01 20:18 UTC
+# ScalePad developer docs — changes detected 2026-10-13 20:36 UTC
 
-Tracking 591 pages at https://developer.scalepad.com. **2 added · 1 removed · 1 changed**
+Tracking 591 pages at https://developer.scalepad.com. **0 added · 0 removed · 9 changed**
 
-## Added (2)
-### Backup Radar API
-- [POST /backup-radar/v3/backups/retire — Retire unused backups](https://developer.scalepad.com/reference/postv3backupsretire)
-
+## Changed (9)
 ### Guides
-- [BackupRadar API – Retire Unused Backups](https://developer.scalepad.com/changelog/20260930-backup-radar-v1-changelog)
+- [ScalePad MCP 2.0](https://developer.scalepad.com/docs/product-mcp)
+  - page content updated (schema details / examples / prose)
 
-## Removed (1)
-### Guides
-- [SaaS Management: Device Enrollment & Utilization Summary](https://developer.scalepad.com/changelog/20260722-saas-management-v1-changelog)
-
-## Changed (1)
-### Backup Radar API
-- [POST /backup-radar/v3/backups — Ingest backup results](https://developer.scalepad.com/reference/postv3backups)
+### Quoter API
+- [POST /v1/line-items — Create Line Item](https://developer.scalepad.com/reference/createlineitem)
+  - marked *deprecated*
+- [GET /v1/quotes — List Quotes](https://developer.scalepad.com/reference/listquotes)
+  - page content updated (schema details / examples / prose)
+- [POST /v1/quotes — Create Quote](https://developer.scalepad.com/reference/createquote)
+  - page content updated (schema details / examples / prose)
+- [GET /v1/quotes/{quote_id} — Fetch Quote](https://developer.scalepad.com/reference/fetchquote)
+  - page content updated (schema details / examples / prose)
+- [POST /v1/quotes/{quote_id}/publish — Publish Quote](https://developer.scalepad.com/reference/publishquote)
+  - page content updated (schema details / examples / prose)
+- [POST /v1/quotes/{quote_id}/sections — Create Quote Sections](https://developer.scalepad.com/reference/createquotesections)
+  - page content updated (schema details / examples / prose)
+- [POST /v1/quotes/{quote_id}/sections/{section_id}/line-items — Create Quote Line Items](https://developer.scalepad.com/reference/createquotelineitems)
+  - description text updated
+- [PATCH /v1/quotes/{quote_id}/sections/{section_id}/line-items/{line_item_id} — Patch Quote Line Item](https://developer.scalepad.com/reference/patchquotesectionlineitem)
   - page content updated (schema details / examples / prose)
