@@ -1,9 +1,9 @@
 {
  "meta": {
   "base_url": "https://developer.scalepad.com",
-  "checked_at": "2026-11-03T23:56:14.993748+00:00",
-  "page_count": 763,
-  "previous_checked_at": "2026-11-03T22:16:15.787022+00:00"
+  "checked_at": "2026-11-04T21:14:55.300813+00:00",
+  "page_count": 772,
+  "previous_checked_at": "2026-11-03T23:56:14.993748+00:00"
  },
  "pages": [
   {
@@ -203,7 +203,7 @@
    "url": "https://developer.scalepad.com/docs/product-apis-and-subscriptions"
   },
   {
-   "content_hash": "83294fd09af662ab",
+   "content_hash": "857dce4af840f7d0",
    "description": "Connect your AI client to ScalePad with OAuth, discover product tools, and start with a read-only request.",
    "fetch_error": null,
    "key": "/docs/product-mcp",
@@ -213,7 +213,7 @@
    "path": null,
    "product": null,
    "title": "ScalePad MCP 2.0",
-   "updated_at": "2026-10-13T16:05:37.000Z",
+   "updated_at": "2026-11-04T15:02:33.000Z",
    "url": "https://developer.scalepad.com/docs/product-mcp"
   },
   {
@@ -2184,7 +2184,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1accountlogoupload"
   },
   {
-   "content_hash": "fb0f63cf361e2175",
+   "content_hash": "0c581216cb2b8d2f",
    "description": "Get the account-wide general settings (identity, account type, region and format).",
    "fetch_error": null,
    "key": "/reference/apipublicv1accountsettingsget",
@@ -2385,6 +2385,141 @@
    "title": "Delete Agreement Asset Bulk",
    "updated_at": "2026-08-06T18:13:14.000Z",
    "url": "https://developer.scalepad.com/reference/apipublicv1agreementassetbulkdelete"
+  },
+  {
+   "content_hash": "835b3978432b9580",
+   "description": "Cancel planned agreement budget increases.",
+   "fetch_error": null,
+   "key": "/reference/apipublicv1agreementbudgetoverridecancel",
+   "kind": "endpoint",
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:agreement_budget_override_id*",
+     "path:agreement_id*"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "400",
+     "402",
+     "403",
+     "404"
+    ],
+    "summary": "Cancel Planned Agreement Budget Increases",
+    "tags": [
+     "Agreements"
+    ]
+   },
+   "path": "/lifecycle-manager/v1/agreements/{agreement_id}/budget/{agreement_budget_override_id}/cancel",
+   "product": "Lifecycle Manager API",
+   "title": "Cancel Planned Agreement Budget Increases",
+   "updated_at": "2026-11-04T13:47:19.000Z",
+   "url": "https://developer.scalepad.com/reference/apipublicv1agreementbudgetoverridecancel"
+  },
+  {
+   "content_hash": "64170953c15b3f91",
+   "description": "List planned agreement budget increases.",
+   "fetch_error": null,
+   "key": "/reference/apipublicv1agreementbudgetoverridelist",
+   "kind": "endpoint",
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:agreement_id*"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "400",
+     "402",
+     "403",
+     "404"
+    ],
+    "summary": "List Planned Agreement Budget Increases",
+    "tags": [
+     "Agreements"
+    ]
+   },
+   "path": "/lifecycle-manager/v1/agreements/{agreement_id}/budget",
+   "product": "Lifecycle Manager API",
+   "title": "List Planned Agreement Budget Increases",
+   "updated_at": "2026-11-04T13:47:19.000Z",
+   "url": "https://developer.scalepad.com/reference/apipublicv1agreementbudgetoverridelist"
+  },
+  {
+   "content_hash": "1ef9aee6113cdcf0",
+   "description": "Preview planned agreement budget increases.",
+   "fetch_error": null,
+   "key": "/reference/apipublicv1agreementbudgetoverridepreview",
+   "kind": "endpoint",
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:agreement_id*"
+    ],
+    "request_fields": [
+     "agreement_item_id",
+     "effective_date",
+     "override_id",
+     "percentage"
+    ],
+    "responses": [
+     "200",
+     "400",
+     "402",
+     "403",
+     "404"
+    ],
+    "summary": "Preview Planned Agreement Budget Increases",
+    "tags": [
+     "Agreements"
+    ]
+   },
+   "path": "/lifecycle-manager/v1/agreements/{agreement_id}/budget/preview",
+   "product": "Lifecycle Manager API",
+   "title": "Preview Planned Agreement Budget Increases",
+   "updated_at": "2026-11-04T13:47:19.000Z",
+   "url": "https://developer.scalepad.com/reference/apipublicv1agreementbudgetoverridepreview"
+  },
+  {
+   "content_hash": "a93732395042459d",
+   "description": "Save planned agreement budget increases.",
+   "fetch_error": null,
+   "key": "/reference/apipublicv1agreementbudgetoverridesave",
+   "kind": "endpoint",
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:agreement_id*"
+    ],
+    "request_fields": [
+     "agreement_item_id",
+     "effective_date",
+     "override_id",
+     "percentage"
+    ],
+    "responses": [
+     "200",
+     "400",
+     "402",
+     "403",
+     "404"
+    ],
+    "summary": "Save Planned Agreement Budget Increases",
+    "tags": [
+     "Agreements"
+    ]
+   },
+   "path": "/lifecycle-manager/v1/agreements/{agreement_id}/budget",
+   "product": "Lifecycle Manager API",
+   "title": "Save Planned Agreement Budget Increases",
+   "updated_at": "2026-11-04T13:47:19.000Z",
+   "url": "https://developer.scalepad.com/reference/apipublicv1agreementbudgetoverridesave"
   },
   {
    "content_hash": "bc92fc2dd534f6dc",
@@ -3467,7 +3602,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1assessmentevaluationquestiontagupdate"
   },
   {
-   "content_hash": "b90a01e4f7ba8eca",
+   "content_hash": "3352412cbe08ac4e",
    "description": "Create a PSA ticket and link it to an assessment evaluation question. The ticket is queued for creation in the external PSA; this endpoint returns 202 Accepted with a Pending state. Poll the\u2026",
    "fetch_error": null,
    "key": "/reference/apipublicv1assessmentevaluationquestionticketcreate",
@@ -3706,7 +3841,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1assessmentsevaluate"
   },
   {
-   "content_hash": "8a3627e1413cceb8",
+   "content_hash": "6bb5d3a01257578c",
    "description": "Access complete details of a specific assessment including its evaluation.",
    "fetch_error": null,
    "key": "/reference/apipublicv1assessmentsget",
@@ -3770,7 +3905,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1assessmentsinternalcommentupsert-1"
   },
   {
-   "content_hash": "736de14b6ef58855",
+   "content_hash": "df59221882809a77",
    "description": "Retrieve a comprehensive list of all assessments overview with filtering options.",
    "fetch_error": null,
    "key": "/reference/apipublicv1assessmentslist",
@@ -4131,7 +4266,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1assessmentsupdate"
   },
   {
-   "content_hash": "546be2158d49e724",
+   "content_hash": "4d5c443f7c7cf108",
    "description": "Create a new assessment template with custom categories, questions, and criteria.",
    "fetch_error": null,
    "key": "/reference/apipublicv1assessmenttemplatecreate",
@@ -4193,7 +4328,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1assessmenttemplatedelete"
   },
   {
-   "content_hash": "6027c5a0ae484de4",
+   "content_hash": "c8b9ba3d6d26a836",
    "description": "Retrieve comprehensive details of a specific assessment template including all categories, questions, and criteria.",
    "fetch_error": null,
    "key": "/reference/apipublicv1assessmenttemplateget",
@@ -4358,7 +4493,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1assessmenttemplateslist"
   },
   {
-   "content_hash": "ba766cb2aa7fa386",
+   "content_hash": "9d3403ea642c0982",
    "description": "Modify an existing assessment template including its structure, categories, questions, and criteria.",
    "fetch_error": null,
    "key": "/reference/apipublicv1assessmenttemplateupdate",
@@ -4377,7 +4512,8 @@
      "400",
      "402",
      "403",
-     "404"
+     "404",
+     "409"
     ],
     "summary": "Update Assessment Template",
     "tags": [
@@ -4391,7 +4527,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1assessmenttemplateupdate"
   },
   {
-   "content_hash": "e14d6f89ade40914",
+   "content_hash": "8a3c55b463d61ed0",
    "description": "Export contacts as a spreadsheet, honoring the supplied search, filters, sort, and selected columns. Exports every matching row, so the page_size and cursor parameters are ignored. The requested xlsx\u2026",
    "fetch_error": null,
    "key": "/reference/apipublicv1assetscontactsexport",
@@ -4418,19 +4554,19 @@
      "403",
      "404"
     ],
-    "summary": "Export Contacts as Spreadsheet",
+    "summary": "Assets Contacts Export",
     "tags": [
      "Contact Reports"
     ]
    },
    "path": "/lifecycle-manager/v1/assets/contacts/export",
    "product": "Lifecycle Manager API",
-   "title": "Export Contacts as Spreadsheet",
+   "title": "Assets Contacts Export",
    "updated_at": "2026-10-25T13:43:45.000Z",
    "url": "https://developer.scalepad.com/reference/apipublicv1assetscontactsexport"
   },
   {
-   "content_hash": "fcba47331b83948a",
+   "content_hash": "943ec32e0a3ead80",
    "description": "Generate a PDF contact report for a client, honoring the supplied search, filters, sort, and selected columns. Reports every matching row, so the page_size and cursor parameters are ignored.",
    "fetch_error": null,
    "key": "/reference/apipublicv1assetscontactsreportpdf",
@@ -4457,19 +4593,19 @@
      "403",
      "404"
     ],
-    "summary": "Download Contact Report PDF",
+    "summary": "Export Assets Contacts Report Pdf",
     "tags": [
      "Contact Reports"
     ]
    },
    "path": "/lifecycle-manager/v1/assets/contacts/report/pdf",
    "product": "Lifecycle Manager API",
-   "title": "Download Contact Report PDF",
+   "title": "Export Assets Contacts Report Pdf",
    "updated_at": "2026-10-25T13:43:45.000Z",
    "url": "https://developer.scalepad.com/reference/apipublicv1assetscontactsreportpdf"
   },
   {
-   "content_hash": "15abd329c9a46c30",
+   "content_hash": "b951b1dbf1af8322",
    "description": "List Hardware Asset Attached Agreements",
    "fetch_error": null,
    "key": "/reference/apipublicv1assetshardwareattachedagreements",
@@ -4488,19 +4624,19 @@
      "403",
      "404"
     ],
-    "summary": "List Agreements Attached to Hardware",
+    "summary": "Assets Hardware Attached Agreements",
     "tags": [
      "Hardware Assets"
     ]
    },
    "path": "/lifecycle-manager/v1/assets/hardware/attached-agreements/lookup",
    "product": "Lifecycle Manager API",
-   "title": "List Agreements Attached to Hardware",
+   "title": "Assets Hardware Attached Agreements",
    "updated_at": "2026-10-25T13:43:45.000Z",
    "url": "https://developer.scalepad.com/reference/apipublicv1assetshardwareattachedagreements"
   },
   {
-   "content_hash": "e2e224a8ccd305da",
+   "content_hash": "0e196754891744a9",
    "description": "Retrieve the initiatives attached to a hardware asset identified by its unique key.",
    "fetch_error": null,
    "key": "/reference/apipublicv1assetshardwareattachedinitiatives",
@@ -4519,14 +4655,14 @@
      "403",
      "404"
     ],
-    "summary": "List Initiatives Attached to Hardware",
+    "summary": "List Attached Initiatives",
     "tags": [
      "Hardware Assets"
     ]
    },
    "path": "/lifecycle-manager/v1/assets/hardware/attached-initiatives/lookup",
    "product": "Lifecycle Manager API",
-   "title": "List Initiatives Attached to Hardware",
+   "title": "List Attached Initiatives",
    "updated_at": "2026-10-25T13:43:45.000Z",
    "url": "https://developer.scalepad.com/reference/apipublicv1assetshardwareattachedinitiatives"
   },
@@ -4565,7 +4701,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1assetshardwaredashboardsummaryget"
   },
   {
-   "content_hash": "48c51aabc2697508",
+   "content_hash": "f0daaff5c40311b7",
    "description": "Download hardware asset data as a CSV file, preserving the requested column order.",
    "fetch_error": null,
    "key": "/reference/apipublicv1assetshardwareexportcsv",
@@ -4580,6 +4716,7 @@
      "filter",
      "filter_operator",
      "filter_selection",
+     "insight_ids",
      "search",
      "selected_columns",
      "sort"
@@ -4603,7 +4740,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1assetshardwareexportcsv"
   },
   {
-   "content_hash": "b4cc8a5a314fc3ad",
+   "content_hash": "6d1d423aa3e1a078",
    "description": "Download hardware asset data as a PDF report, preserving the requested column order.",
    "fetch_error": null,
    "key": "/reference/apipublicv1assetshardwareexportpdf",
@@ -4618,6 +4755,7 @@
      "filter",
      "filter_operator",
      "filter_selection",
+     "insight_ids",
      "search",
      "selected_columns",
      "sort"
@@ -4642,7 +4780,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1assetshardwareexportpdf"
   },
   {
-   "content_hash": "c4445c870a2e67a8",
+   "content_hash": "adc2c97a2d895831",
    "description": "Download hardware asset data as an XLSX spreadsheet, preserving the requested column order.",
    "fetch_error": null,
    "key": "/reference/apipublicv1assetshardwareexportxlsx",
@@ -4657,6 +4795,7 @@
      "filter",
      "filter_operator",
      "filter_selection",
+     "insight_ids",
      "search",
      "selected_columns",
      "sort"
@@ -4809,7 +4948,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1assetshardwarelifecycles"
   },
   {
-   "content_hash": "57ff6e2b680e2dc3",
+   "content_hash": "6d4b997152eeb4fb",
    "description": "List hardware assets with client ownership and basic device fields. Supports query filters, free-text search, pagination, and sorting.",
    "fetch_error": null,
    "key": "/reference/apipublicv1assetshardwarelist",
@@ -4832,6 +4971,7 @@
      "query:filter[manufacturer.name]",
      "query:filter[memory]",
      "query:filter[processor]",
+     "query:filter[replacement_status]",
      "query:filter[site.id]",
      "query:filter[storage]",
      "query:filter[type]",
@@ -4853,14 +4993,14 @@
      "403",
      "404"
     ],
-    "summary": "List Hardware Assets",
+    "summary": "List Assets Hardware",
     "tags": [
      "Hardware Assets"
     ]
    },
    "path": "/lifecycle-manager/v1/assets/hardware",
    "product": "Lifecycle Manager API",
-   "title": "List Hardware Assets",
+   "title": "List Assets Hardware",
    "updated_at": "2026-10-25T13:43:45.000Z",
    "url": "https://developer.scalepad.com/reference/apipublicv1assetshardwarelist"
   },
@@ -4896,7 +5036,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1assetshardwaremetadataget"
   },
   {
-   "content_hash": "428a434949bb760e",
+   "content_hash": "c8e22cb62cd8ce82",
    "description": "Retrieve a hardware asset overview for a hardware asset id or unique key, including summary, warranty context, integrations, and lightweight navigation hints.",
    "fetch_error": null,
    "key": "/reference/apipublicv1assetshardwareoverview",
@@ -4928,7 +5068,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1assetshardwareoverview"
   },
   {
-   "content_hash": "30d8856b3727dcc3",
+   "content_hash": "87dae81684b968a1",
    "description": "Set or clear the estimated replacement cost for one or more hardware assets identified by Core API id or unique key.",
    "fetch_error": null,
    "key": "/reference/apipublicv1assetshardwarereplacementcostupdate",
@@ -4948,19 +5088,19 @@
      "403",
      "404"
     ],
-    "summary": "Update Hardware Replacement Costs",
+    "summary": "Update Assets Hardware Replacement Cost",
     "tags": [
      "Hardware Assets"
     ]
    },
    "path": "/lifecycle-manager/v1/assets/hardware/replacement-cost",
    "product": "Lifecycle Manager API",
-   "title": "Update Hardware Replacement Costs",
+   "title": "Update Assets Hardware Replacement Cost",
    "updated_at": "2026-10-22T18:13:21.000Z",
    "url": "https://developer.scalepad.com/reference/apipublicv1assetshardwarereplacementcostupdate"
   },
   {
-   "content_hash": "6279ad7c4f2f701d",
+   "content_hash": "aea1c8e5c8f00fea",
    "description": "Retrieve resolved hardware details and ordered source rows for a hardware asset Core API id.",
    "fetch_error": null,
    "key": "/reference/apipublicv1assetshardwaresourcesget",
@@ -4979,19 +5119,19 @@
      "403",
      "404"
     ],
-    "summary": "Get Hardware Asset Sources",
+    "summary": "Hardware Sources",
     "tags": [
      "Hardware Assets"
     ]
    },
    "path": "/lifecycle-manager/v1/assets/hardware/sources",
    "product": "Lifecycle Manager API",
-   "title": "Get Hardware Asset Sources",
+   "title": "Hardware Sources",
    "updated_at": "2026-09-09T22:53:10.000Z",
    "url": "https://developer.scalepad.com/reference/apipublicv1assetshardwaresourcesget"
   },
   {
-   "content_hash": "89ade64f1ada8d89",
+   "content_hash": "ee762193bf3583a6",
    "description": "Update the report asset type for one or more hardware assets identified by Core API id or unique key. Assigning a different type clears each asset's replacement cost override so it takes the new\u2026",
    "fetch_error": null,
    "key": "/reference/apipublicv1assetshardwaretypeupdate",
@@ -5011,19 +5151,19 @@
      "403",
      "404"
     ],
-    "summary": "Update Hardware Asset Type",
+    "summary": "Update Assets Hardware Type",
     "tags": [
      "Hardware Assets"
     ]
    },
    "path": "/lifecycle-manager/v1/assets/hardware/type",
    "product": "Lifecycle Manager API",
-   "title": "Update Hardware Asset Type",
+   "title": "Update Assets Hardware Type",
    "updated_at": "2026-10-22T18:13:21.000Z",
    "url": "https://developer.scalepad.com/reference/apipublicv1assetshardwaretypeupdate"
   },
   {
-   "content_hash": "9cba655c83286396",
+   "content_hash": "f5123580ed399896",
    "description": "Hide one or more hardware assets from reports, or restore them to reports, identified by Core API id or unique key.",
    "fetch_error": null,
    "key": "/reference/apipublicv1assetshardwarevisibilityupdate",
@@ -5043,14 +5183,14 @@
      "403",
      "404"
     ],
-    "summary": "Update Hardware Asset Visibility",
+    "summary": "Update Assets Hardware Visibility",
     "tags": [
      "Hardware Assets"
     ]
    },
    "path": "/lifecycle-manager/v1/assets/hardware/visibility",
    "product": "Lifecycle Manager API",
-   "title": "Update Hardware Asset Visibility",
+   "title": "Update Assets Hardware Visibility",
    "updated_at": "2026-10-25T13:43:45.000Z",
    "url": "https://developer.scalepad.com/reference/apipublicv1assetshardwarevisibilityupdate"
   },
@@ -5520,7 +5660,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1assetssoftwaresummaryget"
   },
   {
-   "content_hash": "ec3a821f43767ac6",
+   "content_hash": "0220d8eb1a6e1e7f",
    "description": "Create a hardware type for the account, with the replacement criteria it should start with.",
    "fetch_error": null,
    "key": "/reference/apipublicv1assetstypescreate",
@@ -5540,19 +5680,19 @@
      "403",
      "404"
     ],
-    "summary": "Create Hardware Type",
+    "summary": "Create hardware type",
     "tags": [
      "Hardware Types"
     ]
    },
    "path": "/lifecycle-manager/v1/assets/types",
    "product": "Lifecycle Manager API",
-   "title": "Create Hardware Type",
+   "title": "Create hardware type",
    "updated_at": "2026-10-25T13:43:45.000Z",
    "url": "https://developer.scalepad.com/reference/apipublicv1assetstypescreate"
   },
   {
-   "content_hash": "d25263247a6b60e6",
+   "content_hash": "b09842a918886ee8",
    "description": "Delete an unused account-created hardware type.",
    "fetch_error": null,
    "key": "/reference/apipublicv1assetstypesdelete",
@@ -5571,19 +5711,19 @@
      "403",
      "404"
     ],
-    "summary": "Delete Hardware Type",
+    "summary": "Delete a hardware type",
     "tags": [
      "Hardware Types"
     ]
    },
    "path": "/lifecycle-manager/v1/assets/types/{id}",
    "product": "Lifecycle Manager API",
-   "title": "Delete Hardware Type",
+   "title": "Delete a hardware type",
    "updated_at": "2026-10-25T13:43:45.000Z",
    "url": "https://developer.scalepad.com/reference/apipublicv1assetstypesdelete"
   },
   {
-   "content_hash": "fe91e8b95c3c0479",
+   "content_hash": "0c0c001a04471cfe",
    "description": "Get a hardware type with effective replacement settings and asset usage.",
    "fetch_error": null,
    "key": "/reference/apipublicv1assetstypesget",
@@ -5602,19 +5742,19 @@
      "403",
      "404"
     ],
-    "summary": "Get Hardware Type",
+    "summary": "Get hardware type details",
     "tags": [
      "Hardware Types"
     ]
    },
    "path": "/lifecycle-manager/v1/assets/types/{id}",
    "product": "Lifecycle Manager API",
-   "title": "Get Hardware Type",
+   "title": "Get hardware type details",
    "updated_at": "2026-10-25T13:43:45.000Z",
    "url": "https://developer.scalepad.com/reference/apipublicv1assetstypesget"
   },
   {
-   "content_hash": "0a9287e1d6e4a7da",
+   "content_hash": "ffae05fe64b0ed66",
    "description": "List the hardware types configured for the account, including the application defaults and the account's own types, with their replacement criteria.",
    "fetch_error": null,
    "key": "/reference/apipublicv1assetstypeslist",
@@ -5631,19 +5771,19 @@
      "403",
      "404"
     ],
-    "summary": "List Hardware Types",
+    "summary": "List hardware types",
     "tags": [
      "Hardware Types"
     ]
    },
    "path": "/lifecycle-manager/v1/assets/types",
    "product": "Lifecycle Manager API",
-   "title": "List Hardware Types",
+   "title": "List hardware types",
    "updated_at": "2026-10-25T13:43:45.000Z",
    "url": "https://developer.scalepad.com/reference/apipublicv1assetstypeslist"
   },
   {
-   "content_hash": "8d19dfe0296f8202",
+   "content_hash": "a777e157836ae770",
    "description": "Reassign this account\u2019s hardware to another type.",
    "fetch_error": null,
    "key": "/reference/apipublicv1assetstypesreassign",
@@ -5663,19 +5803,19 @@
      "404",
      "422"
     ],
-    "summary": "Reassign Hardware to Another Type",
+    "summary": "Reassign hardware to another type",
     "tags": [
      "Hardware Types"
     ]
    },
    "path": "/lifecycle-manager/v1/assets/types/{id}/reassign",
    "product": "Lifecycle Manager API",
-   "title": "Reassign Hardware to Another Type",
+   "title": "Reassign hardware to another type",
    "updated_at": "2026-10-25T13:43:45.000Z",
    "url": "https://developer.scalepad.com/reference/apipublicv1assetstypesreassign"
   },
   {
-   "content_hash": "f886f244369c2667",
+   "content_hash": "9e5f5f39e3eabf8c",
    "description": "Patch the account-wide replacement settings of one asset type.",
    "fetch_error": null,
    "key": "/reference/apipublicv1assetstypesreplacementpatch",
@@ -5697,14 +5837,14 @@
      "403",
      "404"
     ],
-    "summary": "Update Hardware Type Replacement Settings",
+    "summary": "Patch asset type replacement settings",
     "tags": [
      "Hardware Types"
     ]
    },
    "path": "/lifecycle-manager/v1/assets/types/{id}/replacement",
    "product": "Lifecycle Manager API",
-   "title": "Update Hardware Type Replacement Settings",
+   "title": "Patch asset type replacement settings",
    "updated_at": "2026-10-25T13:43:45.000Z",
    "url": "https://developer.scalepad.com/reference/apipublicv1assetstypesreplacementpatch"
   },
@@ -6144,7 +6284,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1clientaccessgroupupdate"
   },
   {
-   "content_hash": "d74c636db8b1300d",
+   "content_hash": "858b11883b9ac698",
    "description": "Get the current user's authorization for a client.",
    "fetch_error": null,
    "key": "/reference/apipublicv1clientauthorizationget",
@@ -6304,7 +6444,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1clientdmitrendget"
   },
   {
-   "content_hash": "d4deb354cd6adb87",
+   "content_hash": "f270eeab74edfd08",
    "description": "Get a single client profile.",
    "fetch_error": null,
    "key": "/reference/apipublicv1clientget",
@@ -6691,7 +6831,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1clientkeycontactsunassign"
   },
   {
-   "content_hash": "ce4be47dc9c1cce3",
+   "content_hash": "7fc515e6e118d284",
    "description": "Get paginated client summary by query parameter",
    "fetch_error": null,
    "key": "/reference/apipublicv1clientlist",
@@ -6802,103 +6942,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1clientsettingsget"
   },
   {
-   "content_hash": "26605c01512e84ce",
-   "description": "Download the current clients list as a CSV file.",
-   "fetch_error": null,
-   "key": "/reference/apipublicv1clientsexportcsv",
-   "kind": "endpoint",
-   "method": "POST",
-   "operation": {
-    "deprecated": false,
-    "parameters": [],
-    "request_fields": [
-     "assigned_user_id",
-     "client_access_group_id",
-     "client_ids",
-     "columns",
-     "hardware_count",
-     "last_assessment_days_ago",
-     "last_assessment_score",
-     "last_meeting_starts_at",
-     "license",
-     "meeting_policy_status",
-     "search",
-     "segment_id",
-     "software_count",
-     "sort",
-     "source",
-     "upcoming_meeting_days",
-     "vertical_id"
-    ],
-    "responses": [
-     "200",
-     "400",
-     "402",
-     "403",
-     "404",
-     "422"
-    ],
-    "summary": "Export Clients as CSV",
-    "tags": [
-     "Client Reports"
-    ]
-   },
-   "path": "/lifecycle-manager/v1/clients/export/csv",
-   "product": "Lifecycle Manager API",
-   "title": "Export Clients as CSV",
-   "updated_at": "2026-10-25T13:43:45.000Z",
-   "url": "https://developer.scalepad.com/reference/apipublicv1clientsexportcsv"
-  },
-  {
-   "content_hash": "5a6537582350da5d",
-   "description": "Download the current clients list as an XLSX spreadsheet.",
-   "fetch_error": null,
-   "key": "/reference/apipublicv1clientsexportxlsx",
-   "kind": "endpoint",
-   "method": "POST",
-   "operation": {
-    "deprecated": false,
-    "parameters": [],
-    "request_fields": [
-     "assigned_user_id",
-     "client_access_group_id",
-     "client_ids",
-     "columns",
-     "hardware_count",
-     "last_assessment_days_ago",
-     "last_assessment_score",
-     "last_meeting_starts_at",
-     "license",
-     "meeting_policy_status",
-     "search",
-     "segment_id",
-     "software_count",
-     "sort",
-     "source",
-     "upcoming_meeting_days",
-     "vertical_id"
-    ],
-    "responses": [
-     "200",
-     "400",
-     "402",
-     "403",
-     "404",
-     "422"
-    ],
-    "summary": "Export Clients as XLSX",
-    "tags": [
-     "Client Reports"
-    ]
-   },
-   "path": "/lifecycle-manager/v1/clients/export/xlsx",
-   "product": "Lifecycle Manager API",
-   "title": "Export Clients as XLSX",
-   "updated_at": "2026-10-25T13:43:45.000Z",
-   "url": "https://developer.scalepad.com/reference/apipublicv1clientsexportxlsx"
-  },
-  {
-   "content_hash": "aa39e8a8f517f26c",
+   "content_hash": "f283f222c4c62b9b",
    "description": "Search clients by name, returning a paged list of clients scoped to the caller's client group access. Each client carries its id, display label, Lifecycle Manager license, and whether the caller has\u2026",
    "fetch_error": null,
    "key": "/reference/apipublicv1clientslookup",
@@ -6931,6 +6975,39 @@
    "title": "Search Clients",
    "updated_at": "2026-06-16T21:43:06.000Z",
    "url": "https://developer.scalepad.com/reference/apipublicv1clientslookup"
+  },
+  {
+   "content_hash": "7944b441ce28f0ac",
+   "description": "Add or remove tags for selected clients, preserving their other tags. All clients must be accessible and allow Client Settings Update. Repeated operations are idempotent.",
+   "fetch_error": null,
+   "key": "/reference/apipublicv1clientstagupdate",
+   "kind": "endpoint",
+   "method": "PATCH",
+   "operation": {
+    "deprecated": false,
+    "parameters": [],
+    "request_fields": [
+     "client_ids",
+     "operation",
+     "tag_ids"
+    ],
+    "responses": [
+     "200",
+     "400",
+     "402",
+     "403",
+     "404"
+    ],
+    "summary": "Add or Remove Client Tags",
+    "tags": [
+     "Clients"
+    ]
+   },
+   "path": "/lifecycle-manager/v1/clients/tags",
+   "product": "Lifecycle Manager API",
+   "title": "Add or Remove Client Tags",
+   "updated_at": "2026-11-04T13:48:28.000Z",
+   "url": "https://developer.scalepad.com/reference/apipublicv1clientstagupdate"
   },
   {
    "content_hash": "f86d389805cfe08a",
@@ -7596,8 +7673,8 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1contacthiddenstatusupdate"
   },
   {
-   "content_hash": "b9a477e4ef8cd52b",
-   "description": "List Lifecycle Manager contacts for accessible clients. Supports optional client, integration-lineage, hidden-status, email-presence, and name/email search filters, cursor pagination, Core record\u2026",
+   "content_hash": "7df239034bd72a65",
+   "description": "List Lifecycle Manager contacts for accessible clients. Supports optional client, integration-lineage, hidden-status, email-presence, assigned-license, and name/email search filters, cursor\u2026",
    "fetch_error": null,
    "key": "/reference/apipublicv1contactslist",
    "kind": "endpoint",
@@ -7608,7 +7685,9 @@
      "query:cursor",
      "query:filter[client_id]",
      "query:filter[has_email]",
+     "query:filter[has_license]",
      "query:filter[is_hidden]",
+     "query:filter[licenses.sku_name]",
      "query:filter[record_lineage.integration_configuration.id]",
      "query:page_size",
      "query:search",
@@ -7931,7 +8010,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1contractsupdate"
   },
   {
-   "content_hash": "7105e054e13684ac",
+   "content_hash": "e5bba03819e276bc",
    "description": "Add an assessment to an existing deliverable.",
    "fetch_error": null,
    "key": "/reference/apipublicv1deliverableassessmentcreate",
@@ -8579,7 +8658,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1engagementactiondelete"
   },
   {
-   "content_hash": "740c17003e67769b",
+   "content_hash": "f7ce2893ccb3924a",
    "description": "Get an action item by the item's id. The returned data includes Action item details and linked entities.",
    "fetch_error": null,
    "key": "/reference/apipublicv1engagementactionget",
@@ -8610,7 +8689,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1engagementactionget"
   },
   {
-   "content_hash": "801358e20247a480",
+   "content_hash": "2a2cb0f9c3cf16fc",
    "description": "Get a list of action items. The returned data includes Action item details and linked entities.",
    "fetch_error": null,
    "key": "/reference/apipublicv1engagementactionlist",
@@ -8756,7 +8835,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1engagementactionreposition"
   },
   {
-   "content_hash": "cc3ed0fd02439abf",
+   "content_hash": "40b4c2925880e2dc",
    "description": "Attach an existing ticket from the client's primary PSA integration to an action item.",
    "fetch_error": null,
    "key": "/reference/apipublicv1engagementactionticketattach",
@@ -8789,7 +8868,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1engagementactionticketattach"
   },
   {
-   "content_hash": "66d064d05e843428",
+   "content_hash": "9dbf127e6c474937",
    "description": "Create a PSA ticket and link it to an action item.",
    "fetch_error": null,
    "key": "/reference/apipublicv1engagementactionticketcreate",
@@ -8823,7 +8902,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1engagementactionticketcreate"
   },
   {
-   "content_hash": "95068bab53bc4930",
+   "content_hash": "eb980ed4a2cc3e9a",
    "description": "Get the state of the PSA ticket linked to an action item.",
    "fetch_error": null,
    "key": "/reference/apipublicv1engagementactionticketget",
@@ -9840,7 +9919,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1goalupdate"
   },
   {
-   "content_hash": "70bee9cece8a15de",
+   "content_hash": "98061df00dbcfcb5",
    "description": "Patch manual hardware asset values by Core API ID",
    "fetch_error": null,
    "key": "/reference/apipublicv1hardwareassetoverridespatch",
@@ -9862,14 +9941,14 @@
      "403",
      "404"
     ],
-    "summary": "Update Hardware Asset Overrides",
+    "summary": "Patch hardware asset overrides",
     "tags": [
      "Hardware Assets"
     ]
    },
    "path": "/lifecycle-manager/v1/assets/hardware/{hardware_asset_id}/overrides",
    "product": "Lifecycle Manager API",
-   "title": "Update Hardware Asset Overrides",
+   "title": "Patch hardware asset overrides",
    "updated_at": "2026-10-22T18:13:21.000Z",
    "url": "https://developer.scalepad.com/reference/apipublicv1hardwareassetoverridespatch"
   },
@@ -10071,7 +10150,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1hardwarecustomfieldvalueunassign"
   },
   {
-   "content_hash": "56bfa67dc72465f5",
+   "content_hash": "85b526bd3e944b32",
    "description": "Retrieve delivered Inbox notifications for the authenticated user, newest first. The default page size is 50 and the maximum is 200. The cursor is opaque; omit it for the first page and pass the\u2026",
    "fetch_error": null,
    "key": "/reference/apipublicv1inboxnotificationlist",
@@ -10081,6 +10160,9 @@
     "deprecated": false,
     "parameters": [
      "query:cursor",
+     "query:filter[actor_user_id]",
+     "query:filter[client_id]",
+     "query:filter[entity_type]",
      "query:filter[read_state]",
      "query:page_size",
      "query:search",
@@ -10138,8 +10220,8 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1inboxnotificationread"
   },
   {
-   "content_hash": "23acca05817b4737",
-   "description": "Mark all currently delivered Inbox notifications read, including unloaded pages. Notifications arriving after the operation starts remain unread. With a search, only the unread notifications the same\u2026",
+   "content_hash": "e255172cd5315892",
+   "description": "Mark all currently delivered Inbox notifications read, including unloaded pages. Notifications arriving after the operation starts remain unread. With a search or filters, only the unread\u2026",
    "fetch_error": null,
    "key": "/reference/apipublicv1inboxnotificationreadall",
    "kind": "endpoint",
@@ -10148,6 +10230,9 @@
     "deprecated": false,
     "parameters": [],
     "request_fields": [
+     "actor_user_ids",
+     "client_ids",
+     "entity_types",
      "search"
     ],
     "responses": [
@@ -11300,7 +11385,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1initiativeopportunityattach"
   },
   {
-   "content_hash": "c9e2f5cceb8b8e63",
+   "content_hash": "d04fe0a08d39e1b9",
    "description": "Create a PSA opportunity for an initiative and link it. Creation is queued in the external PSA; this endpoint returns 202 Accepted with a Pending state.",
    "fetch_error": null,
    "key": "/reference/apipublicv1initiativeopportunitycreate",
@@ -11839,7 +11924,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1initiativetemplateupdate"
   },
   {
-   "content_hash": "c37bcaad58d5ac0d",
+   "content_hash": "ec72c8ad27b9f1f2",
    "description": "Link an existing PSA ticket to an initiative. The ticket must already belong to the initiative's client.",
    "fetch_error": null,
    "key": "/reference/apipublicv1initiativeticketattach",
@@ -11873,7 +11958,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1initiativeticketattach"
   },
   {
-   "content_hash": "c6f39d17234c50dd",
+   "content_hash": "04fed85cb90cd5e9",
    "description": "Create a PSA ticket and link it to the initiative. The ticket is queued for creation in the external PSA; this endpoint returns 202 Accepted with a Pending state. Poll `GET\u2026",
    "fetch_error": null,
    "key": "/reference/apipublicv1initiativeticketcreate",
@@ -11939,7 +12024,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1initiativeticketdelete"
   },
   {
-   "content_hash": "b822efde0cefc248",
+   "content_hash": "b191983133c8b858",
    "description": "Deprecated compatibility operation. Returns the first linked ticket state, ordered by ticket-link identifier, or 404 when no ticket is linked. Use GET\u2026",
    "fetch_error": null,
    "key": "/reference/apipublicv1initiativeticketget",
@@ -11970,7 +12055,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1initiativeticketget"
   },
   {
-   "content_hash": "9abe01c13601579d",
+   "content_hash": "ae3487986361d6e4",
    "description": "Deprecated compatibility operation. Creates and links a PSA ticket while preserving the single-link constraint; returns 409 if a ticket is already linked. Use POST\u2026",
    "fetch_error": null,
    "key": "/reference/apipublicv1initiativeticketlegacycreate",
@@ -12035,7 +12120,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1initiativeticketlegacydelete"
   },
   {
-   "content_hash": "4e58ab061a360a6b",
+   "content_hash": "19eea3453721e697",
    "description": "List the current states of all PSA tickets linked to an initiative. An empty data array indicates that no tickets are linked.",
    "fetch_error": null,
    "key": "/reference/apipublicv1initiativeticketlist",
@@ -12306,7 +12391,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1initiativeupdatestatus"
   },
   {
-   "content_hash": "707912cd2aa20941",
+   "content_hash": "88711232aff9d937",
    "description": "Download the assets currently affected by an insight as a CSV file. Only insights with a Hardware asset scope are supported.",
    "fetch_error": null,
    "key": "/reference/apipublicv1insightassetsexportcsv",
@@ -12316,7 +12401,8 @@
     "deprecated": false,
     "parameters": [
      "path:insight_id*",
-     "query:client_id"
+     "query:client_id",
+     "query:filter[assigned_user_id]"
     ],
     "request_fields": [],
     "responses": [
@@ -12521,7 +12607,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1insightdelete"
   },
   {
-   "content_hash": "9df13f20469f79ad",
+   "content_hash": "31ae8bf9c62ebd87",
    "description": "Download the assets projected to match an insight at a future date as a CSV file. Assets already affected today are excluded by default. Only insights with a Hardware asset scope are supported.",
    "fetch_error": null,
    "key": "/reference/apipublicv1insightforecastedassetsexportcsv",
@@ -12533,6 +12619,7 @@
      "path:insight_id*",
      "query:client_id",
      "query:exclude_currently_affected",
+     "query:filter[assigned_user_id]",
      "query:forecast_days"
     ],
     "request_fields": [],
@@ -12591,7 +12678,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1insights"
   },
   {
-   "content_hash": "7a95271b6f4da6e2",
+   "content_hash": "e828a5f6b3ab177f",
    "description": "Assign a license of the given type to one or more clients.",
    "fetch_error": null,
    "key": "/reference/apipublicv1licensesassign",
@@ -12908,6 +12995,37 @@
    "title": "List Meeting Attachments",
    "updated_at": "2026-10-25T13:43:45.000Z",
    "url": "https://developer.scalepad.com/reference/apipublicv1meetingattachmentslist"
+  },
+  {
+   "content_hash": "cec01f0bec2dac00",
+   "description": "Get who attended a meeting's online sessions, matched to its invitees.",
+   "fetch_error": null,
+   "key": "/reference/apipublicv1meetingattendanceget",
+   "kind": "endpoint",
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:meeting_id*"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "400",
+     "402",
+     "403",
+     "404"
+    ],
+    "summary": "Get Meeting Attendance",
+    "tags": [
+     "Meetings"
+    ]
+   },
+   "path": "/lifecycle-manager/v1/meetings/{meeting_id}/attendance",
+   "product": "Lifecycle Manager API",
+   "title": "Get Meeting Attendance",
+   "updated_at": "2026-11-04T13:47:19.000Z",
+   "url": "https://developer.scalepad.com/reference/apipublicv1meetingattendanceget"
   },
   {
    "content_hash": "18c30428f770578c",
@@ -13239,7 +13357,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1meetingdeliverableslist"
   },
   {
-   "content_hash": "7b9bb26619a68a16",
+   "content_hash": "71fbea3c8deb65f8",
    "description": "Access complete details of a specific meeting.",
    "fetch_error": null,
    "key": "/reference/apipublicv1meetingget",
@@ -13460,7 +13578,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1meetinginitiativeslist"
   },
   {
-   "content_hash": "11355c0648480b45",
+   "content_hash": "2e9fa17afe7aa31b",
    "description": "Retrieve a comprehensive list of all client meetings with filtering options.",
    "fetch_error": null,
    "key": "/reference/apipublicv1meetinglist",
@@ -14061,7 +14179,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1meetingsyncconnectionpost"
   },
   {
-   "content_hash": "434007d8240edae4",
+   "content_hash": "2202787f48662fc0",
    "description": "List Outlook calendar events available for Meeting import or linking.",
    "fetch_error": null,
    "key": "/reference/apipublicv1meetingsynceventsget",
@@ -14092,7 +14210,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1meetingsynceventsget"
   },
   {
-   "content_hash": "e3482d33c6d8faf1",
+   "content_hash": "a033cc15f978522c",
    "description": "Get the current user's Microsoft Outlook meeting sync status.",
    "fetch_error": null,
    "key": "/reference/apipublicv1meetingsyncget",
@@ -14349,8 +14467,42 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1meetingtemplateupdate"
   },
   {
-   "content_hash": "9ade37079a4dbfda",
-   "description": "Create a PSA ticket and link it to the meeting. The ticket is queued for creation in the external PSA; this endpoint returns 202 Accepted with a Pending state.",
+   "content_hash": "038af50632c5d1e3",
+   "description": "Link an existing PSA ticket to a meeting. The ticket must already belong to the meeting's client, and the meeting must not already have a linked ticket.",
+   "fetch_error": null,
+   "key": "/reference/apipublicv1meetingticketattach",
+   "kind": "endpoint",
+   "method": "PUT",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:meeting_id*"
+    ],
+    "request_fields": [
+     "ticket_id"
+    ],
+    "responses": [
+     "200",
+     "400",
+     "402",
+     "403",
+     "404",
+     "409"
+    ],
+    "summary": "Link an existing PSA ticket to a Meeting",
+    "tags": [
+     "Meeting Integrations"
+    ]
+   },
+   "path": "/lifecycle-manager/v1/meetings/{meeting_id}/ticket",
+   "product": "Lifecycle Manager API",
+   "title": "Link an existing PSA ticket to a Meeting",
+   "updated_at": "2026-11-04T13:47:19.000Z",
+   "url": "https://developer.scalepad.com/reference/apipublicv1meetingticketattach"
+  },
+  {
+   "content_hash": "31de6ee8eb431283",
+   "description": "Create a PSA ticket and link it to the meeting. Returns HTTP 202 Accepted with a Pending state when queued. Concurrent creates are serialized per meeting; an existing Pending, Created or Error link\u2026",
    "fetch_error": null,
    "key": "/reference/apipublicv1meetingticketcreate",
    "kind": "endpoint",
@@ -14414,8 +14566,8 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1meetingticketdelete"
   },
   {
-   "content_hash": "0470d4566584fc50",
-   "description": "Get the current state of the PSA ticket linked to a meeting.",
+   "content_hash": "ee56137eb84e3d34",
+   "description": "Get the current state of the PSA ticket linked to a meeting. Returns HTTP 200 for Pending, Created and Error states. A generic 404 can mean no current link, a missing meeting, or an account/client\u2026",
    "fetch_error": null,
    "key": "/reference/apipublicv1meetingticketget",
    "kind": "endpoint",
@@ -14443,6 +14595,37 @@
    "title": "Get the linked PSA ticket state for a Meeting",
    "updated_at": "2026-09-09T22:53:10.000Z",
    "url": "https://developer.scalepad.com/reference/apipublicv1meetingticketget"
+  },
+  {
+   "content_hash": "faf12ae2382beb47",
+   "description": "Get the transcripts of a meeting's online sessions.",
+   "fetch_error": null,
+   "key": "/reference/apipublicv1meetingtranscriptget",
+   "kind": "endpoint",
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:meeting_id*"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "400",
+     "402",
+     "403",
+     "404"
+    ],
+    "summary": "Get Meeting Transcripts",
+    "tags": [
+     "Meetings"
+    ]
+   },
+   "path": "/lifecycle-manager/v1/meetings/{meeting_id}/transcript",
+   "product": "Lifecycle Manager API",
+   "title": "Get Meeting Transcripts",
+   "updated_at": "2026-11-04T13:47:19.000Z",
+   "url": "https://developer.scalepad.com/reference/apipublicv1meetingtranscriptget"
   },
   {
    "content_hash": "ad4106c986bfc0ce",
@@ -15659,7 +15842,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1rolelist"
   },
   {
-   "content_hash": "9f081a23ddd0c252",
+   "content_hash": "cdce2c2228d4a3a5",
    "description": "Update a custom Lifecycle Manager role.",
    "fetch_error": null,
    "key": "/reference/apipublicv1roleupdate",
@@ -15672,6 +15855,7 @@
     ],
     "request_fields": [
      "description",
+     "expected_permission_keys",
      "label",
      "permission_keys"
     ],
@@ -15680,7 +15864,8 @@
      "400",
      "402",
      "403",
-     "404"
+     "404",
+     "409"
     ],
     "summary": "Update Role",
     "tags": [
@@ -17146,7 +17331,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1ticketlist"
   },
   {
-   "content_hash": "41d0f2a1b31399e3",
+   "content_hash": "34ac5244de363a15",
    "description": "Get the Core client identifiers the authenticated ScalePad user can access.",
    "fetch_error": null,
    "key": "/reference/apipublicv1userclientaccessget",
@@ -17177,7 +17362,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1userclientaccessget"
   },
   {
-   "content_hash": "8a38d9203a268948",
+   "content_hash": "304d58384bd397a5",
    "description": "Get a user along with their feature access and permissions.",
    "fetch_error": null,
    "key": "/reference/apipublicv1userget",
@@ -17343,7 +17528,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1usermanagerevoke"
   },
   {
-   "content_hash": "2921396df6ce199d",
+   "content_hash": "4604880230cfc14b",
    "description": "Apply a partial update to the authenticated user's own record. Fields omitted from the request body are left unchanged.",
    "fetch_error": null,
    "key": "/reference/apipublicv1userpatch",
@@ -17364,14 +17549,14 @@
      "403",
      "404"
     ],
-    "summary": "Update User Preferences",
+    "summary": "Update the authenticated user preference.",
     "tags": [
      "Users"
     ]
    },
    "path": "/lifecycle-manager/v1/user/{user_id}",
    "product": "Lifecycle Manager API",
-   "title": "Update User Preferences",
+   "title": "Update the authenticated user preference.",
    "updated_at": "2026-10-22T18:13:21.000Z",
    "url": "https://developer.scalepad.com/reference/apipublicv1userpatch"
   },
@@ -17407,7 +17592,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv1userpermissionsget"
   },
   {
-   "content_hash": "8bca18da835ce0c6",
+   "content_hash": "7ad7a1955e913398",
    "description": "Replace the Lifecycle Manager roles and direct permissions assigned to a user.",
    "fetch_error": null,
    "key": "/reference/apipublicv1userpermissionsupdate",
@@ -17419,6 +17604,8 @@
      "path:user_id*"
     ],
     "request_fields": [
+     "expected_direct_permission_keys",
+     "expected_effective_permission_keys",
      "permission_keys",
      "role_ids"
     ],
@@ -17427,7 +17614,8 @@
      "400",
      "402",
      "403",
-     "404"
+     "404",
+     "409"
     ],
     "summary": "Update user permissions",
     "tags": [
@@ -17670,7 +17858,7 @@
    "url": "https://developer.scalepad.com/reference/apipublicv2goalssummaryget"
   },
   {
-   "content_hash": "9712906c401f152d",
+   "content_hash": "9fd2632d593c6d8a",
    "description": "Retrieve a list of all strategic initiatives with filtering options.",
    "fetch_error": null,
    "key": "/reference/apipublicv2initiativelist",
@@ -17697,6 +17885,7 @@
      "query:filter[tag.id]",
      "query:filter[updated_at]",
      "query:filter[updated_period]",
+     "query:include",
      "query:include_internal",
      "query:include_unscheduled",
      "query:page_size",
@@ -17864,6 +18053,38 @@
    "url": "https://developer.scalepad.com/reference/apipublicv2meetingupdate"
   },
   {
+   "content_hash": "400c3907290f2196",
+   "description": "Add a brand new AccountTeamMemberRole for an Account",
+   "fetch_error": null,
+   "key": "/reference/apiv1accountteammemberrolecreate",
+   "kind": "endpoint",
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [],
+    "request_fields": [
+     "is_primary",
+     "role_label"
+    ],
+    "responses": [
+     "201",
+     "400",
+     "403",
+     "404",
+     "409"
+    ],
+    "summary": "Create Team Role",
+    "tags": [
+     "Account Team"
+    ]
+   },
+   "path": "/lifecycle-manager/v1/account-team/member/role/create",
+   "product": "Lifecycle Manager API",
+   "title": "Create Team Role",
+   "updated_at": "2026-11-04T13:47:19.000Z",
+   "url": "https://developer.scalepad.com/reference/apiv1accountteammemberrolecreate"
+  },
+  {
    "content_hash": "c15c4d99608d6134",
    "description": "Set whether an account team role is primary for all clients in the account",
    "fetch_error": null,
@@ -17893,6 +18114,68 @@
    "title": "Update Primary Team Role",
    "updated_at": "2026-10-22T18:13:21.000Z",
    "url": "https://developer.scalepad.com/reference/apiv1accountteammemberroleprimaryupdate"
+  },
+  {
+   "content_hash": "f7dd0d049e2b49d8",
+   "description": "Remove a AccountTeamMemberRole for an Account",
+   "fetch_error": null,
+   "key": "/reference/apiv1accountteammemberroleremove",
+   "kind": "endpoint",
+   "method": "POST",
+   "operation": {
+    "deprecated": false,
+    "parameters": [],
+    "request_fields": [
+     "account_team_member_role_id"
+    ],
+    "responses": [
+     "201",
+     "400",
+     "403",
+     "404"
+    ],
+    "summary": "Delete Team Role",
+    "tags": [
+     "Account Team"
+    ]
+   },
+   "path": "/lifecycle-manager/v1/account-team/member/role/remove",
+   "product": "Lifecycle Manager API",
+   "title": "Delete Team Role",
+   "updated_at": "2026-11-04T13:47:19.000Z",
+   "url": "https://developer.scalepad.com/reference/apiv1accountteammemberroleremove"
+  },
+  {
+   "content_hash": "a2b87b534027f7e5",
+   "description": "Rename an account team role. Members who hold the role keep it and show the new label. Rejected with 409 Conflict when another role in the account already uses the label.",
+   "fetch_error": null,
+   "key": "/reference/apiv1accountteammemberrolerename",
+   "kind": "endpoint",
+   "method": "PUT",
+   "operation": {
+    "deprecated": false,
+    "parameters": [],
+    "request_fields": [
+     "account_team_member_role_id",
+     "role_label"
+    ],
+    "responses": [
+     "200",
+     "400",
+     "403",
+     "404",
+     "409"
+    ],
+    "summary": "Rename Team Role",
+    "tags": [
+     "Account Team"
+    ]
+   },
+   "path": "/lifecycle-manager/v1/account-team/member/role/rename",
+   "product": "Lifecycle Manager API",
+   "title": "Rename Team Role",
+   "updated_at": "2026-11-04T13:47:19.000Z",
+   "url": "https://developer.scalepad.com/reference/apiv1accountteammemberrolerename"
   },
   {
    "content_hash": "f5e06c0692208920",
@@ -17974,7 +18257,7 @@
    "url": "https://developer.scalepad.com/reference/apiv1deliverablelistbyaccount"
   },
   {
-   "content_hash": "36ba35c3498de2c7",
+   "content_hash": "418ea553b3a72fc0",
    "description": "List published Lifecycle Manager updates with the current user read state.",
    "fetch_error": null,
    "key": "/reference/apiv1featurebaseupdateslist",
@@ -17990,19 +18273,19 @@
     "responses": [
      "200"
     ],
-    "summary": "List Product Updates",
+    "summary": "List Featurebase Updates",
     "tags": [
      "Inbox"
     ]
    },
    "path": "/lifecycle-manager/v1/featurebase/updates",
    "product": "Lifecycle Manager API",
-   "title": "List Product Updates",
+   "title": "List Featurebase Updates",
    "updated_at": "2026-10-25T13:43:45.000Z",
    "url": "https://developer.scalepad.com/reference/apiv1featurebaseupdateslist"
   },
   {
-   "content_hash": "26d7c2b03c334396",
+   "content_hash": "b0497432d99f15fc",
    "description": "Mark visible product updates as read for the authenticated user.",
    "fetch_error": null,
    "key": "/reference/apiv1featurebaseupdatesread",
@@ -18020,14 +18303,14 @@
      "403",
      "404"
     ],
-    "summary": "Mark Product Updates Read",
+    "summary": "Read Featurebase Updates",
     "tags": [
      "Inbox"
     ]
    },
    "path": "/lifecycle-manager/v1/featurebase/updates/read",
    "product": "Lifecycle Manager API",
-   "title": "Mark Product Updates Read",
+   "title": "Read Featurebase Updates",
    "updated_at": "2026-10-25T13:43:45.000Z",
    "url": "https://developer.scalepad.com/reference/apiv1featurebaseupdatesread"
   },
@@ -18923,7 +19206,7 @@
    "url": "https://developer.scalepad.com/reference/create-deliverable-share-general-link-1"
   },
   {
-   "content_hash": "b376b1340668b988",
+   "content_hash": "60a9e9b1f95f474f",
    "description": "This endpoint creates a new general share link for the specified deliverable.",
    "fetch_error": null,
    "key": "/reference/create-deliverable-share-general-link-v2",
@@ -24943,7 +25226,7 @@
    "url": "https://developer.scalepad.com/reference/unmapvendorentitiesforclient"
   },
   {
-   "content_hash": "636fa6afee82c2a6",
+   "content_hash": "19a558561b1a5e16",
    "description": "This endpoint updates an existing deliverable with the provided fields.",
    "fetch_error": null,
    "key": "/reference/update-deliverable-1",
@@ -24956,6 +25239,7 @@
     ],
     "request_fields": [
      "name",
+     "omit_failed_components",
      "sections",
      "status"
     ],
