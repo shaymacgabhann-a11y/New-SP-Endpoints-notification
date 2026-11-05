@@ -1,162 +1,1089 @@
-# ScalePad developer docs — changes detected 2026-11-04 21:14 UTC
+# ScalePad developer docs — changes detected 2026-11-05 00:17 UTC
 
-Tracking 772 pages at https://developer.scalepad.com. **11 added · 2 removed · 66 changed**
+Tracking 773 pages at https://developer.scalepad.com. **22 added · 21 removed · 515 changed**
 
-## Added (11)
+## Added (22)
+### Guides
+- [ScalePad MCP tool reference](https://developer.scalepad.com/docs/product-mcp-tools)
+
 ### Lifecycle Manager API
-- [POST /lifecycle-manager/v1/account-team/member/role/create — Create Team Role](https://developer.scalepad.com/reference/apiv1accountteammemberrolecreate)
-- [POST /lifecycle-manager/v1/account-team/member/role/remove — Delete Team Role](https://developer.scalepad.com/reference/apiv1accountteammemberroleremove)
-- [PUT /lifecycle-manager/v1/account-team/member/role/rename — Rename Team Role](https://developer.scalepad.com/reference/apiv1accountteammemberrolerename)
-- [GET /lifecycle-manager/v1/agreements/{agreement_id}/budget — List Planned Agreement Budget Increases](https://developer.scalepad.com/reference/apipublicv1agreementbudgetoverridelist)
-- [POST /lifecycle-manager/v1/agreements/{agreement_id}/budget — Save Planned Agreement Budget Increases](https://developer.scalepad.com/reference/apipublicv1agreementbudgetoverridesave)
-- [POST /lifecycle-manager/v1/agreements/{agreement_id}/budget/preview — Preview Planned Agreement Budget Increases](https://developer.scalepad.com/reference/apipublicv1agreementbudgetoverridepreview)
-- [POST /lifecycle-manager/v1/agreements/{agreement_id}/budget/{agreement_budget_override_id}/cancel — Cancel Planned Agreement Budget Increases](https://developer.scalepad.com/reference/apipublicv1agreementbudgetoverridecancel)
-- [PATCH /lifecycle-manager/v1/clients/tags — Add or Remove Client Tags](https://developer.scalepad.com/reference/apipublicv1clientstagupdate)
-- [GET /lifecycle-manager/v1/meetings/{meeting_id}/attendance — Get Meeting Attendance](https://developer.scalepad.com/reference/apipublicv1meetingattendanceget)
-- [PUT /lifecycle-manager/v1/meetings/{meeting_id}/ticket — Link an existing PSA ticket to a Meeting](https://developer.scalepad.com/reference/apipublicv1meetingticketattach)
-- [GET /lifecycle-manager/v1/meetings/{meeting_id}/transcript — Get Meeting Transcripts](https://developer.scalepad.com/reference/apipublicv1meetingtranscriptget)
+- [GET /app/v1/tasks — List Tasks](https://developer.scalepad.com/reference/apipublicv1tasklist)
+- [POST /app/v1/tasks — Create Task](https://developer.scalepad.com/reference/apipublicv1taskcreate)
+- [DELETE /app/v1/tasks/{action_item_id}/ticket — Unlink the PSA ticket from a task](https://developer.scalepad.com/reference/apipublicv1taskticketunlink)
+- [GET /app/v1/tasks/{action_item_id}/ticket — Get the linked PSA ticket state for a task](https://developer.scalepad.com/reference/apipublicv1taskticketget)
+- [POST /app/v1/tasks/{action_item_id}/ticket — Create and Link a Ticket to a Task](https://developer.scalepad.com/reference/apipublicv1taskticketcreate)
+- [PUT /app/v1/tasks/{action_item_id}/ticket — Attach Existing Task Ticket](https://developer.scalepad.com/reference/apipublicv1taskticketattach)
+- [DELETE /app/v1/tasks/{id} — Delete Task](https://developer.scalepad.com/reference/apipublicv1taskdelete)
+- [GET /app/v1/tasks/{id} — Get Task](https://developer.scalepad.com/reference/apipublicv1taskget)
+- [PUT /app/v1/tasks/{id} — Update Task](https://developer.scalepad.com/reference/apipublicv1taskupdate)
+- [PUT /app/v1/tasks/{id}/completion-status — Update Task Completion Status](https://developer.scalepad.com/reference/apipublicv1taskmarkcompleted)
+- [PUT /app/v1/tasks/{id}/pin — Update Task Pin Status](https://developer.scalepad.com/reference/apipublicv1taskpin)
+- [POST /app/v1/tasks/{id}/reposition — Reposition Task](https://developer.scalepad.com/reference/apipublicv1taskreposition)
+- [GET /cs/v1/goals/{goal_id}/tasks — List Goal Tasks](https://developer.scalepad.com/reference/apipublicv1goaltaskslist)
+- [DELETE /cs/v1/goals/{goal_id}/tasks/{action_item_id} — Detach Task from Goal](https://developer.scalepad.com/reference/apipublicv1goaltaskdetach)
+- [POST /cs/v1/goals/{goal_id}/tasks/{action_item_id} — Attach Task to Goal](https://developer.scalepad.com/reference/apipublicv1goaltaskattach)
+- [GET /cs/v1/initiatives/{initiative_id}/tasks — List Initiative Tasks](https://developer.scalepad.com/reference/apipublicv1initiativetaskslist)
+- [DELETE /cs/v1/initiatives/{initiative_id}/tasks/{action_item_id} — Detach Task from Initiative](https://developer.scalepad.com/reference/apipublicv1initiativetaskdetach)
+- [POST /cs/v1/initiatives/{initiative_id}/tasks/{action_item_id} — Attach Task to Initiative](https://developer.scalepad.com/reference/apipublicv1initiativetaskattach)
+- [GET /cs/v1/meetings/{meeting_id}/tasks — List Meeting Tasks](https://developer.scalepad.com/reference/apipublicv1meetingtaskslist)
+- [DELETE /cs/v1/meetings/{meeting_id}/tasks/{action_item_id} — Detach Task from Meeting](https://developer.scalepad.com/reference/apipublicv1meetingtaskdetach)
+- [POST /cs/v1/meetings/{meeting_id}/tasks/{action_item_id} — Attach Task to Meeting](https://developer.scalepad.com/reference/apipublicv1meetingtaskattach)
 
-## Removed (2)
+## Removed (21)
 ### Lifecycle Manager API
-- [POST /lifecycle-manager/v1/clients/export/csv — Export Clients as CSV](https://developer.scalepad.com/reference/apipublicv1clientsexportcsv)
-- [POST /lifecycle-manager/v1/clients/export/xlsx — Export Clients as XLSX](https://developer.scalepad.com/reference/apipublicv1clientsexportxlsx)
+- [GET /lifecycle-manager/v1/action-items — List Action Items](https://developer.scalepad.com/reference/apipublicv1engagementactionlist)
+- [POST /lifecycle-manager/v1/action-items — Create Action Item](https://developer.scalepad.com/reference/apipublicv1engagementactioncreate)
+- [DELETE /lifecycle-manager/v1/action-items/{action_item_id}/ticket — Unlink the PSA ticket from an action item](https://developer.scalepad.com/reference/apipublicv1engagementactionticketunlink)
+- [GET /lifecycle-manager/v1/action-items/{action_item_id}/ticket — Get the linked PSA ticket state for an action item](https://developer.scalepad.com/reference/apipublicv1engagementactionticketget)
+- [POST /lifecycle-manager/v1/action-items/{action_item_id}/ticket — Create and Link a Ticket to an Action Item](https://developer.scalepad.com/reference/apipublicv1engagementactionticketcreate)
+- [PUT /lifecycle-manager/v1/action-items/{action_item_id}/ticket — Attach Existing Action Item Ticket](https://developer.scalepad.com/reference/apipublicv1engagementactionticketattach)
+- [DELETE /lifecycle-manager/v1/action-items/{id} — Delete Action Item](https://developer.scalepad.com/reference/apipublicv1engagementactiondelete)
+- [GET /lifecycle-manager/v1/action-items/{id} — Get Action Item](https://developer.scalepad.com/reference/apipublicv1engagementactionget)
+- [PUT /lifecycle-manager/v1/action-items/{id} — Update Action Item](https://developer.scalepad.com/reference/apipublicv1engagementactionupdate)
+- [PUT /lifecycle-manager/v1/action-items/{id}/completion-status — Update Action Item Completion Status](https://developer.scalepad.com/reference/apipublicv1engagementactionmarkcompleted)
+- [PUT /lifecycle-manager/v1/action-items/{id}/pin — Update Action Item Pin Status](https://developer.scalepad.com/reference/apipublicv1engagementactionpin)
+- [POST /lifecycle-manager/v1/action-items/{id}/reposition — Reposition Action Item](https://developer.scalepad.com/reference/apipublicv1engagementactionreposition)
+- [GET /lifecycle-manager/v1/goals/{goal_id}/action-items — List Goal Action Items](https://developer.scalepad.com/reference/apipublicv1goalactionitemslist)
+- [DELETE /lifecycle-manager/v1/goals/{goal_id}/action-items/{action_item_id} — Detach Action Item from Goal](https://developer.scalepad.com/reference/apipublicv1goalactionitemdetach)
+- [POST /lifecycle-manager/v1/goals/{goal_id}/action-items/{action_item_id} — Attach Action Item to Goal](https://developer.scalepad.com/reference/apipublicv1goalactionitemattach)
+- [GET /lifecycle-manager/v1/initiatives/{initiative_id}/action-items — List Initiative Action Items](https://developer.scalepad.com/reference/apipublicv1initiativeactionitemslist)
+- [DELETE /lifecycle-manager/v1/initiatives/{initiative_id}/action-items/{action_item_id} — Detach Action Item from Initiative](https://developer.scalepad.com/reference/apipublicv1initiativeactionitemdetach)
+- [POST /lifecycle-manager/v1/initiatives/{initiative_id}/action-items/{action_item_id} — Attach Action Item to Initiative](https://developer.scalepad.com/reference/apipublicv1initiativeactionitemattach)
+- [GET /lifecycle-manager/v1/meetings/{meeting_id}/action-items — List Meeting Action Items](https://developer.scalepad.com/reference/apipublicv1meetingactionitemslist)
+- [DELETE /lifecycle-manager/v1/meetings/{meeting_id}/action-items/{action_item_id} — Detach Action Item from Meeting](https://developer.scalepad.com/reference/apipublicv1meetingactionitemdetach)
+- [POST /lifecycle-manager/v1/meetings/{meeting_id}/action-items/{action_item_id} — Attach Action Item to Meeting](https://developer.scalepad.com/reference/apipublicv1meetingactionitemattach)
 
-## Changed (66)
+## Changed (515)
 ### Guides
 - [ScalePad MCP 2.0](https://developer.scalepad.com/docs/product-mcp)
   - page content updated (schema details / examples / prose)
 
 ### Lifecycle Manager API
-- [GET /lifecycle-manager/v1/account/settings — Get Account Settings](https://developer.scalepad.com/reference/apipublicv1accountsettingsget)
-  - page content updated (schema details / examples / prose)
-- [GET /lifecycle-manager/v1/action-items — List Action Items](https://developer.scalepad.com/reference/apipublicv1engagementactionlist)
-  - page content updated (schema details / examples / prose)
-- [GET /lifecycle-manager/v1/action-items/{action_item_id}/ticket — Get the linked PSA ticket state for an action item](https://developer.scalepad.com/reference/apipublicv1engagementactionticketget)
-  - page content updated (schema details / examples / prose)
-- [POST /lifecycle-manager/v1/action-items/{action_item_id}/ticket — Create and Link a Ticket to an Action Item](https://developer.scalepad.com/reference/apipublicv1engagementactionticketcreate)
-  - page content updated (schema details / examples / prose)
-- [PUT /lifecycle-manager/v1/action-items/{action_item_id}/ticket — Attach Existing Action Item Ticket](https://developer.scalepad.com/reference/apipublicv1engagementactionticketattach)
-  - page content updated (schema details / examples / prose)
-- [GET /lifecycle-manager/v1/action-items/{id} — Get Action Item](https://developer.scalepad.com/reference/apipublicv1engagementactionget)
-  - page content updated (schema details / examples / prose)
-- [POST /lifecycle-manager/v1/assessment-templates — Create Assessment Template](https://developer.scalepad.com/reference/apipublicv1assessmenttemplatecreate)
-  - page content updated (schema details / examples / prose)
-- [GET /lifecycle-manager/v1/assessment-templates/{assessment_template_id} — Get Assessment Template](https://developer.scalepad.com/reference/apipublicv1assessmenttemplateget)
-  - page content updated (schema details / examples / prose)
-- [PUT /lifecycle-manager/v1/assessment-templates/{assessment_template_id} — Update Assessment Template](https://developer.scalepad.com/reference/apipublicv1assessmenttemplateupdate)
-  - responses added: `409`
-- [GET /lifecycle-manager/v1/assessments — List Assessments](https://developer.scalepad.com/reference/apipublicv1assessmentslist)
-  - page content updated (schema details / examples / prose)
-- [POST /lifecycle-manager/v1/assessments/{assessment_id}/questions/{assessment_evaluation_question_id}/ticket — Create and Link a Ticket to an Assessment Evaluation Question](https://developer.scalepad.com/reference/apipublicv1assessmentevaluationquestionticketcreate)
-  - page content updated (schema details / examples / prose)
-- [GET /lifecycle-manager/v1/assessments/{id} — Get Assessment](https://developer.scalepad.com/reference/apipublicv1assessmentsget)
-  - page content updated (schema details / examples / prose)
-- [GET /lifecycle-manager/v1/assets/contacts/export — Assets Contacts Export](https://developer.scalepad.com/reference/apipublicv1assetscontactsexport)
-  - title: “Export Contacts as Spreadsheet” → “Assets Contacts Export”
-- [GET /lifecycle-manager/v1/assets/contacts/report/pdf — Export Assets Contacts Report Pdf](https://developer.scalepad.com/reference/apipublicv1assetscontactsreportpdf)
-  - title: “Download Contact Report PDF” → “Export Assets Contacts Report Pdf”
-- [GET /lifecycle-manager/v1/assets/hardware — List Assets Hardware](https://developer.scalepad.com/reference/apipublicv1assetshardwarelist)
-  - title: “List Hardware Assets” → “List Assets Hardware”
-  - params added: `query:filter[replacement_status]`
-- [POST /lifecycle-manager/v1/assets/hardware/attached-agreements/lookup — Assets Hardware Attached Agreements](https://developer.scalepad.com/reference/apipublicv1assetshardwareattachedagreements)
-  - title: “List Agreements Attached to Hardware” → “Assets Hardware Attached Agreements”
-- [POST /lifecycle-manager/v1/assets/hardware/attached-initiatives/lookup — List Attached Initiatives](https://developer.scalepad.com/reference/apipublicv1assetshardwareattachedinitiatives)
-  - title: “List Initiatives Attached to Hardware” → “List Attached Initiatives”
-- [POST /lifecycle-manager/v1/assets/hardware/export/csv — Download hardware CSV export](https://developer.scalepad.com/reference/apipublicv1assetshardwareexportcsv)
-  - request fields added: `insight_ids`
-- [POST /lifecycle-manager/v1/assets/hardware/export/pdf — Download hardware PDF export](https://developer.scalepad.com/reference/apipublicv1assetshardwareexportpdf)
-  - request fields added: `insight_ids`
-- [POST /lifecycle-manager/v1/assets/hardware/export/xlsx — Download hardware XLSX export](https://developer.scalepad.com/reference/apipublicv1assetshardwareexportxlsx)
-  - request fields added: `insight_ids`
-- [POST /lifecycle-manager/v1/assets/hardware/overview — Retrieve Hardware Asset Overview](https://developer.scalepad.com/reference/apipublicv1assetshardwareoverview)
-  - page content updated (schema details / examples / prose)
-- [PUT /lifecycle-manager/v1/assets/hardware/replacement-cost — Update Assets Hardware Replacement Cost](https://developer.scalepad.com/reference/apipublicv1assetshardwarereplacementcostupdate)
-  - title: “Update Hardware Replacement Costs” → “Update Assets Hardware Replacement Cost”
-- [POST /lifecycle-manager/v1/assets/hardware/sources — Hardware Sources](https://developer.scalepad.com/reference/apipublicv1assetshardwaresourcesget)
-  - title: “Get Hardware Asset Sources” → “Hardware Sources”
-- [PUT /lifecycle-manager/v1/assets/hardware/type — Update Assets Hardware Type](https://developer.scalepad.com/reference/apipublicv1assetshardwaretypeupdate)
-  - title: “Update Hardware Asset Type” → “Update Assets Hardware Type”
-- [PUT /lifecycle-manager/v1/assets/hardware/visibility — Update Assets Hardware Visibility](https://developer.scalepad.com/reference/apipublicv1assetshardwarevisibilityupdate)
-  - title: “Update Hardware Asset Visibility” → “Update Assets Hardware Visibility”
-- [PATCH /lifecycle-manager/v1/assets/hardware/{hardware_asset_id}/overrides — Patch hardware asset overrides](https://developer.scalepad.com/reference/apipublicv1hardwareassetoverridespatch)
-  - title: “Update Hardware Asset Overrides” → “Patch hardware asset overrides”
-- [GET /lifecycle-manager/v1/assets/types — List hardware types](https://developer.scalepad.com/reference/apipublicv1assetstypeslist)
-  - title: “List Hardware Types” → “List hardware types”
-- [POST /lifecycle-manager/v1/assets/types — Create hardware type](https://developer.scalepad.com/reference/apipublicv1assetstypescreate)
-  - title: “Create Hardware Type” → “Create hardware type”
-- [DELETE /lifecycle-manager/v1/assets/types/{id} — Delete a hardware type](https://developer.scalepad.com/reference/apipublicv1assetstypesdelete)
-  - title: “Delete Hardware Type” → “Delete a hardware type”
-- [GET /lifecycle-manager/v1/assets/types/{id} — Get hardware type details](https://developer.scalepad.com/reference/apipublicv1assetstypesget)
-  - title: “Get Hardware Type” → “Get hardware type details”
-- [POST /lifecycle-manager/v1/assets/types/{id}/reassign — Reassign hardware to another type](https://developer.scalepad.com/reference/apipublicv1assetstypesreassign)
-  - title: “Reassign Hardware to Another Type” → “Reassign hardware to another type”
-- [PATCH /lifecycle-manager/v1/assets/types/{id}/replacement — Patch asset type replacement settings](https://developer.scalepad.com/reference/apipublicv1assetstypesreplacementpatch)
-  - title: “Update Hardware Type Replacement Settings” → “Patch asset type replacement settings”
-- [GET /lifecycle-manager/v1/clients — List Clients](https://developer.scalepad.com/reference/apipublicv1clientlist)
-  - page content updated (schema details / examples / prose)
-- [GET /lifecycle-manager/v1/clients/lookup — Search Clients](https://developer.scalepad.com/reference/apipublicv1clientslookup)
-  - page content updated (schema details / examples / prose)
-- [GET /lifecycle-manager/v1/clients/{client_id} — Get Client](https://developer.scalepad.com/reference/apipublicv1clientget)
-  - page content updated (schema details / examples / prose)
-- [GET /lifecycle-manager/v1/clients/{client_id}/authorization — Get Client Authorization](https://developer.scalepad.com/reference/apipublicv1clientauthorizationget)
-  - page content updated (schema details / examples / prose)
-- [GET /lifecycle-manager/v1/contacts — List Contacts](https://developer.scalepad.com/reference/apipublicv1contactslist)
-  - params added: `query:filter[has_license]`, `query:filter[licenses.sku_name]`
-- [PATCH /lifecycle-manager/v1/deliverables/{deliverable-id} — Update Deliverable](https://developer.scalepad.com/reference/update-deliverable-1)
-  - request fields added: `omit_failed_components`
-- [POST /lifecycle-manager/v1/deliverables/{deliverable_id}/assessment — Append assessment report](https://developer.scalepad.com/reference/apipublicv1deliverableassessmentcreate)
-  - page content updated (schema details / examples / prose)
-- [GET /lifecycle-manager/v1/featurebase/updates — List Featurebase Updates](https://developer.scalepad.com/reference/apiv1featurebaseupdateslist)
-  - title: “List Product Updates” → “List Featurebase Updates”
-- [POST /lifecycle-manager/v1/featurebase/updates/read — Read Featurebase Updates](https://developer.scalepad.com/reference/apiv1featurebaseupdatesread)
-  - title: “Mark Product Updates Read” → “Read Featurebase Updates”
-- [GET /lifecycle-manager/v1/inbox/notifications — List Inbox Notifications](https://developer.scalepad.com/reference/apipublicv1inboxnotificationlist)
-  - params added: `query:filter[actor_user_id]`, `query:filter[client_id]`, `query:filter[entity_type]`
-- [POST /lifecycle-manager/v1/inbox/notifications/read-all — Mark All Inbox Notifications Read](https://developer.scalepad.com/reference/apipublicv1inboxnotificationreadall)
-  - request fields added: `actor_user_ids`, `client_ids`, `entity_types`
-- [POST /lifecycle-manager/v1/initiatives/{initiative_id}/opportunity — Create Initiative Opportunity](https://developer.scalepad.com/reference/apipublicv1initiativeopportunitycreate)
-  - page content updated (schema details / examples / prose)
-- [GET /lifecycle-manager/v1/initiatives/{initiative_id}/ticket — Get the linked PSA ticket state for an initiative](https://developer.scalepad.com/reference/apipublicv1initiativeticketget)
-  - page content updated (schema details / examples / prose)
-- [POST /lifecycle-manager/v1/initiatives/{initiative_id}/ticket — Create and Link a Ticket to an Initiative](https://developer.scalepad.com/reference/apipublicv1initiativeticketlegacycreate)
-  - page content updated (schema details / examples / prose)
-- [GET /lifecycle-manager/v1/initiatives/{initiative_id}/tickets — List the PSA tickets linked to an initiative](https://developer.scalepad.com/reference/apipublicv1initiativeticketlist)
-  - page content updated (schema details / examples / prose)
-- [POST /lifecycle-manager/v1/initiatives/{initiative_id}/tickets — Create and Link a Ticket to an Initiative](https://developer.scalepad.com/reference/apipublicv1initiativeticketcreate)
-  - page content updated (schema details / examples / prose)
-- [PUT /lifecycle-manager/v1/initiatives/{initiative_id}/tickets — Link an existing PSA ticket to an initiative](https://developer.scalepad.com/reference/apipublicv1initiativeticketattach)
-  - page content updated (schema details / examples / prose)
-- [GET /lifecycle-manager/v1/insights/{insight_id}/assets/export/csv — Download insight affected assets CSV](https://developer.scalepad.com/reference/apipublicv1insightassetsexportcsv)
-  - params added: `query:filter[assigned_user_id]`
-- [GET /lifecycle-manager/v1/insights/{insight_id}/assets/forecast/export/csv — Download insight forecasted assets CSV](https://developer.scalepad.com/reference/apipublicv1insightforecastedassetsexportcsv)
-  - params added: `query:filter[assigned_user_id]`
-- [PUT /lifecycle-manager/v1/licenses/assign — Assign Licenses](https://developer.scalepad.com/reference/apipublicv1licensesassign)
-  - page content updated (schema details / examples / prose)
-- [GET /lifecycle-manager/v1/meetings — List Meetings](https://developer.scalepad.com/reference/apipublicv1meetinglist)
-  - page content updated (schema details / examples / prose)
-- [GET /lifecycle-manager/v1/meetings/sync — Get Meeting Sync](https://developer.scalepad.com/reference/apipublicv1meetingsyncget)
-  - page content updated (schema details / examples / prose)
-- [GET /lifecycle-manager/v1/meetings/sync/events — Get Meeting Sync Events](https://developer.scalepad.com/reference/apipublicv1meetingsynceventsget)
-  - page content updated (schema details / examples / prose)
-- [GET /lifecycle-manager/v1/meetings/{id} — Get Meeting](https://developer.scalepad.com/reference/apipublicv1meetingget)
-  - page content updated (schema details / examples / prose)
-- [GET /lifecycle-manager/v1/meetings/{meeting_id}/ticket — Get the linked PSA ticket state for a Meeting](https://developer.scalepad.com/reference/apipublicv1meetingticketget)
-  - description text updated
-- [POST /lifecycle-manager/v1/meetings/{meeting_id}/ticket — Create and Link a Ticket to a Meeting](https://developer.scalepad.com/reference/apipublicv1meetingticketcreate)
-  - description text updated
-- [PUT /lifecycle-manager/v1/roles/{role_id} — Update Role](https://developer.scalepad.com/reference/apipublicv1roleupdate)
-  - request fields added: `expected_permission_keys`
-  - responses added: `409`
-- [GET /lifecycle-manager/v1/user/{user_id} — Get User](https://developer.scalepad.com/reference/apipublicv1userget)
-  - page content updated (schema details / examples / prose)
-- [PATCH /lifecycle-manager/v1/user/{user_id} — Update the authenticated user preference.](https://developer.scalepad.com/reference/apipublicv1userpatch)
-  - title: “Update User Preferences” → “Update the authenticated user preference.”
-- [GET /lifecycle-manager/v1/users/{user_id}/client-access — Get user client access](https://developer.scalepad.com/reference/apipublicv1userclientaccessget)
-  - page content updated (schema details / examples / prose)
-- [PUT /lifecycle-manager/v1/users/{user_id}/permissions — Update user permissions](https://developer.scalepad.com/reference/apipublicv1userpermissionsupdate)
-  - request fields added: `expected_direct_permission_keys`, `expected_effective_permission_keys`
-  - responses added: `409`
-- [POST /lifecycle-manager/v2/deliverables/{deliverable-id}/shares/general-link — Create General Share Link](https://developer.scalepad.com/reference/create-deliverable-share-general-link-v2)
-  - page content updated (schema details / examples / prose)
-- [GET /lifecycle-manager/v2/initiatives — List Initiatives v2](https://developer.scalepad.com/reference/apipublicv2initiativelist)
-  - params added: `query:include`
+- [POST /app/v1/account-team/member/role/create — Create Team Role](https://developer.scalepad.com/reference/apiv1accountteammemberrolecreate)
+  - route changed: `POST /lifecycle-manager/v1/account-team/member/role/create` → `POST /app/v1/account-team/member/role/create`
+- [POST /app/v1/account-team/member/role/primary/update — Update Primary Team Role](https://developer.scalepad.com/reference/apiv1accountteammemberroleprimaryupdate)
+  - route changed: `POST /lifecycle-manager/v1/account-team/member/role/primary/update` → `POST /app/v1/account-team/member/role/primary/update`
+- [POST /app/v1/account-team/member/role/remove — Delete Team Role](https://developer.scalepad.com/reference/apiv1accountteammemberroleremove)
+  - route changed: `POST /lifecycle-manager/v1/account-team/member/role/remove` → `POST /app/v1/account-team/member/role/remove`
+- [PUT /app/v1/account-team/member/role/rename — Rename Team Role](https://developer.scalepad.com/reference/apiv1accountteammemberrolerename)
+  - route changed: `PUT /lifecycle-manager/v1/account-team/member/role/rename` → `PUT /app/v1/account-team/member/role/rename`
+- [GET /app/v1/account-team/members — List Account Team Members](https://developer.scalepad.com/reference/apipublicv1accountteammemberslist)
+  - route changed: `GET /lifecycle-manager/v1/account-team/members` → `GET /app/v1/account-team/members`
+- [GET /app/v1/account-team/roles — List Account Team Member Roles](https://developer.scalepad.com/reference/apipublicv1accountteammemberroleslist)
+  - route changed: `GET /lifecycle-manager/v1/account-team/roles` → `GET /app/v1/account-team/roles`
+- [DELETE /app/v1/account/logo — Delete Account Logo](https://developer.scalepad.com/reference/apipublicv1accountlogodelete)
+  - route changed: `DELETE /lifecycle-manager/v1/account/logo` → `DELETE /app/v1/account/logo`
+- [GET /app/v1/account/logo — Get Account Logo](https://developer.scalepad.com/reference/apipublicv1accountlogoget)
+  - route changed: `GET /lifecycle-manager/v1/account/logo` → `GET /app/v1/account/logo`
+- [POST /app/v1/account/logo — Upload Account Logo](https://developer.scalepad.com/reference/apipublicv1accountlogoupload)
+  - route changed: `POST /lifecycle-manager/v1/account/logo` → `POST /app/v1/account/logo`
+- [GET /app/v1/account/settings — Get Account Settings](https://developer.scalepad.com/reference/apipublicv1accountsettingsget)
+  - route changed: `GET /lifecycle-manager/v1/account/settings` → `GET /app/v1/account/settings`
+- [PATCH /app/v1/account/settings — Update Account Settings](https://developer.scalepad.com/reference/apipublicv1accountsettingspatch)
+  - route changed: `PATCH /lifecycle-manager/v1/account/settings` → `PATCH /app/v1/account/settings`
+- [GET /app/v1/assets/contacts/export — Assets Contacts Export](https://developer.scalepad.com/reference/apipublicv1assetscontactsexport)
+  - route changed: `GET /lifecycle-manager/v1/assets/contacts/export` → `GET /app/v1/assets/contacts/export`
+- [GET /app/v1/assets/contacts/report/pdf — Export Assets Contacts Report Pdf](https://developer.scalepad.com/reference/apipublicv1assetscontactsreportpdf)
+  - route changed: `GET /lifecycle-manager/v1/assets/contacts/report/pdf` → `GET /app/v1/assets/contacts/report/pdf`
+- [GET /app/v1/assets/hardware — List Assets Hardware](https://developer.scalepad.com/reference/apipublicv1assetshardwarelist)
+  - route changed: `GET /lifecycle-manager/v1/assets/hardware` → `GET /app/v1/assets/hardware`
+- [POST /app/v1/assets/hardware/attached-agreements/lookup — Assets Hardware Attached Agreements](https://developer.scalepad.com/reference/apipublicv1assetshardwareattachedagreements)
+  - route changed: `POST /lifecycle-manager/v1/assets/hardware/attached-agreements/lookup` → `POST /app/v1/assets/hardware/attached-agreements/lookup`
+- [POST /app/v1/assets/hardware/attached-initiatives/lookup — List Attached Initiatives](https://developer.scalepad.com/reference/apipublicv1assetshardwareattachedinitiatives)
+  - route changed: `POST /lifecycle-manager/v1/assets/hardware/attached-initiatives/lookup` → `POST /app/v1/assets/hardware/attached-initiatives/lookup`
+- [GET /app/v1/assets/hardware/custom-fields — List hardware custom field definitions.](https://developer.scalepad.com/reference/apipublicv1hardwarecustomfieldlist)
+  - route changed: `GET /lifecycle-manager/v1/assets/hardware/custom-fields` → `GET /app/v1/assets/hardware/custom-fields`
+- [POST /app/v1/assets/hardware/custom-fields — Create a hardware custom field definition.](https://developer.scalepad.com/reference/apipublicv1hardwarecustomfieldcreate)
+  - route changed: `POST /lifecycle-manager/v1/assets/hardware/custom-fields` → `POST /app/v1/assets/hardware/custom-fields`
+- [DELETE /app/v1/assets/hardware/custom-fields/{hardware_custom_field_id} — Delete a hardware custom field definition.](https://developer.scalepad.com/reference/apipublicv1hardwarecustomfielddelete)
+  - route changed: `DELETE /lifecycle-manager/v1/assets/hardware/custom-fields/{hardware_custom_field_id}` → `DELETE /app/v1/assets/hardware/custom-fields/{hardware_custom_field_id}`
+- [PUT /app/v1/assets/hardware/custom-fields/{hardware_custom_field_id} — Update a hardware custom field definition.](https://developer.scalepad.com/reference/apipublicv1hardwarecustomfieldupdate)
+  - route changed: `PUT /lifecycle-manager/v1/assets/hardware/custom-fields/{hardware_custom_field_id}` → `PUT /app/v1/assets/hardware/custom-fields/{hardware_custom_field_id}`
+- [POST /app/v1/assets/hardware/custom-fields/{hardware_custom_field_id}/values/assign — Assign Hardware Custom Field Value](https://developer.scalepad.com/reference/apipublicv1hardwarecustomfieldvalueassign)
+  - route changed: `POST /lifecycle-manager/v1/assets/hardware/custom-fields/{hardware_custom_field_id}/values/assign` → `POST /app/v1/assets/hardware/custom-fields/{hardware_custom_field_id}/values/assign`
+- [POST /app/v1/assets/hardware/custom-fields/{hardware_custom_field_id}/values/unassign — Unassign Hardware Custom Field Value](https://developer.scalepad.com/reference/apipublicv1hardwarecustomfieldvalueunassign)
+  - route changed: `POST /lifecycle-manager/v1/assets/hardware/custom-fields/{hardware_custom_field_id}/values/unassign` → `POST /app/v1/assets/hardware/custom-fields/{hardware_custom_field_id}/values/unassign`
+- [GET /app/v1/assets/hardware/dashboard — Get Hardware Summary](https://developer.scalepad.com/reference/apipublicv1assetshardwaredashboardsummaryget)
+  - route changed: `GET /lifecycle-manager/v1/assets/hardware/dashboard` → `GET /app/v1/assets/hardware/dashboard`
+- [POST /app/v1/assets/hardware/export/csv — Download hardware CSV export](https://developer.scalepad.com/reference/apipublicv1assetshardwareexportcsv)
+  - route changed: `POST /lifecycle-manager/v1/assets/hardware/export/csv` → `POST /app/v1/assets/hardware/export/csv`
+- [POST /app/v1/assets/hardware/export/legacy/xlsx — Download previous Hardware spreadsheet](https://developer.scalepad.com/reference/apipublicv1assetshardwarelegacyexportxlsx)
+  - route changed: `POST /lifecycle-manager/v1/assets/hardware/export/legacy/xlsx` → `POST /app/v1/assets/hardware/export/legacy/xlsx`
+- [POST /app/v1/assets/hardware/export/pdf — Download hardware PDF export](https://developer.scalepad.com/reference/apipublicv1assetshardwareexportpdf)
+  - route changed: `POST /lifecycle-manager/v1/assets/hardware/export/pdf` → `POST /app/v1/assets/hardware/export/pdf`
+- [POST /app/v1/assets/hardware/export/xlsx — Download hardware XLSX export](https://developer.scalepad.com/reference/apipublicv1assetshardwareexportxlsx)
+  - route changed: `POST /lifecycle-manager/v1/assets/hardware/export/xlsx` → `POST /app/v1/assets/hardware/export/xlsx`
+- [GET /app/v1/assets/hardware/lifecycle-report/availability — Get Hardware Lifecycle Report Availability](https://developer.scalepad.com/reference/apipublicv1assetshardwarelifecyclereportavailabilityget)
+  - route changed: `GET /lifecycle-manager/v1/assets/hardware/lifecycle-report/availability` → `GET /app/v1/assets/hardware/lifecycle-report/availability`
+- [POST /app/v1/assets/hardware/lifecycle-report/pdf — Download Hardware Lifecycle Report PDF](https://developer.scalepad.com/reference/apipublicv1assetshardwarelifecyclereportpdf)
+  - route changed: `POST /lifecycle-manager/v1/assets/hardware/lifecycle-report/pdf` → `POST /app/v1/assets/hardware/lifecycle-report/pdf`
+- [GET /app/v1/assets/hardware/lifecycles — List active hardware lifecycle records](https://developer.scalepad.com/reference/apipublicv1assetshardwarelifecycles)
+  - route changed: `GET /lifecycle-manager/v1/assets/hardware/lifecycles` → `GET /app/v1/assets/hardware/lifecycles`
+- [GET /app/v1/assets/hardware/metadata — Get Hardware Asset Metadata](https://developer.scalepad.com/reference/apipublicv1assetshardwaremetadataget)
+  - route changed: `GET /lifecycle-manager/v1/assets/hardware/metadata` → `GET /app/v1/assets/hardware/metadata`
+- [POST /app/v1/assets/hardware/overview — Retrieve Hardware Asset Overview](https://developer.scalepad.com/reference/apipublicv1assetshardwareoverview)
+  - route changed: `POST /lifecycle-manager/v1/assets/hardware/overview` → `POST /app/v1/assets/hardware/overview`
+- [PUT /app/v1/assets/hardware/replacement-cost — Update Assets Hardware Replacement Cost](https://developer.scalepad.com/reference/apipublicv1assetshardwarereplacementcostupdate)
+  - route changed: `PUT /lifecycle-manager/v1/assets/hardware/replacement-cost` → `PUT /app/v1/assets/hardware/replacement-cost`
+- [POST /app/v1/assets/hardware/sources — Hardware Sources](https://developer.scalepad.com/reference/apipublicv1assetshardwaresourcesget)
+  - route changed: `POST /lifecycle-manager/v1/assets/hardware/sources` → `POST /app/v1/assets/hardware/sources`
+- [PUT /app/v1/assets/hardware/type — Update Assets Hardware Type](https://developer.scalepad.com/reference/apipublicv1assetshardwaretypeupdate)
+  - route changed: `PUT /lifecycle-manager/v1/assets/hardware/type` → `PUT /app/v1/assets/hardware/type`
+- [PUT /app/v1/assets/hardware/visibility — Update Assets Hardware Visibility](https://developer.scalepad.com/reference/apipublicv1assetshardwarevisibilityupdate)
+  - route changed: `PUT /lifecycle-manager/v1/assets/hardware/visibility` → `PUT /app/v1/assets/hardware/visibility`
+- [PATCH /app/v1/assets/hardware/{hardware_asset_id}/overrides — Patch hardware asset overrides](https://developer.scalepad.com/reference/apipublicv1hardwareassetoverridespatch)
+  - route changed: `PATCH /lifecycle-manager/v1/assets/hardware/{hardware_asset_id}/overrides` → `PATCH /app/v1/assets/hardware/{hardware_asset_id}/overrides`
+- [GET /app/v1/assets/types — List hardware types](https://developer.scalepad.com/reference/apipublicv1assetstypeslist)
+  - route changed: `GET /lifecycle-manager/v1/assets/types` → `GET /app/v1/assets/types`
+- [POST /app/v1/assets/types — Create hardware type](https://developer.scalepad.com/reference/apipublicv1assetstypescreate)
+  - route changed: `POST /lifecycle-manager/v1/assets/types` → `POST /app/v1/assets/types`
+- [DELETE /app/v1/assets/types/{id} — Delete a hardware type](https://developer.scalepad.com/reference/apipublicv1assetstypesdelete)
+  - route changed: `DELETE /lifecycle-manager/v1/assets/types/{id}` → `DELETE /app/v1/assets/types/{id}`
+- [GET /app/v1/assets/types/{id} — Get hardware type details](https://developer.scalepad.com/reference/apipublicv1assetstypesget)
+  - route changed: `GET /lifecycle-manager/v1/assets/types/{id}` → `GET /app/v1/assets/types/{id}`
+- [POST /app/v1/assets/types/{id}/reassign — Reassign hardware to another type](https://developer.scalepad.com/reference/apipublicv1assetstypesreassign)
+  - route changed: `POST /lifecycle-manager/v1/assets/types/{id}/reassign` → `POST /app/v1/assets/types/{id}/reassign`
+- [PATCH /app/v1/assets/types/{id}/replacement — Patch asset type replacement settings](https://developer.scalepad.com/reference/apipublicv1assetstypesreplacementpatch)
+  - route changed: `PATCH /lifecycle-manager/v1/assets/types/{id}/replacement` → `PATCH /app/v1/assets/types/{id}/replacement`
+- [GET /app/v1/authorization — Get Account Authorization](https://developer.scalepad.com/reference/apipublicv1accountauthorizationget)
+  - route changed: `GET /lifecycle-manager/v1/authorization` → `GET /app/v1/authorization`
+- [POST /app/v1/authorization/clients/filter — Filter Authorized Clients](https://developer.scalepad.com/reference/apipublicv1authorizationclientsfilter)
+  - route changed: `POST /lifecycle-manager/v1/authorization/clients/filter` → `POST /app/v1/authorization/clients/filter`
+- [GET /app/v1/calendar/events — List calendar events](https://developer.scalepad.com/reference/apipublicv1calendareventlist)
+  - route changed: `GET /lifecycle-manager/v1/calendar/events` → `GET /app/v1/calendar/events`
+- [GET /app/v1/client-groups — List Client Groups](https://developer.scalepad.com/reference/apipublicv1clientgroupslist)
+  - route changed: `GET /lifecycle-manager/v1/client-groups` → `GET /app/v1/client-groups`
+- [POST /app/v1/client-groups — Create Client Group](https://developer.scalepad.com/reference/apipublicv1clientgroupscreate)
+  - route changed: `POST /lifecycle-manager/v1/client-groups` → `POST /app/v1/client-groups`
+- [DELETE /app/v1/client-groups/{client_group_id} — Delete Client Group](https://developer.scalepad.com/reference/apipublicv1clientgroupsdelete)
+  - route changed: `DELETE /lifecycle-manager/v1/client-groups/{client_group_id}` → `DELETE /app/v1/client-groups/{client_group_id}`
+- [GET /app/v1/client-groups/{client_group_id} — Get Client Group](https://developer.scalepad.com/reference/apipublicv1clientgroupsget)
+  - route changed: `GET /lifecycle-manager/v1/client-groups/{client_group_id}` → `GET /app/v1/client-groups/{client_group_id}`
+- [PUT /app/v1/client-groups/{client_group_id} — Update Client Group](https://developer.scalepad.com/reference/apipublicv1clientgroupsupdate)
+  - route changed: `PUT /lifecycle-manager/v1/client-groups/{client_group_id}` → `PUT /app/v1/client-groups/{client_group_id}`
+- [POST /app/v1/client-groups/{client_group_id}/assignments — Client Group Assign](https://developer.scalepad.com/reference/apipublicv1clientgroupmembersassign)
+  - route changed: `POST /lifecycle-manager/v1/client-groups/{client_group_id}/assignments` → `POST /app/v1/client-groups/{client_group_id}/assignments`
+- [POST /app/v1/client-groups/{client_group_id}/assignments/unassign — Client Group Unassign](https://developer.scalepad.com/reference/apipublicv1clientgroupmemberunassign)
+  - route changed: `POST /lifecycle-manager/v1/client-groups/{client_group_id}/assignments/unassign` → `POST /app/v1/client-groups/{client_group_id}/assignments/unassign`
+- [GET /app/v1/clients — List Clients](https://developer.scalepad.com/reference/apipublicv1clientlist)
+  - route changed: `GET /lifecycle-manager/v1/clients` → `GET /app/v1/clients`
+- [PATCH /app/v1/clients — Update Clients](https://developer.scalepad.com/reference/apipublicv1clientsupdate)
+  - route changed: `PATCH /lifecycle-manager/v1/clients` → `PATCH /app/v1/clients`
+- [PUT /app/v1/clients/access-group — Update Client Access Group](https://developer.scalepad.com/reference/apipublicv1clientaccessgroupupdate)
+  - route changed: `PUT /lifecycle-manager/v1/clients/access-group` → `PUT /app/v1/clients/access-group`
+- [PUT /app/v1/clients/account-team — Assign Client Team Members](https://developer.scalepad.com/reference/apipublicv1clientteammemberassign)
+  - route changed: `PUT /lifecycle-manager/v1/clients/account-team` → `PUT /app/v1/clients/account-team`
+- [PUT /app/v1/clients/account-team/unassign — Unassign Client Team Members](https://developer.scalepad.com/reference/apipublicv1clientteammemberremove)
+  - route changed: `PUT /lifecycle-manager/v1/clients/account-team/unassign` → `PUT /app/v1/clients/account-team/unassign`
+- [GET /app/v1/clients/lookup — Search Clients](https://developer.scalepad.com/reference/apipublicv1clientslookup)
+  - route changed: `GET /lifecycle-manager/v1/clients/lookup` → `GET /app/v1/clients/lookup`
+- [PATCH /app/v1/clients/tags — Add or Remove Client Tags](https://developer.scalepad.com/reference/apipublicv1clientstagupdate)
+  - route changed: `PATCH /lifecycle-manager/v1/clients/tags` → `PATCH /app/v1/clients/tags`
+- [GET /app/v1/clients/{client_id} — Get Client](https://developer.scalepad.com/reference/apipublicv1clientget)
+  - route changed: `GET /lifecycle-manager/v1/clients/{client_id}` → `GET /app/v1/clients/{client_id}`
+- [PATCH /app/v1/clients/{client_id} — Update Client](https://developer.scalepad.com/reference/apipublicv1clientupdate)
+  - route changed: `PATCH /lifecycle-manager/v1/clients/{client_id}` → `PATCH /app/v1/clients/{client_id}`
+- [GET /app/v1/clients/{client_id}/authorization — Get Client Authorization](https://developer.scalepad.com/reference/apipublicv1clientauthorizationget)
+  - route changed: `GET /lifecycle-manager/v1/clients/{client_id}/authorization` → `GET /app/v1/clients/{client_id}/authorization`
+- [DELETE /app/v1/clients/{client_id}/contact/quoting — Clear Quoting Contact](https://developer.scalepad.com/reference/apipublicv1quotingcontactdelete)
+  - route changed: `DELETE /lifecycle-manager/v1/clients/{client_id}/contact/quoting` → `DELETE /app/v1/clients/{client_id}/contact/quoting`
+- [GET /app/v1/clients/{client_id}/contact/quoting — Get Quoting Contact](https://developer.scalepad.com/reference/apipublicv1quotingcontactget)
+  - route changed: `GET /lifecycle-manager/v1/clients/{client_id}/contact/quoting` → `GET /app/v1/clients/{client_id}/contact/quoting`
+- [PUT /app/v1/clients/{client_id}/contact/quoting — Assign Quoting Contact](https://developer.scalepad.com/reference/apipublicv1quotingcontactupdate)
+  - route changed: `PUT /lifecycle-manager/v1/clients/{client_id}/contact/quoting` → `PUT /app/v1/clients/{client_id}/contact/quoting`
+- [POST /app/v1/clients/{client_id}/enrollment-tokens — Create an enrollment token](https://developer.scalepad.com/reference/createsaasmanagementenrollmenttoken)
+  - route changed: `POST /lifecycle-manager/v1/saas-management/clients/{client_id}/enrollment-tokens` → `POST /app/v1/clients/{client_id}/enrollment-tokens`
+- [PUT /app/v1/clients/{client_id}/key-contacts — Assign Client Key Contacts](https://developer.scalepad.com/reference/apipublicv1clientkeycontactsassign)
+  - route changed: `PUT /lifecycle-manager/v1/clients/{client_id}/key-contacts` → `PUT /app/v1/clients/{client_id}/key-contacts`
+- [PUT /app/v1/clients/{client_id}/key-contacts/unassign — Unassign Client Key Contacts](https://developer.scalepad.com/reference/apipublicv1clientkeycontactsunassign)
+  - route changed: `PUT /lifecycle-manager/v1/clients/{client_id}/key-contacts/unassign` → `PUT /app/v1/clients/{client_id}/key-contacts/unassign`
+- [GET /app/v1/clients/{client_id}/mention-access — Get Client Mention Access](https://developer.scalepad.com/reference/apipublicv1clientmentionaccessget)
+  - route changed: `GET /lifecycle-manager/v1/clients/{client_id}/mention-access` → `GET /app/v1/clients/{client_id}/mention-access`
+- [GET /app/v1/clients/{client_id}/settings — Get Client Settings](https://developer.scalepad.com/reference/apipublicv1clientsettingsget)
+  - route changed: `GET /lifecycle-manager/v1/clients/{client_id}/settings` → `GET /app/v1/clients/{client_id}/settings`
+- [PUT /app/v1/clients/{client_id}/tags — Update Client Tags](https://developer.scalepad.com/reference/apipublicv1clienttagupdate)
+  - route changed: `PUT /lifecycle-manager/v1/clients/{client_id}/tags` → `PUT /app/v1/clients/{client_id}/tags`
+- [GET /app/v1/clients/{client_id}/types — List Client Types](https://developer.scalepad.com/reference/apipublicv1clienttypeslist)
+  - route changed: `GET /lifecycle-manager/v1/clients/{client_id}/types` → `GET /app/v1/clients/{client_id}/types`
+- [GET /app/v1/clients/{client_id}/types/{id} — Get Client Type](https://developer.scalepad.com/reference/apipublicv1clienttypeget)
+  - route changed: `GET /lifecycle-manager/v1/clients/{client_id}/types/{id}` → `GET /app/v1/clients/{client_id}/types/{id}`
+- [DELETE /app/v1/clients/{client_id}/types/{id}/replacement — Clear client asset type replacement settings](https://developer.scalepad.com/reference/apipublicv1clienttypereplacementdelete)
+  - route changed: `DELETE /lifecycle-manager/v1/clients/{client_id}/types/{id}/replacement` → `DELETE /app/v1/clients/{client_id}/types/{id}/replacement`
+- [PATCH /app/v1/clients/{client_id}/types/{id}/replacement — Patch client asset type replacement settings](https://developer.scalepad.com/reference/apipublicv1clienttypereplacementpatch)
+  - route changed: `PATCH /lifecycle-manager/v1/clients/{client_id}/types/{id}/replacement` → `PATCH /app/v1/clients/{client_id}/types/{id}/replacement`
+- [GET /app/v1/comments — List Comments](https://developer.scalepad.com/reference/apipublicv1commentlist)
+  - route changed: `GET /lifecycle-manager/v1/comments` → `GET /app/v1/comments`
+- [POST /app/v1/comments — Create Comment](https://developer.scalepad.com/reference/apipublicv1commentcreate)
+  - route changed: `POST /lifecycle-manager/v1/comments` → `POST /app/v1/comments`
+- [DELETE /app/v1/comments/{comment_id} — Delete Comment or reply](https://developer.scalepad.com/reference/apipublicv1commentdelete)
+  - route changed: `DELETE /lifecycle-manager/v1/comments/{comment_id}` → `DELETE /app/v1/comments/{comment_id}`
+- [PATCH /app/v1/comments/{comment_id} — Update Comment](https://developer.scalepad.com/reference/apipublicv1commentupdate)
+  - route changed: `PATCH /lifecycle-manager/v1/comments/{comment_id}` → `PATCH /app/v1/comments/{comment_id}`
+- [PUT /app/v1/comments/{comment_id}/reactions/add — Add Comment reaction](https://developer.scalepad.com/reference/apipublicv1commentreactionadd)
+  - route changed: `PUT /lifecycle-manager/v1/comments/{comment_id}/reactions/add` → `PUT /app/v1/comments/{comment_id}/reactions/add`
+- [PUT /app/v1/comments/{comment_id}/reactions/remove — Remove Comment reaction](https://developer.scalepad.com/reference/apipublicv1commentreactionremove)
+  - route changed: `PUT /lifecycle-manager/v1/comments/{comment_id}/reactions/remove` → `PUT /app/v1/comments/{comment_id}/reactions/remove`
+- [GET /app/v1/comments/{comment_id}/replies — List Comment replies](https://developer.scalepad.com/reference/apipublicv1commentreplylist)
+  - route changed: `GET /lifecycle-manager/v1/comments/{comment_id}/replies` → `GET /app/v1/comments/{comment_id}/replies`
+- [POST /app/v1/comments/{comment_id}/replies — Create Comment reply](https://developer.scalepad.com/reference/apipublicv1commentreplycreate)
+  - route changed: `POST /lifecycle-manager/v1/comments/{comment_id}/replies` → `POST /app/v1/comments/{comment_id}/replies`
+- [GET /app/v1/contacts — List Contacts](https://developer.scalepad.com/reference/apipublicv1contactslist)
+  - route changed: `GET /lifecycle-manager/v1/contacts` → `GET /app/v1/contacts`
+- [PATCH /app/v1/contacts — Update Contact Visibility](https://developer.scalepad.com/reference/apipublicv1contactsupdate)
+  - route changed: `PATCH /lifecycle-manager/v1/contacts` → `PATCH /app/v1/contacts`
+- [POST /app/v1/contacts — Create Contact](https://developer.scalepad.com/reference/apipublicv1contactcreate)
+  - route changed: `POST /lifecycle-manager/v1/contacts` → `POST /app/v1/contacts`
+- [GET /app/v1/contacts/summary — Get Contact Summary](https://developer.scalepad.com/reference/apipublicv1contactssummaryget)
+  - route changed: `GET /lifecycle-manager/v1/contacts/summary` → `GET /app/v1/contacts/summary`
+- [GET /app/v1/contacts/{contact_id} — Get Contact](https://developer.scalepad.com/reference/apipublicv1contactget)
+  - route changed: `GET /lifecycle-manager/v1/contacts/{contact_id}` → `GET /app/v1/contacts/{contact_id}`
+- [PUT /app/v1/contacts/{contact_id}/hidden-status — Update Contact Hidden Status](https://developer.scalepad.com/reference/apipublicv1contacthiddenstatusupdate)
+  - route changed: `PUT /lifecycle-manager/v1/contacts/{contact_id}/hidden-status` → `PUT /app/v1/contacts/{contact_id}/hidden-status`
+- [GET /app/v1/entity-history — List Entity History](https://developer.scalepad.com/reference/apipublicv1entityhistorylist)
+  - route changed: `GET /lifecycle-manager/v1/entity-history` → `GET /app/v1/entity-history`
+- [GET /app/v1/featurebase/updates — List Featurebase Updates](https://developer.scalepad.com/reference/apiv1featurebaseupdateslist)
+  - route changed: `GET /lifecycle-manager/v1/featurebase/updates` → `GET /app/v1/featurebase/updates`
+- [POST /app/v1/featurebase/updates/read — Read Featurebase Updates](https://developer.scalepad.com/reference/apiv1featurebaseupdatesread)
+  - route changed: `POST /lifecycle-manager/v1/featurebase/updates/read` → `POST /app/v1/featurebase/updates/read`
+- [GET /app/v1/inbox/notifications — List Inbox Notifications](https://developer.scalepad.com/reference/apipublicv1inboxnotificationlist)
+  - route changed: `GET /lifecycle-manager/v1/inbox/notifications` → `GET /app/v1/inbox/notifications`
+- [POST /app/v1/inbox/notifications/read-all — Mark All Inbox Notifications Read](https://developer.scalepad.com/reference/apipublicv1inboxnotificationreadall)
+  - route changed: `POST /lifecycle-manager/v1/inbox/notifications/read-all` → `POST /app/v1/inbox/notifications/read-all`
+- [GET /app/v1/inbox/notifications/unread-count — Get Inbox Unread Count](https://developer.scalepad.com/reference/apipublicv1inboxnotificationunreadcountget)
+  - route changed: `GET /lifecycle-manager/v1/inbox/notifications/unread-count` → `GET /app/v1/inbox/notifications/unread-count`
+- [POST /app/v1/inbox/notifications/{inbox_notification_id}/read — Mark Inbox Notification Read](https://developer.scalepad.com/reference/apipublicv1inboxnotificationread)
+  - route changed: `POST /lifecycle-manager/v1/inbox/notifications/{inbox_notification_id}/read` → `POST /app/v1/inbox/notifications/{inbox_notification_id}/read`
+- [POST /app/v1/inbox/notifications/{inbox_notification_id}/replies — Reply to Inbox Notification](https://developer.scalepad.com/reference/apipublicv1inboxnotificationreplycreate)
+  - route changed: `POST /lifecycle-manager/v1/inbox/notifications/{inbox_notification_id}/replies` → `POST /app/v1/inbox/notifications/{inbox_notification_id}/replies`
+- [GET /app/v1/inbox/notifications/{inbox_notification_id}/resolve — Resolve Inbox Notification Destination](https://developer.scalepad.com/reference/apipublicv1inboxnotificationresolve)
+  - route changed: `GET /lifecycle-manager/v1/inbox/notifications/{inbox_notification_id}/resolve` → `GET /app/v1/inbox/notifications/{inbox_notification_id}/resolve`
+- [GET /app/v1/inbox/settings — Get Inbox Settings](https://developer.scalepad.com/reference/apipublicv1inboxsettingsget)
+  - route changed: `GET /lifecycle-manager/v1/inbox/settings` → `GET /app/v1/inbox/settings`
+- [POST /app/v1/inbox/settings/update — Update Inbox Settings](https://developer.scalepad.com/reference/apipublicv1inboxsettingsupdate)
+  - route changed: `POST /lifecycle-manager/v1/inbox/settings/update` → `POST /app/v1/inbox/settings/update`
+- [GET /app/v1/members/lookup — Search Members](https://developer.scalepad.com/reference/apiv1memberslookup)
+  - route changed: `GET /lifecycle-manager/v1/members/lookup` → `GET /app/v1/members/lookup`
+- [GET /app/v1/permissions — List permissions](https://developer.scalepad.com/reference/apipublicv1permissionlist)
+  - route changed: `GET /lifecycle-manager/v1/permissions` → `GET /app/v1/permissions`
+- [POST /app/v1/rich-text/files — Upload Rich-Text Image](https://developer.scalepad.com/reference/apipublicv1richtextfilescreate)
+  - route changed: `POST /lifecycle-manager/v1/rich-text/files` → `POST /app/v1/rich-text/files`
+- [GET /app/v1/rich-text/files/{rich_text_file_id} — Get Rich-Text Image](https://developer.scalepad.com/reference/apipublicv1richtextfilesget)
+  - route changed: `GET /lifecycle-manager/v1/rich-text/files/{rich_text_file_id}` → `GET /app/v1/rich-text/files/{rich_text_file_id}`
+- [GET /app/v1/roles — List Role](https://developer.scalepad.com/reference/apipublicv1rolelist)
+  - route changed: `GET /lifecycle-manager/v1/roles` → `GET /app/v1/roles`
+- [POST /app/v1/roles — Create Role](https://developer.scalepad.com/reference/apipublicv1rolecreate)
+  - route changed: `POST /lifecycle-manager/v1/roles` → `POST /app/v1/roles`
+- [PUT /app/v1/roles/{role_id} — Update Role](https://developer.scalepad.com/reference/apipublicv1roleupdate)
+  - route changed: `PUT /lifecycle-manager/v1/roles/{role_id}` → `PUT /app/v1/roles/{role_id}`
+- [PUT /app/v1/saved-view-defaults/{key} — Set Saved view default](https://developer.scalepad.com/reference/apipublicv1savedviewdefaultset)
+  - route changed: `PUT /lifecycle-manager/v1/saved-view-defaults/{key}` → `PUT /app/v1/saved-view-defaults/{key}`
+- [GET /app/v1/saved-views — List Saved views](https://developer.scalepad.com/reference/apipublicv1savedviewlist)
+  - route changed: `GET /lifecycle-manager/v1/saved-views` → `GET /app/v1/saved-views`
+- [POST /app/v1/saved-views — Create Saved view](https://developer.scalepad.com/reference/apipublicv1savedviewcreate)
+  - route changed: `POST /lifecycle-manager/v1/saved-views` → `POST /app/v1/saved-views`
+- [DELETE /app/v1/saved-views/{saved_view_id} — Delete Saved view](https://developer.scalepad.com/reference/apipublicv1savedviewdelete)
+  - route changed: `DELETE /lifecycle-manager/v1/saved-views/{saved_view_id}` → `DELETE /app/v1/saved-views/{saved_view_id}`
+- [PATCH /app/v1/saved-views/{saved_view_id} — Update Saved view](https://developer.scalepad.com/reference/apipublicv1savedviewupdate)
+  - route changed: `PATCH /lifecycle-manager/v1/saved-views/{saved_view_id}` → `PATCH /app/v1/saved-views/{saved_view_id}`
+- [GET /app/v1/segments — List Segments](https://developer.scalepad.com/reference/apipublicv1segmentslist)
+  - route changed: `GET /lifecycle-manager/v1/segments` → `GET /app/v1/segments`
+- [GET /app/v1/sites — List Sites](https://developer.scalepad.com/reference/apipublicv1siteslist)
+  - route changed: `GET /lifecycle-manager/v1/sites` → `GET /app/v1/sites`
+- [DELETE /app/v1/sites/{child_site_id}/link — Unlink Site](https://developer.scalepad.com/reference/apipublicv1siteslinkdelete)
+  - route changed: `DELETE /lifecycle-manager/v1/sites/{child_site_id}/link` → `DELETE /app/v1/sites/{child_site_id}/link`
+- [POST /app/v1/sites/{child_site_id}/link — Link Site](https://developer.scalepad.com/reference/apipublicv1siteslinkcreate)
+  - route changed: `POST /lifecycle-manager/v1/sites/{child_site_id}/link` → `POST /app/v1/sites/{child_site_id}/link`
+- [GET /app/v1/sites/{site_id} — Get Site](https://developer.scalepad.com/reference/apipublicv1sitesget)
+  - route changed: `GET /lifecycle-manager/v1/sites/{site_id}` → `GET /app/v1/sites/{site_id}`
+- [GET /app/v1/tags — List Tags](https://developer.scalepad.com/reference/apipublicv1taglist)
+  - route changed: `GET /lifecycle-manager/v1/tags` → `GET /app/v1/tags`
+- [POST /app/v1/tags — Create Tag](https://developer.scalepad.com/reference/apipublicv1tagcreate)
+  - route changed: `POST /lifecycle-manager/v1/tags` → `POST /app/v1/tags`
+- [DELETE /app/v1/tags/{tag_id} — Delete Tag](https://developer.scalepad.com/reference/apipublicv1tagdelete)
+  - route changed: `DELETE /lifecycle-manager/v1/tags/{tag_id}` → `DELETE /app/v1/tags/{tag_id}`
+- [PUT /app/v1/tags/{tag_id} — Update Tag](https://developer.scalepad.com/reference/apipublicv1tagupdate)
+  - route changed: `PUT /lifecycle-manager/v1/tags/{tag_id}` → `PUT /app/v1/tags/{tag_id}`
+- [GET /app/v1/task-templates — List Task Templates](https://developer.scalepad.com/reference/apipublicv1tasktemplatelist)
+  - route changed: `GET /lifecycle-manager/v1/task-templates` → `GET /app/v1/task-templates`
+- [POST /app/v1/task-templates — Create Task Template](https://developer.scalepad.com/reference/apipublicv1tasktemplatecreate)
+  - route changed: `POST /lifecycle-manager/v1/task-templates` → `POST /app/v1/task-templates`
+- [DELETE /app/v1/task-templates/{task_template_id} — Delete Task Template](https://developer.scalepad.com/reference/apipublicv1tasktemplatedelete)
+  - route changed: `DELETE /lifecycle-manager/v1/task-templates/{task_template_id}` → `DELETE /app/v1/task-templates/{task_template_id}`
+- [GET /app/v1/task-templates/{task_template_id} — Get Task Template](https://developer.scalepad.com/reference/apipublicv1tasktemplateget)
+  - route changed: `GET /lifecycle-manager/v1/task-templates/{task_template_id}` → `GET /app/v1/task-templates/{task_template_id}`
+- [PUT /app/v1/task-templates/{task_template_id} — Update Task Template](https://developer.scalepad.com/reference/apipublicv1tasktemplateupdate)
+  - route changed: `PUT /lifecycle-manager/v1/task-templates/{task_template_id}` → `PUT /app/v1/task-templates/{task_template_id}`
+- [POST /app/v1/task-templates/{task_template_id}/duplicate — Duplicate Task Template](https://developer.scalepad.com/reference/apipublicv1tasktemplateduplicate)
+  - route changed: `POST /lifecycle-manager/v1/task-templates/{task_template_id}/duplicate` → `POST /app/v1/task-templates/{task_template_id}/duplicate`
+- [GET /app/v1/user/{user_id} — Get User](https://developer.scalepad.com/reference/apipublicv1userget)
+  - route changed: `GET /lifecycle-manager/v1/user/{user_id}` → `GET /app/v1/user/{user_id}`
+- [PATCH /app/v1/user/{user_id} — Update the authenticated user preference.](https://developer.scalepad.com/reference/apipublicv1userpatch)
+  - route changed: `PATCH /lifecycle-manager/v1/user/{user_id}` → `PATCH /app/v1/user/{user_id}`
+- [GET /app/v1/users — List Active Users](https://developer.scalepad.com/reference/apipublicv1userlist)
+  - route changed: `GET /lifecycle-manager/v1/users` → `GET /app/v1/users`
+- [GET /app/v1/users/manage — List managed users](https://developer.scalepad.com/reference/apipublicv1usermanagelist)
+  - route changed: `GET /lifecycle-manager/v1/users/manage` → `GET /app/v1/users/manage`
+- [POST /app/v1/users/manage — Grant Lifecycle Manager access](https://developer.scalepad.com/reference/apipublicv1usermanagegrant)
+  - route changed: `POST /lifecycle-manager/v1/users/manage` → `POST /app/v1/users/manage`
+- [PUT /app/v1/users/manage/revoke — Revoke access from managed users](https://developer.scalepad.com/reference/apipublicv1usermanagerevoke)
+  - route changed: `PUT /lifecycle-manager/v1/users/manage/revoke` → `PUT /app/v1/users/manage/revoke`
+- [GET /app/v1/users/{user_id}/account-team-assignments — List user account-team assignments](https://developer.scalepad.com/reference/apipublicv1userteamassignmentslist)
+  - route changed: `GET /lifecycle-manager/v1/users/{user_id}/account-team-assignments` → `GET /app/v1/users/{user_id}/account-team-assignments`
+- [GET /app/v1/users/{user_id}/client-access — Get user client access](https://developer.scalepad.com/reference/apipublicv1userclientaccessget)
+  - route changed: `GET /lifecycle-manager/v1/users/{user_id}/client-access` → `GET /app/v1/users/{user_id}/client-access`
+- [GET /app/v1/users/{user_id}/permissions — Get user permissions](https://developer.scalepad.com/reference/apipublicv1userpermissionsget)
+  - route changed: `GET /lifecycle-manager/v1/users/{user_id}/permissions` → `GET /app/v1/users/{user_id}/permissions`
+- [PUT /app/v1/users/{user_id}/permissions — Update user permissions](https://developer.scalepad.com/reference/apipublicv1userpermissionsupdate)
+  - route changed: `PUT /lifecycle-manager/v1/users/{user_id}/permissions` → `PUT /app/v1/users/{user_id}/permissions`
+- [GET /app/v1/verticals — List Verticals](https://developer.scalepad.com/reference/apipublicv1verticalslist)
+  - route changed: `GET /lifecycle-manager/v1/verticals` → `GET /app/v1/verticals`
+- [POST /app/v1/verticals — Create Vertical](https://developer.scalepad.com/reference/apipublicv1verticalscreate)
+  - route changed: `POST /lifecycle-manager/v1/verticals` → `POST /app/v1/verticals`
+- [DELETE /app/v1/verticals/{vertical_id} — Delete Vertical](https://developer.scalepad.com/reference/apipublicv1verticalsdelete)
+  - route changed: `DELETE /lifecycle-manager/v1/verticals/{vertical_id}` → `DELETE /app/v1/verticals/{vertical_id}`
+- [PUT /app/v1/verticals/{vertical_id} — Update Vertical](https://developer.scalepad.com/reference/apipublicv1verticalsupdate)
+  - route changed: `PUT /lifecycle-manager/v1/verticals/{vertical_id}` → `PUT /app/v1/verticals/{vertical_id}`
+- [GET /cs/v1/account/copilot-settings — Get Account Copilot Settings](https://developer.scalepad.com/reference/apipublicv1accountcopilotsettingsget)
+  - route changed: `GET /lifecycle-manager/v1/account/copilot-settings` → `GET /cs/v1/account/copilot-settings`
+- [PATCH /cs/v1/account/copilot-settings — Update Account Copilot Settings](https://developer.scalepad.com/reference/apipublicv1accountcopilotsettingspatch)
+  - route changed: `PATCH /lifecycle-manager/v1/account/copilot-settings` → `PATCH /cs/v1/account/copilot-settings`
+- [GET /cs/v1/agreement-items — List Agreement Items](https://developer.scalepad.com/reference/apipublicv1agreementitemslist)
+  - route changed: `GET /lifecycle-manager/v1/agreement-items` → `GET /cs/v1/agreement-items`
+- [GET /cs/v1/agreement-templates — List Agreement Templates](https://developer.scalepad.com/reference/apipublicv1agreementtemplateslist)
+  - route changed: `GET /lifecycle-manager/v1/agreement-templates` → `GET /cs/v1/agreement-templates`
+- [POST /cs/v1/agreement-templates — Create Agreement Template](https://developer.scalepad.com/reference/apipublicv1agreementtemplatecreate)
+  - route changed: `POST /lifecycle-manager/v1/agreement-templates` → `POST /cs/v1/agreement-templates`
+- [DELETE /cs/v1/agreement-templates/{agreement_template_id} — Delete Agreement Template](https://developer.scalepad.com/reference/apipublicv1agreementtemplatedelete)
+  - route changed: `DELETE /lifecycle-manager/v1/agreement-templates/{agreement_template_id}` → `DELETE /cs/v1/agreement-templates/{agreement_template_id}`
+- [GET /cs/v1/agreement-templates/{agreement_template_id} — Get Agreement Template](https://developer.scalepad.com/reference/apipublicv1agreementtemplateget)
+  - route changed: `GET /lifecycle-manager/v1/agreement-templates/{agreement_template_id}` → `GET /cs/v1/agreement-templates/{agreement_template_id}`
+- [PUT /cs/v1/agreement-templates/{agreement_template_id} — Update Agreement Template](https://developer.scalepad.com/reference/apipublicv1agreementtemplateupdate)
+  - route changed: `PUT /lifecycle-manager/v1/agreement-templates/{agreement_template_id}` → `PUT /cs/v1/agreement-templates/{agreement_template_id}`
+- [GET /cs/v1/agreements — List Agreements](https://developer.scalepad.com/reference/apipublicv1agreementslist)
+  - route changed: `GET /lifecycle-manager/v1/agreements` → `GET /cs/v1/agreements`
+- [POST /cs/v1/agreements — Create Agreement](https://developer.scalepad.com/reference/apipublicv1agreementscreate)
+  - route changed: `POST /lifecycle-manager/v1/agreements` → `POST /cs/v1/agreements`
+- [POST /cs/v1/agreements/delete — Bulk Delete Agreements](https://developer.scalepad.com/reference/apipublicv1agreementsbulkdelete)
+  - route changed: `POST /lifecycle-manager/v1/agreements/delete` → `POST /cs/v1/agreements/delete`
+- [POST /cs/v1/agreements/export/csv — Export Agreements Csv](https://developer.scalepad.com/reference/apipublicv1agreementsexportcsv)
+  - route changed: `POST /lifecycle-manager/v1/agreements/export/csv` → `POST /cs/v1/agreements/export/csv`
+- [POST /cs/v1/agreements/export/pdf — Export Agreements Export Pdf](https://developer.scalepad.com/reference/apipublicv1agreementsexportpdf)
+  - route changed: `POST /lifecycle-manager/v1/agreements/export/pdf` → `POST /cs/v1/agreements/export/pdf`
+- [POST /cs/v1/agreements/export/xlsx — Export Agreements Xlsx](https://developer.scalepad.com/reference/apipublicv1agreementsexportxlsx)
+  - route changed: `POST /lifecycle-manager/v1/agreements/export/xlsx` → `POST /cs/v1/agreements/export/xlsx`
+- [GET /cs/v1/agreements/summary — Get Agreement Summary](https://developer.scalepad.com/reference/apipublicv1agreementsummaryget)
+  - route changed: `GET /lifecycle-manager/v1/agreements/summary` → `GET /cs/v1/agreements/summary`
+- [DELETE /cs/v1/agreements/{agreement_id} — Delete Agreement](https://developer.scalepad.com/reference/apipublicv1agreementsdelete)
+  - route changed: `DELETE /lifecycle-manager/v1/agreements/{agreement_id}` → `DELETE /cs/v1/agreements/{agreement_id}`
+- [GET /cs/v1/agreements/{agreement_id} — Get Agreement](https://developer.scalepad.com/reference/apipublicv1agreementsget)
+  - route changed: `GET /lifecycle-manager/v1/agreements/{agreement_id}` → `GET /cs/v1/agreements/{agreement_id}`
+- [PUT /cs/v1/agreements/{agreement_id} — Update Agreement](https://developer.scalepad.com/reference/apipublicv1agreementsupdate)
+  - route changed: `PUT /lifecycle-manager/v1/agreements/{agreement_id}` → `PUT /cs/v1/agreements/{agreement_id}`
+- [PUT /cs/v1/agreements/{agreement_id}/assets — Agreement Asset Attach](https://developer.scalepad.com/reference/apipublicv1agreementassetattach)
+  - route changed: `PUT /lifecycle-manager/v1/agreements/{agreement_id}/assets` → `PUT /cs/v1/agreements/{agreement_id}/assets`
+- [POST /cs/v1/agreements/{agreement_id}/assets/delete — Delete Agreement Asset Bulk](https://developer.scalepad.com/reference/apipublicv1agreementassetbulkdelete)
+  - route changed: `POST /lifecycle-manager/v1/agreements/{agreement_id}/assets/delete` → `POST /cs/v1/agreements/{agreement_id}/assets/delete`
+- [GET /cs/v1/agreements/{agreement_id}/budget — List Planned Agreement Budget Increases](https://developer.scalepad.com/reference/apipublicv1agreementbudgetoverridelist)
+  - route changed: `GET /lifecycle-manager/v1/agreements/{agreement_id}/budget` → `GET /cs/v1/agreements/{agreement_id}/budget`
+- [POST /cs/v1/agreements/{agreement_id}/budget — Save Planned Agreement Budget Increases](https://developer.scalepad.com/reference/apipublicv1agreementbudgetoverridesave)
+  - route changed: `POST /lifecycle-manager/v1/agreements/{agreement_id}/budget` → `POST /cs/v1/agreements/{agreement_id}/budget`
+- [POST /cs/v1/agreements/{agreement_id}/budget/preview — Preview Planned Agreement Budget Increases](https://developer.scalepad.com/reference/apipublicv1agreementbudgetoverridepreview)
+  - route changed: `POST /lifecycle-manager/v1/agreements/{agreement_id}/budget/preview` → `POST /cs/v1/agreements/{agreement_id}/budget/preview`
+- [POST /cs/v1/agreements/{agreement_id}/budget/{agreement_budget_override_id}/cancel — Cancel Planned Agreement Budget Increases](https://developer.scalepad.com/reference/apipublicv1agreementbudgetoverridecancel)
+  - route changed: `POST /lifecycle-manager/v1/agreements/{agreement_id}/budget/{agreement_budget_override_id}/cancel` → `POST /cs/v1/agreements/{agreement_id}/budget/{agreement_budget_override_id}/cancel`
+- [PUT /cs/v1/agreements/{agreement_id}/hidden-status — Update Agreement Hidden Status](https://developer.scalepad.com/reference/apipublicv1agreementhiddenstatusupdate)
+  - route changed: `PUT /lifecycle-manager/v1/agreements/{agreement_id}/hidden-status` → `PUT /cs/v1/agreements/{agreement_id}/hidden-status`
+- [POST /cs/v1/agreements/{agreement_id}/items — Create Agreement Item](https://developer.scalepad.com/reference/apipublicv1agreementitemcreate)
+  - route changed: `POST /lifecycle-manager/v1/agreements/{agreement_id}/items` → `POST /cs/v1/agreements/{agreement_id}/items`
+- [DELETE /cs/v1/agreements/{agreement_id}/items/{agreement_item_id} — Delete Agreement Item](https://developer.scalepad.com/reference/apipublicv1agreementitemdelete)
+  - route changed: `DELETE /lifecycle-manager/v1/agreements/{agreement_id}/items/{agreement_item_id}` → `DELETE /cs/v1/agreements/{agreement_id}/items/{agreement_item_id}`
+- [PUT /cs/v1/agreements/{agreement_id}/items/{agreement_item_id} — Update Agreement Item](https://developer.scalepad.com/reference/apipublicv1agreementitemupdate)
+  - route changed: `PUT /lifecycle-manager/v1/agreements/{agreement_id}/items/{agreement_item_id}` → `PUT /cs/v1/agreements/{agreement_id}/items/{agreement_item_id}`
+- [DELETE /cs/v1/agreements/{agreement_id}/overrides — Agreement Overrides Clear All](https://developer.scalepad.com/reference/apipublicv1agreementoverridesclearall)
+  - route changed: `DELETE /lifecycle-manager/v1/agreements/{agreement_id}/overrides` → `DELETE /cs/v1/agreements/{agreement_id}/overrides`
+- [DELETE /cs/v1/agreements/{agreement_id}/overrides/{field_name} — Agreement Override Clear](https://developer.scalepad.com/reference/apipublicv1agreementoverrideclear)
+  - route changed: `DELETE /lifecycle-manager/v1/agreements/{agreement_id}/overrides/{field_name}` → `DELETE /cs/v1/agreements/{agreement_id}/overrides/{field_name}`
+- [GET /cs/v1/analytics/display-settings — Get Analytics Configuration](https://developer.scalepad.com/reference/apipublicv1analyticsdisplaysettingsget)
+  - route changed: `GET /lifecycle-manager/v1/analytics/display-settings` → `GET /cs/v1/analytics/display-settings`
+- [PUT /cs/v1/analytics/display-settings — Save Analytics Configuration](https://developer.scalepad.com/reference/apipublicv1analyticsdisplaysettingsput)
+  - route changed: `PUT /lifecycle-manager/v1/analytics/display-settings` → `PUT /cs/v1/analytics/display-settings`
+- [GET /cs/v1/assessment-templates — List Assessment Templates](https://developer.scalepad.com/reference/apipublicv1assessmenttemplateslist)
+  - route changed: `GET /lifecycle-manager/v1/assessment-templates` → `GET /cs/v1/assessment-templates`
+- [POST /cs/v1/assessment-templates — Create Assessment Template](https://developer.scalepad.com/reference/apipublicv1assessmenttemplatecreate)
+  - route changed: `POST /lifecycle-manager/v1/assessment-templates` → `POST /cs/v1/assessment-templates`
+- [DELETE /cs/v1/assessment-templates/{assessment_template_id} — Delete Assessment Template](https://developer.scalepad.com/reference/apipublicv1assessmenttemplatedelete)
+  - route changed: `DELETE /lifecycle-manager/v1/assessment-templates/{assessment_template_id}` → `DELETE /cs/v1/assessment-templates/{assessment_template_id}`
+- [GET /cs/v1/assessment-templates/{assessment_template_id} — Get Assessment Template](https://developer.scalepad.com/reference/apipublicv1assessmenttemplateget)
+  - route changed: `GET /lifecycle-manager/v1/assessment-templates/{assessment_template_id}` → `GET /cs/v1/assessment-templates/{assessment_template_id}`
+- [PUT /cs/v1/assessment-templates/{assessment_template_id} — Update Assessment Template](https://developer.scalepad.com/reference/apipublicv1assessmenttemplateupdate)
+  - route changed: `PUT /lifecycle-manager/v1/assessment-templates/{assessment_template_id}` → `PUT /cs/v1/assessment-templates/{assessment_template_id}`
+- [GET /cs/v1/assessment-templates/{assessment_template_id}/questions/{assessment_template_question_id}/responses — List assessment template question responses](https://developer.scalepad.com/reference/apipublicv1assessmenttemplatequestionresponselist)
+  - route changed: `GET /lifecycle-manager/v1/assessment-templates/{assessment_template_id}/questions/{assessment_template_question_id}/responses` → `GET /cs/v1/assessment-templates/{assessment_template_id}/questions/{assessment_template_question_id}/responses`
+- [POST /cs/v1/assessment-templates/{assessment_template_id}/restore — Restore Assessment Template](https://developer.scalepad.com/reference/apipublicv1assessmenttemplaterestore)
+  - route changed: `POST /lifecycle-manager/v1/assessment-templates/{assessment_template_id}/restore` → `POST /cs/v1/assessment-templates/{assessment_template_id}/restore`
+- [GET /cs/v1/assessments — List Assessments](https://developer.scalepad.com/reference/apipublicv1assessmentslist)
+  - route changed: `GET /lifecycle-manager/v1/assessments` → `GET /cs/v1/assessments`
+- [POST /cs/v1/assessments — Create Assessment](https://developer.scalepad.com/reference/apipublicv1assessmentscreate)
+  - route changed: `POST /lifecycle-manager/v1/assessments` → `POST /cs/v1/assessments`
+- [GET /cs/v1/assessments/criteria/labels — List Assessment Criterion Label Types](https://developer.scalepad.com/reference/apipublicv1assessmentcriterionlabeltypelist)
+  - route changed: `GET /lifecycle-manager/v1/assessments/criteria/labels` → `GET /cs/v1/assessments/criteria/labels`
+- [PUT /cs/v1/assessments/templates/questions/{assessment_template_question_id}/tags — Update Assessment Template Question Tags](https://developer.scalepad.com/reference/apipublicv1assessmenttemplatequestiontagupdate)
+  - route changed: `PUT /lifecycle-manager/v1/assessments/templates/questions/{assessment_template_question_id}/tags` → `PUT /cs/v1/assessments/templates/questions/{assessment_template_question_id}/tags`
+- [POST /cs/v1/assessments/{assessment_id}/duplicate — Duplicate Assessment](https://developer.scalepad.com/reference/apipublicv1assessmentsduplicate)
+  - route changed: `POST /lifecycle-manager/v1/assessments/{assessment_id}/duplicate` → `POST /cs/v1/assessments/{assessment_id}/duplicate`
+- [POST /cs/v1/assessments/{assessment_id}/questions/initiative-link — Link Assessment Items to an Initiative](https://developer.scalepad.com/reference/apipublicv1assessmentevaluationquestionsinitiativelink)
+  - route changed: `POST /lifecycle-manager/v1/assessments/{assessment_id}/questions/initiative-link` → `POST /cs/v1/assessments/{assessment_id}/questions/initiative-link`
+- [DELETE /cs/v1/assessments/{assessment_id}/questions/{assessment_evaluation_question_id}/answer — Clear Assessment Evaluation Question Answer](https://developer.scalepad.com/reference/apipublicv1assessmentevaluationquestionanswerclear)
+  - route changed: `DELETE /lifecycle-manager/v1/assessments/{assessment_id}/questions/{assessment_evaluation_question_id}/answer` → `DELETE /cs/v1/assessments/{assessment_id}/questions/{assessment_evaluation_question_id}/answer`
+- [DELETE /cs/v1/assessments/{assessment_id}/questions/{assessment_evaluation_question_id}/initiative — Unlink Initiative from Assessment Evaluation Question](https://developer.scalepad.com/reference/apipublicv1assessmentevaluationquestioninitiativeunlink)
+  - route changed: `DELETE /lifecycle-manager/v1/assessments/{assessment_id}/questions/{assessment_evaluation_question_id}/initiative` → `DELETE /cs/v1/assessments/{assessment_id}/questions/{assessment_evaluation_question_id}/initiative`
+- [POST /cs/v1/assessments/{assessment_id}/questions/{assessment_evaluation_question_id}/initiative — Link Initiative to Assessment Evaluation Question](https://developer.scalepad.com/reference/apipublicv1assessmentevaluationquestioninitiativelink)
+  - route changed: `POST /lifecycle-manager/v1/assessments/{assessment_id}/questions/{assessment_evaluation_question_id}/initiative` → `POST /cs/v1/assessments/{assessment_id}/questions/{assessment_evaluation_question_id}/initiative`
+- [PUT /cs/v1/assessments/{assessment_id}/questions/{assessment_evaluation_question_id}/tags — Update Assessment Evaluation Question Tags](https://developer.scalepad.com/reference/apipublicv1assessmentevaluationquestiontagupdate)
+  - route changed: `PUT /lifecycle-manager/v1/assessments/{assessment_id}/questions/{assessment_evaluation_question_id}/tags` → `PUT /cs/v1/assessments/{assessment_id}/questions/{assessment_evaluation_question_id}/tags`
+- [DELETE /cs/v1/assessments/{assessment_id}/questions/{assessment_evaluation_question_id}/ticket — Unlink Ticket from Assessment Evaluation Question](https://developer.scalepad.com/reference/apipublicv1assessmentevaluationquestionticketunlink)
+  - route changed: `DELETE /lifecycle-manager/v1/assessments/{assessment_id}/questions/{assessment_evaluation_question_id}/ticket` → `DELETE /cs/v1/assessments/{assessment_id}/questions/{assessment_evaluation_question_id}/ticket`
+- [POST /cs/v1/assessments/{assessment_id}/questions/{assessment_evaluation_question_id}/ticket — Create and Link a Ticket to an Assessment Evaluation Question](https://developer.scalepad.com/reference/apipublicv1assessmentevaluationquestionticketcreate)
+  - route changed: `POST /lifecycle-manager/v1/assessments/{assessment_id}/questions/{assessment_evaluation_question_id}/ticket` → `POST /cs/v1/assessments/{assessment_id}/questions/{assessment_evaluation_question_id}/ticket`
+- [PUT /cs/v1/assessments/{assessment_id}/questions/{question_id}/comment/internal — Update Assessment Item Internal Comment](https://developer.scalepad.com/reference/apipublicv1assessmentsquestioncommentinternalupsert-1)
+  - route changed: `PUT /lifecycle-manager/v1/assessments/{assessment_id}/questions/{question_id}/comment/internal` → `PUT /cs/v1/assessments/{assessment_id}/questions/{question_id}/comment/internal`
+- [PUT /cs/v1/assessments/{assessment_id}/questions/{question_id}/comment/public — Update Assessment Item Public Comment](https://developer.scalepad.com/reference/apipublicv1assessmentsquestioncommentpublicupsert-1)
+  - route changed: `PUT /lifecycle-manager/v1/assessments/{assessment_id}/questions/{question_id}/comment/public` → `PUT /cs/v1/assessments/{assessment_id}/questions/{question_id}/comment/public`
+- [POST /cs/v1/assessments/{assessment_id}/questions/{question_id}/criteria — Add Additional Answer](https://developer.scalepad.com/reference/apipublicv1assessmentsquestioncriterioncreate)
+  - route changed: `POST /lifecycle-manager/v1/assessments/{assessment_id}/questions/{question_id}/criteria` → `POST /cs/v1/assessments/{assessment_id}/questions/{question_id}/criteria`
+- [DELETE /cs/v1/assessments/{assessment_id}/questions/{question_id}/criteria/{assessment_criterion_id} — Delete Assessment Question Custom Answer](https://developer.scalepad.com/reference/apipublicv1assessmentsquestioncriteriondelete)
+  - route changed: `DELETE /lifecycle-manager/v1/assessments/{assessment_id}/questions/{question_id}/criteria/{assessment_criterion_id}` → `DELETE /cs/v1/assessments/{assessment_id}/questions/{question_id}/criteria/{assessment_criterion_id}`
+- [GET /cs/v1/assessments/{assessment_id}/reports/comparison — Assessment Comparison Report](https://developer.scalepad.com/reference/apipublicv1assessmentsreportcomparison)
+  - route changed: `GET /lifecycle-manager/v1/assessments/{assessment_id}/reports/comparison` → `GET /cs/v1/assessments/{assessment_id}/reports/comparison`
+- [GET /cs/v1/assessments/{assessment_id}/reports/full — Assessment Full Report](https://developer.scalepad.com/reference/apipublicv1assessmentsreportfull)
+  - route changed: `GET /lifecycle-manager/v1/assessments/{assessment_id}/reports/full` → `GET /cs/v1/assessments/{assessment_id}/reports/full`
+- [GET /cs/v1/assessments/{assessment_id}/reports/item-detail — Assessment Item Detail Report](https://developer.scalepad.com/reference/apipublicv1assessmentsreportitemdetail)
+  - route changed: `GET /lifecycle-manager/v1/assessments/{assessment_id}/reports/item-detail` → `GET /cs/v1/assessments/{assessment_id}/reports/item-detail`
+- [GET /cs/v1/assessments/{assessment_id}/reports/summary — Assessment Summary Report](https://developer.scalepad.com/reference/apipublicv1assessmentsreportsummary)
+  - route changed: `GET /lifecycle-manager/v1/assessments/{assessment_id}/reports/summary` → `GET /cs/v1/assessments/{assessment_id}/reports/summary`
+- [DELETE /cs/v1/assessments/{id} — Delete Assessment](https://developer.scalepad.com/reference/apipublicv1assessmentsdelete)
+  - route changed: `DELETE /lifecycle-manager/v1/assessments/{id}` → `DELETE /cs/v1/assessments/{id}`
+- [GET /cs/v1/assessments/{id} — Get Assessment](https://developer.scalepad.com/reference/apipublicv1assessmentsget)
+  - route changed: `GET /lifecycle-manager/v1/assessments/{id}` → `GET /cs/v1/assessments/{id}`
+- [PUT /cs/v1/assessments/{id} — Update Assessment](https://developer.scalepad.com/reference/apipublicv1assessmentsupdate)
+  - route changed: `PUT /lifecycle-manager/v1/assessments/{id}` → `PUT /cs/v1/assessments/{id}`
+- [PUT /cs/v1/assessments/{id}/completion-status — Update Assessment Completion Status](https://developer.scalepad.com/reference/apipublicv1assessmentscompletionstatusupdate)
+  - route changed: `PUT /lifecycle-manager/v1/assessments/{id}/completion-status` → `PUT /cs/v1/assessments/{id}/completion-status`
+- [PUT /cs/v1/assessments/{id}/evaluate — Evaluate Assessment](https://developer.scalepad.com/reference/apipublicv1assessmentsevaluate)
+  - route changed: `PUT /lifecycle-manager/v1/assessments/{id}/evaluate` → `PUT /cs/v1/assessments/{id}/evaluate`
+- [PUT /cs/v1/assessments/{id}/internal-comment — Update Assessment Internal Comment](https://developer.scalepad.com/reference/apipublicv1assessmentsinternalcommentupsert-1)
+  - route changed: `PUT /lifecycle-manager/v1/assessments/{id}/internal-comment` → `PUT /cs/v1/assessments/{id}/internal-comment`
+- [GET /cs/v1/assets/saas — List SaaS Assets](https://developer.scalepad.com/reference/apipublicv1assetssaaslist)
+  - route changed: `GET /lifecycle-manager/v1/assets/saas` → `GET /cs/v1/assets/saas`
+- [GET /cs/v1/assets/saas/summary — Get SaaS Portfolio Summary](https://developer.scalepad.com/reference/apipublicv1assetssaassummaryget)
+  - route changed: `GET /lifecycle-manager/v1/assets/saas/summary` → `GET /cs/v1/assets/saas/summary`
+- [GET /cs/v1/assets/software — List Software Assets](https://developer.scalepad.com/reference/apipublicv1assetssoftwarelist)
+  - route changed: `GET /lifecycle-manager/v1/assets/software` → `GET /cs/v1/assets/software`
+- [POST /cs/v1/assets/software/category-lifecycle-report/pdf — Download Software Category Lifecycle Report PDF](https://developer.scalepad.com/reference/apipublicv1assetssoftwarecategorylifecyclereportpdf)
+  - route changed: `POST /lifecycle-manager/v1/assets/software/category-lifecycle-report/pdf` → `POST /cs/v1/assets/software/category-lifecycle-report/pdf`
+- [POST /cs/v1/assets/software/export/csv — Download installed software assets as CSV](https://developer.scalepad.com/reference/apipublicv1assetssoftwareexportcsv)
+  - route changed: `POST /lifecycle-manager/v1/assets/software/export/csv` → `POST /cs/v1/assets/software/export/csv`
+- [POST /cs/v1/assets/software/export/xlsx — Download installed software assets as XLSX](https://developer.scalepad.com/reference/apipublicv1assetssoftwareexportxlsx)
+  - route changed: `POST /lifecycle-manager/v1/assets/software/export/xlsx` → `POST /cs/v1/assets/software/export/xlsx`
+- [POST /cs/v1/assets/software/lifecycle-report/pdf — Download Software Lifecycle Report PDF](https://developer.scalepad.com/reference/apipublicv1assetssoftwarelifecyclereportpdf)
+  - route changed: `POST /lifecycle-manager/v1/assets/software/lifecycle-report/pdf` → `POST /cs/v1/assets/software/lifecycle-report/pdf`
+- [GET /cs/v1/assets/software/lifecycle-summary — Get Assets Software Lifecycle Summary](https://developer.scalepad.com/reference/apipublicv1assetssoftwarelifecyclesummaryget)
+  - route changed: `GET /lifecycle-manager/v1/assets/software/lifecycle-summary` → `GET /cs/v1/assets/software/lifecycle-summary`
+- [GET /cs/v1/assets/software/products — List Software Products](https://developer.scalepad.com/reference/apipublicv1assetssoftwareproductsget)
+  - route changed: `GET /lifecycle-manager/v1/assets/software/products` → `GET /cs/v1/assets/software/products`
+- [GET /cs/v1/assets/software/products/{software_product_id}/devices — List Software Product Devices](https://developer.scalepad.com/reference/apipublicv1assetssoftwareproductdevicesget)
+  - route changed: `GET /lifecycle-manager/v1/assets/software/products/{software_product_id}/devices` → `GET /cs/v1/assets/software/products/{software_product_id}/devices`
+- [GET /cs/v1/assets/software/products/{software_product_id}/summary — Get Software Product Summary](https://developer.scalepad.com/reference/apipublicv1assetssoftwareproductsummaryget)
+  - route changed: `GET /lifecycle-manager/v1/assets/software/products/{software_product_id}/summary` → `GET /cs/v1/assets/software/products/{software_product_id}/summary`
+- [GET /cs/v1/assets/software/summary — Get Software Summary](https://developer.scalepad.com/reference/apipublicv1assetssoftwaresummaryget)
+  - route changed: `GET /lifecycle-manager/v1/assets/software/summary` → `GET /cs/v1/assets/software/summary`
+- [GET /cs/v1/assets/software/{software_asset_id} — Get Software Asset](https://developer.scalepad.com/reference/apipublicv1assetssoftwareget)
+  - route changed: `GET /lifecycle-manager/v1/assets/software/{software_asset_id}` → `GET /cs/v1/assets/software/{software_asset_id}`
+- [GET /cs/v1/budget/summary — Account Budget Summary Get](https://developer.scalepad.com/reference/apipublicv1accountbudgetsummaryget)
+  - route changed: `GET /lifecycle-manager/v1/budget/summary` → `GET /cs/v1/budget/summary`
+- [GET /cs/v1/budget/{client_id}/availabilities — Get Budget Availabilities](https://developer.scalepad.com/reference/apipublicv1budgetavailabilitiesget)
+  - route changed: `GET /lifecycle-manager/v1/budget/{client_id}/availabilities` → `GET /cs/v1/budget/{client_id}/availabilities`
+- [GET /cs/v1/budget/{client_id}/contracts — List Budget Contracts](https://developer.scalepad.com/reference/apipublicv1budgetcontractslist)
+  - route changed: `GET /lifecycle-manager/v1/budget/{client_id}/contracts` → `GET /cs/v1/budget/{client_id}/contracts`
+- [GET /cs/v1/budget/{client_id}/forecast/csv — Budget Forecast CSV](https://developer.scalepad.com/reference/apipublicv1budgetforecastcsv)
+  - route changed: `GET /lifecycle-manager/v1/budget/{client_id}/forecast/csv` → `GET /cs/v1/budget/{client_id}/forecast/csv`
+- [GET /cs/v1/budget/{client_id}/forecast/detail/pdf — Budget Forecast Detail PDF](https://developer.scalepad.com/reference/apipublicv1budgetforecastdetailpdf)
+  - route changed: `GET /lifecycle-manager/v1/budget/{client_id}/forecast/detail/pdf` → `GET /cs/v1/budget/{client_id}/forecast/detail/pdf`
+- [GET /cs/v1/budget/{client_id}/forecast/pdf — Budget Forecast PDF](https://developer.scalepad.com/reference/apipublicv1budgetforecastpdf)
+  - route changed: `GET /lifecycle-manager/v1/budget/{client_id}/forecast/pdf` → `GET /cs/v1/budget/{client_id}/forecast/pdf`
+- [GET /cs/v1/budget/{client_id}/initiatives — List Budget Initiatives](https://developer.scalepad.com/reference/apipublicv1budgetinitiativeslist)
+  - route changed: `GET /lifecycle-manager/v1/budget/{client_id}/initiatives` → `GET /cs/v1/budget/{client_id}/initiatives`
+- [GET /cs/v1/budget/{client_id}/it-debt — List Budget IT Debt](https://developer.scalepad.com/reference/apipublicv1budgetitdebtlist)
+  - route changed: `GET /lifecycle-manager/v1/budget/{client_id}/it-debt` → `GET /cs/v1/budget/{client_id}/it-debt`
+- [GET /cs/v1/budget/{client_id}/summary — Get Budget Summary](https://developer.scalepad.com/reference/apipublicv1budgetsummaryget)
+  - route changed: `GET /lifecycle-manager/v1/budget/{client_id}/summary` → `GET /cs/v1/budget/{client_id}/summary`
+- [GET /cs/v1/clients/{client-id}/deliverables — List Client Deliverables](https://developer.scalepad.com/reference/list-deliverables-1)
+  - route changed: `GET /lifecycle-manager/v1/clients/{client-id}/deliverables` → `GET /cs/v1/clients/{client-id}/deliverables`
+- [POST /cs/v1/clients/{client-id}/deliverables — Create Deliverable](https://developer.scalepad.com/reference/create-deliverable-1)
+  - route changed: `POST /lifecycle-manager/v1/clients/{client-id}/deliverables` → `POST /cs/v1/clients/{client-id}/deliverables`
+- [GET /cs/v1/clients/{client-id}/deliverables/catalog/components — List Catalog Components](https://developer.scalepad.com/reference/list-deliverable-catalog-components-1)
+  - route changed: `GET /lifecycle-manager/v1/clients/{client-id}/deliverables/catalog/components` → `GET /cs/v1/clients/{client-id}/deliverables/catalog/components`
+- [GET /cs/v1/clients/{client-id}/deliverables/catalog/components/service-delivery/board-options — List Service Delivery Board Options](https://developer.scalepad.com/reference/list-deliverable-service-delivery-board-options)
+  - route changed: `GET /lifecycle-manager/v1/clients/{client-id}/deliverables/catalog/components/service-delivery/board-options` → `GET /cs/v1/clients/{client-id}/deliverables/catalog/components/service-delivery/board-options`
+- [POST /cs/v1/clients/{client-id}/deliverables/create-from/template/{template-id} — Create Deliverable from Template](https://developer.scalepad.com/reference/create-deliverable-from-template-1)
+  - route changed: `POST /lifecycle-manager/v1/clients/{client-id}/deliverables/create-from/template/{template-id}` → `POST /cs/v1/clients/{client-id}/deliverables/create-from/template/{template-id}`
+- [GET /cs/v1/clients/{client-id}/deliverables/integrations/integrated — List Configured Integrations](https://developer.scalepad.com/reference/list-deliverable-integrations-integrated-1)
+  - route changed: `GET /lifecycle-manager/v1/clients/{client-id}/deliverables/integrations/integrated` → `GET /cs/v1/clients/{client-id}/deliverables/integrations/integrated`
+- [POST /cs/v1/clients/{client_id}/agreements/import-draft — Create Agreement Import Draft](https://developer.scalepad.com/reference/apipublicv1agreementdocumentimportdraftcreate)
+  - route changed: `POST /lifecycle-manager/v1/clients/{client_id}/agreements/import-draft` → `POST /cs/v1/clients/{client_id}/agreements/import-draft`
+- [GET /cs/v1/clients/{client_id}/assessments/access — Get Assessment Client Access](https://developer.scalepad.com/reference/apipublicv1assessmentclientaccessget)
+  - route changed: `GET /lifecycle-manager/v1/clients/{client_id}/assessments/access` → `GET /cs/v1/clients/{client_id}/assessments/access`
+- [GET /cs/v1/clients/{client_id}/client-iq — Get ClientIQ](https://developer.scalepad.com/reference/apipublicv1clientiqget)
+  - route changed: `GET /lifecycle-manager/v1/clients/{client_id}/client-iq` → `GET /cs/v1/clients/{client_id}/client-iq`
+- [POST /cs/v1/clients/{client_id}/client-iq/generate — Generate ClientIQ Content](https://developer.scalepad.com/reference/apipublicv1clientiqgenerate)
+  - route changed: `POST /lifecycle-manager/v1/clients/{client_id}/client-iq/generate` → `POST /cs/v1/clients/{client_id}/client-iq/generate`
+- [GET /cs/v1/clients/{client_id}/copilot-settings — Get Client Copilot Settings](https://developer.scalepad.com/reference/apipublicv1clientcopilotsettingsget)
+  - route changed: `GET /lifecycle-manager/v1/clients/{client_id}/copilot-settings` → `GET /cs/v1/clients/{client_id}/copilot-settings`
+- [PATCH /cs/v1/clients/{client_id}/copilot-settings — Update Client Copilot Settings](https://developer.scalepad.com/reference/apipublicv1clientcopilotsettingspatch)
+  - route changed: `PATCH /lifecycle-manager/v1/clients/{client_id}/copilot-settings` → `PATCH /cs/v1/clients/{client_id}/copilot-settings`
+- [GET /cs/v1/clients/{client_id}/dmi/score — Client DMI Score](https://developer.scalepad.com/reference/apipublicv1clientdmiscoreget)
+  - route changed: `GET /lifecycle-manager/v1/clients/{client_id}/dmi/score` → `GET /cs/v1/clients/{client_id}/dmi/score`
+- [GET /cs/v1/clients/{client_id}/dmi/trend — Client DMI Trend](https://developer.scalepad.com/reference/apipublicv1clientdmitrendget)
+  - route changed: `GET /lifecycle-manager/v1/clients/{client_id}/dmi/trend` → `GET /cs/v1/clients/{client_id}/dmi/trend`
+- [GET /cs/v1/contracts — List Contracts](https://developer.scalepad.com/reference/apipublicv1contractslist)
+  - route changed: `GET /lifecycle-manager/v1/contracts` → `GET /cs/v1/contracts`
+- [POST /cs/v1/contracts — Create Contract](https://developer.scalepad.com/reference/apipublicv1contractscreate)
+  - route changed: `POST /lifecycle-manager/v1/contracts` → `POST /cs/v1/contracts`
+- [PUT /cs/v1/contracts/{contract_id}/assets — Contract Asset Attach](https://developer.scalepad.com/reference/apipublicv1contractassetattach)
+  - route changed: `PUT /lifecycle-manager/v1/contracts/{contract_id}/assets` → `PUT /cs/v1/contracts/{contract_id}/assets`
+- [POST /cs/v1/contracts/{contract_id}/assets/delete — Delete Contract Asset Bulk](https://developer.scalepad.com/reference/apipublicv1contractassetbulkdelete)
+  - route changed: `POST /lifecycle-manager/v1/contracts/{contract_id}/assets/delete` → `POST /cs/v1/contracts/{contract_id}/assets/delete`
+- [DELETE /cs/v1/contracts/{id} — Delete Contract](https://developer.scalepad.com/reference/apipublicv1contractsdelete)
+  - route changed: `DELETE /lifecycle-manager/v1/contracts/{id}` → `DELETE /cs/v1/contracts/{id}`
+- [GET /cs/v1/contracts/{id} — Get Contract](https://developer.scalepad.com/reference/apipublicv1contractsget)
+  - route changed: `GET /lifecycle-manager/v1/contracts/{id}` → `GET /cs/v1/contracts/{id}`
+- [PUT /cs/v1/contracts/{id} — Update Contract](https://developer.scalepad.com/reference/apipublicv1contractsupdate)
+  - route changed: `PUT /lifecycle-manager/v1/contracts/{id}` → `PUT /cs/v1/contracts/{id}`
+- [GET /cs/v1/deliverables — List Account Deliverables](https://developer.scalepad.com/reference/apiv1deliverablelistbyaccount)
+  - route changed: `GET /lifecycle-manager/v1/deliverables` → `GET /cs/v1/deliverables`
+- [GET /cs/v1/deliverables/catalog/integrations — List Available Integrations](https://developer.scalepad.com/reference/list-deliverable-catalog-integrations-1)
+  - route changed: `GET /lifecycle-manager/v1/deliverables/catalog/integrations` → `GET /cs/v1/deliverables/catalog/integrations`
+- [GET /cs/v1/deliverables/schedules — List Schedules](https://developer.scalepad.com/reference/apipublicv1deliverableschedulelist)
+  - route changed: `GET /lifecycle-manager/v1/deliverables/schedules` → `GET /cs/v1/deliverables/schedules`
+- [POST /cs/v1/deliverables/schedules/next-occurrence — Preview Next Occurrence](https://developer.scalepad.com/reference/apipublicv1deliverableschedulenextoccurrence)
+  - route changed: `POST /lifecycle-manager/v1/deliverables/schedules/next-occurrence` → `POST /cs/v1/deliverables/schedules/next-occurrence`
+- [POST /cs/v1/deliverables/schedules/preview — Preview Schedule Message](https://developer.scalepad.com/reference/apipublicv1deliverableschedulepreview)
+  - route changed: `POST /lifecycle-manager/v1/deliverables/schedules/preview` → `POST /cs/v1/deliverables/schedules/preview`
+- [POST /cs/v1/deliverables/schedules/send-test — Send Test Message](https://developer.scalepad.com/reference/apipublicv1deliverableschedulesendtest)
+  - route changed: `POST /lifecycle-manager/v1/deliverables/schedules/send-test` → `POST /cs/v1/deliverables/schedules/send-test`
+- [GET /cs/v1/deliverables/schedules/template-variables — List Template Variables](https://developer.scalepad.com/reference/apipublicv1deliverablescheduletemplatevariablelist)
+  - route changed: `GET /lifecycle-manager/v1/deliverables/schedules/template-variables` → `GET /cs/v1/deliverables/schedules/template-variables`
+- [DELETE /cs/v1/deliverables/schedules/{schedule_id} — Delete Schedule](https://developer.scalepad.com/reference/apipublicv1deliverablescheduledelete)
+  - route changed: `DELETE /lifecycle-manager/v1/deliverables/schedules/{schedule_id}` → `DELETE /cs/v1/deliverables/schedules/{schedule_id}`
+- [GET /cs/v1/deliverables/schedules/{schedule_id} — Get Schedule](https://developer.scalepad.com/reference/apipublicv1deliverablescheduleget)
+  - route changed: `GET /lifecycle-manager/v1/deliverables/schedules/{schedule_id}` → `GET /cs/v1/deliverables/schedules/{schedule_id}`
+- [PATCH /cs/v1/deliverables/schedules/{schedule_id} — Update Schedule](https://developer.scalepad.com/reference/apipublicv1deliverableschedulepatch)
+  - route changed: `PATCH /lifecycle-manager/v1/deliverables/schedules/{schedule_id}` → `PATCH /cs/v1/deliverables/schedules/{schedule_id}`
+- [POST /cs/v1/deliverables/schedules/{schedule_id}/pause — Pause Schedule](https://developer.scalepad.com/reference/apipublicv1deliverableschedulepause)
+  - route changed: `POST /lifecycle-manager/v1/deliverables/schedules/{schedule_id}/pause` → `POST /cs/v1/deliverables/schedules/{schedule_id}/pause`
+- [POST /cs/v1/deliverables/schedules/{schedule_id}/recipients — Add Recipient](https://developer.scalepad.com/reference/apipublicv1deliverableschedulerecipientcreate)
+  - route changed: `POST /lifecycle-manager/v1/deliverables/schedules/{schedule_id}/recipients` → `POST /cs/v1/deliverables/schedules/{schedule_id}/recipients`
+- [DELETE /cs/v1/deliverables/schedules/{schedule_id}/recipients/{recipient_id} — Remove Recipient](https://developer.scalepad.com/reference/apipublicv1deliverableschedulerecipientdelete)
+  - route changed: `DELETE /lifecycle-manager/v1/deliverables/schedules/{schedule_id}/recipients/{recipient_id}` → `DELETE /cs/v1/deliverables/schedules/{schedule_id}/recipients/{recipient_id}`
+- [POST /cs/v1/deliverables/schedules/{schedule_id}/resume — Resume Schedule](https://developer.scalepad.com/reference/apipublicv1deliverablescheduleresume)
+  - route changed: `POST /lifecycle-manager/v1/deliverables/schedules/{schedule_id}/resume` → `POST /cs/v1/deliverables/schedules/{schedule_id}/resume`
+- [GET /cs/v1/deliverables/schedules/{schedule_id}/runs — List Runs](https://developer.scalepad.com/reference/apipublicv1deliverableschedulerunhistorylist)
+  - route changed: `GET /lifecycle-manager/v1/deliverables/schedules/{schedule_id}/runs` → `GET /cs/v1/deliverables/schedules/{schedule_id}/runs`
+- [POST /cs/v1/deliverables/schedules/{schedule_id}/send-now — Send Schedule Now](https://developer.scalepad.com/reference/apipublicv1deliverableschedulesendnow)
+  - route changed: `POST /lifecycle-manager/v1/deliverables/schedules/{schedule_id}/send-now` → `POST /cs/v1/deliverables/schedules/{schedule_id}/send-now`
+- [GET /cs/v1/deliverables/templates — List Templates](https://developer.scalepad.com/reference/list-deliverable-templates-1)
+  - route changed: `GET /lifecycle-manager/v1/deliverables/templates` → `GET /cs/v1/deliverables/templates`
+- [POST /cs/v1/deliverables/templates — Create Template](https://developer.scalepad.com/reference/create-deliverable-template-1)
+  - route changed: `POST /lifecycle-manager/v1/deliverables/templates` → `POST /cs/v1/deliverables/templates`
+- [GET /cs/v1/deliverables/templates/catalog/components — List Template Catalog Components](https://developer.scalepad.com/reference/list-deliverable-template-catalog-components-1)
+  - route changed: `GET /lifecycle-manager/v1/deliverables/templates/catalog/components` → `GET /cs/v1/deliverables/templates/catalog/components`
+- [POST /cs/v1/deliverables/templates/create-from/deliverable/{deliverable-id} — Create Template from Deliverable](https://developer.scalepad.com/reference/create-deliverable-template-from-deliverable-1)
+  - route changed: `POST /lifecycle-manager/v1/deliverables/templates/create-from/deliverable/{deliverable-id}` → `POST /cs/v1/deliverables/templates/create-from/deliverable/{deliverable-id}`
+- [POST /cs/v1/deliverables/templates/create-from/template/{template-id} — Create Template from Template](https://developer.scalepad.com/reference/create-deliverable-template-from-template-1)
+  - route changed: `POST /lifecycle-manager/v1/deliverables/templates/create-from/template/{template-id}` → `POST /cs/v1/deliverables/templates/create-from/template/{template-id}`
+- [DELETE /cs/v1/deliverables/templates/{template-id} — Delete Template](https://developer.scalepad.com/reference/delete-deliverable-template-1)
+  - route changed: `DELETE /lifecycle-manager/v1/deliverables/templates/{template-id}` → `DELETE /cs/v1/deliverables/templates/{template-id}`
+- [GET /cs/v1/deliverables/templates/{template-id} — Get Template](https://developer.scalepad.com/reference/get-deliverable-template-1)
+  - route changed: `GET /lifecycle-manager/v1/deliverables/templates/{template-id}` → `GET /cs/v1/deliverables/templates/{template-id}`
+- [PATCH /cs/v1/deliverables/templates/{template-id} — Update Template](https://developer.scalepad.com/reference/update-deliverable-template-1)
+  - route changed: `PATCH /lifecycle-manager/v1/deliverables/templates/{template-id}` → `PATCH /cs/v1/deliverables/templates/{template-id}`
+- [DELETE /cs/v1/deliverables/templates/{template-id}/sections/{section-id} — Delete Template Section](https://developer.scalepad.com/reference/delete-deliverable-template-section-1)
+  - route changed: `DELETE /lifecycle-manager/v1/deliverables/templates/{template-id}/sections/{section-id}` → `DELETE /cs/v1/deliverables/templates/{template-id}/sections/{section-id}`
+- [DELETE /cs/v1/deliverables/templates/{template-id}/sections/{section-id}/components/{component-id} — Delete Template Component](https://developer.scalepad.com/reference/delete-deliverable-template-section-component-1)
+  - route changed: `DELETE /lifecycle-manager/v1/deliverables/templates/{template-id}/sections/{section-id}/components/{component-id}` → `DELETE /cs/v1/deliverables/templates/{template-id}/sections/{section-id}/components/{component-id}`
+- [POST /cs/v1/deliverables/templates/{template_id}/schedules — Create Schedule](https://developer.scalepad.com/reference/apipublicv1deliverableschedulecreate)
+  - route changed: `POST /lifecycle-manager/v1/deliverables/templates/{template_id}/schedules` → `POST /cs/v1/deliverables/templates/{template_id}/schedules`
+- [DELETE /cs/v1/deliverables/{deliverable-id} — Delete Deliverable](https://developer.scalepad.com/reference/delete-deliverable-1)
+  - route changed: `DELETE /lifecycle-manager/v1/deliverables/{deliverable-id}` → `DELETE /cs/v1/deliverables/{deliverable-id}`
+- [GET /cs/v1/deliverables/{deliverable-id} — Get Deliverable](https://developer.scalepad.com/reference/get-deliverable-1)
+  - route changed: `GET /lifecycle-manager/v1/deliverables/{deliverable-id}` → `GET /cs/v1/deliverables/{deliverable-id}`
+- [PATCH /cs/v1/deliverables/{deliverable-id} — Update Deliverable](https://developer.scalepad.com/reference/update-deliverable-1)
+  - route changed: `PATCH /lifecycle-manager/v1/deliverables/{deliverable-id}` → `PATCH /cs/v1/deliverables/{deliverable-id}`
+- [GET /cs/v1/deliverables/{deliverable-id}/components/{component-id}/file — Get a deliverable component's file](https://developer.scalepad.com/reference/get-deliverable-component-file)
+  - route changed: `GET /lifecycle-manager/v1/deliverables/{deliverable-id}/components/{component-id}/file` → `GET /cs/v1/deliverables/{deliverable-id}/components/{component-id}/file`
+- [GET /cs/v1/deliverables/{deliverable-id}/pdf — Download a deliverable PDF](https://developer.scalepad.com/reference/apiv1deliverabledownload)
+  - route changed: `GET /lifecycle-manager/v1/deliverables/{deliverable-id}/pdf` → `GET /cs/v1/deliverables/{deliverable-id}/pdf`
+- [GET /cs/v1/deliverables/{deliverable-id}/presentation — Get Presentation](https://developer.scalepad.com/reference/get-deliverable-presentation-1)
+  - route changed: `GET /lifecycle-manager/v1/deliverables/{deliverable-id}/presentation` → `GET /cs/v1/deliverables/{deliverable-id}/presentation`
+- [DELETE /cs/v1/deliverables/{deliverable-id}/sections/{section-id} — Delete Section](https://developer.scalepad.com/reference/delete-deliverable-section-1)
+  - route changed: `DELETE /lifecycle-manager/v1/deliverables/{deliverable-id}/sections/{section-id}` → `DELETE /cs/v1/deliverables/{deliverable-id}/sections/{section-id}`
+- [DELETE /cs/v1/deliverables/{deliverable-id}/sections/{section-id}/components/{component-id} — Delete Component](https://developer.scalepad.com/reference/delete-deliverable-section-component-1)
+  - route changed: `DELETE /lifecycle-manager/v1/deliverables/{deliverable-id}/sections/{section-id}/components/{component-id}` → `DELETE /cs/v1/deliverables/{deliverable-id}/sections/{section-id}/components/{component-id}`
+- [POST /cs/v1/deliverables/{deliverable-id}/sections/{section-id}/components/{component-id}/refresh — Refresh Component](https://developer.scalepad.com/reference/refresh-deliverable-section-component-1)
+  - route changed: `POST /lifecycle-manager/v1/deliverables/{deliverable-id}/sections/{section-id}/components/{component-id}/refresh` → `POST /cs/v1/deliverables/{deliverable-id}/sections/{section-id}/components/{component-id}/refresh`
+- [POST /cs/v1/deliverables/{deliverable-id}/sections/{section-id}/executive-summary/suggest — Suggest a Deliverable Executive Summary](https://developer.scalepad.com/reference/suggest-deliverable-executive-summary)
+  - route changed: `POST /lifecycle-manager/v1/deliverables/{deliverable-id}/sections/{section-id}/executive-summary/suggest` → `POST /cs/v1/deliverables/{deliverable-id}/sections/{section-id}/executive-summary/suggest`
+- [POST /cs/v1/deliverables/{deliverable-id}/sections/{section-id}/refresh — Refresh Section](https://developer.scalepad.com/reference/refresh-deliverable-section-1)
+  - route changed: `POST /lifecycle-manager/v1/deliverables/{deliverable-id}/sections/{section-id}/refresh` → `POST /cs/v1/deliverables/{deliverable-id}/sections/{section-id}/refresh`
+- [GET /cs/v1/deliverables/{deliverable-id}/shares/general-link — Get General Share Link](https://developer.scalepad.com/reference/get-deliverable-share-general-link-1)
+  - route changed: `GET /lifecycle-manager/v1/deliverables/{deliverable-id}/shares/general-link` → `GET /cs/v1/deliverables/{deliverable-id}/shares/general-link`
+- [POST /cs/v1/deliverables/{deliverable-id}/shares/general-link — Create General Share Link](https://developer.scalepad.com/reference/create-deliverable-share-general-link-1)
+  - route changed: `POST /lifecycle-manager/v1/deliverables/{deliverable-id}/shares/general-link` → `POST /cs/v1/deliverables/{deliverable-id}/shares/general-link`
+- [POST /cs/v1/deliverables/{deliverable-id}/shares/general-link/regenerate — Regenerate General Share Link](https://developer.scalepad.com/reference/regenerate-deliverable-share-general-link-1)
+  - route changed: `POST /lifecycle-manager/v1/deliverables/{deliverable-id}/shares/general-link/regenerate` → `POST /cs/v1/deliverables/{deliverable-id}/shares/general-link/regenerate`
+- [POST /cs/v1/deliverables/{deliverable-id}/shares/general-link/revoke — Revoke General Share Link](https://developer.scalepad.com/reference/revoke-deliverable-share-general-link-1)
+  - route changed: `POST /lifecycle-manager/v1/deliverables/{deliverable-id}/shares/general-link/revoke` → `POST /cs/v1/deliverables/{deliverable-id}/shares/general-link/revoke`
+- [POST /cs/v1/deliverables/{deliverable_id}/assessment — Append assessment report](https://developer.scalepad.com/reference/apipublicv1deliverableassessmentcreate)
+  - route changed: `POST /lifecycle-manager/v1/deliverables/{deliverable_id}/assessment` → `POST /cs/v1/deliverables/{deliverable_id}/assessment`
+- [GET /cs/v1/deliverables/{deliverable_id}/components/{component_id}/it-glue/flexible-assets — List IT Glue flexible asset details](https://developer.scalepad.com/reference/apipublicv1deliverablecomponentitglueflexibleassetlist)
+  - route changed: `GET /lifecycle-manager/v1/deliverables/{deliverable_id}/components/{component_id}/it-glue/flexible-assets` → `GET /cs/v1/deliverables/{deliverable_id}/components/{component_id}/it-glue/flexible-assets`
+- [GET /cs/v1/goal-templates — List Goal Templates](https://developer.scalepad.com/reference/apipublicv1goaltemplateslist)
+  - route changed: `GET /lifecycle-manager/v1/goal-templates` → `GET /cs/v1/goal-templates`
+- [POST /cs/v1/goal-templates — Create Goal Template](https://developer.scalepad.com/reference/apipublicv1goaltemplatecreate)
+  - route changed: `POST /lifecycle-manager/v1/goal-templates` → `POST /cs/v1/goal-templates`
+- [DELETE /cs/v1/goal-templates/{goal_template_id} — Delete Goal Template](https://developer.scalepad.com/reference/apipublicv1goaltemplatedelete)
+  - route changed: `DELETE /lifecycle-manager/v1/goal-templates/{goal_template_id}` → `DELETE /cs/v1/goal-templates/{goal_template_id}`
+- [GET /cs/v1/goal-templates/{goal_template_id} — Get Goal Template](https://developer.scalepad.com/reference/apipublicv1goaltemplateget)
+  - route changed: `GET /lifecycle-manager/v1/goal-templates/{goal_template_id}` → `GET /cs/v1/goal-templates/{goal_template_id}`
+- [PUT /cs/v1/goal-templates/{goal_template_id} — Update Goal Template](https://developer.scalepad.com/reference/apipublicv1goaltemplateupdate)
+  - route changed: `PUT /lifecycle-manager/v1/goal-templates/{goal_template_id}` → `PUT /cs/v1/goal-templates/{goal_template_id}`
+- [GET /cs/v1/goals — List Goals](https://developer.scalepad.com/reference/apipublicv1goallist)
+  - route changed: `GET /lifecycle-manager/v1/goals` → `GET /cs/v1/goals`
+- [POST /cs/v1/goals — Create Goal](https://developer.scalepad.com/reference/apipublicv1goalcreate)
+  - route changed: `POST /lifecycle-manager/v1/goals` → `POST /cs/v1/goals`
+- [POST /cs/v1/goals/create-from/template/{goal_template_id} — Goal Create from Template](https://developer.scalepad.com/reference/apipublicv1goalcreatefromtemplate)
+  - route changed: `POST /lifecycle-manager/v1/goals/create-from/template/{goal_template_id}` → `POST /cs/v1/goals/create-from/template/{goal_template_id}`
+- [GET /cs/v1/goals/outcomes — List Outcomes](https://developer.scalepad.com/reference/apipublicv1goaloutcomelist)
+  - route changed: `GET /lifecycle-manager/v1/goals/outcomes` → `GET /cs/v1/goals/outcomes`
+- [POST /cs/v1/goals/outcomes — Create Outcome](https://developer.scalepad.com/reference/apipublicv1goaloutcomecreate)
+  - route changed: `POST /lifecycle-manager/v1/goals/outcomes` → `POST /cs/v1/goals/outcomes`
+- [PATCH /cs/v1/goals/outcomes/{outcome_id} — Update Outcome](https://developer.scalepad.com/reference/apipublicv1goaloutcomeupdate)
+  - route changed: `PATCH /lifecycle-manager/v1/goals/outcomes/{outcome_id}` → `PATCH /cs/v1/goals/outcomes/{outcome_id}`
+- [POST /cs/v1/goals/{goal_id}/archive — Archive Goal](https://developer.scalepad.com/reference/apipublicv1goalarchive)
+  - route changed: `POST /lifecycle-manager/v1/goals/{goal_id}/archive` → `POST /cs/v1/goals/{goal_id}/archive`
+- [GET /cs/v1/goals/{goal_id}/initiatives — List Goal Initiatives](https://developer.scalepad.com/reference/apipublicv1goalinitiativeslist)
+  - route changed: `GET /lifecycle-manager/v1/goals/{goal_id}/initiatives` → `GET /cs/v1/goals/{goal_id}/initiatives`
+- [DELETE /cs/v1/goals/{goal_id}/initiatives/{initiative_id} — Detach Initiative from Goal](https://developer.scalepad.com/reference/apipublicv1goalinitiativedetach)
+  - route changed: `DELETE /lifecycle-manager/v1/goals/{goal_id}/initiatives/{initiative_id}` → `DELETE /cs/v1/goals/{goal_id}/initiatives/{initiative_id}`
+- [POST /cs/v1/goals/{goal_id}/initiatives/{initiative_id} — Attach Initiative to Goal](https://developer.scalepad.com/reference/apipublicv1goalinitiativeattach)
+  - route changed: `POST /lifecycle-manager/v1/goals/{goal_id}/initiatives/{initiative_id}` → `POST /cs/v1/goals/{goal_id}/initiatives/{initiative_id}`
+- [GET /cs/v1/goals/{goal_id}/meetings — List Goal Meetings](https://developer.scalepad.com/reference/apipublicv1goalmeetingslist)
+  - route changed: `GET /lifecycle-manager/v1/goals/{goal_id}/meetings` → `GET /cs/v1/goals/{goal_id}/meetings`
+- [DELETE /cs/v1/goals/{goal_id}/meetings/{meeting_id} — Detach Meeting from Goal](https://developer.scalepad.com/reference/apipublicv1goalmeetingdetach)
+  - route changed: `DELETE /lifecycle-manager/v1/goals/{goal_id}/meetings/{meeting_id}` → `DELETE /cs/v1/goals/{goal_id}/meetings/{meeting_id}`
+- [POST /cs/v1/goals/{goal_id}/meetings/{meeting_id} — Attach Meeting to Goal](https://developer.scalepad.com/reference/apipublicv1goalmeetingattach)
+  - route changed: `POST /lifecycle-manager/v1/goals/{goal_id}/meetings/{meeting_id}` → `POST /cs/v1/goals/{goal_id}/meetings/{meeting_id}`
+- [POST /cs/v1/goals/{goal_id}/restore — Restore Goal](https://developer.scalepad.com/reference/apipublicv1goalrestore)
+  - route changed: `POST /lifecycle-manager/v1/goals/{goal_id}/restore` → `POST /cs/v1/goals/{goal_id}/restore`
+- [DELETE /cs/v1/goals/{id} — Delete Goal](https://developer.scalepad.com/reference/apipublicv1goaldelete)
+  - route changed: `DELETE /lifecycle-manager/v1/goals/{id}` → `DELETE /cs/v1/goals/{id}`
+- [GET /cs/v1/goals/{id} — Get Goal](https://developer.scalepad.com/reference/apipublicv1goalget)
+  - route changed: `GET /lifecycle-manager/v1/goals/{id}` → `GET /cs/v1/goals/{id}`
+- [PATCH /cs/v1/goals/{id} — Update Goal](https://developer.scalepad.com/reference/apipublicv1goalupdate)
+  - route changed: `PATCH /lifecycle-manager/v1/goals/{id}` → `PATCH /cs/v1/goals/{id}`
+- [PUT /cs/v1/goals/{id}/schedule — Update Goal Schedule](https://developer.scalepad.com/reference/apipublicv1goalscheduleupdate)
+  - route changed: `PUT /lifecycle-manager/v1/goals/{id}/schedule` → `PUT /cs/v1/goals/{id}/schedule`
+- [PUT /cs/v1/goals/{id}/status — Update Goal Status](https://developer.scalepad.com/reference/apipublicv1goalstatusupdate)
+  - route changed: `PUT /lifecycle-manager/v1/goals/{id}/status` → `PUT /cs/v1/goals/{id}/status`
+- [GET /cs/v1/initiative-templates — List Initiative Templates](https://developer.scalepad.com/reference/apipublicv1initiativetemplatelist)
+  - route changed: `GET /lifecycle-manager/v1/initiative-templates` → `GET /cs/v1/initiative-templates`
+- [POST /cs/v1/initiative-templates — Create Initiative Template](https://developer.scalepad.com/reference/apipublicv1initiativetemplatecreate)
+  - route changed: `POST /lifecycle-manager/v1/initiative-templates` → `POST /cs/v1/initiative-templates`
+- [DELETE /cs/v1/initiative-templates/{initiative_template_id} — Delete Initiative Template](https://developer.scalepad.com/reference/apipublicv1initiativetemplatedelete)
+  - route changed: `DELETE /lifecycle-manager/v1/initiative-templates/{initiative_template_id}` → `DELETE /cs/v1/initiative-templates/{initiative_template_id}`
+- [GET /cs/v1/initiative-templates/{initiative_template_id} — Get Initiative Template](https://developer.scalepad.com/reference/apipublicv1initiativetemplateget)
+  - route changed: `GET /lifecycle-manager/v1/initiative-templates/{initiative_template_id}` → `GET /cs/v1/initiative-templates/{initiative_template_id}`
+- [PUT /cs/v1/initiative-templates/{initiative_template_id} — Update Initiative Template](https://developer.scalepad.com/reference/apipublicv1initiativetemplateupdate)
+  - route changed: `PUT /lifecycle-manager/v1/initiative-templates/{initiative_template_id}` → `PUT /cs/v1/initiative-templates/{initiative_template_id}`
+- [POST /cs/v1/initiative-templates/{initiative_template_id}/duplicate — Duplicate Initiative Template](https://developer.scalepad.com/reference/apipublicv1initiativetemplateduplicate)
+  - route changed: `POST /lifecycle-manager/v1/initiative-templates/{initiative_template_id}/duplicate` → `POST /cs/v1/initiative-templates/{initiative_template_id}/duplicate`
+- [GET /cs/v1/initiatives — List Initiatives](https://developer.scalepad.com/reference/apipublicv1initiativelist)
+  - route changed: `GET /lifecycle-manager/v1/initiatives` → `GET /cs/v1/initiatives`
+- [POST /cs/v1/initiatives — Create Initiative](https://developer.scalepad.com/reference/apipublicv1initiativecreate)
+  - route changed: `POST /lifecycle-manager/v1/initiatives` → `POST /cs/v1/initiatives`
+- [POST /cs/v1/initiatives/statuses/custom — Create Custom Initiative Status](https://developer.scalepad.com/reference/apipublicv1initiativecustomstatuscreate)
+  - route changed: `POST /lifecycle-manager/v1/initiatives/statuses/custom` → `POST /cs/v1/initiatives/statuses/custom`
+- [DELETE /cs/v1/initiatives/statuses/custom/{custom_status_id} — Delete Custom Initiative Status](https://developer.scalepad.com/reference/apipublicv1initiativecustomstatusdelete)
+  - route changed: `DELETE /lifecycle-manager/v1/initiatives/statuses/custom/{custom_status_id}` → `DELETE /cs/v1/initiatives/statuses/custom/{custom_status_id}`
+- [GET /cs/v1/initiatives/statuses/labels — List Initiative Status Labels](https://developer.scalepad.com/reference/apipublicv1initiativestatuslabellist)
+  - route changed: `GET /lifecycle-manager/v1/initiatives/statuses/labels` → `GET /cs/v1/initiatives/statuses/labels`
+- [PUT /cs/v1/initiatives/statuses/{initiative_status_id}/label — Update Initiative Status Label](https://developer.scalepad.com/reference/apipublicv1initiativestatuslabelupdate)
+  - route changed: `PUT /lifecycle-manager/v1/initiatives/statuses/{initiative_status_id}/label` → `PUT /cs/v1/initiatives/statuses/{initiative_status_id}/label`
+- [DELETE /cs/v1/initiatives/{id} — Delete Initiative](https://developer.scalepad.com/reference/apipublicv1initiativedelete)
+  - route changed: `DELETE /lifecycle-manager/v1/initiatives/{id}` → `DELETE /cs/v1/initiatives/{id}`
+- [GET /cs/v1/initiatives/{id} — Get Initiative](https://developer.scalepad.com/reference/apipublicv1initiativeget)
+  - route changed: `GET /lifecycle-manager/v1/initiatives/{id}` → `GET /cs/v1/initiatives/{id}`
+- [PATCH /cs/v1/initiatives/{id} — Update Initiative](https://developer.scalepad.com/reference/apipublicv1initiativeupdate)
+  - route changed: `PATCH /lifecycle-manager/v1/initiatives/{id}` → `PATCH /cs/v1/initiatives/{id}`
+- [PUT /cs/v1/initiatives/{id}/budget — Update Initiative One-Time Investments](https://developer.scalepad.com/reference/apipublicv1initiativeupdatebudget)
+  - route changed: `PUT /lifecycle-manager/v1/initiatives/{id}/budget` → `PUT /cs/v1/initiatives/{id}/budget`
+- [PUT /cs/v1/initiatives/{id}/priority — Update Initiative Priority](https://developer.scalepad.com/reference/apipublicv1initiativeupdatepriority)
+  - route changed: `PUT /lifecycle-manager/v1/initiatives/{id}/priority` → `PUT /cs/v1/initiatives/{id}/priority`
+- [PUT /cs/v1/initiatives/{id}/recurring — Update Initiative Recurring Investments](https://developer.scalepad.com/reference/apipublicv1initiativeupdaterecurring)
+  - route changed: `PUT /lifecycle-manager/v1/initiatives/{id}/recurring` → `PUT /cs/v1/initiatives/{id}/recurring`
+- [PUT /cs/v1/initiatives/{id}/schedule — Update Initiative Schedule](https://developer.scalepad.com/reference/apipublicv1initiativeupdateschedule)
+  - route changed: `PUT /lifecycle-manager/v1/initiatives/{id}/schedule` → `PUT /cs/v1/initiatives/{id}/schedule`
+- [PUT /cs/v1/initiatives/{id}/status — Update Initiative Status](https://developer.scalepad.com/reference/apipublicv1initiativeupdatestatus)
+  - route changed: `PUT /lifecycle-manager/v1/initiatives/{id}/status` → `PUT /cs/v1/initiatives/{id}/status`
+- [POST /cs/v1/initiatives/{initiative_id}/archive — Archive Initiative](https://developer.scalepad.com/reference/apipublicv1initiativearchive)
+  - route changed: `POST /lifecycle-manager/v1/initiatives/{initiative_id}/archive` → `POST /cs/v1/initiatives/{initiative_id}/archive`
+- [GET /cs/v1/initiatives/{initiative_id}/assessment-questions — List Initiative Assessment Questions](https://developer.scalepad.com/reference/apipublicv1initiativeassessmentquestionslist)
+  - route changed: `GET /lifecycle-manager/v1/initiatives/{initiative_id}/assessment-questions` → `GET /cs/v1/initiatives/{initiative_id}/assessment-questions`
+- [GET /cs/v1/initiatives/{initiative_id}/assets — List Initiative Assets](https://developer.scalepad.com/reference/apipublicv1initiativeassetslist)
+  - route changed: `GET /lifecycle-manager/v1/initiatives/{initiative_id}/assets` → `GET /cs/v1/initiatives/{initiative_id}/assets`
+- [PUT /cs/v1/initiatives/{initiative_id}/assets — Attach Assets to an Initiative](https://developer.scalepad.com/reference/apipublicv1initiativeassetattach)
+  - route changed: `PUT /lifecycle-manager/v1/initiatives/{initiative_id}/assets` → `PUT /cs/v1/initiatives/{initiative_id}/assets`
+- [POST /cs/v1/initiatives/{initiative_id}/assets/detach — Detach Assets from an Initiative](https://developer.scalepad.com/reference/apipublicv1initiativeassetdetach)
+  - route changed: `POST /lifecycle-manager/v1/initiatives/{initiative_id}/assets/detach` → `POST /cs/v1/initiatives/{initiative_id}/assets/detach`
+- [PUT /cs/v1/initiatives/{initiative_id}/assigned-user — Update Initiative Assigned User](https://developer.scalepad.com/reference/apipublicv1initiativeupdateassigneduser)
+  - route changed: `PUT /lifecycle-manager/v1/initiatives/{initiative_id}/assigned-user` → `PUT /cs/v1/initiatives/{initiative_id}/assigned-user`
+- [GET /cs/v1/initiatives/{initiative_id}/attachments — List Initiative Attachments](https://developer.scalepad.com/reference/apipublicv1initiativeattachmentslist)
+  - route changed: `GET /lifecycle-manager/v1/initiatives/{initiative_id}/attachments` → `GET /cs/v1/initiatives/{initiative_id}/attachments`
+- [POST /cs/v1/initiatives/{initiative_id}/attachments — Upload an Initiative Attachment](https://developer.scalepad.com/reference/apipublicv1initiativeattachmentpost)
+  - route changed: `POST /lifecycle-manager/v1/initiatives/{initiative_id}/attachments` → `POST /cs/v1/initiatives/{initiative_id}/attachments`
+- [DELETE /cs/v1/initiatives/{initiative_id}/attachments/{attachment_id} — Delete an Initiative Attachment](https://developer.scalepad.com/reference/apipublicv1initiativeattachmentdelete)
+  - route changed: `DELETE /lifecycle-manager/v1/initiatives/{initiative_id}/attachments/{attachment_id}` → `DELETE /cs/v1/initiatives/{initiative_id}/attachments/{attachment_id}`
+- [GET /cs/v1/initiatives/{initiative_id}/attachments/{attachment_id}/content — Retrieve initiative attachment content.](https://developer.scalepad.com/reference/apipublicv1initiativeattachmentcontent)
+  - route changed: `GET /lifecycle-manager/v1/initiatives/{initiative_id}/attachments/{attachment_id}/content` → `GET /cs/v1/initiatives/{initiative_id}/attachments/{attachment_id}/content`
+- [GET /cs/v1/initiatives/{initiative_id}/external-urls — List Initiative Links](https://developer.scalepad.com/reference/apipublicv1initiativeexternalurlslist)
+  - route changed: `GET /lifecycle-manager/v1/initiatives/{initiative_id}/external-urls` → `GET /cs/v1/initiatives/{initiative_id}/external-urls`
+- [POST /cs/v1/initiatives/{initiative_id}/external-urls — Attach a Link to an Initiative](https://developer.scalepad.com/reference/apipublicv1initiativeexternalurlpost)
+  - route changed: `POST /lifecycle-manager/v1/initiatives/{initiative_id}/external-urls` → `POST /cs/v1/initiatives/{initiative_id}/external-urls`
+- [DELETE /cs/v1/initiatives/{initiative_id}/external-urls/{external_url_id} — Remove a Link from an Initiative](https://developer.scalepad.com/reference/apipublicv1initiativeexternalurldelete)
+  - route changed: `DELETE /lifecycle-manager/v1/initiatives/{initiative_id}/external-urls/{external_url_id}` → `DELETE /cs/v1/initiatives/{initiative_id}/external-urls/{external_url_id}`
+- [GET /cs/v1/initiatives/{initiative_id}/goals — List Initiative Goals](https://developer.scalepad.com/reference/apipublicv1initiativegoalslist)
+  - route changed: `GET /lifecycle-manager/v1/initiatives/{initiative_id}/goals` → `GET /cs/v1/initiatives/{initiative_id}/goals`
+- [DELETE /cs/v1/initiatives/{initiative_id}/goals/{goal_id} — Detach Goal from Initiative](https://developer.scalepad.com/reference/apipublicv1initiativegoaldetach)
+  - route changed: `DELETE /lifecycle-manager/v1/initiatives/{initiative_id}/goals/{goal_id}` → `DELETE /cs/v1/initiatives/{initiative_id}/goals/{goal_id}`
+- [POST /cs/v1/initiatives/{initiative_id}/goals/{goal_id} — Attach Goal to Initiative](https://developer.scalepad.com/reference/apipublicv1initiativegoalattach)
+  - route changed: `POST /lifecycle-manager/v1/initiatives/{initiative_id}/goals/{goal_id}` → `POST /cs/v1/initiatives/{initiative_id}/goals/{goal_id}`
+- [GET /cs/v1/initiatives/{initiative_id}/items — Get Initiative Items](https://developer.scalepad.com/reference/apipublicv1initiativeitemsget)
+  - route changed: `GET /lifecycle-manager/v1/initiatives/{initiative_id}/items` → `GET /cs/v1/initiatives/{initiative_id}/items`
+- [PUT /cs/v1/initiatives/{initiative_id}/items — Update Initiative Items](https://developer.scalepad.com/reference/apipublicv1initiativeitemsupdate)
+  - route changed: `PUT /lifecycle-manager/v1/initiatives/{initiative_id}/items` → `PUT /cs/v1/initiatives/{initiative_id}/items`
+- [GET /cs/v1/initiatives/{initiative_id}/meetings — List Initiative Meetings](https://developer.scalepad.com/reference/apipublicv1initiativemeetingslist)
+  - route changed: `GET /lifecycle-manager/v1/initiatives/{initiative_id}/meetings` → `GET /cs/v1/initiatives/{initiative_id}/meetings`
+- [DELETE /cs/v1/initiatives/{initiative_id}/meetings/{meeting_id} — Detach Meeting from Initiative](https://developer.scalepad.com/reference/apipublicv1initiativemeetingdetach)
+  - route changed: `DELETE /lifecycle-manager/v1/initiatives/{initiative_id}/meetings/{meeting_id}` → `DELETE /cs/v1/initiatives/{initiative_id}/meetings/{meeting_id}`
+- [PUT /cs/v1/initiatives/{initiative_id}/meetings/{meeting_id} — Attach Meeting to Initiative](https://developer.scalepad.com/reference/apipublicv1initiativemeetingattach)
+  - route changed: `PUT /lifecycle-manager/v1/initiatives/{initiative_id}/meetings/{meeting_id}` → `PUT /cs/v1/initiatives/{initiative_id}/meetings/{meeting_id}`
+- [POST /cs/v1/initiatives/{initiative_id}/opportunities/{opportunity_id} — Attach Opportunity to Initiative](https://developer.scalepad.com/reference/apipublicv1initiativeopportunityattach)
+  - route changed: `POST /lifecycle-manager/v1/initiatives/{initiative_id}/opportunities/{opportunity_id}` → `POST /cs/v1/initiatives/{initiative_id}/opportunities/{opportunity_id}`
+- [DELETE /cs/v1/initiatives/{initiative_id}/opportunity — Delete Initiative Opportunity](https://developer.scalepad.com/reference/apipublicv1initiativeopportunitydelete)
+  - route changed: `DELETE /lifecycle-manager/v1/initiatives/{initiative_id}/opportunity` → `DELETE /cs/v1/initiatives/{initiative_id}/opportunity`
+- [GET /cs/v1/initiatives/{initiative_id}/opportunity — Get Initiative Opportunity](https://developer.scalepad.com/reference/apipublicv1initiativeopportunityget)
+  - route changed: `GET /lifecycle-manager/v1/initiatives/{initiative_id}/opportunity` → `GET /cs/v1/initiatives/{initiative_id}/opportunity`
+- [POST /cs/v1/initiatives/{initiative_id}/opportunity — Create Initiative Opportunity](https://developer.scalepad.com/reference/apipublicv1initiativeopportunitycreate)
+  - route changed: `POST /lifecycle-manager/v1/initiatives/{initiative_id}/opportunity` → `POST /cs/v1/initiatives/{initiative_id}/opportunity`
+- [GET /cs/v1/initiatives/{initiative_id}/pdf — Download Initiative PDF](https://developer.scalepad.com/reference/apipublicv1initiativepdf)
+  - route changed: `GET /lifecycle-manager/v1/initiatives/{initiative_id}/pdf` → `GET /cs/v1/initiatives/{initiative_id}/pdf`
+- [GET /cs/v1/initiatives/{initiative_id}/quotes — List Initiative Quotes](https://developer.scalepad.com/reference/apipublicv1initiativequoteslist)
+  - route changed: `GET /lifecycle-manager/v1/initiatives/{initiative_id}/quotes` → `GET /cs/v1/initiatives/{initiative_id}/quotes`
+- [POST /cs/v1/initiatives/{initiative_id}/restore — Restore Initiative](https://developer.scalepad.com/reference/apipublicv1initiativerestore)
+  - route changed: `POST /lifecycle-manager/v1/initiatives/{initiative_id}/restore` → `POST /cs/v1/initiatives/{initiative_id}/restore`
+- [PUT /cs/v1/initiatives/{initiative_id}/tags/assign — Assign Tags to Initiative](https://developer.scalepad.com/reference/apipublicv1initiativetagassign)
+  - route changed: `PUT /lifecycle-manager/v1/initiatives/{initiative_id}/tags/assign` → `PUT /cs/v1/initiatives/{initiative_id}/tags/assign`
+- [PUT /cs/v1/initiatives/{initiative_id}/tags/unassign — Unassign Tags from Initiative](https://developer.scalepad.com/reference/apipublicv1initiativetagunassign)
+  - route changed: `PUT /lifecycle-manager/v1/initiatives/{initiative_id}/tags/unassign` → `PUT /cs/v1/initiatives/{initiative_id}/tags/unassign`
+- [POST /cs/v1/initiatives/{initiative_id}/template/{initiative_template_id}/apply — Apply Initiative Template](https://developer.scalepad.com/reference/apipublicv1initiativetemplateapply)
+  - route changed: `POST /lifecycle-manager/v1/initiatives/{initiative_id}/template/{initiative_template_id}/apply` → `POST /cs/v1/initiatives/{initiative_id}/template/{initiative_template_id}/apply`
+- [DELETE /cs/v1/initiatives/{initiative_id}/ticket — Detach the PSA ticket linked to an initiative](https://developer.scalepad.com/reference/apipublicv1initiativeticketlegacydelete)
+  - route changed: `DELETE /lifecycle-manager/v1/initiatives/{initiative_id}/ticket` → `DELETE /cs/v1/initiatives/{initiative_id}/ticket`
+- [GET /cs/v1/initiatives/{initiative_id}/ticket — Get the linked PSA ticket state for an initiative](https://developer.scalepad.com/reference/apipublicv1initiativeticketget)
+  - route changed: `GET /lifecycle-manager/v1/initiatives/{initiative_id}/ticket` → `GET /cs/v1/initiatives/{initiative_id}/ticket`
+- [POST /cs/v1/initiatives/{initiative_id}/ticket — Create and Link a Ticket to an Initiative](https://developer.scalepad.com/reference/apipublicv1initiativeticketlegacycreate)
+  - route changed: `POST /lifecycle-manager/v1/initiatives/{initiative_id}/ticket` → `POST /cs/v1/initiatives/{initiative_id}/ticket`
+- [GET /cs/v1/initiatives/{initiative_id}/tickets — List the PSA tickets linked to an initiative](https://developer.scalepad.com/reference/apipublicv1initiativeticketlist)
+  - route changed: `GET /lifecycle-manager/v1/initiatives/{initiative_id}/tickets` → `GET /cs/v1/initiatives/{initiative_id}/tickets`
+- [POST /cs/v1/initiatives/{initiative_id}/tickets — Create and Link a Ticket to an Initiative](https://developer.scalepad.com/reference/apipublicv1initiativeticketcreate)
+  - route changed: `POST /lifecycle-manager/v1/initiatives/{initiative_id}/tickets` → `POST /cs/v1/initiatives/{initiative_id}/tickets`
+- [PUT /cs/v1/initiatives/{initiative_id}/tickets — Link an existing PSA ticket to an initiative](https://developer.scalepad.com/reference/apipublicv1initiativeticketattach)
+  - route changed: `PUT /lifecycle-manager/v1/initiatives/{initiative_id}/tickets` → `PUT /cs/v1/initiatives/{initiative_id}/tickets`
+- [DELETE /cs/v1/initiatives/{initiative_id}/tickets/{ticket_link_id} — Detach one PSA ticket linked to an initiative](https://developer.scalepad.com/reference/apipublicv1initiativeticketdelete)
+  - route changed: `DELETE /lifecycle-manager/v1/initiatives/{initiative_id}/tickets/{ticket_link_id}` → `DELETE /cs/v1/initiatives/{initiative_id}/tickets/{ticket_link_id}`
+- [GET /cs/v1/insights — List Insights](https://developer.scalepad.com/reference/apipublicv1insights)
+  - route changed: `GET /lifecycle-manager/v1/insights` → `GET /cs/v1/insights`
+- [POST /cs/v1/insights — Create Insight](https://developer.scalepad.com/reference/apipublicv1insightcreate)
+  - route changed: `POST /lifecycle-manager/v1/insights` → `POST /cs/v1/insights`
+- [GET /cs/v1/insights/definitions — List Insight Definitions](https://developer.scalepad.com/reference/apipublicv1insightdefinitionslist)
+  - route changed: `GET /lifecycle-manager/v1/insights/definitions` → `GET /cs/v1/insights/definitions`
+- [GET /cs/v1/insights/metadata — Get Insight Create Metadata](https://developer.scalepad.com/reference/apipublicv1insightcreatemetadataget)
+  - route changed: `GET /lifecycle-manager/v1/insights/metadata` → `GET /cs/v1/insights/metadata`
+- [DELETE /cs/v1/insights/{insight_id} — Delete Insight](https://developer.scalepad.com/reference/apipublicv1insightdelete)
+  - route changed: `DELETE /lifecycle-manager/v1/insights/{insight_id}` → `DELETE /cs/v1/insights/{insight_id}`
+- [GET /cs/v1/insights/{insight_id}/assets — List Insight affected assets](https://developer.scalepad.com/reference/apipublicv1insightassetslist)
+  - route changed: `GET /lifecycle-manager/v1/insights/{insight_id}/assets` → `GET /cs/v1/insights/{insight_id}/assets`
+- [GET /cs/v1/insights/{insight_id}/assets/export/csv — Download insight affected assets CSV](https://developer.scalepad.com/reference/apipublicv1insightassetsexportcsv)
+  - route changed: `GET /lifecycle-manager/v1/insights/{insight_id}/assets/export/csv` → `GET /cs/v1/insights/{insight_id}/assets/export/csv`
+- [GET /cs/v1/insights/{insight_id}/assets/forecast/export/csv — Download insight forecasted assets CSV](https://developer.scalepad.com/reference/apipublicv1insightforecastedassetsexportcsv)
+  - route changed: `GET /lifecycle-manager/v1/insights/{insight_id}/assets/forecast/export/csv` → `GET /cs/v1/insights/{insight_id}/assets/forecast/export/csv`
+- [PUT /cs/v1/licenses/assign — Assign Licenses](https://developer.scalepad.com/reference/apipublicv1licensesassign)
+  - route changed: `PUT /lifecycle-manager/v1/licenses/assign` → `PUT /cs/v1/licenses/assign`
+- [GET /cs/v1/licenses/summary — Get License Summary](https://developer.scalepad.com/reference/apipublicv1licensessummary)
+  - route changed: `GET /lifecycle-manager/v1/licenses/summary` → `GET /cs/v1/licenses/summary`
+- [PUT /cs/v1/licenses/unassign — Unassign Licenses](https://developer.scalepad.com/reference/apipublicv1licensesunassign)
+  - route changed: `PUT /lifecycle-manager/v1/licenses/unassign` → `PUT /cs/v1/licenses/unassign`
+- [GET /cs/v1/meeting-policies — List Meeting Policies](https://developer.scalepad.com/reference/apipublicv1meetingpolicylist)
+  - route changed: `GET /lifecycle-manager/v1/meeting-policies` → `GET /cs/v1/meeting-policies`
+- [POST /cs/v1/meeting-policies — Create Meeting Policy](https://developer.scalepad.com/reference/apipublicv1meetingpolicycreate)
+  - route changed: `POST /lifecycle-manager/v1/meeting-policies` → `POST /cs/v1/meeting-policies`
+- [GET /cs/v1/meeting-policies/compliance/summary — Get Meeting Policy Compliance Summary](https://developer.scalepad.com/reference/apipublicv1meetingpolicycompliancesummaryget)
+  - route changed: `GET /lifecycle-manager/v1/meeting-policies/compliance/summary` → `GET /cs/v1/meeting-policies/compliance/summary`
+- [DELETE /cs/v1/meeting-policies/{meeting_policy_id} — Delete Meeting Policy](https://developer.scalepad.com/reference/apipublicv1meetingpolicydelete)
+  - route changed: `DELETE /lifecycle-manager/v1/meeting-policies/{meeting_policy_id}` → `DELETE /cs/v1/meeting-policies/{meeting_policy_id}`
+- [GET /cs/v1/meeting-policies/{meeting_policy_id} — Get Meeting Policy](https://developer.scalepad.com/reference/apipublicv1meetingpolicyget)
+  - route changed: `GET /lifecycle-manager/v1/meeting-policies/{meeting_policy_id}` → `GET /cs/v1/meeting-policies/{meeting_policy_id}`
+- [PUT /cs/v1/meeting-policies/{meeting_policy_id} — Update Meeting Policy](https://developer.scalepad.com/reference/apipublicv1meetingpolicyupdate)
+  - route changed: `PUT /lifecycle-manager/v1/meeting-policies/{meeting_policy_id}` → `PUT /cs/v1/meeting-policies/{meeting_policy_id}`
+- [GET /cs/v1/meeting-templates — List Meeting Templates](https://developer.scalepad.com/reference/apipublicv1meetingtemplatelist)
+  - route changed: `GET /lifecycle-manager/v1/meeting-templates` → `GET /cs/v1/meeting-templates`
+- [POST /cs/v1/meeting-templates — Create Meeting Template](https://developer.scalepad.com/reference/apipublicv1meetingtemplatecreate)
+  - route changed: `POST /lifecycle-manager/v1/meeting-templates` → `POST /cs/v1/meeting-templates`
+- [DELETE /cs/v1/meeting-templates/{meeting_template_id} — Delete Meeting Template](https://developer.scalepad.com/reference/apipublicv1meetingtemplatedelete)
+  - route changed: `DELETE /lifecycle-manager/v1/meeting-templates/{meeting_template_id}` → `DELETE /cs/v1/meeting-templates/{meeting_template_id}`
+- [PUT /cs/v1/meeting-templates/{meeting_template_id} — Update Meeting Template](https://developer.scalepad.com/reference/apipublicv1meetingtemplateupdate)
+  - route changed: `PUT /lifecycle-manager/v1/meeting-templates/{meeting_template_id}` → `PUT /cs/v1/meeting-templates/{meeting_template_id}`
+- [POST /cs/v1/meeting-templates/{meeting_template_id}/attendees/users/assign — Assign Meeting Template Attendee User](https://developer.scalepad.com/reference/apipublicv1meetingtemplateattendeeuserassign)
+  - route changed: `POST /lifecycle-manager/v1/meeting-templates/{meeting_template_id}/attendees/users/assign` → `POST /cs/v1/meeting-templates/{meeting_template_id}/attendees/users/assign`
+- [POST /cs/v1/meeting-templates/{meeting_template_id}/attendees/users/unassign — Unassign Meeting Template Attendee User](https://developer.scalepad.com/reference/apipublicv1meetingtemplateattendeeuserunassign)
+  - route changed: `POST /lifecycle-manager/v1/meeting-templates/{meeting_template_id}/attendees/users/unassign` → `POST /cs/v1/meeting-templates/{meeting_template_id}/attendees/users/unassign`
+- [GET /cs/v1/meeting-types — List Meeting Types](https://developer.scalepad.com/reference/apipublicv1meetingtypelist)
+  - route changed: `GET /lifecycle-manager/v1/meeting-types` → `GET /cs/v1/meeting-types`
+- [POST /cs/v1/meeting-types — Create Meeting Type](https://developer.scalepad.com/reference/apipublicv1meetingtypecreate)
+  - route changed: `POST /lifecycle-manager/v1/meeting-types` → `POST /cs/v1/meeting-types`
+- [DELETE /cs/v1/meeting-types/{meeting_type_id} — Delete Meeting Type](https://developer.scalepad.com/reference/apipublicv1meetingtypedelete)
+  - route changed: `DELETE /lifecycle-manager/v1/meeting-types/{meeting_type_id}` → `DELETE /cs/v1/meeting-types/{meeting_type_id}`
+- [PUT /cs/v1/meeting-types/{meeting_type_id} — Update Meeting Type](https://developer.scalepad.com/reference/apipublicv1meetingtypeupdate)
+  - route changed: `PUT /lifecycle-manager/v1/meeting-types/{meeting_type_id}` → `PUT /cs/v1/meeting-types/{meeting_type_id}`
+- [GET /cs/v1/meetings — List Meetings](https://developer.scalepad.com/reference/apipublicv1meetinglist)
+  - route changed: `GET /lifecycle-manager/v1/meetings` → `GET /cs/v1/meetings`
+- [POST /cs/v1/meetings — Create Meeting v1](https://developer.scalepad.com/reference/apipublicv1meetingcreate)
+  - route changed: `POST /lifecycle-manager/v1/meetings` → `POST /cs/v1/meetings`
+- [GET /cs/v1/meetings/sync — Get Meeting Sync](https://developer.scalepad.com/reference/apipublicv1meetingsyncget)
+  - route changed: `GET /lifecycle-manager/v1/meetings/sync` → `GET /cs/v1/meetings/sync`
+- [POST /cs/v1/meetings/sync — Create Meeting Sync Command](https://developer.scalepad.com/reference/apipublicv1meetingsynccommandpost)
+  - route changed: `POST /lifecycle-manager/v1/meetings/sync` → `POST /cs/v1/meetings/sync`
+- [GET /cs/v1/meetings/sync/attention — Get Meeting Sync Attention](https://developer.scalepad.com/reference/apipublicv1meetingsyncattentionget)
+  - route changed: `GET /lifecycle-manager/v1/meetings/sync/attention` → `GET /cs/v1/meetings/sync/attention`
+- [DELETE /cs/v1/meetings/sync/connection — Delete Meeting Sync Connection](https://developer.scalepad.com/reference/apipublicv1meetingsyncconnectiondelete)
+  - route changed: `DELETE /lifecycle-manager/v1/meetings/sync/connection` → `DELETE /cs/v1/meetings/sync/connection`
+- [POST /cs/v1/meetings/sync/connection — Create Meeting Sync Connection](https://developer.scalepad.com/reference/apipublicv1meetingsyncconnectionpost)
+  - route changed: `POST /lifecycle-manager/v1/meetings/sync/connection` → `POST /cs/v1/meetings/sync/connection`
+- [GET /cs/v1/meetings/sync/events — Get Meeting Sync Events](https://developer.scalepad.com/reference/apipublicv1meetingsynceventsget)
+  - route changed: `GET /lifecycle-manager/v1/meetings/sync/events` → `GET /cs/v1/meetings/sync/events`
+- [PUT /cs/v1/meetings/sync/settings — Update Meeting Sync Settings](https://developer.scalepad.com/reference/apipublicv1meetingsyncsettingsput)
+  - route changed: `PUT /lifecycle-manager/v1/meetings/sync/settings` → `PUT /cs/v1/meetings/sync/settings`
+- [DELETE /cs/v1/meetings/{id} — Delete Meeting](https://developer.scalepad.com/reference/apipublicv1meetingdelete)
+  - route changed: `DELETE /lifecycle-manager/v1/meetings/{id}` → `DELETE /cs/v1/meetings/{id}`
+- [GET /cs/v1/meetings/{id} — Get Meeting](https://developer.scalepad.com/reference/apipublicv1meetingget)
+  - route changed: `GET /lifecycle-manager/v1/meetings/{id}` → `GET /cs/v1/meetings/{id}`
+- [PUT /cs/v1/meetings/{id} — Update Meeting v1](https://developer.scalepad.com/reference/apipublicv1meetingupdate)
+  - route changed: `PUT /lifecycle-manager/v1/meetings/{id}` → `PUT /cs/v1/meetings/{id}`
+- [POST /cs/v1/meetings/{id}/attendees/contacts — Add Meeting Contact Attendees](https://developer.scalepad.com/reference/apipublicv1meetingattendeecontactadd)
+  - route changed: `POST /lifecycle-manager/v1/meetings/{id}/attendees/contacts` → `POST /cs/v1/meetings/{id}/attendees/contacts`
+- [POST /cs/v1/meetings/{id}/attendees/contacts/delete — Remove Meeting Contact Attendees](https://developer.scalepad.com/reference/apipublicv1meetingattendeecontactdelete)
+  - route changed: `POST /lifecycle-manager/v1/meetings/{id}/attendees/contacts/delete` → `POST /cs/v1/meetings/{id}/attendees/contacts/delete`
+- [POST /cs/v1/meetings/{id}/attendees/users — Add Meeting User Attendees](https://developer.scalepad.com/reference/apipublicv1meetingattendeeuseradd)
+  - route changed: `POST /lifecycle-manager/v1/meetings/{id}/attendees/users` → `POST /cs/v1/meetings/{id}/attendees/users`
+- [POST /cs/v1/meetings/{id}/attendees/users/delete — Remove Meeting User Attendees](https://developer.scalepad.com/reference/apipublicv1meetingattendeeuserdelete)
+  - route changed: `POST /lifecycle-manager/v1/meetings/{id}/attendees/users/delete` → `POST /cs/v1/meetings/{id}/attendees/users/delete`
+- [PUT /cs/v1/meetings/{id}/completion-status — Update Meeting Completion Status](https://developer.scalepad.com/reference/apipublicv1meetingcompletestatusupdate)
+  - route changed: `PUT /lifecycle-manager/v1/meetings/{id}/completion-status` → `PUT /cs/v1/meetings/{id}/completion-status`
+- [GET /cs/v1/meetings/{meeting_id}/attachments — List Meeting Attachments](https://developer.scalepad.com/reference/apipublicv1meetingattachmentslist)
+  - route changed: `GET /lifecycle-manager/v1/meetings/{meeting_id}/attachments` → `GET /cs/v1/meetings/{meeting_id}/attachments`
+- [POST /cs/v1/meetings/{meeting_id}/attachments — Create Meeting Attachment](https://developer.scalepad.com/reference/apipublicv1meetingattachmentpost)
+  - route changed: `POST /lifecycle-manager/v1/meetings/{meeting_id}/attachments` → `POST /cs/v1/meetings/{meeting_id}/attachments`
+- [DELETE /cs/v1/meetings/{meeting_id}/attachments/{attachment_id} — Delete Meeting Attachment](https://developer.scalepad.com/reference/apipublicv1meetingattachmentdelete)
+  - route changed: `DELETE /lifecycle-manager/v1/meetings/{meeting_id}/attachments/{attachment_id}` → `DELETE /cs/v1/meetings/{meeting_id}/attachments/{attachment_id}`
+- [GET /cs/v1/meetings/{meeting_id}/attachments/{attachment_id}/content — Retrieve meeting attachment content.](https://developer.scalepad.com/reference/apipublicv1meetingattachmentcontent)
+  - route changed: `GET /lifecycle-manager/v1/meetings/{meeting_id}/attachments/{attachment_id}/content` → `GET /cs/v1/meetings/{meeting_id}/attachments/{attachment_id}/content`
+- [GET /cs/v1/meetings/{meeting_id}/attendance — Get Meeting Attendance](https://developer.scalepad.com/reference/apipublicv1meetingattendanceget)
+  - route changed: `GET /lifecycle-manager/v1/meetings/{meeting_id}/attendance` → `GET /cs/v1/meetings/{meeting_id}/attendance`
+- [GET /cs/v1/meetings/{meeting_id}/deliverables — List Meeting Deliverables](https://developer.scalepad.com/reference/apipublicv1meetingdeliverableslist)
+  - route changed: `GET /lifecycle-manager/v1/meetings/{meeting_id}/deliverables` → `GET /cs/v1/meetings/{meeting_id}/deliverables`
+- [PUT /cs/v1/meetings/{meeting_id}/deliverables/attach — Attach Deliverable to Meeting](https://developer.scalepad.com/reference/apipublicv1meetingdeliverableattach)
+  - route changed: `PUT /lifecycle-manager/v1/meetings/{meeting_id}/deliverables/attach` → `PUT /cs/v1/meetings/{meeting_id}/deliverables/attach`
+- [PUT /cs/v1/meetings/{meeting_id}/deliverables/detach — Detach Deliverable from Meeting](https://developer.scalepad.com/reference/apipublicv1meetingdeliverabledetach)
+  - route changed: `PUT /lifecycle-manager/v1/meetings/{meeting_id}/deliverables/detach` → `PUT /cs/v1/meetings/{meeting_id}/deliverables/detach`
+- [GET /cs/v1/meetings/{meeting_id}/goals — List Meeting Goals](https://developer.scalepad.com/reference/apipublicv1meetinggoalslist)
+  - route changed: `GET /lifecycle-manager/v1/meetings/{meeting_id}/goals` → `GET /cs/v1/meetings/{meeting_id}/goals`
+- [DELETE /cs/v1/meetings/{meeting_id}/goals/{goal_id} — Detach Goal from Meeting](https://developer.scalepad.com/reference/apipublicv1meetinggoaldetach)
+  - route changed: `DELETE /lifecycle-manager/v1/meetings/{meeting_id}/goals/{goal_id}` → `DELETE /cs/v1/meetings/{meeting_id}/goals/{goal_id}`
+- [POST /cs/v1/meetings/{meeting_id}/goals/{goal_id} — Attach Goal to Meeting](https://developer.scalepad.com/reference/apipublicv1meetinggoalattach)
+  - route changed: `POST /lifecycle-manager/v1/meetings/{meeting_id}/goals/{goal_id}` → `POST /cs/v1/meetings/{meeting_id}/goals/{goal_id}`
+- [GET /cs/v1/meetings/{meeting_id}/initiatives — List Meeting Initiatives](https://developer.scalepad.com/reference/apipublicv1meetinginitiativeslist)
+  - route changed: `GET /lifecycle-manager/v1/meetings/{meeting_id}/initiatives` → `GET /cs/v1/meetings/{meeting_id}/initiatives`
+- [DELETE /cs/v1/meetings/{meeting_id}/initiatives/{initiative_id} — Detach Initiative from Meeting](https://developer.scalepad.com/reference/apipublicv1meetinginitiativedetach)
+  - route changed: `DELETE /lifecycle-manager/v1/meetings/{meeting_id}/initiatives/{initiative_id}` → `DELETE /cs/v1/meetings/{meeting_id}/initiatives/{initiative_id}`
+- [POST /cs/v1/meetings/{meeting_id}/initiatives/{initiative_id} — Attach Initiative to Meeting](https://developer.scalepad.com/reference/apipublicv1meetinginitiativeattach)
+  - route changed: `POST /lifecycle-manager/v1/meetings/{meeting_id}/initiatives/{initiative_id}` → `POST /cs/v1/meetings/{meeting_id}/initiatives/{initiative_id}`
+- [GET /cs/v1/meetings/{meeting_id}/notes — List Meeting Notes](https://developer.scalepad.com/reference/apipublicv1meetingnoteslist)
+  - route changed: `GET /lifecycle-manager/v1/meetings/{meeting_id}/notes` → `GET /cs/v1/meetings/{meeting_id}/notes`
+- [DELETE /cs/v1/meetings/{meeting_id}/notes/{note_id} — Detach Note from Meeting](https://developer.scalepad.com/reference/apipublicv1meetingnotedetach)
+  - route changed: `DELETE /lifecycle-manager/v1/meetings/{meeting_id}/notes/{note_id}` → `DELETE /cs/v1/meetings/{meeting_id}/notes/{note_id}`
+- [POST /cs/v1/meetings/{meeting_id}/notes/{note_id} — Attach Note to Meeting](https://developer.scalepad.com/reference/apipublicv1meetingnoteattach)
+  - route changed: `POST /lifecycle-manager/v1/meetings/{meeting_id}/notes/{note_id}` → `POST /cs/v1/meetings/{meeting_id}/notes/{note_id}`
+- [DELETE /cs/v1/meetings/{meeting_id}/series — Delete Meeting Series](https://developer.scalepad.com/reference/apipublicv1meetingseriesdelete)
+  - route changed: `DELETE /lifecycle-manager/v1/meetings/{meeting_id}/series` → `DELETE /cs/v1/meetings/{meeting_id}/series`
+- [GET /cs/v1/meetings/{meeting_id}/series/goals — List Meeting Series Goals](https://developer.scalepad.com/reference/apipublicv1meetingseriesgoalslist)
+  - route changed: `GET /lifecycle-manager/v1/meetings/{meeting_id}/series/goals` → `GET /cs/v1/meetings/{meeting_id}/series/goals`
+- [DELETE /cs/v1/meetings/{meeting_id}/series/goals/{goal_id} — Detach Goal from Meeting Series](https://developer.scalepad.com/reference/apipublicv1meetingseriesgoaldetach)
+  - route changed: `DELETE /lifecycle-manager/v1/meetings/{meeting_id}/series/goals/{goal_id}` → `DELETE /cs/v1/meetings/{meeting_id}/series/goals/{goal_id}`
+- [POST /cs/v1/meetings/{meeting_id}/series/goals/{goal_id} — Attach Goal to Meeting Series](https://developer.scalepad.com/reference/apipublicv1meetingseriesgoalattach)
+  - route changed: `POST /lifecycle-manager/v1/meetings/{meeting_id}/series/goals/{goal_id}` → `POST /cs/v1/meetings/{meeting_id}/series/goals/{goal_id}`
+- [DELETE /cs/v1/meetings/{meeting_id}/ticket — Detach the PSA ticket linked to a Meeting](https://developer.scalepad.com/reference/apipublicv1meetingticketdelete)
+  - route changed: `DELETE /lifecycle-manager/v1/meetings/{meeting_id}/ticket` → `DELETE /cs/v1/meetings/{meeting_id}/ticket`
+- [GET /cs/v1/meetings/{meeting_id}/ticket — Get the linked PSA ticket state for a Meeting](https://developer.scalepad.com/reference/apipublicv1meetingticketget)
+  - route changed: `GET /lifecycle-manager/v1/meetings/{meeting_id}/ticket` → `GET /cs/v1/meetings/{meeting_id}/ticket`
+- [POST /cs/v1/meetings/{meeting_id}/ticket — Create and Link a Ticket to a Meeting](https://developer.scalepad.com/reference/apipublicv1meetingticketcreate)
+  - route changed: `POST /lifecycle-manager/v1/meetings/{meeting_id}/ticket` → `POST /cs/v1/meetings/{meeting_id}/ticket`
+- [PUT /cs/v1/meetings/{meeting_id}/ticket — Link an existing PSA ticket to a Meeting](https://developer.scalepad.com/reference/apipublicv1meetingticketattach)
+  - route changed: `PUT /lifecycle-manager/v1/meetings/{meeting_id}/ticket` → `PUT /cs/v1/meetings/{meeting_id}/ticket`
+- [GET /cs/v1/meetings/{meeting_id}/transcript — Get Meeting Transcripts](https://developer.scalepad.com/reference/apipublicv1meetingtranscriptget)
+  - route changed: `GET /lifecycle-manager/v1/meetings/{meeting_id}/transcript` → `GET /cs/v1/meetings/{meeting_id}/transcript`
+- [GET /cs/v1/notes — List Notes](https://developer.scalepad.com/reference/apipublicv1noteslist)
+  - route changed: `GET /lifecycle-manager/v1/notes` → `GET /cs/v1/notes`
+- [POST /cs/v1/notes — Create Note](https://developer.scalepad.com/reference/apipublicv1notescreate)
+  - route changed: `POST /lifecycle-manager/v1/notes` → `POST /cs/v1/notes`
+- [DELETE /cs/v1/notes/{id} — Delete Note](https://developer.scalepad.com/reference/apipublicv1notesdelete)
+  - route changed: `DELETE /lifecycle-manager/v1/notes/{id}` → `DELETE /cs/v1/notes/{id}`
+- [GET /cs/v1/notes/{id} — Get Note](https://developer.scalepad.com/reference/apipublicv1notesget)
+  - route changed: `GET /lifecycle-manager/v1/notes/{id}` → `GET /cs/v1/notes/{id}`
+- [PUT /cs/v1/notes/{id} — Update Note](https://developer.scalepad.com/reference/apipublicv1notesupdate)
+  - route changed: `PUT /lifecycle-manager/v1/notes/{id}` → `PUT /cs/v1/notes/{id}`
+- [PUT /cs/v1/notes/{id}/archive-status — Update Note Archive Status](https://developer.scalepad.com/reference/apipublicv1notesarchivestatus)
+  - route changed: `PUT /lifecycle-manager/v1/notes/{id}/archive-status` → `PUT /cs/v1/notes/{id}/archive-status`
+- [GET /cs/v1/opportunities — List Opportunities](https://developer.scalepad.com/reference/apipublicv1opportunitieslist)
+  - route changed: `GET /lifecycle-manager/v1/opportunities` → `GET /cs/v1/opportunities`
+- [GET /cs/v1/opportunities/create-fields — Get Opportunity Create Fields](https://developer.scalepad.com/reference/apipublicv1opportunitycreatefieldsget)
+  - route changed: `GET /lifecycle-manager/v1/opportunities/create-fields` → `GET /cs/v1/opportunities/create-fields`
+- [GET /cs/v1/plan/dashboard — Get Plan Summary](https://developer.scalepad.com/reference/apipublicv1plandashboardsummaryget)
+  - route changed: `GET /lifecycle-manager/v1/plan/dashboard` → `GET /cs/v1/plan/dashboard`
+- [GET /cs/v1/plan/dashboard/layout — Get Plan Configuration](https://developer.scalepad.com/reference/apipublicv1plandashboardlayoutget)
+  - route changed: `GET /lifecycle-manager/v1/plan/dashboard/layout` → `GET /cs/v1/plan/dashboard/layout`
+- [PUT /cs/v1/plan/dashboard/layout — Save Plan Configuration](https://developer.scalepad.com/reference/apipublicv1plandashboardlayoutset)
+  - route changed: `PUT /lifecycle-manager/v1/plan/dashboard/layout` → `PUT /cs/v1/plan/dashboard/layout`
+- [GET /cs/v1/plan/export/csv — Plan Portfolio CSV](https://developer.scalepad.com/reference/apipublicv1planexportcsv)
+  - route changed: `GET /lifecycle-manager/v1/plan/export/csv` → `GET /cs/v1/plan/export/csv`
+- [GET /cs/v1/plan/export/pdf — Plan Portfolio PDF](https://developer.scalepad.com/reference/apipublicv1planexportpdf)
+  - route changed: `GET /lifecycle-manager/v1/plan/export/pdf` → `GET /cs/v1/plan/export/pdf`
+- [GET /cs/v1/products — List Products](https://developer.scalepad.com/reference/apipublicv1productslist)
+  - route changed: `GET /lifecycle-manager/v1/products` → `GET /cs/v1/products`
+- [GET /cs/v1/products/{id} — Get Products](https://developer.scalepad.com/reference/apipublicv1productsget)
+  - route changed: `GET /lifecycle-manager/v1/products/{id}` → `GET /cs/v1/products/{id}`
+- [GET /cs/v1/quotes — List Quotes](https://developer.scalepad.com/reference/apipublicv1quotelist)
+  - route changed: `GET /lifecycle-manager/v1/quotes` → `GET /cs/v1/quotes`
+- [GET /cs/v1/roadmap-templates — List Roadmap Templates](https://developer.scalepad.com/reference/apipublicv1roadmaptemplatelist)
+  - route changed: `GET /lifecycle-manager/v1/roadmap-templates` → `GET /cs/v1/roadmap-templates`
+- [POST /cs/v1/roadmap-templates — Create Roadmap Template](https://developer.scalepad.com/reference/apipublicv1roadmaptemplatecreate)
+  - route changed: `POST /lifecycle-manager/v1/roadmap-templates` → `POST /cs/v1/roadmap-templates`
+- [DELETE /cs/v1/roadmap-templates/{roadmap_template_id} — Delete Roadmap Template](https://developer.scalepad.com/reference/apipublicv1roadmaptemplatedelete)
+  - route changed: `DELETE /lifecycle-manager/v1/roadmap-templates/{roadmap_template_id}` → `DELETE /cs/v1/roadmap-templates/{roadmap_template_id}`
+- [GET /cs/v1/roadmap-templates/{roadmap_template_id} — Get Roadmap Template](https://developer.scalepad.com/reference/apipublicv1roadmaptemplateget)
+  - route changed: `GET /lifecycle-manager/v1/roadmap-templates/{roadmap_template_id}` → `GET /cs/v1/roadmap-templates/{roadmap_template_id}`
+- [PUT /cs/v1/roadmap-templates/{roadmap_template_id} — Update Roadmap Template](https://developer.scalepad.com/reference/apipublicv1roadmaptemplateupdate)
+  - route changed: `PUT /lifecycle-manager/v1/roadmap-templates/{roadmap_template_id}` → `PUT /cs/v1/roadmap-templates/{roadmap_template_id}`
+- [POST /cs/v1/roadmap-templates/{roadmap_template_id}/applications — Apply Roadmap Template](https://developer.scalepad.com/reference/apipublicv1roadmaptemplateapplicationcreate)
+  - route changed: `POST /lifecycle-manager/v1/roadmap-templates/{roadmap_template_id}/applications` → `POST /cs/v1/roadmap-templates/{roadmap_template_id}/applications`
+- [POST /cs/v1/roadmap-templates/{roadmap_template_id}/applications/preview — Preview Roadmap Template application](https://developer.scalepad.com/reference/apipublicv1roadmaptemplateapplicationpreview)
+  - route changed: `POST /lifecycle-manager/v1/roadmap-templates/{roadmap_template_id}/applications/preview` → `POST /cs/v1/roadmap-templates/{roadmap_template_id}/applications/preview`
+- [POST /cs/v1/roadmap-templates/{roadmap_template_id}/duplicate — Duplicate Roadmap Template](https://developer.scalepad.com/reference/apipublicv1roadmaptemplateduplicate)
+  - route changed: `POST /lifecycle-manager/v1/roadmap-templates/{roadmap_template_id}/duplicate` → `POST /cs/v1/roadmap-templates/{roadmap_template_id}/duplicate`
+- [POST /cs/v1/roadmap/csv — Generate Roadmap CSV](https://developer.scalepad.com/reference/apiv1roadmapcsv)
+  - route changed: `POST /lifecycle-manager/v1/roadmap/csv` → `POST /cs/v1/roadmap/csv`
+- [POST /cs/v1/roadmap/pdf — Generate Roadmap PDF](https://developer.scalepad.com/reference/apiv1roadmappdf)
+  - route changed: `POST /lifecycle-manager/v1/roadmap/pdf` → `POST /cs/v1/roadmap/pdf`
+- [POST /cs/v1/roadmap/spreadsheet — Generate Roadmap Spreadsheet](https://developer.scalepad.com/reference/apiv1roadmapspreadsheet)
+  - route changed: `POST /lifecycle-manager/v1/roadmap/spreadsheet` → `POST /cs/v1/roadmap/spreadsheet`
+- [GET /cs/v1/scheduled-reports — List Scheduled reports](https://developer.scalepad.com/reference/apipublicv1scheduledreportlist)
+  - route changed: `GET /lifecycle-manager/v1/scheduled-reports` → `GET /cs/v1/scheduled-reports`
+- [GET /cs/v1/scheduled-reports/custom/availability — List Custom scheduled report availability](https://developer.scalepad.com/reference/apipublicv1scheduledreportcustomavailabilityget)
+  - route changed: `GET /lifecycle-manager/v1/scheduled-reports/custom/availability` → `GET /cs/v1/scheduled-reports/custom/availability`
+- [DELETE /cs/v1/scheduled-reports/custom/{scheduled_report_id} — Delete Custom scheduled report](https://developer.scalepad.com/reference/apipublicv1scheduledreportcustomdelete)
+  - route changed: `DELETE /lifecycle-manager/v1/scheduled-reports/custom/{scheduled_report_id}` → `DELETE /cs/v1/scheduled-reports/custom/{scheduled_report_id}`
+- [GET /cs/v1/scheduled-reports/custom/{scheduled_report_id} — Get Custom scheduled report](https://developer.scalepad.com/reference/apipublicv1scheduledreportcustomget)
+  - route changed: `GET /lifecycle-manager/v1/scheduled-reports/custom/{scheduled_report_id}` → `GET /cs/v1/scheduled-reports/custom/{scheduled_report_id}`
+- [PUT /cs/v1/scheduled-reports/custom/{scheduled_report_id}/configuration — Update Custom scheduled report configuration](https://developer.scalepad.com/reference/apipublicv1scheduledreportcustomconfigurationupdate)
+  - route changed: `PUT /lifecycle-manager/v1/scheduled-reports/custom/{scheduled_report_id}/configuration` → `PUT /cs/v1/scheduled-reports/custom/{scheduled_report_id}/configuration`
+- [PUT /cs/v1/scheduled-reports/custom/{scheduled_report_id}/email-template — Update Custom scheduled report email template](https://developer.scalepad.com/reference/apipublicv1scheduledreportcustomemailtemplateupdate)
+  - route changed: `PUT /lifecycle-manager/v1/scheduled-reports/custom/{scheduled_report_id}/email-template` → `PUT /cs/v1/scheduled-reports/custom/{scheduled_report_id}/email-template`
+- [GET /cs/v1/scheduled-reports/custom/{scheduled_report_id}/pdf — Download Custom scheduled report PDF](https://developer.scalepad.com/reference/apipublicv1scheduledreportcustompdf)
+  - route changed: `GET /lifecycle-manager/v1/scheduled-reports/custom/{scheduled_report_id}/pdf` → `GET /cs/v1/scheduled-reports/custom/{scheduled_report_id}/pdf`
+- [POST /cs/v1/scheduled-reports/custom/{scheduled_report_id}/recipients — Add Custom scheduled report recipient](https://developer.scalepad.com/reference/apipublicv1scheduledreportcustomrecipientcreate)
+  - route changed: `POST /lifecycle-manager/v1/scheduled-reports/custom/{scheduled_report_id}/recipients` → `POST /cs/v1/scheduled-reports/custom/{scheduled_report_id}/recipients`
+- [DELETE /cs/v1/scheduled-reports/custom/{scheduled_report_id}/recipients/{scheduled_report_recipient_id} — Remove Custom scheduled report recipient](https://developer.scalepad.com/reference/apipublicv1scheduledreportcustomrecipientdelete)
+  - route changed: `DELETE /lifecycle-manager/v1/scheduled-reports/custom/{scheduled_report_id}/recipients/{scheduled_report_recipient_id}` → `DELETE /cs/v1/scheduled-reports/custom/{scheduled_report_id}/recipients/{scheduled_report_recipient_id}`
+- [PUT /cs/v1/scheduled-reports/custom/{scheduled_report_id}/schedule — Update Custom scheduled report schedule](https://developer.scalepad.com/reference/apipublicv1scheduledreportcustomscheduleupdate)
+  - route changed: `PUT /lifecycle-manager/v1/scheduled-reports/custom/{scheduled_report_id}/schedule` → `PUT /cs/v1/scheduled-reports/custom/{scheduled_report_id}/schedule`
+- [POST /cs/v1/scheduled-reports/custom/{scheduled_report_id}/send-test — Send Custom scheduled report test message](https://developer.scalepad.com/reference/apipublicv1scheduledreportcustomsendtest)
+  - route changed: `POST /lifecycle-manager/v1/scheduled-reports/custom/{scheduled_report_id}/send-test` → `POST /cs/v1/scheduled-reports/custom/{scheduled_report_id}/send-test`
+- [GET /cs/v1/scheduled-reports/lifecycle/{client_id} — Get Hardware lifecycle report](https://developer.scalepad.com/reference/apipublicv1scheduledreportlifecycleget)
+  - route changed: `GET /lifecycle-manager/v1/scheduled-reports/lifecycle/{client_id}` → `GET /cs/v1/scheduled-reports/lifecycle/{client_id}`
+- [DELETE /cs/v1/scheduled-reports/lifecycle/{client_id}/email-template — Reset Hardware lifecycle report email template](https://developer.scalepad.com/reference/apipublicv1scheduledreportlifecycleemailtemplatedelete)
+  - route changed: `DELETE /lifecycle-manager/v1/scheduled-reports/lifecycle/{client_id}/email-template` → `DELETE /cs/v1/scheduled-reports/lifecycle/{client_id}/email-template`
+- [GET /cs/v1/scheduled-reports/lifecycle/{client_id}/email-template — Get Hardware lifecycle report email template](https://developer.scalepad.com/reference/apipublicv1scheduledreportlifecycleemailtemplateget)
+  - route changed: `GET /lifecycle-manager/v1/scheduled-reports/lifecycle/{client_id}/email-template` → `GET /cs/v1/scheduled-reports/lifecycle/{client_id}/email-template`
+- [PUT /cs/v1/scheduled-reports/lifecycle/{client_id}/email-template — Update Hardware lifecycle report email template](https://developer.scalepad.com/reference/apipublicv1scheduledreportlifecycleemailtemplateupdate)
+  - route changed: `PUT /lifecycle-manager/v1/scheduled-reports/lifecycle/{client_id}/email-template` → `PUT /cs/v1/scheduled-reports/lifecycle/{client_id}/email-template`
+- [DELETE /cs/v1/scheduled-reports/lifecycle/{client_id}/recipients — Remove Hardware lifecycle report recipient](https://developer.scalepad.com/reference/apipublicv1scheduledreportlifecyclerecipientdelete)
+  - route changed: `DELETE /lifecycle-manager/v1/scheduled-reports/lifecycle/{client_id}/recipients` → `DELETE /cs/v1/scheduled-reports/lifecycle/{client_id}/recipients`
+- [POST /cs/v1/scheduled-reports/lifecycle/{client_id}/recipients — Add Hardware lifecycle report recipient](https://developer.scalepad.com/reference/apipublicv1scheduledreportlifecyclerecipientcreate)
+  - route changed: `POST /lifecycle-manager/v1/scheduled-reports/lifecycle/{client_id}/recipients` → `POST /cs/v1/scheduled-reports/lifecycle/{client_id}/recipients`
+- [PUT /cs/v1/scheduled-reports/lifecycle/{client_id}/schedule — Update Hardware lifecycle report schedule](https://developer.scalepad.com/reference/apipublicv1scheduledreportlifecyclescheduleupdate)
+  - route changed: `PUT /lifecycle-manager/v1/scheduled-reports/lifecycle/{client_id}/schedule` → `PUT /cs/v1/scheduled-reports/lifecycle/{client_id}/schedule`
+- [POST /cs/v1/scheduled-reports/lifecycle/{client_id}/send-test — Send Hardware lifecycle report test message](https://developer.scalepad.com/reference/apipublicv1scheduledreportlifecyclesendtest)
+  - route changed: `POST /lifecycle-manager/v1/scheduled-reports/lifecycle/{client_id}/send-test` → `POST /cs/v1/scheduled-reports/lifecycle/{client_id}/send-test`
+- [GET /cs/v1/scheduled-reports/template-variables — List Scheduled report template variables](https://developer.scalepad.com/reference/apipublicv1scheduledreporttemplatevariablelist)
+  - route changed: `GET /lifecycle-manager/v1/scheduled-reports/template-variables` → `GET /cs/v1/scheduled-reports/template-variables`
+- [GET /cs/v1/segments/{segment_id}/copilot-settings — Get Segment Copilot Settings](https://developer.scalepad.com/reference/apipublicv1segmentcopilotsettingsget)
+  - route changed: `GET /lifecycle-manager/v1/segments/{segment_id}/copilot-settings` → `GET /cs/v1/segments/{segment_id}/copilot-settings`
+- [PATCH /cs/v1/segments/{segment_id}/copilot-settings — Update Segment Copilot Settings](https://developer.scalepad.com/reference/apipublicv1segmentcopilotsettingspatch)
+  - route changed: `PATCH /lifecycle-manager/v1/segments/{segment_id}/copilot-settings` → `PATCH /cs/v1/segments/{segment_id}/copilot-settings`
+- [GET /cs/v1/tickets — List Linkable Tickets](https://developer.scalepad.com/reference/apipublicv1ticketlist)
+  - route changed: `GET /lifecycle-manager/v1/tickets` → `GET /cs/v1/tickets`
+- [GET /cs/v1/tickets/boards — List Ticket Boards](https://developer.scalepad.com/reference/apiv1ticketboardlist)
+  - route changed: `GET /lifecycle-manager/v1/tickets/boards` → `GET /cs/v1/tickets/boards`
+- [GET /cs/v1/tickets/create-fields — Get Ticket Create Fields](https://developer.scalepad.com/reference/apipublicv1ticketcreatefieldsget)
+  - route changed: `GET /lifecycle-manager/v1/tickets/create-fields` → `GET /cs/v1/tickets/create-fields`
+- [GET /cs/v1/tickets/field-options — Get Ticket Field Options](https://developer.scalepad.com/reference/apipublicv1ticketfieldoptionsget)
+  - route changed: `GET /lifecycle-manager/v1/tickets/field-options` → `GET /cs/v1/tickets/field-options`
+- [GET /cs/v1/warranty/pricing — List Warranty Pricing](https://developer.scalepad.com/reference/apipublicv1warrantypricing)
+  - route changed: `GET /lifecycle-manager/v1/warranty/pricing` → `GET /cs/v1/warranty/pricing`
+- [PATCH /cs/v2/deliverables/{deliverable-id}/shares/general-link — Update General Share Link Expiry](https://developer.scalepad.com/reference/update-deliverable-share-general-link-expiry)
+  - route changed: `PATCH /lifecycle-manager/v2/deliverables/{deliverable-id}/shares/general-link` → `PATCH /cs/v2/deliverables/{deliverable-id}/shares/general-link`
+- [POST /cs/v2/deliverables/{deliverable-id}/shares/general-link — Create General Share Link](https://developer.scalepad.com/reference/create-deliverable-share-general-link-v2)
+  - route changed: `POST /lifecycle-manager/v2/deliverables/{deliverable-id}/shares/general-link` → `POST /cs/v2/deliverables/{deliverable-id}/shares/general-link`
+- [POST /cs/v2/deliverables/{deliverable-id}/shares/general-link/regenerate — Regenerate General Share Link](https://developer.scalepad.com/reference/regenerate-deliverable-share-general-link-v2)
+  - route changed: `POST /lifecycle-manager/v2/deliverables/{deliverable-id}/shares/general-link/regenerate` → `POST /cs/v2/deliverables/{deliverable-id}/shares/general-link/regenerate`
+- [POST /cs/v2/deliverables/{deliverable-id}/shares/general-link/regenerate-link — Regenerate General Share Link URL](https://developer.scalepad.com/reference/regenerate-link-deliverable-share-general-link)
+  - route changed: `POST /lifecycle-manager/v2/deliverables/{deliverable-id}/shares/general-link/regenerate-link` → `POST /cs/v2/deliverables/{deliverable-id}/shares/general-link/regenerate-link`
+- [POST /cs/v2/deliverables/{deliverable-id}/shares/general-link/regenerate-password — Regenerate General Share Link Password](https://developer.scalepad.com/reference/regenerate-password-deliverable-share-general-link)
+  - route changed: `POST /lifecycle-manager/v2/deliverables/{deliverable-id}/shares/general-link/regenerate-password` → `POST /cs/v2/deliverables/{deliverable-id}/shares/general-link/regenerate-password`
+- [GET /cs/v2/goals/summary — Get Clients At Risk From Goal Health](https://developer.scalepad.com/reference/apipublicv2goalssummaryget)
+  - route changed: `GET /lifecycle-manager/v2/goals/summary` → `GET /cs/v2/goals/summary`
+- [GET /cs/v2/initiatives — List Initiatives v2](https://developer.scalepad.com/reference/apipublicv2initiativelist)
+  - route changed: `GET /lifecycle-manager/v2/initiatives` → `GET /cs/v2/initiatives`
+- [GET /cs/v2/initiatives/summary — Get Initiative Summary](https://developer.scalepad.com/reference/apipublicv2initiativesummaryget)
+  - route changed: `GET /lifecycle-manager/v2/initiatives/summary` → `GET /cs/v2/initiatives/summary`
+- [POST /cs/v2/meetings — Create Meeting](https://developer.scalepad.com/reference/apipublicv2meetingcreate)
+  - route changed: `POST /lifecycle-manager/v2/meetings` → `POST /cs/v2/meetings`
+- [PUT /cs/v2/meetings/{id} — Update Meeting](https://developer.scalepad.com/reference/apipublicv2meetingupdate)
+  - route changed: `PUT /lifecycle-manager/v2/meetings/{id}` → `PUT /cs/v2/meetings/{id}`
+- [GET /saas-manager/v1/clients/{client_id}/apps/utilization — Get app utilization (app dashboard)](https://developer.scalepad.com/reference/getsaasmanagementapputilization)
+  - route changed: `GET /lifecycle-manager/v1/saas-management/clients/{client_id}/apps/utilization` → `GET /saas-manager/v1/clients/{client_id}/apps/utilization`
+- [GET /saas-manager/v1/clients/{client_id}/apps/utilization/timeseries — Get app lifecycle timeseries](https://developer.scalepad.com/reference/getsaasmanagementapputilizationtimeseries)
+  - route changed: `GET /lifecycle-manager/v1/saas-management/clients/{client_id}/apps/utilization/timeseries` → `GET /saas-manager/v1/clients/{client_id}/apps/utilization/timeseries`
+- [GET /saas-manager/v1/clients/{client_id}/apps/utilization/users — Get app utilization with per-app users](https://developer.scalepad.com/reference/getsaasmanagementapputilizationwithusers)
+  - route changed: `GET /lifecycle-manager/v1/saas-management/clients/{client_id}/apps/utilization/users` → `GET /saas-manager/v1/clients/{client_id}/apps/utilization/users`
+- [GET /saas-manager/v1/clients/{client_id}/saas-utilization/summary — Get SaaS utilization summary](https://developer.scalepad.com/reference/getsaasmanagementutilizationsummary)
+  - route changed: `GET /lifecycle-manager/v1/saas-management/clients/{client_id}/saas-utilization/summary` → `GET /saas-manager/v1/clients/{client_id}/saas-utilization/summary`
