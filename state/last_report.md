@@ -1,8 +1,301 @@
-# ScalePad developer docs — changes detected 2026-11-10 01:57 UTC
+# ScalePad developer docs — changes detected 2026-11-10 21:15 UTC
 
-Tracking 773 pages at https://developer.scalepad.com. **0 added · 0 removed · 6 changed**
+Tracking 790 pages at https://developer.scalepad.com. **27 added · 10 removed · 198 changed**
 
-## Changed (6)
+## Added (27)
+### Guides
+- [Canonical Lifecycle Manager API paths](https://developer.scalepad.com/changelog/20261104-lifecycle-manager-v1-changelog)
+- [Canonical SaaS Management API paths](https://developer.scalepad.com/changelog/20261104-saas-management-v1-changelog)
+- [ControlMap API - Documentation Updates](https://developer.scalepad.com/changelog/20261026-control-map-v1-changelog)
+- [Lifecycle Manager API - Agreement Budgets, Client Tags, and Meeting Details](https://developer.scalepad.com/changelog/20261103-lifecycle-manager-v1-changelog)
+- [Lifecycle Manager API namespace expansion](https://developer.scalepad.com/changelog/20261105-lifecycle-manager-v1-changelog-2)
+- [Quoter API - Distributors, Product Cloud, quote editing and sending](https://developer.scalepad.com/changelog/20261106-quoter-v1-changelog)
+- [SaaS Management API namespace expansion](https://developer.scalepad.com/changelog/20261105-saas-management-v1-changelog-2)
+- [SaaS Management: List Enrollment Tokens and Get Token Values](https://developer.scalepad.com/changelog/20261106-saas-management-v1-changelog)
+- [ScalePad CS, ScalePad Platform, and SaaS Manager API navigation](https://developer.scalepad.com/changelog/20261105-saas-management-v1-changelog-3)
+- [ScalePad MCP now advertises a compact tool catalog](https://developer.scalepad.com/changelog/20261104-mcp-changelog)
+
+### Quoter API
+- [GET /v1/distributors — List Distributors](https://developer.scalepad.com/reference/listdistributors)
+- [POST /v1/distributors — Create Distributor](https://developer.scalepad.com/reference/createdistributor)
+- [DELETE /v1/distributors/{distributor_id} — Delete Distributor](https://developer.scalepad.com/reference/deletedistributor)
+- [GET /v1/distributors/{distributor_id} — Fetch Distributor](https://developer.scalepad.com/reference/fetchdistributor)
+- [PATCH /v1/distributors/{distributor_id} — Update Distributor](https://developer.scalepad.com/reference/updatedistributor)
+- [POST /v1/files/images — Upload Image](https://developer.scalepad.com/reference/createimage)
+- [POST /v1/product-cloud/pna — Check Price and Availability](https://developer.scalepad.com/reference/checkpriceandavailability)
+- [POST /v1/product-cloud/product-lookup — Look Up a Product](https://developer.scalepad.com/reference/lookupproduct)
+- [POST /v1/product-cloud/search — Search Products](https://developer.scalepad.com/reference/searchproducts)
+- [DELETE /v1/quotes/{quote_id} — Delete Quote](https://developer.scalepad.com/reference/deletequote)
+- [PATCH /v1/quotes/{quote_id} — Patch Quote](https://developer.scalepad.com/reference/patchquote)
+- [DELETE /v1/quotes/{quote_id}/sections/{section_id} — Delete Quote Section](https://developer.scalepad.com/reference/deletequotesection)
+- [PATCH /v1/quotes/{quote_id}/sections/{section_id} — Patch Quote Section](https://developer.scalepad.com/reference/patchquotesection)
+- [DELETE /v1/quotes/{quote_id}/sections/{section_id}/line-items/{line_item_id} — Delete Quote Line Item](https://developer.scalepad.com/reference/deletequotesectionlineitem)
+- [POST /v1/quotes/{quote_id}/send — Send Quote](https://developer.scalepad.com/reference/sendquote)
+
+### ScalePad CS, ScalePad Platform, and SaaS Manager
+- [GET /app/v1/clients/{client_id}/enrollment-tokens — List enrollment tokens](https://developer.scalepad.com/reference/listsaasmanagementenrollmenttokens)
+- [GET /app/v1/clients/{client_id}/enrollment-tokens/{token_id}/value — Get an enrollment token value](https://developer.scalepad.com/reference/getsaasmanagementenrollmenttokenvalue)
+
+## Removed (10)
+### Guides
+- [BackupRadar API – Backup Results Ingestion](https://developer.scalepad.com/changelog/20260818-backup-radar-v1-changelog)
+- [BackupRadar API – Retire Unused Backups](https://developer.scalepad.com/changelog/20260930-backup-radar-v1-changelog)
+- [ControlMap API – Compliance Program Links & Endpoint Changes](https://developer.scalepad.com/changelog/20260804-control-map-v1-changelog)
+- [ControlMap API – Objective Assessments, Policy Sections & Risk Search](https://developer.scalepad.com/changelog/20260924-control-map-v1-changelog)
+- [ControlMap API – Objective Editing, Risk Detail & Health History](https://developer.scalepad.com/changelog/20260922-control-map-v1-changelog)
+- [Core API – Vendor application URL and connection settings on integration configurations](https://developer.scalepad.com/changelog/20260915-core-api-v1-changelog)
+- [Lifecycle Manager API - Contract Alignment, Migration Corrections, and New Endpoints](https://developer.scalepad.com/changelog/20260909-lifecycle-manager-v1-changelog)
+- [Lifecycle Manager API – Agreements, Deliverable Schedules, Assessment Reporting, Software & SaaS Assets, Planning & Account Administration](https://developer.scalepad.com/changelog/20260805-lifecycle-manager-v1-changelog)
+- [Quoter API – Contact Lookup by Client Name](https://developer.scalepad.com/changelog/20260812-quoter-v1-changelog)
+- [SaaS Management: App Utilization Dashboards](https://developer.scalepad.com/changelog/20260827-saas-management-v1-changelog)
+
+## Changed (198)
+### ControlMap API
+- [GET /controlmap/v1/clients/action-items-summary — List Clients' Action Items Summary](https://developer.scalepad.com/reference/c_actionitem_1-1)
+  - title: “List Client Action Items Summary” → “List Clients' Action Items Summary”
+- [GET /controlmap/v1/clients/assessments/common/summary — Clients' Assessment Overview](https://developer.scalepad.com/reference/01_listclientsassessmentsummary-1)
+  - title: “Clients Assessment Overview” → “Clients' Assessment Overview”
+- [GET /controlmap/v1/clients/controls-summary — List Clients' Control Summaries](https://developer.scalepad.com/reference/opencontrolsclientssummary)
+  - title: “List Clients Control Summaries” → “List Clients' Control Summaries”
+- [GET /controlmap/v1/clients/evidences-summary — List Clients' Evidence Summaries](https://developer.scalepad.com/reference/02_evidenceapi-1)
+  - title: “List Clients Evidence Summaries” → “List Clients' Evidence Summaries”
+- [GET /controlmap/v1/clients/frameworks/objectives/summary — Clients' Objective Overview](https://developer.scalepad.com/reference/getrequirementsobjectivesummary)
+  - title: “Clients Objective Overview” → “Clients' Objective Overview”
+- [GET /controlmap/v1/clients/governance-summary — Clients' Governance Overview](https://developer.scalepad.com/reference/getgovernancesummarybyclients)
+  - title: “Clients Governance Overview” → “Clients' Governance Overview”
+- [GET /controlmap/v1/clients/health — List Clients' Compliance Health Metrics](https://developer.scalepad.com/reference/01_listclientshealth-1)
+  - title: “List Clients Compliance Health Metrics” → “List Clients' Compliance Health Metrics”
+- [GET /controlmap/v1/clients/policies-summary — Clients' Policy Overview](https://developer.scalepad.com/reference/getpolicysummarybyclients)
+  - title: “Clients Policy Overview” → “Clients' Policy Overview”
+- [GET /controlmap/v1/clients/procedures-summary — Clients' Procedure Overview](https://developer.scalepad.com/reference/getproceduresummarybyclients)
+  - title: “Clients Procedure Overview” → “Clients' Procedure Overview”
+- [GET /controlmap/v1/clients/risks-summary — List Clients' Risk Summaries](https://developer.scalepad.com/reference/03_listclientsrisksummary-1)
+  - title: “List Clients Risk Summaries” → “List Clients' Risk Summaries”
+- [POST /controlmap/v1/clients/{client_id}/action-items — Create a new action item](https://developer.scalepad.com/reference/createactionitem-1)
+  - page content updated (schema details / examples / prose)
+- [DELETE /controlmap/v1/clients/{client_id}/action-items/{action_item_id} — Delete Action Item](https://developer.scalepad.com/reference/deleteclientactionitem)
+  - page content updated (schema details / examples / prose)
+- [GET /controlmap/v1/clients/{client_id}/action-items/{action_item_id} — Get Action Item](https://developer.scalepad.com/reference/b_actionitem-1)
+  - page content updated (schema details / examples / prose)
+- [PATCH /controlmap/v1/clients/{client_id}/action-items/{action_item_id} — Partially update an action item](https://developer.scalepad.com/reference/patchactionitemrequest-1)
+  - page content updated (schema details / examples / prose)
+- [POST /controlmap/v1/clients/{client_id}/action-items/{action_item_id}/documents — Upload Document to Action Item (upto 10 MB)](https://developer.scalepad.com/reference/c_actionitem-1)
+  - page content updated (schema details / examples / prose)
+- [POST /controlmap/v1/clients/{client_id}/action-items/{action_item_id}/documents/signed-url — Generate Signed URLs to Upload Documents for an Action Item](https://developer.scalepad.com/reference/d_actionitem-1)
+  - page content updated (schema details / examples / prose)
+- [POST /controlmap/v1/clients/{client_id}/action-items/{action_item_id}/mappings — Map Action Item to Objectives, Assessment Questions, Risks, Controls, Assets, and Asset Types](https://developer.scalepad.com/reference/actionitemmapentitiesforclient)
+  - page content updated (schema details / examples / prose)
+- [POST /controlmap/v1/clients/{client_id}/action-items/{action_item_id}/mappings/bulk-delete — Unmap Action Item from Objectives, Assessment Questions, Risks, Controls, Assets, and Asset Types](https://developer.scalepad.com/reference/actionitemunmapentitiesforclient)
+  - page content updated (schema details / examples / prose)
+- [GET /controlmap/v1/clients/{client_id}/assessments/common/questions/{question_code} — Get Assessment Question](https://developer.scalepad.com/reference/assessmentquestiongetbycodeforclient-1)
+  - page content updated (schema details / examples / prose)
+- [DELETE /controlmap/v1/clients/{client_id}/assessments/common/questions/{question_code}/answer — Clear Assessment Question Answer](https://developer.scalepad.com/reference/assessmentquestiondeleteanswerforclient-1)
+  - page content updated (schema details / examples / prose)
+- [PUT /controlmap/v1/clients/{client_id}/assessments/common/questions/{question_code}/answer — Save Assessment Question Answer](https://developer.scalepad.com/reference/assessmentquestionputanswerforclient-1)
+  - page content updated (schema details / examples / prose)
+- [DELETE /controlmap/v1/clients/{client_id}/assessments/common/questions/{question_code}/mappings — Unmap Assessment Question from Items (Deprecated)](https://developer.scalepad.com/reference/assessmentquestionunmapentitiesforclientdeprecated)
+  - page content updated (schema details / examples / prose)
+- [POST /controlmap/v1/clients/{client_id}/assessments/common/questions/{question_code}/mappings — Map Assessment Question to Evidences, Action Items, Policies, or Procedures](https://developer.scalepad.com/reference/assessmentquestionmapentitiesforclient-1)
+  - page content updated (schema details / examples / prose)
+- [POST /controlmap/v1/clients/{client_id}/assessments/common/questions/{question_code}/mappings/bulk-delete — Unmap Assessment Question from Evidences, Action Items, Policies, or Procedures](https://developer.scalepad.com/reference/assessmentquestionunmapentitiesforclient-1)
+  - page content updated (schema details / examples / prose)
+- [PATCH /controlmap/v1/clients/{client_id}/assessments/common/questions/{question_code}/responses — Update Assessment Question Response](https://developer.scalepad.com/reference/assessmentquestionresponseupdate-1)
+  - page content updated (schema details / examples / prose)
+- [POST /controlmap/v1/clients/{client_id}/assessments/common/questions/{question_code}/responses — Create Assessment Question Response](https://developer.scalepad.com/reference/assessmentquestionnotecreate-1)
+  - page content updated (schema details / examples / prose)
+- [DELETE /controlmap/v1/clients/{client_id}/assessments/common/questions/{question_code}/responses/{response_id} — Delete Assessment Question Response](https://developer.scalepad.com/reference/assessmentquestionresponsedelete-1)
+  - page content updated (schema details / examples / prose)
+- [GET /controlmap/v1/clients/{client_id}/assessments/common/summary — Client's Assessment Summary](https://developer.scalepad.com/reference/assessmentprogress-1)
+  - title: “Client Assessment Summary” → “Client's Assessment Summary”
+- [GET /controlmap/v1/clients/{client_id}/control-families — List Control Families](https://developer.scalepad.com/reference/opencontrolfamilieslist)
+  - page content updated (schema details / examples / prose)
+- [GET /controlmap/v1/clients/{client_id}/control-sets — List Control Sets](https://developer.scalepad.com/reference/opencontrolsetslist)
+  - page content updated (schema details / examples / prose)
+- [POST /controlmap/v1/clients/{client_id}/controls — Create Control](https://developer.scalepad.com/reference/opencontrolscreate)
+  - page content updated (schema details / examples / prose)
+- [GET /controlmap/v1/clients/{client_id}/controls-summary — Client's Control Summary](https://developer.scalepad.com/reference/opencontrolsclientsummary)
+  - title: “Client Control Summary” → “Client's Control Summary”
+- [DELETE /controlmap/v1/clients/{client_id}/controls/{control_id} — Delete Control](https://developer.scalepad.com/reference/opencontrolsdelete)
+  - page content updated (schema details / examples / prose)
+- [GET /controlmap/v1/clients/{client_id}/controls/{control_id} — Get Control by ID](https://developer.scalepad.com/reference/opencontrolsdetail)
+  - page content updated (schema details / examples / prose)
+- [PATCH /controlmap/v1/clients/{client_id}/controls/{control_id} — Partially Update Client's Control](https://developer.scalepad.com/reference/patchclientcontrol)
+  - title: “Partially Update Client Control” → “Partially Update Client's Control”
+- [POST /controlmap/v1/clients/{client_id}/controls/{control_id}/mappings — Map Policy, Procedure, Governance, Risk, Evidence, and Action Items to Control](https://developer.scalepad.com/reference/opencontrolsmapmappings)
+  - page content updated (schema details / examples / prose)
+- [POST /controlmap/v1/clients/{client_id}/controls/{control_id}/mappings/bulk-delete — Unmap Policy, Procedure, Governance, Risk, Evidence, and Action Items from Control](https://developer.scalepad.com/reference/opencontrolsbulkdeletemappings)
+  - description text updated
+- [DELETE /controlmap/v1/clients/{client_id}/documents/{document_id} — Delete Document](https://developer.scalepad.com/reference/17_evidenceapi-1)
+  - page content updated (schema details / examples / prose)
+- [GET /controlmap/v1/clients/{client_id}/documents/{document_id} — Get Document Signed URL](https://developer.scalepad.com/reference/getdocumentsignedurl)
+  - page content updated (schema details / examples / prose)
+- [POST /controlmap/v1/clients/{client_id}/evidence-mappings/refresh — Refresh Client's Evidence Mappings](https://developer.scalepad.com/reference/13_evidenceapi-1)
+  - title: “Refresh Client Evidence Mappings” → “Refresh Client's Evidence Mappings”
+- [POST /controlmap/v1/clients/{client_id}/evidence-requests/links — Create Link for Evidence Request](https://developer.scalepad.com/reference/11_evidenceapi_1-1)
+  - page content updated (schema details / examples / prose)
+- [DELETE /controlmap/v1/clients/{client_id}/evidence-requests/{evidence_request_id} — Delete Evidence Request](https://developer.scalepad.com/reference/14_evidenceapi-1)
+  - page content updated (schema details / examples / prose)
+- [PATCH /controlmap/v1/clients/{client_id}/evidence-requests/{evidence_request_id} — Partially Update Evidence Request](https://developer.scalepad.com/reference/12_evidenceapi-1)
+  - page content updated (schema details / examples / prose)
+- [POST /controlmap/v1/clients/{client_id}/evidence-requests/{evidence_request_id}/archive — Archive Evidence Request](https://developer.scalepad.com/reference/15_evidenceapi-1)
+  - page content updated (schema details / examples / prose)
+- [POST /controlmap/v1/clients/{client_id}/evidence-requests/{evidence_request_id}/documents — Upload a document (up to 10 MB) to an evidence request.](https://developer.scalepad.com/reference/10_evidenceapi-1)
+  - page content updated (schema details / examples / prose)
+- [POST /controlmap/v1/clients/{client_id}/evidence-requests/{evidence_request_id}/documents/signed-url — Generate Signed URLs to Upload Documents for an Evidence Request](https://developer.scalepad.com/reference/09_evidenceapi_1-1)
+  - page content updated (schema details / examples / prose)
+- [POST /controlmap/v1/clients/{client_id}/evidences — Create Client's Evidence](https://developer.scalepad.com/reference/03_evidenceapi-1)
+  - title: “Create Client Evidence” → “Create Client's Evidence”
+- [DELETE /controlmap/v1/clients/{client_id}/evidences/{evidence_id} — Delete Client's Evidence](https://developer.scalepad.com/reference/06_evidenceapi-1)
+  - title: “Delete Client Evidence” → “Delete Client's Evidence”
+- [GET /controlmap/v1/clients/{client_id}/evidences/{evidence_id} — Get Evidence by ID](https://developer.scalepad.com/reference/getevidencebyid)
+  - page content updated (schema details / examples / prose)
+- [PATCH /controlmap/v1/clients/{client_id}/evidences/{evidence_id} — Update Client's Evidence](https://developer.scalepad.com/reference/04_evidenceapi-1)
+  - title: “Update Client Evidence” → “Update Client's Evidence”
+- [POST /controlmap/v1/clients/{client_id}/evidences/{evidence_id}/documents — Create Evidence Request and Upload a document (up to 10 MB)](https://developer.scalepad.com/reference/11_evidenceapi-1)
+  - page content updated (schema details / examples / prose)
+- [POST /controlmap/v1/clients/{client_id}/evidences/{evidence_id}/documents/signed-url — Create Evidence Request and Generate Signed URLs for Documents](https://developer.scalepad.com/reference/09_evidenceapi-1)
+  - page content updated (schema details / examples / prose)
+- [POST /controlmap/v1/clients/{client_id}/evidences/{evidence_id}/mappings — Map Evidence to Objectives or Controls](https://developer.scalepad.com/reference/evidencemapentitiesforclient)
+  - page content updated (schema details / examples / prose)
+- [POST /controlmap/v1/clients/{client_id}/evidences/{evidence_id}/mappings/bulk-delete — Unmap Evidence from Objectives or Controls](https://developer.scalepad.com/reference/evidenceunmapentitiesforclient)
+  - page content updated (schema details / examples / prose)
+- [GET /controlmap/v1/clients/{client_id}/evidences/{evidence_id}/requests — List Evidence Requests](https://developer.scalepad.com/reference/07_evidenceapi-1)
+  - page content updated (schema details / examples / prose)
+- [POST /controlmap/v1/clients/{client_id}/evidences/{evidence_id}/requests — Create Request in Evidence](https://developer.scalepad.com/reference/08_evidenceapi-1)
+  - page content updated (schema details / examples / prose)
+- [DELETE /controlmap/v1/clients/{client_id}/evidences/{evidence_id}/schedule — Delete Evidence Schedule (Deprecated)](https://developer.scalepad.com/reference/05a_evidenceapideprecated)
+  - page content updated (schema details / examples / prose)
+- [POST /controlmap/v1/clients/{client_id}/evidences/{evidence_id}/schedule/delete — Delete Evidence Schedule](https://developer.scalepad.com/reference/05_evidenceapi-1)
+  - page content updated (schema details / examples / prose)
+- [GET /controlmap/v1/clients/{client_id}/frameworks/objectives/summary — Client's Objective Summary](https://developer.scalepad.com/reference/getclientrequirementsobjectivesummary)
+  - title: “Client Objective Summary” → “Client's Objective Summary”
+- [GET /controlmap/v1/clients/{client_id}/frameworks/{framework_id}/objectives/{objective_id} — Get Client's Objective](https://developer.scalepad.com/reference/02_getclientobjectivebyid)
+  - title: “Get Client Objective” → “Get Client's Objective”
+- [PATCH /controlmap/v1/clients/{client_id}/frameworks/{framework_id}/objectives/{objective_id} — Partially Update Client's Objective](https://developer.scalepad.com/reference/05_updateclientobjective)
+  - title: “Partially Update Client Objective” → “Partially Update Client's Objective”
+- [POST /controlmap/v1/clients/{client_id}/frameworks/{framework_id}/objectives/{objective_id}/mappings — Create Client's Objective Crosswalk](https://developer.scalepad.com/reference/03_createclientobjectivecrosswalk)
+  - title: “Create Client Objective Crosswalk” → “Create Client's Objective Crosswalk”
+- [POST /controlmap/v1/clients/{client_id}/frameworks/{framework_id}/objectives/{objective_id}/mappings/bulk-delete — Delete Client's Objective Crosswalk](https://developer.scalepad.com/reference/04_deleteclientobjectivecrosswalk)
+  - title: “Delete Client Objective Crosswalk” → “Delete Client's Objective Crosswalk”
+- [POST /controlmap/v1/clients/{client_id}/governance — Create Client's Governance](https://developer.scalepad.com/reference/createclientgovernancedocument)
+  - title: “Create Client Governance” → “Create Client's Governance”
+- [DELETE /controlmap/v1/clients/{client_id}/governance/{governance_id} — Delete Client's Governance](https://developer.scalepad.com/reference/deleteclientgovernancedocument)
+  - title: “Delete Client Governance” → “Delete Client's Governance”
+- [GET /controlmap/v1/clients/{client_id}/governance/{governance_id} — Get Client's Governance](https://developer.scalepad.com/reference/getclientgovernancedocumentbyid)
+  - title: “Get Client Governance” → “Get Client's Governance”
+- [PATCH /controlmap/v1/clients/{client_id}/governance/{governance_id} — Partially Update Client's Governance](https://developer.scalepad.com/reference/patchclientgovernancedocument)
+  - title: “Partially Update Client Governance” → “Partially Update Client's Governance”
+- [POST /controlmap/v1/clients/{client_id}/governance/{governance_id}/mappings — Map Governance to Objectives, Policies, and Controls](https://developer.scalepad.com/reference/mapentitiestoclientgovernancedocument)
+  - page content updated (schema details / examples / prose)
+- [POST /controlmap/v1/clients/{client_id}/governance/{governance_id}/mappings/bulk-delete — Unmap Governance from Objectives, Policies, and Controls](https://developer.scalepad.com/reference/bulkdeleteentitiesfromclientgovernance)
+  - description text updated
+- [GET /controlmap/v1/clients/{client_id}/health — Get Client's Compliance Health Metrics](https://developer.scalepad.com/reference/02_clienthealth-1)
+  - title: “Get Client Compliance Health Metrics” → “Get Client's Compliance Health Metrics”
+- [POST /controlmap/v1/clients/{client_id}/policies — Create Client's Policy](https://developer.scalepad.com/reference/createclientpolicy)
+  - title: “Create Client Policy” → “Create Client's Policy”
+- [DELETE /controlmap/v1/clients/{client_id}/policies/{policy_id} — Delete Client's Policy](https://developer.scalepad.com/reference/deleteclientpolicy)
+  - title: “Delete Client Policy” → “Delete Client's Policy”
+- [GET /controlmap/v1/clients/{client_id}/policies/{policy_id} — Get Client's Policy](https://developer.scalepad.com/reference/getclientpolicybyid)
+  - title: “Get Client Policy” → “Get Client's Policy”
+- [PATCH /controlmap/v1/clients/{client_id}/policies/{policy_id} — Partially Update Client's Policy](https://developer.scalepad.com/reference/patchclientpolicy)
+  - title: “Partially Update Client Policy” → “Partially Update Client's Policy”
+- [POST /controlmap/v1/clients/{client_id}/policies/{policy_id}/mappings — Map Policy to Objectives and Controls](https://developer.scalepad.com/reference/mapentitiestoclientpolicy)
+  - page content updated (schema details / examples / prose)
+- [POST /controlmap/v1/clients/{client_id}/policies/{policy_id}/mappings/bulk-delete — Unmap Policy from Objectives and Controls](https://developer.scalepad.com/reference/bulkdeleteentitiesfromclientpolicy)
+  - description text updated
+- [PUT /controlmap/v1/clients/{client_id}/policies/{policy_id}/sections — Create or Update a policy section](https://developer.scalepad.com/reference/upsertclientpolicysection)
+  - page content updated (schema details / examples / prose)
+- [DELETE /controlmap/v1/clients/{client_id}/policies/{policy_id}/sections/{section_id} — Delete Client's Policy Section](https://developer.scalepad.com/reference/deleteclientpolicysection)
+  - title: “Delete Client Policy Section” → “Delete Client's Policy Section”
+- [POST /controlmap/v1/clients/{client_id}/procedures — Create Client's Procedure](https://developer.scalepad.com/reference/createclientprocedure)
+  - title: “Create Client Procedure” → “Create Client's Procedure”
+- [DELETE /controlmap/v1/clients/{client_id}/procedures/{procedure_id} — Delete Client's Procedure](https://developer.scalepad.com/reference/deleteclientprocedure)
+  - title: “Delete Client Procedure” → “Delete Client's Procedure”
+- [GET /controlmap/v1/clients/{client_id}/procedures/{procedure_id} — Get Client's Procedure](https://developer.scalepad.com/reference/getclientprocedurebyid)
+  - title: “Get Client Procedure” → “Get Client's Procedure”
+- [PATCH /controlmap/v1/clients/{client_id}/procedures/{procedure_id} — Partially Update Client's Procedure](https://developer.scalepad.com/reference/patchclientprocedure)
+  - title: “Partially Update Client Procedure” → “Partially Update Client's Procedure”
+- [POST /controlmap/v1/clients/{client_id}/procedures/{procedure_id}/mappings — Map Procedure to Objectives, Policies, and Controls](https://developer.scalepad.com/reference/mapentitiestoclientprocedure)
+  - description text updated
+- [POST /controlmap/v1/clients/{client_id}/procedures/{procedure_id}/mappings/bulk-delete — Unmap Procedure from Objectives, Policies, and Controls](https://developer.scalepad.com/reference/bulkdeleteentitiesfromclientprocedure)
+  - description text updated
+- [GET /controlmap/v1/clients/{client_id}/reports/{report_id}/signed-url — Retrieve a signed URL to download a report](https://developer.scalepad.com/reference/getreportsignedurl-1)
+  - page content updated (schema details / examples / prose)
+- [GET /controlmap/v1/clients/{client_id}/risk-categories/{risk_category_id} — Get Client's Risk Category](https://developer.scalepad.com/reference/getclientriskcategorybyid)
+  - title: “Get Client Risk Category” → “Get Client's Risk Category”
+- [POST /controlmap/v1/clients/{client_id}/risks — Create Client's Risk](https://developer.scalepad.com/reference/createclientrisk)
+  - title: “Create Client Risk” → “Create Client's Risk”
+- [GET /controlmap/v1/clients/{client_id}/risks/categories — List Client's Risk Categories](https://developer.scalepad.com/reference/listclientriskcategories)
+  - title: “List Client Risk Categories” → “List Client's Risk Categories”
+- [GET /controlmap/v1/clients/{client_id}/risks/departments — List Client's Risk Departments](https://developer.scalepad.com/reference/listclientriskdepartments)
+  - title: “List Client Risk Departments” → “List Client's Risk Departments”
+- [DELETE /controlmap/v1/clients/{client_id}/risks/{risk_id} — Delete Client's Risk](https://developer.scalepad.com/reference/deleteclientrisk)
+  - title: “Delete Client Risk” → “Delete Client's Risk”
+- [GET /controlmap/v1/clients/{client_id}/risks/{risk_id} — Get Client's Risk](https://developer.scalepad.com/reference/02_clientrisk-1)
+  - title: “Get Client Risk” → “Get Client's Risk”
+- [PATCH /controlmap/v1/clients/{client_id}/risks/{risk_id} — Partially Update Client's Risk](https://developer.scalepad.com/reference/updateclientrisk)
+  - title: “Partially Update Client Risk” → “Partially Update Client's Risk”
+- [POST /controlmap/v1/clients/{client_id}/risks/{risk_id}/mappings — Map Risk to Assets, Asset Types, Threats, Vulnerabilities, or Vendors](https://developer.scalepad.com/reference/mapentitiestoclientrisk)
+  - page content updated (schema details / examples / prose)
+- [POST /controlmap/v1/clients/{client_id}/risks/{risk_id}/mappings/bulk-delete — Unmap Risk from Assets, Asset Types, Threats, Vulnerabilities, or Vendors](https://developer.scalepad.com/reference/bulkdeleteentitiesfromclientrisk)
+  - page content updated (schema details / examples / prose)
+- [POST /controlmap/v1/clients/{client_id}/vendors — Create Client's Vendor](https://developer.scalepad.com/reference/03_createclientvendor)
+  - title: “Create Client Vendor” → “Create Client's Vendor”
+- [GET /controlmap/v1/clients/{client_id}/vendors/questionnaires — List Vendor Risk Assessment Questionnaires](https://developer.scalepad.com/reference/listvendorriskassessmentquestionnaires)
+  - description text updated
+- [POST /controlmap/v1/clients/{client_id}/vendors/search — Search Client's Vendors](https://developer.scalepad.com/reference/01_searchclientvendors)
+  - title: “Search Client Vendors” → “Search Client's Vendors”
+- [DELETE /controlmap/v1/clients/{client_id}/vendors/{vendor_code} — Delete Client's Vendor](https://developer.scalepad.com/reference/05_deleteclientvendor)
+  - title: “Delete Client Vendor” → “Delete Client's Vendor”
+- [GET /controlmap/v1/clients/{client_id}/vendors/{vendor_code} — Get Client's Vendor](https://developer.scalepad.com/reference/02_getclientvendor)
+  - title: “Get Client Vendor” → “Get Client's Vendor”
+- [PATCH /controlmap/v1/clients/{client_id}/vendors/{vendor_code} — Update Client's Vendor](https://developer.scalepad.com/reference/04_updateclientvendor)
+  - title: “Update Client Vendor” → “Update Client's Vendor”
+- [GET /controlmap/v1/clients/{client_id}/vendors/{vendor_code}/contacts — List Vendor Contacts](https://developer.scalepad.com/reference/09_listvendorcontacts)
+  - page content updated (schema details / examples / prose)
+- [POST /controlmap/v1/clients/{client_id}/vendors/{vendor_code}/contacts — Add Vendor Contact](https://developer.scalepad.com/reference/10_addvendorcontact)
+  - page content updated (schema details / examples / prose)
+- [DELETE /controlmap/v1/clients/{client_id}/vendors/{vendor_code}/contacts/{contact_id} — Delete Vendor Contact](https://developer.scalepad.com/reference/12_deletevendorcontact)
+  - page content updated (schema details / examples / prose)
+- [PATCH /controlmap/v1/clients/{client_id}/vendors/{vendor_code}/contacts/{contact_id} — Update Vendor Contact](https://developer.scalepad.com/reference/11_updatevendorcontact)
+  - page content updated (schema details / examples / prose)
+- [GET /controlmap/v1/clients/{client_id}/vendors/{vendor_code}/documents — List Vendor Documents](https://developer.scalepad.com/reference/16_getvendordocuments)
+  - page content updated (schema details / examples / prose)
+- [POST /controlmap/v1/clients/{client_id}/vendors/{vendor_code}/documents — Upload Vendor Document](https://developer.scalepad.com/reference/17_uploadvendordocument)
+  - page content updated (schema details / examples / prose)
+- [POST /controlmap/v1/clients/{client_id}/vendors/{vendor_code}/documents/complete-upload — Complete Vendor Document Upload](https://developer.scalepad.com/reference/completevendordocumentuploadforclient)
+  - page content updated (schema details / examples / prose)
+- [POST /controlmap/v1/clients/{client_id}/vendors/{vendor_code}/documents/signed-url — Prepare Signed Vendor Document Upload](https://developer.scalepad.com/reference/preparevendordocumentuploadforclient)
+  - page content updated (schema details / examples / prose)
+- [DELETE /controlmap/v1/clients/{client_id}/vendors/{vendor_code}/documents/{document_id} — Delete Vendor Document](https://developer.scalepad.com/reference/19_deletevendordocument)
+  - page content updated (schema details / examples / prose)
+- [GET /controlmap/v1/clients/{client_id}/vendors/{vendor_code}/links — List Vendor Links](https://developer.scalepad.com/reference/06_listvendorlinks)
+  - page content updated (schema details / examples / prose)
+- [POST /controlmap/v1/clients/{client_id}/vendors/{vendor_code}/links — Add Vendor Link](https://developer.scalepad.com/reference/07_addvendorlink)
+  - page content updated (schema details / examples / prose)
+- [DELETE /controlmap/v1/clients/{client_id}/vendors/{vendor_code}/links/{link_id} — Delete Vendor Link](https://developer.scalepad.com/reference/08_deletevendorlink)
+  - page content updated (schema details / examples / prose)
+- [POST /controlmap/v1/clients/{client_id}/vendors/{vendor_code}/mappings — Map Vendor Risks and Action Items](https://developer.scalepad.com/reference/mapvendorentitiesforclient)
+  - page content updated (schema details / examples / prose)
+- [POST /controlmap/v1/clients/{client_id}/vendors/{vendor_code}/mappings/bulk-delete — Unmap Vendor Risks and Action Items](https://developer.scalepad.com/reference/unmapvendorentitiesforclient)
+  - page content updated (schema details / examples / prose)
+- [GET /controlmap/v1/clients/{client_id}/vendors/{vendor_code}/quick-assessment — List Vendor Quick Assessments](https://developer.scalepad.com/reference/14_getvendorquickassessment)
+  - page content updated (schema details / examples / prose)
+- [GET /controlmap/v1/clients/{client_id}/vendors/{vendor_code}/quick-assessment/{assessment_link_id} — Get Vendor Quick Assessment](https://developer.scalepad.com/reference/getvendorquickassessmentforclient)
+  - page content updated (schema details / examples / prose)
+- [PATCH /controlmap/v1/clients/{client_id}/vendors/{vendor_code}/quick-assessment/{assessment_link_id} — Update Vendor Quick Assessment](https://developer.scalepad.com/reference/15_updatevendorquickassessment)
+  - page content updated (schema details / examples / prose)
+- [GET /controlmap/v1/clients/{client_id}/vendors/{vendor_code}/risk-assessments — List Vendor Risk Assessments](https://developer.scalepad.com/reference/13b_getvendorriskassessments)
+  - page content updated (schema details / examples / prose)
+- [POST /controlmap/v1/clients/{client_id}/vendors/{vendor_code}/risk-assessments — Create Vendor Risk Assessment](https://developer.scalepad.com/reference/createvendorriskassessmentforclient)
+  - page content updated (schema details / examples / prose)
+- [DELETE /controlmap/v1/clients/{client_id}/vendors/{vendor_code}/risk-assessments/{assessment_link_id} — Delete Vendor Risk Assessment](https://developer.scalepad.com/reference/deletevendorriskassessmentforclient)
+  - page content updated (schema details / examples / prose)
+- [GET /controlmap/v1/clients/{client_id}/vendors/{vendor_code}/risk-assessments/{assessment_link_id} — Get Vendor Risk Assessment](https://developer.scalepad.com/reference/getvendorriskassessmentforclient)
+  - page content updated (schema details / examples / prose)
+- [PATCH /controlmap/v1/clients/{client_id}/vendors/{vendor_code}/risk-assessments/{assessment_link_id} — Update Vendor Risk Assessment](https://developer.scalepad.com/reference/updatevendorriskassessmentanswer)
+  - page content updated (schema details / examples / prose)
+
 ### Guides
 - [API versioning policy](https://developer.scalepad.com/docs/api-versioning-policy)
   - page content updated (schema details / examples / prose)
@@ -16,3 +309,151 @@ Tracking 773 pages at https://developer.scalepad.com. **0 added · 0 removed · 
   - page content updated (schema details / examples / prose)
 - [ScalePad x Zapier](https://developer.scalepad.com/docs/zapier-integration)
   - page content updated (schema details / examples / prose)
+
+### Other
+- [List Client's Evidences](https://developer.scalepad.com/reference/01_evidenceapi-1)
+  - title: “List Client Evidences” → “List Client's Evidences”
+- [List Client's Reports](https://developer.scalepad.com/reference/01_listclientreports-1)
+  - title: “List Client Reports” → “List Client's Reports”
+- [Search Client's Action Items](https://developer.scalepad.com/reference/a_actionitem-1)
+  - title: “Search Client Action Items” → “Search Client's Action Items”
+- [Search Client's Assessment Questions](https://developer.scalepad.com/reference/assessmentquestionssearchbyclient-1)
+  - title: “Search Client Assessment Questions” → “Search Client's Assessment Questions”
+- [Search Client's Controls](https://developer.scalepad.com/reference/opencontrolssearch)
+  - title: “Search Client Controls” → “Search Client's Controls”
+- [Search Client's Governance](https://developer.scalepad.com/reference/searchclientgovernance)
+  - title: “Search Client Governance” → “Search Client's Governance”
+- [Search Client's Objectives](https://developer.scalepad.com/reference/01_searchclientobjectives)
+  - title: “Search Client Objectives” → “Search Client's Objectives”
+- [Search Client's Policies](https://developer.scalepad.com/reference/searchclientpolicies)
+  - title: “Search Client Policies” → “Search Client's Policies”
+- [Search Client's Procedures](https://developer.scalepad.com/reference/searchclientprocedures)
+  - title: “Search Client Procedures” → “Search Client's Procedures”
+- [Search Client's Risks](https://developer.scalepad.com/reference/01_listclientsrisk-1)
+  - title: “Search Client Risks” → “Search Client's Risks”
+
+### Quoter API
+- [GET /v1/categories — List Categories](https://developer.scalepad.com/reference/listcategories)
+  - responses added: `400`
+- [POST /v1/categories — Create Category](https://developer.scalepad.com/reference/createcategory)
+  - page content updated (schema details / examples / prose)
+- [DELETE /v1/categories/{id} — Delete Category](https://developer.scalepad.com/reference/deletecategory)
+  - page content updated (schema details / examples / prose)
+- [GET /v1/categories/{id} — Fetch Category](https://developer.scalepad.com/reference/fetchcategory)
+  - page content updated (schema details / examples / prose)
+- [PATCH /v1/categories/{id} — Update Category](https://developer.scalepad.com/reference/updatecategory)
+  - page content updated (schema details / examples / prose)
+- [GET /v1/contacts — List Contacts](https://developer.scalepad.com/reference/listcontacts)
+  - responses added: `400`
+- [POST /v1/contacts — Create Contact](https://developer.scalepad.com/reference/createcontact)
+  - page content updated (schema details / examples / prose)
+- [GET /v1/contacts/{id} — Fetch Contact](https://developer.scalepad.com/reference/fetchcontact)
+  - page content updated (schema details / examples / prose)
+- [PATCH /v1/contacts/{id} — Update Contact](https://developer.scalepad.com/reference/updatecontact)
+  - page content updated (schema details / examples / prose)
+- [GET /v1/datafeeds/supplier-items — List Supplier Items](https://developer.scalepad.com/reference/listdatafeedsupplieritems)
+  - page content updated (schema details / examples / prose)
+- [GET /v1/datafeeds/suppliers — List Suppliers](https://developer.scalepad.com/reference/listdatafeedsuppliers)
+  - page content updated (schema details / examples / prose)
+- [GET /v1/item-group-item-assignments — List Item Group Assignments](https://developer.scalepad.com/reference/listitemgroupitemassignments)
+  - responses added: `400`
+- [POST /v1/item-group-item-assignments — Create Item Group Assignment](https://developer.scalepad.com/reference/createitemgroupitemassignment)
+  - page content updated (schema details / examples / prose)
+- [DELETE /v1/item-group-item-assignments/{id} — Delete Item Group Assignment](https://developer.scalepad.com/reference/deleteitemgroupitemassignment)
+  - page content updated (schema details / examples / prose)
+- [GET /v1/item-group-item-assignments/{id} — Fetch Item Group Assignment](https://developer.scalepad.com/reference/fetchitemgroupitemassignment)
+  - page content updated (schema details / examples / prose)
+- [GET /v1/item-groups — List Item Groups](https://developer.scalepad.com/reference/listitemgroups)
+  - responses added: `400`
+- [POST /v1/item-groups — Create Item Group](https://developer.scalepad.com/reference/createitemgroup)
+  - page content updated (schema details / examples / prose)
+- [DELETE /v1/item-groups/{id} — Delete Item Group](https://developer.scalepad.com/reference/deleteitemgroup)
+  - page content updated (schema details / examples / prose)
+- [GET /v1/item-groups/{id} — Fetch Item Group](https://developer.scalepad.com/reference/fetchitemgroup)
+  - page content updated (schema details / examples / prose)
+- [PATCH /v1/item-groups/{id} — Update Item Group](https://developer.scalepad.com/reference/updateitemgroup)
+  - page content updated (schema details / examples / prose)
+- [GET /v1/item-option-values — List Item Option Values](https://developer.scalepad.com/reference/listitemoptionvalues)
+  - responses added: `400`
+- [POST /v1/item-option-values — Create Item Option Value](https://developer.scalepad.com/reference/createitemoptionvalue)
+  - page content updated (schema details / examples / prose)
+- [DELETE /v1/item-option-values/{id} — Delete Item Option Value](https://developer.scalepad.com/reference/deleteitemoptionvalue)
+  - page content updated (schema details / examples / prose)
+- [GET /v1/item-option-values/{id} — Fetch Item Option Value](https://developer.scalepad.com/reference/fetchitemoptionvalue)
+  - page content updated (schema details / examples / prose)
+- [PATCH /v1/item-option-values/{id} — Update Item Option Value](https://developer.scalepad.com/reference/updateitemoptionvalue)
+  - page content updated (schema details / examples / prose)
+- [GET /v1/item-options — List Item Options](https://developer.scalepad.com/reference/listitemoptions)
+  - responses added: `400`
+- [POST /v1/item-options — Create Item Option](https://developer.scalepad.com/reference/createitemoption)
+  - page content updated (schema details / examples / prose)
+- [DELETE /v1/item-options/{id} — Delete Item Option](https://developer.scalepad.com/reference/deleteitemoption)
+  - page content updated (schema details / examples / prose)
+- [GET /v1/item-options/{id} — Fetch Item Option](https://developer.scalepad.com/reference/fetchitemoption)
+  - page content updated (schema details / examples / prose)
+- [PATCH /v1/item-options/{id} — Update Item Option](https://developer.scalepad.com/reference/updateitemoption)
+  - page content updated (schema details / examples / prose)
+- [GET /v1/item-tiers — List Item Tiers](https://developer.scalepad.com/reference/listitemtiers)
+  - responses added: `400`
+- [POST /v1/item-tiers — Create Item Tier](https://developer.scalepad.com/reference/createitemtier)
+  - page content updated (schema details / examples / prose)
+- [DELETE /v1/item-tiers/{id} — Delete Item Tier](https://developer.scalepad.com/reference/deleteitemtier)
+  - page content updated (schema details / examples / prose)
+- [GET /v1/item-tiers/{id} — Fetch Item Tier](https://developer.scalepad.com/reference/fetchitemtier)
+  - page content updated (schema details / examples / prose)
+- [PATCH /v1/item-tiers/{id} — Update Item Tier](https://developer.scalepad.com/reference/updateitemtier)
+  - page content updated (schema details / examples / prose)
+- [GET /v1/items — List Items](https://developer.scalepad.com/reference/listitems)
+  - responses added: `400`
+- [POST /v1/items — Create Item](https://developer.scalepad.com/reference/createitem)
+  - page content updated (schema details / examples / prose)
+- [DELETE /v1/items/{id} — Delete Item](https://developer.scalepad.com/reference/deleteitem)
+  - page content updated (schema details / examples / prose)
+- [GET /v1/items/{id} — Fetch Item](https://developer.scalepad.com/reference/fetchitem)
+  - page content updated (schema details / examples / prose)
+- [PATCH /v1/items/{id} — Update Item](https://developer.scalepad.com/reference/updateitem)
+  - page content updated (schema details / examples / prose)
+- [POST /v1/line-items — Create Line Item](https://developer.scalepad.com/reference/createlineitem)
+  - page content updated (schema details / examples / prose)
+- [GET /v1/manufacturers — List Manufacturers](https://developer.scalepad.com/reference/listmanufacturers)
+  - responses added: `400`
+- [POST /v1/manufacturers — Create Manufacturer](https://developer.scalepad.com/reference/createmanufacturer)
+  - page content updated (schema details / examples / prose)
+- [DELETE /v1/manufacturers/{id} — Delete Manufacturer](https://developer.scalepad.com/reference/deletemanufacturer)
+  - page content updated (schema details / examples / prose)
+- [GET /v1/manufacturers/{id} — Fetch Manufacturer](https://developer.scalepad.com/reference/fetchmanufacturer)
+  - page content updated (schema details / examples / prose)
+- [PATCH /v1/manufacturers/{id} — Update Manufacturer](https://developer.scalepad.com/reference/updatemanufacturer)
+  - page content updated (schema details / examples / prose)
+- [GET /v1/quote-templates — List Quote Templates](https://developer.scalepad.com/reference/listquotetemplates)
+  - responses added: `400`
+  - responses removed: `422`
+- [GET /v1/quotes — List Quotes](https://developer.scalepad.com/reference/listquotes)
+  - params added: `query:filter[include_drafts]`
+  - responses added: `400`
+- [POST /v1/quotes — Create Quote](https://developer.scalepad.com/reference/createquote)
+  - request fields added: `billing_address`, `content_blocks`, `cover_page`, `initiative_id`
+- [GET /v1/quotes/{quote_id} — Fetch Quote](https://developer.scalepad.com/reference/fetchquote)
+  - page content updated (schema details / examples / prose)
+- [POST /v1/quotes/{quote_id}/publish — Publish Quote](https://developer.scalepad.com/reference/publishquote)
+  - description text updated
+- [POST /v1/quotes/{quote_id}/sections — Create Quote Sections](https://developer.scalepad.com/reference/createquotesections)
+  - page content updated (schema details / examples / prose)
+- [POST /v1/quotes/{quote_id}/sections/{section_id}/line-items — Create Quote Line Items](https://developer.scalepad.com/reference/createquotelineitems)
+  - request fields added: `[].integration`
+- [PATCH /v1/quotes/{quote_id}/sections/{section_id}/line-items/{line_item_id} — Patch Quote Line Item](https://developer.scalepad.com/reference/patchquotesectionlineitem)
+  - request fields added: `integration`
+- [GET /v1/suppliers — List Suppliers](https://developer.scalepad.com/reference/get_v1-suppliers-1)
+  - responses added: `400`
+- [POST /v1/suppliers — Create Supplier](https://developer.scalepad.com/reference/post_v1-suppliers-1)
+  - page content updated (schema details / examples / prose)
+- [DELETE /v1/suppliers/{id} — Delete Supplier](https://developer.scalepad.com/reference/delete_v1-suppliers-id-1)
+  - page content updated (schema details / examples / prose)
+- [GET /v1/suppliers/{id} — Fetch Supplier](https://developer.scalepad.com/reference/get_v1-suppliers-id-1)
+  - page content updated (schema details / examples / prose)
+- [PATCH /v1/suppliers/{id} — Update Supplier](https://developer.scalepad.com/reference/patch_v1-suppliers-id-1)
+  - page content updated (schema details / examples / prose)
+
+### ScalePad CS, ScalePad Platform, and SaaS Manager
+- [POST /app/v1/clients/{client_id}/enrollment-tokens — Create an enrollment token](https://developer.scalepad.com/reference/createsaasmanagementenrollmenttoken)
+  - responses added: `403`
