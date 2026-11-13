@@ -1,9 +1,9 @@
 {
  "meta": {
   "base_url": "https://developer.scalepad.com",
-  "checked_at": "2026-11-13T00:06:00.359399+00:00",
-  "page_count": 792,
-  "previous_checked_at": "2026-11-12T22:41:30.910550+00:00"
+  "checked_at": "2026-11-13T21:22:46.086925+00:00",
+  "page_count": 800,
+  "previous_checked_at": "2026-11-13T00:06:00.359399+00:00"
  },
  "pages": [
   {
@@ -33,20 +33,6 @@
    "title": "ControlMap API - Objective notes and bulk updates",
    "updated_at": null,
    "url": "https://developer.scalepad.com/changelog/20261103-control-map-v1-changelog"
-  },
-  {
-   "content_hash": "a0a3cb1444cf288a",
-   "description": "",
-   "fetch_error": null,
-   "key": "/changelog/20261104-lifecycle-manager-v1-changelog",
-   "kind": "guide",
-   "method": null,
-   "operation": {},
-   "path": null,
-   "product": null,
-   "title": "Canonical Lifecycle Manager API paths",
-   "updated_at": null,
-   "url": "https://developer.scalepad.com/changelog/20261104-lifecycle-manager-v1-changelog"
   },
   {
    "content_hash": "db34e11e11363482",
@@ -147,7 +133,21 @@
    "url": "https://developer.scalepad.com/changelog/20261106-saas-management-v1-changelog"
   },
   {
-   "content_hash": "4e3786b024fe802e",
+   "content_hash": "68f38c4cd98b91d3",
+   "description": "",
+   "fetch_error": null,
+   "key": "/changelog/20261113-control-map-v1-changelog",
+   "kind": "guide",
+   "method": null,
+   "operation": {},
+   "path": null,
+   "product": null,
+   "title": "ControlMap API - Sub-objective answers and RACI updates",
+   "updated_at": null,
+   "url": "https://developer.scalepad.com/changelog/20261113-control-map-v1-changelog"
+  },
+  {
+   "content_hash": "9b4289619b750135",
    "description": "",
    "fetch_error": null,
    "key": "/docs/api-versioning-policy",
@@ -161,7 +161,7 @@
    "url": "https://developer.scalepad.com/docs/api-versioning-policy"
   },
   {
-   "content_hash": "f4a7165dbce03f40",
+   "content_hash": "88553f2b46cab033",
    "description": "",
    "fetch_error": null,
    "key": "/docs/getting-started",
@@ -175,7 +175,7 @@
    "url": "https://developer.scalepad.com/docs/getting-started"
   },
   {
-   "content_hash": "3be11c1a7c0ae362",
+   "content_hash": "837b41885dc7eb6b",
    "description": "",
    "fetch_error": null,
    "key": "/docs/mcp",
@@ -189,7 +189,7 @@
    "url": "https://developer.scalepad.com/docs/mcp"
   },
   {
-   "content_hash": "22947409721719e9",
+   "content_hash": "9da494cadb09427f",
    "description": "",
    "fetch_error": null,
    "key": "/docs/product-apis-and-subscriptions",
@@ -231,7 +231,7 @@
    "url": "https://developer.scalepad.com/docs/product-mcp-tools"
   },
   {
-   "content_hash": "a0c66d307fe2a3bc",
+   "content_hash": "c3239cc454c99cec",
    "description": "",
    "fetch_error": null,
    "key": "/docs/regional-endpoints-and-compliance",
@@ -245,7 +245,7 @@
    "url": "https://developer.scalepad.com/docs/regional-endpoints-and-compliance"
   },
   {
-   "content_hash": "4d1d44a5846f5870",
+   "content_hash": "65ba12e26b39bebe",
    "description": "",
    "fetch_error": null,
    "key": "/docs/zapier-integration",
@@ -524,7 +524,7 @@
    "url": "https://developer.scalepad.com/reference/02_evidenceapi-1"
   },
   {
-   "content_hash": "e292cc5bbbac8abd",
+   "content_hash": "36285a74a89bd38b",
    "description": "Returns a single objective for the specified client and framework.",
    "fetch_error": null,
    "key": "/reference/02_getclientobjectivebyid",
@@ -924,7 +924,7 @@
    "url": "https://developer.scalepad.com/reference/05_evidenceapi-1"
   },
   {
-   "content_hash": "54e2dee029d6b310",
+   "content_hash": "eccf3420a149499d",
    "description": "Updates specific fields of an objective. Only the fields provided in the request body will be updated. All other fields will remain unchanged.  Request property names use snake_case in JSON.\u2026",
    "fetch_error": null,
    "key": "/reference/05_updateclientobjective",
@@ -19151,6 +19151,114 @@
    "url": "https://developer.scalepad.com/reference/checkpriceandavailability"
   },
   {
+   "content_hash": "a64433e0ea74b299",
+   "description": "Clears the selected party's responsibility text across objectives and mapped assessment sub-objectives in the framework. Requires an Essentials or Pro plan and a party with a null or empty name. The\u2026",
+   "fetch_error": null,
+   "key": "/reference/clearclientframeworkresponsibilities",
+   "kind": "endpoint",
+   "method": "DELETE",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*",
+     "path:framework_id*",
+     "path:person_id*"
+    ],
+    "request_fields": [],
+    "responses": [
+     "204",
+     "400",
+     "401",
+     "403",
+     "404",
+     "409",
+     "500"
+    ],
+    "summary": "Clear Framework Responsibilities",
+    "tags": [
+     "Frameworks"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/frameworks/{framework_id}/raci/{person_id}/responsibilities",
+   "product": "ControlMap API",
+   "title": "Clear Framework Responsibilities",
+   "updated_at": "2026-11-13T18:14:26.000Z",
+   "url": "https://developer.scalepad.com/reference/clearclientframeworkresponsibilities"
+  },
+  {
+   "content_hash": "bf6b1afd6cf0a887",
+   "description": "Clears one responsibility cell on the objective. The party and its assignment remain available for later edits.",
+   "fetch_error": null,
+   "key": "/reference/clearclientobjectiveresponsibility",
+   "kind": "endpoint",
+   "method": "DELETE",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*",
+     "path:framework_id*",
+     "path:objective_id*",
+     "path:person_id*"
+    ],
+    "request_fields": [],
+    "responses": [
+     "204",
+     "400",
+     "401",
+     "403",
+     "404",
+     "409",
+     "500"
+    ],
+    "summary": "Clear Objective Responsibility",
+    "tags": [
+     "Frameworks"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/frameworks/{framework_id}/objectives/{objective_id}/raci/{person_id}",
+   "product": "ControlMap API",
+   "title": "Clear Objective Responsibility",
+   "updated_at": "2026-11-13T18:14:26.000Z",
+   "url": "https://developer.scalepad.com/reference/clearclientobjectiveresponsibility"
+  },
+  {
+   "content_hash": "930461a925175d17",
+   "description": "Clears one responsibility cell on the mapped assessment sub-objective. A shared sub-objective displays the cleared cell under each mapped objective.",
+   "fetch_error": null,
+   "key": "/reference/clearclientsubobjectiveresponsibility",
+   "kind": "endpoint",
+   "method": "DELETE",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*",
+     "path:framework_id*",
+     "path:objective_id*",
+     "path:person_id*",
+     "path:sub_objective_id*"
+    ],
+    "request_fields": [],
+    "responses": [
+     "204",
+     "400",
+     "401",
+     "403",
+     "404",
+     "409",
+     "500"
+    ],
+    "summary": "Clear Sub-objective Responsibility",
+    "tags": [
+     "Frameworks"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/frameworks/{framework_id}/objectives/{objective_id}/sub-objectives/{sub_objective_id}/raci/{person_id}",
+   "product": "ControlMap API",
+   "title": "Clear Sub-objective Responsibility",
+   "updated_at": "2026-11-13T18:14:26.000Z",
+   "url": "https://developer.scalepad.com/reference/clearclientsubobjectiveresponsibility"
+  },
+  {
    "content_hash": "2365c7bc0af504bd",
    "description": "Adds the uploaded document to the vendor after checking its size and file type.  Call this endpoint after the signed `PUT` succeeds. Use the returned `upload_token` with the same client, vendor and\u2026",
    "fetch_error": null,
@@ -23707,6 +23815,39 @@
    "url": "https://developer.scalepad.com/reference/listcategories"
   },
   {
+   "content_hash": "cda779c2c335e622",
+   "description": "Lists the finite set of assessment sub-objective answer options for the selected client. The framework must belong to the client. The answer lookup is shared by the client's frameworks.",
+   "fetch_error": null,
+   "key": "/reference/listclientobjectiveresponses",
+   "kind": "endpoint",
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*",
+     "path:framework_id*"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "400",
+     "401",
+     "403",
+     "404",
+     "500"
+    ],
+    "summary": "List Objective Responses",
+    "tags": [
+     "Frameworks"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/frameworks/{framework_id}/objective-responses",
+   "product": "ControlMap API",
+   "title": "List Objective Responses",
+   "updated_at": "2026-11-13T18:14:26.000Z",
+   "url": "https://developer.scalepad.com/reference/listclientobjectiveresponses"
+  },
+  {
    "content_hash": "2bd8ea560fe0b6ce",
    "description": "Retrieves risk categories for the specified client. Optionally filter by name using a case-insensitive search query.",
    "fetch_error": null,
@@ -26012,6 +26153,86 @@
    "url": "https://developer.scalepad.com/reference/updatecategory"
   },
   {
+   "content_hash": "3a6d974cb6a27a83",
+   "description": "Updates one party's responsibility text in an explicit set of objective and assessment sub-objective rows or throughout the framework. Named parties are eligible. Empty or whitespace-only text clears\u2026",
+   "fetch_error": null,
+   "key": "/reference/updateclientframeworkresponsibilities",
+   "kind": "endpoint",
+   "method": "PATCH",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*",
+     "path:framework_id*",
+     "path:person_id*"
+    ],
+    "request_fields": [
+     "apply_to_all",
+     "objective_ids",
+     "responsibility",
+     "sub_objective_ids"
+    ],
+    "responses": [
+     "204",
+     "400",
+     "401",
+     "403",
+     "404",
+     "409",
+     "415",
+     "500"
+    ],
+    "summary": "Update Framework Responsibilities",
+    "tags": [
+     "Frameworks"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/frameworks/{framework_id}/raci/{person_id}/responsibilities",
+   "product": "ControlMap API",
+   "title": "Update Framework Responsibilities",
+   "updated_at": "2026-11-13T18:14:26.000Z",
+   "url": "https://developer.scalepad.com/reference/updateclientframeworkresponsibilities"
+  },
+  {
+   "content_hash": "10ebf3ebd49347f4",
+   "description": "Sets the responsibility text for an existing party on the objective. Use the person_id returned in responsible_party. An empty string clears the cell.",
+   "fetch_error": null,
+   "key": "/reference/updateclientobjectiveresponsibility",
+   "kind": "endpoint",
+   "method": "PATCH",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*",
+     "path:framework_id*",
+     "path:objective_id*",
+     "path:person_id*"
+    ],
+    "request_fields": [
+     "responsibility"
+    ],
+    "responses": [
+     "200",
+     "400",
+     "401",
+     "403",
+     "404",
+     "409",
+     "415",
+     "500"
+    ],
+    "summary": "Update Objective Responsibility",
+    "tags": [
+     "Frameworks"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/frameworks/{framework_id}/objectives/{objective_id}/raci/{person_id}",
+   "product": "ControlMap API",
+   "title": "Update Objective Responsibility",
+   "updated_at": "2026-11-13T18:14:26.000Z",
+   "url": "https://developer.scalepad.com/reference/updateclientobjectiveresponsibility"
+  },
+  {
    "content_hash": "3765d322131fa9ae",
    "description": "Updates specific fields of a risk. Only the fields provided in the request body will be updated. All other fields will remain unchanged.  Request property names use snake_case in JSON.  **Allowed\u2026",
    "fetch_error": null,
@@ -26051,6 +26272,85 @@
    "title": "Partially Update Client's Risk",
    "updated_at": "2026-07-02T17:30:37.000Z",
    "url": "https://developer.scalepad.com/reference/updateclientrisk"
+  },
+  {
+   "content_hash": "5f5281b1782114dd",
+   "description": "Sets or clears the answer on a mapped assessment sub-objective for the selected client. Discover the tenant's answer IDs with List Objective Responses. Send null to clear the answer. The cleared\u2026",
+   "fetch_error": null,
+   "key": "/reference/updateclientsubobjective",
+   "kind": "endpoint",
+   "method": "PATCH",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*",
+     "path:framework_id*",
+     "path:objective_id*",
+     "path:sub_objective_id*"
+    ],
+    "request_fields": [
+     "objective_value_id"
+    ],
+    "responses": [
+     "200",
+     "400",
+     "401",
+     "403",
+     "404",
+     "409",
+     "415",
+     "500"
+    ],
+    "summary": "Update Client Sub-objective",
+    "tags": [
+     "Frameworks"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/frameworks/{framework_id}/objectives/{objective_id}/sub-objectives/{sub_objective_id}",
+   "product": "ControlMap API",
+   "title": "Update Client Sub-objective",
+   "updated_at": "2026-11-13T18:14:26.000Z",
+   "url": "https://developer.scalepad.com/reference/updateclientsubobjective"
+  },
+  {
+   "content_hash": "2af9b015f25817e7",
+   "description": "Sets the responsibility text for an existing party on the mapped assessment sub-objective. Use person_id from raci. An empty string clears the cell. A shared sub-objective displays the same cell\u2026",
+   "fetch_error": null,
+   "key": "/reference/updateclientsubobjectiveresponsibility",
+   "kind": "endpoint",
+   "method": "PATCH",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*",
+     "path:framework_id*",
+     "path:objective_id*",
+     "path:person_id*",
+     "path:sub_objective_id*"
+    ],
+    "request_fields": [
+     "responsibility"
+    ],
+    "responses": [
+     "200",
+     "400",
+     "401",
+     "403",
+     "404",
+     "409",
+     "415",
+     "500"
+    ],
+    "summary": "Update Sub-objective Responsibility",
+    "tags": [
+     "Frameworks"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/frameworks/{framework_id}/objectives/{objective_id}/sub-objectives/{sub_objective_id}/raci/{person_id}",
+   "product": "ControlMap API",
+   "title": "Update Sub-objective Responsibility",
+   "updated_at": "2026-11-13T18:14:26.000Z",
+   "url": "https://developer.scalepad.com/reference/updateclientsubobjectiveresponsibility"
   },
   {
    "content_hash": "4f72527505c92728",
