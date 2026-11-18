@@ -1,9 +1,9 @@
 {
  "meta": {
   "base_url": "https://developer.scalepad.com",
-  "checked_at": "2026-11-18T01:33:38.506092+00:00",
-  "page_count": 800,
-  "previous_checked_at": "2026-11-17T23:49:31.359740+00:00"
+  "checked_at": "2026-11-18T22:32:53.323765+00:00",
+  "page_count": 802,
+  "previous_checked_at": "2026-11-18T01:33:38.506092+00:00"
  },
  "pages": [
   {
@@ -147,7 +147,7 @@
    "url": "https://developer.scalepad.com/changelog/20261113-control-map-v1-changelog"
   },
   {
-   "content_hash": "787eccabe59c7d67",
+   "content_hash": "ef8be2762d94e6dc",
    "description": "",
    "fetch_error": null,
    "key": "/docs/api-versioning-policy",
@@ -161,7 +161,7 @@
    "url": "https://developer.scalepad.com/docs/api-versioning-policy"
   },
   {
-   "content_hash": "fad870e31a70d806",
+   "content_hash": "cd0ff4bc4cd22c90",
    "description": "",
    "fetch_error": null,
    "key": "/docs/getting-started",
@@ -175,7 +175,7 @@
    "url": "https://developer.scalepad.com/docs/getting-started"
   },
   {
-   "content_hash": "041975f2193fae18",
+   "content_hash": "1336d414fdded692",
    "description": "",
    "fetch_error": null,
    "key": "/docs/mcp",
@@ -189,7 +189,7 @@
    "url": "https://developer.scalepad.com/docs/mcp"
   },
   {
-   "content_hash": "e0f0874630eaffad",
+   "content_hash": "36c477c19061a7a0",
    "description": "",
    "fetch_error": null,
    "key": "/docs/product-apis-and-subscriptions",
@@ -231,7 +231,7 @@
    "url": "https://developer.scalepad.com/docs/product-mcp-tools"
   },
   {
-   "content_hash": "0c4c5dc87f3c9212",
+   "content_hash": "028615f0e198c6c6",
    "description": "",
    "fetch_error": null,
    "key": "/docs/regional-endpoints-and-compliance",
@@ -245,7 +245,7 @@
    "url": "https://developer.scalepad.com/docs/regional-endpoints-and-compliance"
   },
   {
-   "content_hash": "85c9c44b897491b2",
+   "content_hash": "42e734b56740607b",
    "description": "",
    "fetch_error": null,
    "key": "/docs/zapier-integration",
@@ -524,8 +524,8 @@
    "url": "https://developer.scalepad.com/reference/02_evidenceapi-1"
   },
   {
-   "content_hash": "36285a74a89bd38b",
-   "description": "Returns a single objective for the specified client and framework.",
+   "content_hash": "f984f9876b0b22ef",
+   "description": "Returns a single objective for the specified client and framework. The response includes framework_object with the containing framework id and framework_name.",
    "fetch_error": null,
    "key": "/reference/02_getclientobjectivebyid",
    "kind": "endpoint",
@@ -667,7 +667,7 @@
    "url": "https://developer.scalepad.com/reference/03_createclientvendor"
   },
   {
-   "content_hash": "bc798e0623139eb9",
+   "content_hash": "c3c2df51c44b195a",
    "description": "Creates a new evidence with all necessary details.",
    "fetch_error": null,
    "key": "/reference/03_evidenceapi-1",
@@ -814,6 +814,38 @@
    "url": "https://developer.scalepad.com/reference/04_evidenceapi-1"
   },
   {
+   "content_hash": "2f50cba3ca947293",
+   "description": "Resolves the objective by its numeric ID within the specified client. The framework ID is derived from the objective and is not required in the URL. Returns the same objective detail representation\u2026",
+   "fetch_error": null,
+   "key": "/reference/04_getclientobjectivebyid",
+   "kind": "endpoint",
+   "method": "GET",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*",
+     "path:objective_id*"
+    ],
+    "request_fields": [],
+    "responses": [
+     "200",
+     "400",
+     "401",
+     "404",
+     "500"
+    ],
+    "summary": "Get Client Objective",
+    "tags": [
+     "Frameworks"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/objectives/{objective_id}",
+   "product": "ControlMap API",
+   "title": "Get Client Objective",
+   "updated_at": "2026-11-18T21:50:03.000Z",
+   "url": "https://developer.scalepad.com/reference/04_getclientobjectivebyid"
+  },
+  {
    "content_hash": "24a71c3c433b8c9d",
    "description": "Updates the supplied vendor fields. At least one field is required.  **Update rules**  - Omitted fields remain unchanged. Null clears `owner_email`; other nulls leave values unchanged. - Use client\u2026",
    "fetch_error": null,
@@ -924,7 +956,7 @@
    "url": "https://developer.scalepad.com/reference/05_evidenceapi-1"
   },
   {
-   "content_hash": "eccf3420a149499d",
+   "content_hash": "3718ec72555cd8c4",
    "description": "Updates specific fields of an objective. Only the fields provided in the request body will be updated. All other fields will remain unchanged.  Request property names use snake_case in JSON.\u2026",
    "fetch_error": null,
    "key": "/reference/05_updateclientobjective",
@@ -1061,6 +1093,47 @@
    "title": "List Vendor Links",
    "updated_at": "2026-10-22T17:16:46.000Z",
    "url": "https://developer.scalepad.com/reference/06_listvendorlinks"
+  },
+  {
+   "content_hash": "7b82a029f630c0fe",
+   "description": "Resolves the objective by its numeric ID within the specified client. The framework ID is derived from the objective and is not required in the URL. Updates specific fields of an objective. Only the\u2026",
+   "fetch_error": null,
+   "key": "/reference/06_updateclientobjectivebyid",
+   "kind": "endpoint",
+   "method": "PATCH",
+   "operation": {
+    "deprecated": false,
+    "parameters": [
+     "path:client_id*",
+     "path:objective_id*"
+    ],
+    "request_fields": [
+     "current_maturity",
+     "description",
+     "implementation_details",
+     "in_scope",
+     "remarks",
+     "status",
+     "sub_objectives",
+     "target_maturity"
+    ],
+    "responses": [
+     "200",
+     "400",
+     "401",
+     "404",
+     "500"
+    ],
+    "summary": "Partially Update Client Objective",
+    "tags": [
+     "Frameworks"
+    ]
+   },
+   "path": "/controlmap/v1/clients/{client_id}/objectives/{objective_id}",
+   "product": "ControlMap API",
+   "title": "Partially Update Client Objective",
+   "updated_at": "2026-11-18T21:50:03.000Z",
+   "url": "https://developer.scalepad.com/reference/06_updateclientobjectivebyid"
   },
   {
    "content_hash": "a90fec83d72f578b",
@@ -18836,7 +18909,7 @@
    "url": "https://developer.scalepad.com/reference/assessmentquestionunmapentitiesforclientdeprecated"
   },
   {
-   "content_hash": "8a828a5e8d84dab2",
+   "content_hash": "829879520c26f232",
    "description": "Retrieves a specific action item for a given client.  This endpoint returns detailed information about an action item, including its status, ownership, and audit metadata.",
    "fetch_error": null,
    "key": "/reference/b_actionitem-1",
@@ -18868,8 +18941,8 @@
    "url": "https://developer.scalepad.com/reference/b_actionitem-1"
   },
   {
-   "content_hash": "729c63af20b24545",
-   "description": "Removes links between a client's governance and given objectives (requirements), policies, controls for the client.  In the request body, include only the entity codes that need to be unmapped. Empty\u2026",
+   "content_hash": "d57fe0ace01efb06",
+   "description": "Removes links between a client's governance and given objectives (requirements), policies, controls for the client.  Include only the objective IDs or business codes for mappings you want to remove.\u2026",
    "fetch_error": null,
    "key": "/reference/bulkdeleteentitiesfromclientgovernance",
    "kind": "endpoint",
@@ -18882,6 +18955,7 @@
     ],
     "request_fields": [
      "control_codes",
+     "objective_ids",
      "objectives",
      "policy_codes"
     ],
@@ -18939,8 +19013,8 @@
    "url": "https://developer.scalepad.com/reference/bulkdeleteentitiesfromclientpolicy"
   },
   {
-   "content_hash": "80d14142bf9c9364",
-   "description": "Removes links between a client's procedure and framework requirements (objectives), policies, and/or controls in the request body.  Send only codes for mappings that should be removed. Empty or\u2026",
+   "content_hash": "d0d320f8ea33d303",
+   "description": "Removes links between a client's procedure and framework requirements (objectives), policies, and/or controls in the request body.  Send only the objective IDs or business codes for mappings you want\u2026",
    "fetch_error": null,
    "key": "/reference/bulkdeleteentitiesfromclientprocedure",
    "kind": "endpoint",
@@ -18953,6 +19027,7 @@
     ],
     "request_fields": [
      "control_codes",
+     "objective_ids",
      "objectives",
      "policy_codes"
     ],
@@ -18975,8 +19050,8 @@
    "url": "https://developer.scalepad.com/reference/bulkdeleteentitiesfromclientprocedure"
   },
   {
-   "content_hash": "ddd9a3420293b4f6",
-   "description": "Removes links between a risk and the given assets, asset types, threats, vulnerabilities, vendors, objectives, controls, and/or action items for a client.  Send only codes for mappings that should be\u2026",
+   "content_hash": "ebcec2a052243891",
+   "description": "Removes links between a risk and the given assets, asset types, threats, vulnerabilities, vendors, objectives, controls, and/or action items for a client.  Send IDs or codes for mappings that should\u2026",
    "fetch_error": null,
    "key": "/reference/bulkdeleteentitiesfromclientrisk",
    "kind": "endpoint",
@@ -18993,6 +19068,7 @@
      "asset_type_names",
      "control_codes",
      "objective_codes",
+     "objective_ids",
      "threat_codes",
      "vendor_codes",
      "vulnerability_codes"
@@ -19606,7 +19682,7 @@
    "url": "https://developer.scalepad.com/reference/createcategory"
   },
   {
-   "content_hash": "695dedd93b334b4c",
+   "content_hash": "e3999b17f1426ce7",
    "description": "Creates a new governance for the specified client with the provided details.  The authenticated user becomes the owner and creator. The is created in **In Review** status with a default review date\u2026",
    "fetch_error": null,
    "key": "/reference/createclientgovernancedocument",
@@ -19619,6 +19695,7 @@
     ],
     "request_fields": [
      "description",
+     "mappings",
      "title"
     ],
     "responses": [
@@ -19675,7 +19752,7 @@
    "url": "https://developer.scalepad.com/reference/createclientpolicy"
   },
   {
-   "content_hash": "05a1f88e6b935f44",
+   "content_hash": "ce5f4c56e92e4801",
    "description": "Creates a new procedure for the specified client with the provided details.  The authenticated user becomes the owner and creator. The procedure is created in **In Review** status with a default\u2026",
    "fetch_error": null,
    "key": "/reference/createclientprocedure",
@@ -19688,6 +19765,7 @@
     ],
     "request_fields": [
      "description",
+     "mappings",
      "title"
     ],
     "responses": [
@@ -21183,8 +21261,8 @@
    "url": "https://developer.scalepad.com/reference/deletevendorriskassessmentforclient"
   },
   {
-   "content_hash": "8c8e7c23825041d7",
-   "description": "Maps an evidence to objectives and/or controls for a client.  In the request body, include only the entity codes that need to be mapped. Empty or omitted arrays are ignored.  Supported request\u2026",
+   "content_hash": "5fd44c4fc4ceea8c",
+   "description": "Maps an evidence to objectives and/or controls for a client.  In the request body, include objective IDs, framework-scoped objective codes, or control codes. Empty or omitted arrays are ignored.\u2026",
    "fetch_error": null,
    "key": "/reference/evidencemapentitiesforclient",
    "kind": "endpoint",
@@ -21199,6 +21277,7 @@
      "assessment_question_codes",
      "control_codes",
      "objective_codes",
+     "objective_ids",
      "objectives"
     ],
     "responses": [
@@ -21219,8 +21298,8 @@
    "url": "https://developer.scalepad.com/reference/evidencemapentitiesforclient"
   },
   {
-   "content_hash": "0ba3b73e3e1e6f34",
-   "description": "Removes links between an evidence and the given objectives (requirements) and/or controls for a client.  In the request body, include only the entity codes that need to be unmapped. Empty or omitted\u2026",
+   "content_hash": "4cd2a58547ef7c93",
+   "description": "Removes links between an evidence and the given objectives (requirements) and/or controls for a client.  In the request body, include objective IDs, framework-scoped objective codes, or control\u2026",
    "fetch_error": null,
    "key": "/reference/evidenceunmapentitiesforclient",
    "kind": "endpoint",
@@ -21235,6 +21314,7 @@
      "assessment_question_codes",
      "control_codes",
      "objective_codes",
+     "objective_ids",
      "objectives"
     ],
     "responses": [
@@ -24502,8 +24582,8 @@
    "url": "https://developer.scalepad.com/reference/lookupproduct"
   },
   {
-   "content_hash": "73386dbb8aa4e943",
-   "description": "Maps a governance to framework requirements (objectives), policies, and/or controls for a client.  In the request body, include only the business codes that need to be mapped. Empty or omitted arrays\u2026",
+   "content_hash": "7640bc158fce0952",
+   "description": "Maps a governance to framework requirements (objectives), policies, and/or controls for a client.  In the request body, include only the objective IDs or business codes that need to be mapped. Empty\u2026",
    "fetch_error": null,
    "key": "/reference/mapentitiestoclientgovernancedocument",
    "kind": "endpoint",
@@ -24516,6 +24596,7 @@
     ],
     "request_fields": [
      "control_codes",
+     "objective_ids",
      "objectives",
      "policy_codes"
     ],
@@ -24573,8 +24654,8 @@
    "url": "https://developer.scalepad.com/reference/mapentitiestoclientpolicy"
   },
   {
-   "content_hash": "980f58c3dcef8796",
-   "description": "Maps a client's procedure to framework requirements (objectives), policies, and/or controls.  In the request body, include only the business codes that need to be mapped. Empty or omitted arrays are\u2026",
+   "content_hash": "e390159e506cf0c8",
+   "description": "Maps a client's procedure to framework requirements (objectives), policies, and/or controls.  In the request body, include only the objective IDs or business codes that need to be mapped. Empty or\u2026",
    "fetch_error": null,
    "key": "/reference/mapentitiestoclientprocedure",
    "kind": "endpoint",
@@ -24587,6 +24668,7 @@
     ],
     "request_fields": [
      "control_codes",
+     "objective_ids",
      "objectives",
      "policy_codes"
     ],
@@ -24609,8 +24691,8 @@
    "url": "https://developer.scalepad.com/reference/mapentitiestoclientprocedure"
   },
   {
-   "content_hash": "b818a2cd01ad3495",
-   "description": "Maps a risk to assets, asset types, threats, vulnerabilities, vendors, objectives, controls, and/or action items for a client.  In the request body, include only the entity codes that need to be\u2026",
+   "content_hash": "56e5b297cc26a431",
+   "description": "Maps a risk to assets, asset types, threats, vulnerabilities, vendors, objectives, controls, and/or action items for a client.  In the request body, include objective IDs or entity codes. Empty or\u2026",
    "fetch_error": null,
    "key": "/reference/mapentitiestoclientrisk",
    "kind": "endpoint",
@@ -24627,6 +24709,7 @@
      "asset_type_names",
      "control_codes",
      "objective_codes",
+     "objective_ids",
      "threat_codes",
      "vendor_codes",
      "vulnerability_codes"
@@ -24722,8 +24805,8 @@
    "url": "https://developer.scalepad.com/reference/opencontrolfamilieslist"
   },
   {
-   "content_hash": "041bf6ef8a57c092",
-   "description": "Removes links between a client's control and policies, procedures, governance documents, risks, evidences, and/or action items identified by **policy_codes**, **procedure_codes**,\u2026",
+   "content_hash": "4597dbf84ec5b538",
+   "description": "Removes links between a client's control and policies, procedures, governance documents, risks, evidences, and/or action items identified by **objective_ids**, **objectives**, **policy_codes**,\u2026",
    "fetch_error": null,
    "key": "/reference/opencontrolsbulkdeletemappings",
    "kind": "endpoint",
@@ -24738,6 +24821,7 @@
      "action_item_codes",
      "evidence_codes",
      "governance_codes",
+     "objective_ids",
      "objectives",
      "policy_codes",
      "procedure_codes",
@@ -24827,7 +24911,7 @@
    "url": "https://developer.scalepad.com/reference/opencontrolsclientsummary"
   },
   {
-   "content_hash": "97e31a514fb005ba",
+   "content_hash": "cfb50a74c41f4d48",
    "description": "Creates a control for  for the specified client with the provided details. The authenticated user becomes the owner and creator.",
    "fetch_error": null,
    "key": "/reference/opencontrolscreate",
@@ -24843,6 +24927,7 @@
      "control_family_name",
      "control_set_name",
      "description",
+     "mappings",
      "name",
      "owner_email",
      "tag",
@@ -24967,7 +25052,7 @@
    "url": "https://developer.scalepad.com/reference/opencontrolsetslist"
   },
   {
-   "content_hash": "9060105b7472fc13",
+   "content_hash": "f6353bd9b73b6d27",
    "description": "Map policies, procedures, governance documents, risks, evidences, action items, and/or framework objectives to the control identified by `control_id`. Only non-empty lists in the request body are\u2026",
    "fetch_error": null,
    "key": "/reference/opencontrolsmapmappings",
@@ -24983,6 +25068,7 @@
      "action_item_codes",
      "evidence_codes",
      "governance_codes",
+     "objective_ids",
      "objectives",
      "policy_codes",
      "procedure_codes",
