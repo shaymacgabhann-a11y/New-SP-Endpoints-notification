@@ -1,4 +1,4 @@
-# ScalePad developer docs — changes detected 2026-11-20 01:10 UTC
+# ScalePad developer docs — changes detected 2026-11-20 22:12 UTC
 
 Tracking 802 pages at https://developer.scalepad.com. **0 added · 0 removed · 6 changed**
 
